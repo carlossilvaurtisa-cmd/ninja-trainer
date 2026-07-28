@@ -182,7 +182,7 @@ html, body {
     .estrategia-niveles { grid-template-columns: 1fr; }
 }
 /* FIN ESTRATEGIA */
-.tabs-container { width: 100%; max-width: 900px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; overflow: visible; margin-bottom: 16px; box-shadow: var(--sombra); }
+.tabs-container { width: 100%; max-width: 1000px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; overflow: visible; margin-bottom: 16px; box-shadow: var(--sombra); }
 .tabs-nav { display: flex; background: var(--bg-alt); border-bottom: 1px solid var(--borde); overflow-x: auto; }
 .tab-btn {
     font-family: var(--fuente); font-size: 0.85rem; font-weight: 600;
@@ -200,7 +200,7 @@ html, body {
 .chart-desc { font-size: 0.8rem; color: var(--texto-muted); margin-bottom: 10px; }
 .chart-img-container { width: 100%; background: #fff; border-radius: 8px; overflow: hidden; }
 .chart-img { width: 100%; display: block; border-radius: 8px; }
-.chart-img-real { width: 100%; display: block; border-radius: 8px; max-height: 420px; object-fit: contain; background: #fff; }
+.chart-img-real { width: 100%; display: block; border-radius: 8px; max-height: 500px; object-fit: contain; background: #fff; }
 .chart-canvas-fallback { width: 100%; }
 
 .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }

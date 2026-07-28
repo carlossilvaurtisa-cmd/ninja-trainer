@@ -221,8 +221,8 @@ const UI = (function() {
   };
   function generarQuickChartURL(config, numSeries) {
     // Ajustar ancho según complejidad
-    const width = (numSeries && numSeries >= 5) ? 700 : 580;
-    const height = (numSeries && numSeries >= 5) ? 300 : 270;
+    const width = (numSeries && numSeries >= 5) ? 900 : 750;
+    const height = (numSeries && numSeries >= 5) ? 400 : 350;
     const json = JSON.stringify(config);
     const encoded = encodeURIComponent(json);
     return `https://quickchart.io/chart?w=${width}&h=${height}&b=%23FFFFFF&c=${encoded}`;
