@@ -113,11 +113,12 @@ const UI = (function() {
     });
   }
 
-  function activarPestañaImagen(img, btn) {
+  function activarPestañaImagen(tab, btn) {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
-    const contenido = document.querySelector(`.tab-content[data-tab-id="${img.key}"]`);
+    var tabId = tab.id || tab.key;
+    const contenido = document.querySelector('.tab-content[data-tab-id="' + tabId + '"]');
     if (contenido) contenido.classList.remove('hidden');
   }
 
