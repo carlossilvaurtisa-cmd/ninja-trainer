@@ -41,16 +41,19 @@ const UI = (function() {
       const qb = App.state.questionBankData;
       if (qb.tabsMezcladas && qb.tabsMezcladas.length > 0) {
         renderizarPestañasImagenesMixtas(qb);
+        setTimeout(initLupa, 500);
         return;
       }
       if (qb.imgBarras) {
         renderizarPestañasImagenes(qb);
+        setTimeout(initLupa, 500);
         return;
       }
     }
     // Fallback: tabs con datos + QuickChart
     const tabs = tabsActivos || testData.tabs;
     renderizarPestañas(tabs);
+    setTimeout(initLupa, 500);
   }
 
   function renderizarPestañasImagenesMixtas(qbData) {
@@ -119,7 +122,7 @@ const UI = (function() {
     document.querySelectorAll('.tab-content').forEach(c => c.classList.add('hidden'));
     var tabId = tab.id || tab.key;
     const contenido = document.querySelector('.tab-content[data-tab-id="' + tabId + '"]');
-    if (contenido) contenido.classList.remove('hidden');
+    if (contenido) { contenido.classList.remove('hidden'); setTimeout(initLupa, 300); }
   }
 
   function renderizarPestañas(tabs) {
@@ -220,6 +223,35 @@ const UI = (function() {
     '◆': '#FFCC00',  // fallback
     '⬟': '#FF6600'   // fallback
   };
+  // --- LUPA PARA GRÁFICOS ---
+  function initLupa() {
+    var lens = document.getElementById('chart-lens');
+    if (!lens) {
+      lens = document.createElement('div');
+      lens.id = 'chart-lens';
+      lens.className = 'chart-lens';
+      document.body.appendChild(lens);
+    }
+    document.querySelectorAll('.chart-img-real').forEach(function(img) {
+      if (img.dataset.lupa) return;
+      img.dataset.lupa = '1';
+      img.addEventListener('mousemove', function(e) {
+        lens.style.display = 'block';
+        var rect = img.getBoundingClientRect();
+        var x = e.clientX - rect.left;
+        var y = e.clientY - rect.top;
+        lens.style.backgroundImage = 'url(' + img.src + ')';
+        lens.style.backgroundSize = (rect.width * 2.5) + 'px ' + (rect.height * 2.5) + 'px';
+        lens.style.backgroundPosition = '-' + (x * 2.5 - 100) + 'px -' + (y * 2.5 - 100) + 'px';
+        lens.style.left = (e.clientX + 25) + 'px';
+        lens.style.top = (e.clientY - 220) + 'px';
+      });
+      img.addEventListener('mouseleave', function() {
+        lens.style.display = 'none';
+      });
+    });
+  }
+
   function generarQuickChartURL(config, numSeries) {
     // Ajustar ancho según complejidad
     const width = (numSeries && numSeries >= 5) ? 900 : 750;
