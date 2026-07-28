@@ -244,7 +244,7 @@ const UI = (function() {
         lens.style.backgroundSize = (rect.width * 2.5) + 'px ' + (rect.height * 2.5) + 'px';
         lens.style.backgroundPosition = '-' + (x * 2.5 - 40) + 'px -' + (y * 2.5 - 40) + 'px';
         lens.style.left = (e.clientX + 15) + 'px';
-        lens.style.top = (e.clientY - 90) + 'px';
+        lens.style.top = (e.clientY + 20) + 'px';
       });
       img.addEventListener('mouseleave', function() {
         lens.style.display = 'none';
