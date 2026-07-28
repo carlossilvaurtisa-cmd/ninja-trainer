@@ -512,17 +512,8 @@ const UI = (function() {
         });
       }
 
-      // Si es ejercicio DB, mostrar label con eje y patrón
-      if (ejercicio.esDB) {
-        const infoLabel = document.createElement('span');
-        infoLabel.className = 'inductivo-ref-label';
-        const partes = [];
-        if (ejercicio.eje) partes.push(ejercicio.eje);
-        if (ejercicio.patron) partes.push('Frecuencia: ' + ejercicio.patron);
-        if (ejercicio.simboloDom) partes.push('Domina: ' + ejercicio.simboloDom);
-        infoLabel.textContent = partes.join(' | ');
-        refContainer.appendChild(infoLabel);
-      }
+      // Si es ejercicio DB, no mostrar pistas (el usuario debe descubrir el patrón)
+      // La metadata (eje, patron, simboloDom) se usa para evaluación interna
     }
 
     // Renderizar opciones
@@ -642,10 +633,10 @@ const UI = (function() {
     if (refContainer) {
       refContainer.innerHTML = '';
 
-      // Actualizar hint para explicar la mecánica de frecuencia/posición
+      // Actualizar hint
       const hintEl = document.querySelector('.inductivo-hint');
       if (hintEl) {
-        hintEl.textContent = 'Estas dos tablas comparten el MISMO patrón de frecuencia y posición espejo. Descúbrelo.';
+        hintEl.textContent = 'Descubre la regla: compara frecuencias y posiciones entre Ref 1 y Ref 2.';
       }
 
       // Crear wrapper para Ref 1

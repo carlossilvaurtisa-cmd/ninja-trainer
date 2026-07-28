@@ -77,19 +77,19 @@ const EngineInductivoDB = (function() {
     if (aciertos === 2) {
       return {
         esCorrecta: true,
-        mensaje: '¡Correcto! Identificaste el patrón.',
+        mensaje: '¡Correcto! Identificaste el patrón de frecuencia y posición.',
         tipoError: 'Correcto'
       };
     } else if (aciertos === 1) {
       return {
         esCorrecta: false,
-        mensaje: 'Una opción es correcta, la otra no. Revisa las posiciones espejo con más atención.',
+        mensaje: 'Una opción es correcta, la otra no. Revisa: ¿coinciden la frecuencia Y las posiciones espejo?',
         tipoError: 'Parcial (1 de 2)'
       };
     } else {
       return {
         esCorrecta: false,
-        mensaje: 'Ninguna selección correcta. Observa la relación de posiciones entre Ref 1 y Ref 2.',
+        mensaje: 'Ninguna correcta. Cuenta cuántas veces aparece cada símbolo y observa sus posiciones en Ref 1 vs Ref 2.',
         tipoError: 'Patrón no identificado'
       };
     }

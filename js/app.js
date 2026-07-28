@@ -731,9 +731,11 @@ const App = (function() {
     // Feedback visual en las opciones
     const opciones = document.querySelectorAll('#inductivo-opt-tables .icon-grid');
     opciones.forEach((grid, i) => {
+      grid.style.borderColor = '';
+      grid.style.boxShadow = '';
       if (ejercicio.correctas.includes(i)) {
-        grid.style.borderColor = '#7ecb7e';
-        grid.style.boxShadow = '0 0 12px rgba(126,203,126,0.3)';
+        grid.style.borderColor = '#198754';
+        grid.style.boxShadow = '0 0 0 2px #198754';
       }
     });
 
