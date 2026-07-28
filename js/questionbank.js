@@ -29,9 +29,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Cereza tiene un valor de 688.",
+          "enunciado": "Cereza tiene un valor de 638.",
           "respuesta": "F",
-          "explicacion": "El valor real de Cereza en T4 es 510, no 688.",
+          "explicacion": "El valor real de Cereza en T4 es 510, no 638.",
           "tipo": "barras"
         },
         {
@@ -40,7 +40,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Kiwi supera a Arándano.",
           "respuesta": "F",
-          "explicacion": "En T2, Arándano=250 > Kiwi=190.",
+          "explicacion": "La afirmación es incorrecta. En T2, Arándano=250 > Kiwi=190.",
           "tipo": "barras"
         },
         {
@@ -74,18 +74,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Cereza y Arándano es de 287.",
+          "enunciado": "La diferencia entre Cereza y Arándano es de 238.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 190, no 287.",
+          "explicacion": "La diferencia real es 190, no 238.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 519.",
+          "enunciado": "El promedio de todas las variables es 502.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 402.",
+          "explicacion": "El promedio real en T4 es 402, no 502.",
           "tipo": "barras"
         },
         {
@@ -119,9 +119,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Arándano creció un +52%.",
+          "enunciado": "[T1→T4] Arándano creció un +78%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Arándano es +52%, no +52%.",
+          "explicacion": "El crecimiento real de Arándano es +52%, no +78%.",
           "tipo": "barras"
         },
         {
@@ -166,9 +166,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Manzana es 205.",
+          "enunciado": "El valor de Manzana es 512.",
           "respuesta": "F",
-          "explicacion": "Manzana vale 410 en T2.",
+          "explicacion": "Manzana vale 410 en T2, no 512.",
           "tipo": "lineas"
         },
         {
@@ -177,7 +177,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Cereza muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Cereza aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Cereza decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -213,7 +213,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Kiwi supera a Uva en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Uva mantiene valores superiores a Kiwi en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Uva mantiene valores superiores a Kiwi en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -222,7 +222,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Arándano alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Arándano está en T4 (320).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Arándano está en T4 (320).",
           "tipo": "lineas"
         },
         {
@@ -256,9 +256,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Manzana varió un +19%.",
+          "enunciado": "[T1→T4] Manzana varió un +32%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Manzana es +10%.",
+          "explicacion": "La variación real de Manzana es +10%, no +32%.",
           "tipo": "lineas"
         },
         {
@@ -267,7 +267,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Kiwi supera a Uva.",
           "respuesta": "F",
-          "explicacion": "Uva siempre está por encima de Kiwi en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Uva siempre está por encima de Kiwi en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -303,9 +303,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Manzana representa el 21.6% del total.",
+          "enunciado": "Manzana representa el 31.0% del total.",
           "respuesta": "F",
-          "explicacion": "Manzana representa el 24.8% del total, no el 21.6%.",
+          "explicacion": "Manzana representa el 24.8% del total, no el 31.0%.",
           "tipo": "torta"
         },
         {
@@ -359,7 +359,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Uva, Manzana.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Uva, Manzana, no 3.",
           "tipo": "torta"
         },
         {
@@ -393,18 +393,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Arándano tendría un valor de 1.646.",
+          "enunciado": "Si el total general se duplicara, Arándano tendría un valor de 2.638.",
           "respuesta": "F",
-          "explicacion": "Arándano duplicado sería 2.110, no 1.646.",
+          "explicacion": "Arándano duplicado sería 2.110, no 2.638.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Manzana y Cereza es 0.7:1.",
+          "enunciado": "La razón entre Manzana y Cereza es 3.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razón real es 1.3:1, no 3.3:1.",
           "tipo": "torta"
         },
         {
@@ -451,9 +451,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Hidroeléctrica tiene un valor de 5.895.",
+          "enunciado": "Hidroeléctrica tiene un valor de 8.188.",
           "respuesta": "F",
-          "explicacion": "El valor real de Hidroeléctrica en T4 es 6.550, no 5.895.",
+          "explicacion": "El valor real de Hidroeléctrica en T4 es 6.550, no 8.188.",
           "tipo": "barras"
         },
         {
@@ -462,7 +462,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Gas Natural supera a Carbón.",
           "respuesta": "F",
-          "explicacion": "En T2, Carbón=4.700 > Gas Natural=3.500.",
+          "explicacion": "La afirmación es incorrecta. En T2, Carbón=4.700 > Gas Natural=3.500.",
           "tipo": "barras"
         },
         {
@@ -496,18 +496,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Hidroeléctrica y Carbón es de 4.125.",
+          "enunciado": "La diferencia entre Hidroeléctrica y Carbón es de 3.438.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.750, no 4.125.",
+          "explicacion": "La diferencia real es 2.750, no 3.438.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 6.811.",
+          "enunciado": "El promedio de todas las variables es 5.038.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 4.030.",
+          "explicacion": "El promedio real en T4 es 4.030, no 5.038.",
           "tipo": "barras"
         },
         {
@@ -541,9 +541,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Carbón creció un -44%.",
+          "enunciado": "[T1→T4] Carbón creció un -12%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Carbón es -25%, no -44%.",
+          "explicacion": "El crecimiento real de Carbón es -25%, no -12%.",
           "tipo": "barras"
         },
         {
@@ -588,9 +588,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Eólica es 2.340.",
+          "enunciado": "El valor de Eólica es 3.250.",
           "respuesta": "F",
-          "explicacion": "Eólica vale 2.600 en T2.",
+          "explicacion": "Eólica vale 2.600 en T2, no 3.250.",
           "tipo": "lineas"
         },
         {
@@ -599,7 +599,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Carbón muestra una tendencia creciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Carbón disminuye en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Carbón crece, pero en realidad disminuye en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -635,7 +635,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Solar supera a Hidroeléctrica en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Hidroeléctrica mantiene valores superiores a Solar en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Hidroeléctrica mantiene valores superiores a Solar en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -644,7 +644,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Carbón alcanza su valor máximo en T2.",
           "respuesta": "F",
-          "explicacion": "El máximo de Carbón está en T1 (5.100).",
+          "explicacion": "La afirmación señala T2, pero el máximo de Carbón está en T1 (5.100).",
           "tipo": "lineas"
         },
         {
@@ -678,9 +678,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Carbón varió un -20%.",
+          "enunciado": "[T1→T4] Carbón varió un -51%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Carbón es -25%.",
+          "explicacion": "La variación real de Carbón es -25%, no -51%.",
           "tipo": "lineas"
         },
         {
@@ -689,7 +689,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Solar supera a Hidroeléctrica.",
           "respuesta": "F",
-          "explicacion": "Hidroeléctrica siempre está por encima de Solar en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Hidroeléctrica siempre está por encima de Solar en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -725,9 +725,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Eólica representa el 18.3% del total.",
+          "enunciado": "Eólica representa el 18.1% del total.",
           "respuesta": "F",
-          "explicacion": "Eólica representa el 14.5% del total, no el 18.3%.",
+          "explicacion": "Eólica representa el 14.5% del total, no el 18.1%.",
           "tipo": "torta"
         },
         {
@@ -770,9 +770,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Hidroeléctrica y Carbón juntos representan el 39.3% del total.",
+          "enunciado": "Hidroeléctrica y Carbón juntos representan el 69.3% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 55.4%, no 39.3%.",
+          "explicacion": "Suman 55.4%, no 69.3%.",
           "tipo": "torta"
         },
         {
@@ -781,7 +781,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Hidroeléctrica, Carbón.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Hidroeléctrica, Carbón, no 3.",
           "tipo": "torta"
         },
         {
@@ -815,18 +815,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Carbón tendría un valor de 49.484.",
+          "enunciado": "Si el total general se duplicara, Carbón tendría un valor de 44.500.",
           "respuesta": "F",
-          "explicacion": "Carbón duplicado sería 35.600, no 49.484.",
+          "explicacion": "Carbón duplicado sería 35.600, no 44.500.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Eólica y Hidroeléctrica es 0.7:1.",
+          "enunciado": "La razón entre Eólica y Hidroeléctrica es 2.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.4:1.",
+          "explicacion": "La razón real es 0.4:1, no 2.4:1.",
           "tipo": "torta"
         },
         {
@@ -873,9 +873,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Xiaomi tiene un valor de 506.",
+          "enunciado": "Xiaomi tiene un valor de 762.",
           "respuesta": "F",
-          "explicacion": "El valor real de Xiaomi en T4 es 610, no 506.",
+          "explicacion": "El valor real de Xiaomi en T4 es 610, no 762.",
           "tipo": "barras"
         },
         {
@@ -884,7 +884,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Honor supera a Motorola.",
           "respuesta": "F",
-          "explicacion": "En T2, Motorola=230 > Honor=150.",
+          "explicacion": "La afirmación es incorrecta. En T2, Motorola=230 > Honor=150.",
           "tipo": "barras"
         },
         {
@@ -918,18 +918,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Xiaomi y Motorola es de 539.",
+          "enunciado": "La diferencia entre Xiaomi y Motorola es de 438.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 350, no 539.",
+          "explicacion": "La diferencia real es 350, no 438.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 383.",
+          "enunciado": "El promedio de todas las variables es 684.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 547.",
+          "explicacion": "El promedio real en T4 es 547, no 684.",
           "tipo": "barras"
         },
         {
@@ -963,9 +963,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Motorola creció un +52%.",
+          "enunciado": "[T1→T4] Motorola creció un +42%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Motorola es +24%, no +52%.",
+          "explicacion": "El crecimiento real de Motorola es +24%, no +42%.",
           "tipo": "barras"
         },
         {
@@ -1010,9 +1010,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Apple es 868.",
+          "enunciado": "El valor de Apple es 875.",
           "respuesta": "F",
-          "explicacion": "Apple vale 700 en T2.",
+          "explicacion": "Apple vale 700 en T2, no 875.",
           "tipo": "lineas"
         },
         {
@@ -1021,7 +1021,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Xiaomi muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Xiaomi aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Xiaomi decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -1057,7 +1057,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Honor supera a Samsung en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Samsung mantiene valores superiores a Honor en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Samsung mantiene valores superiores a Honor en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1066,7 +1066,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Motorola alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Motorola está en T4 (260).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Motorola está en T4 (260).",
           "tipo": "lineas"
         },
         {
@@ -1100,9 +1100,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Samsung varió un +20%.",
+          "enunciado": "[T1→T4] Samsung varió un +30%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Samsung es +9%.",
+          "explicacion": "La variación real de Samsung es +9%, no +30%.",
           "tipo": "lineas"
         },
         {
@@ -1111,7 +1111,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Honor supera a Samsung.",
           "respuesta": "F",
-          "explicacion": "Samsung siempre está por encima de Honor en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Samsung siempre está por encima de Honor en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1147,9 +1147,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Apple representa el 42.5% del total.",
+          "enunciado": "Apple representa el 35.9% del total.",
           "respuesta": "F",
-          "explicacion": "Apple representa el 28.7% del total, no el 42.5%.",
+          "explicacion": "Apple representa el 28.7% del total, no el 35.9%.",
           "tipo": "torta"
         },
         {
@@ -1192,9 +1192,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Xiaomi y Motorola juntos representan el 25.9% del total.",
+          "enunciado": "Xiaomi y Motorola juntos representan el 40.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.4%, no 25.9%.",
+          "explicacion": "Suman 32.4%, no 40.5%.",
           "tipo": "torta"
         },
         {
@@ -1203,7 +1203,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Samsung, Apple, Xiaomi.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Samsung, Apple, Xiaomi, no 4.",
           "tipo": "torta"
         },
         {
@@ -1237,18 +1237,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Motorola tendría un valor de 2.627.",
+          "enunciado": "Si el total general se duplicara, Motorola tendría un valor de 2.362.",
           "respuesta": "F",
-          "explicacion": "Motorola duplicado sería 1.890, no 2.627.",
+          "explicacion": "Motorola duplicado sería 1.890, no 2.362.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Apple y Xiaomi es 1.6:1.",
+          "enunciado": "La razón entre Apple y Xiaomi es 3.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razón real es 1.3:1, no 3.3:1.",
           "tipo": "torta"
         },
         {
@@ -1295,9 +1295,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Videoclips tiene un valor de 162.",
+          "enunciado": "Videoclips tiene un valor de 130.",
           "respuesta": "F",
-          "explicacion": "El valor real de Videoclips en T4 es 104, no 162.",
+          "explicacion": "El valor real de Videoclips en T4 es 104, no 130.",
           "tipo": "barras"
         },
         {
@@ -1306,7 +1306,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Series supera a Cortometrajes.",
           "respuesta": "F",
-          "explicacion": "En T2, Cortometrajes=34 > Series=15.",
+          "explicacion": "La afirmación es incorrecta. En T2, Cortometrajes=34 > Series=15.",
           "tipo": "barras"
         },
         {
@@ -1340,18 +1340,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Videoclips y Series es de 119.",
+          "enunciado": "La diferencia entre Videoclips y Series es de 105.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 84, no 119.",
+          "explicacion": "La diferencia real es 84, no 105.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 75.",
+          "enunciado": "El promedio de todas las variables es 124.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 100.",
+          "explicacion": "El promedio real en T4 es 100, no 124.",
           "tipo": "barras"
         },
         {
@@ -1385,9 +1385,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Series creció un +115%.",
+          "enunciado": "[T1→T4] Series creció un +96%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Series es +67%, no +115%.",
+          "explicacion": "El crecimiento real de Series es +67%, no +96%.",
           "tipo": "barras"
         },
         {
@@ -1432,9 +1432,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Documentales es 70.",
+          "enunciado": "El valor de Documentales es 65.",
           "respuesta": "F",
-          "explicacion": "Documentales vale 52 en T2.",
+          "explicacion": "Documentales vale 52 en T2, no 65.",
           "tipo": "lineas"
         },
         {
@@ -1443,7 +1443,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Publicidad muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Publicidad aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Publicidad decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -1479,7 +1479,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Series supera a Publicidad en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Publicidad mantiene valores superiores a Series en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Publicidad mantiene valores superiores a Series en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1488,7 +1488,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Series alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Series está en T4 (20).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Series está en T4 (20).",
           "tipo": "lineas"
         },
         {
@@ -1522,9 +1522,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Videoclips varió un +39%.",
+          "enunciado": "[T1→T4] Videoclips varió un +67%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Videoclips es +39%.",
+          "explicacion": "La variación real de Videoclips es +39%, no +67%.",
           "tipo": "lineas"
         },
         {
@@ -1533,7 +1533,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Series supera a Publicidad.",
           "respuesta": "F",
-          "explicacion": "Publicidad siempre está por encima de Series en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Publicidad siempre está por encima de Series en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1569,9 +1569,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Documentales representa el 6.6% del total.",
+          "enunciado": "Documentales representa el 16.5% del total.",
           "respuesta": "F",
-          "explicacion": "Documentales representa el 13.2% del total, no el 6.6%.",
+          "explicacion": "Documentales representa el 13.2% del total, no el 16.5%.",
           "tipo": "torta"
         },
         {
@@ -1614,9 +1614,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Videoclips y Series juntos representan el 37.3% del total.",
+          "enunciado": "Videoclips y Series juntos representan el 31.1% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 24.9%, no 37.3%.",
+          "explicacion": "Suman 24.9%, no 31.1%.",
           "tipo": "torta"
         },
         {
@@ -1625,7 +1625,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Publicidad, Videoclips.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Publicidad, Videoclips, no 3.",
           "tipo": "torta"
         },
         {
@@ -1659,18 +1659,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Series tendría un valor de 195.",
+          "enunciado": "Si el total general se duplicara, Series tendría un valor de 162.",
           "respuesta": "F",
-          "explicacion": "Series duplicado sería 130, no 195.",
+          "explicacion": "Series duplicado sería 130, no 162.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Documentales y Videoclips es 1.0:1.",
+          "enunciado": "La razón entre Documentales y Videoclips es 2.6:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.6:1.",
+          "explicacion": "La razón real es 0.6:1, no 2.6:1.",
           "tipo": "torta"
         },
         {
@@ -1717,9 +1717,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Sur tiene un valor de 26.",
+          "enunciado": "Sur tiene un valor de 21.",
           "respuesta": "F",
-          "explicacion": "El valor real de Sur en T4 es 17, no 26.",
+          "explicacion": "El valor real de Sur en T4 es 17, no 21.",
           "tipo": "barras"
         },
         {
@@ -1728,7 +1728,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Patagonia supera a Altiplano.",
           "respuesta": "F",
-          "explicacion": "En T2, Altiplano=14 > Patagonia=8.",
+          "explicacion": "La afirmación es incorrecta. En T2, Altiplano=14 > Patagonia=8.",
           "tipo": "barras"
         },
         {
@@ -1762,18 +1762,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Sur y Patagonia es de 6.",
+          "enunciado": "La diferencia entre Sur y Patagonia es de 7.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 5, no 6.",
+          "explicacion": "La diferencia real es 5, no 7.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 16.",
+          "enunciado": "El promedio de todas las variables es 24.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 19.",
+          "explicacion": "El promedio real en T4 es 19, no 24.",
           "tipo": "barras"
         },
         {
@@ -1807,9 +1807,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Patagonia creció un -50%.",
+          "enunciado": "[T1→T4] Patagonia creció un -8%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Patagonia es -20%, no -50%.",
+          "explicacion": "El crecimiento real de Patagonia es -20%, no -8%.",
           "tipo": "barras"
         },
         {
@@ -1854,9 +1854,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Centro es 23.",
+          "enunciado": "El valor de Centro es 20.",
           "respuesta": "F",
-          "explicacion": "Centro vale 16 en T2.",
+          "explicacion": "Centro vale 16 en T2, no 20.",
           "tipo": "lineas"
         },
         {
@@ -1865,7 +1865,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Todos los valores de Sur son iguales entre sí.",
           "respuesta": "F",
-          "explicacion": "Sur varía entre 8 y 20.",
+          "explicacion": "La afirmación dice que Sur es constante, pero varía entre 8 y 20.",
           "tipo": "lineas"
         },
         {
@@ -1901,7 +1901,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Patagonia supera a Norte en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Norte mantiene valores superiores a Patagonia en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Norte mantiene valores superiores a Patagonia en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1910,7 +1910,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Patagonia alcanza su valor máximo en T2.",
           "respuesta": "F",
-          "explicacion": "El máximo de Patagonia está en T1 (15).",
+          "explicacion": "La afirmación señala T2, pero el máximo de Patagonia está en T1 (15).",
           "tipo": "lineas"
         },
         {
@@ -1944,9 +1944,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Patagonia varió un -26%.",
+          "enunciado": "[T1→T4] Patagonia varió un -44%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Patagonia es -20%.",
+          "explicacion": "La variación real de Patagonia es -20%, no -44%.",
           "tipo": "lineas"
         },
         {
@@ -1955,7 +1955,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Patagonia supera a Norte.",
           "respuesta": "F",
-          "explicacion": "Norte siempre está por encima de Patagonia en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Norte siempre está por encima de Patagonia en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -1991,9 +1991,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Centro representa el 33.6% del total.",
+          "enunciado": "Centro representa el 28.5% del total.",
           "respuesta": "F",
-          "explicacion": "Centro representa el 22.8% del total, no el 33.6%.",
+          "explicacion": "Centro representa el 22.8% del total, no el 28.5%.",
           "tipo": "torta"
         },
         {
@@ -2036,9 +2036,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Sur y Patagonia juntos representan el 34.1% del total.",
+          "enunciado": "Sur y Patagonia juntos representan el 37.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 29.6%, no 34.1%.",
+          "explicacion": "Suman 29.6%, no 37.0%.",
           "tipo": "torta"
         },
         {
@@ -2047,7 +2047,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Norte, Centro.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Norte, Centro, no 3.",
           "tipo": "torta"
         },
         {
@@ -2081,18 +2081,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Patagonia tendría un valor de 109.",
+          "enunciado": "Si el total general se duplicara, Patagonia tendría un valor de 95.",
           "respuesta": "F",
-          "explicacion": "Patagonia duplicado sería 76, no 109.",
+          "explicacion": "Patagonia duplicado sería 76, no 95.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Centro y Sur es 1.5:1.",
+          "enunciado": "La razón entre Centro y Sur es 3.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razón real es 1.3:1, no 3.3:1.",
           "tipo": "torta"
         },
         {
@@ -2139,9 +2139,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Valparaíso tiene un valor de 1.",
+          "enunciado": "Valparaíso tiene un valor de 3.",
           "respuesta": "F",
-          "explicacion": "El valor real de Valparaíso en T4 es 1, no 1.",
+          "explicacion": "El valor real de Valparaíso en T4 es 1, no 3.",
           "tipo": "barras"
         },
         {
@@ -2150,7 +2150,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Temuco supera a La Serena.",
           "respuesta": "F",
-          "explicacion": "En T2, La Serena=0 > Temuco=0.",
+          "explicacion": "La afirmación es incorrecta. En T2, La Serena=0 > Temuco=0.",
           "tipo": "barras"
         },
         {
@@ -2184,18 +2184,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Valparaíso y La Serena es de 0.",
+          "enunciado": "La diferencia entre Valparaíso y La Serena es de 3.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 1, no 0.",
+          "explicacion": "La diferencia real es 1, no 3.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 2.",
+          "enunciado": "El promedio de todas las variables es 4.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 2.",
+          "explicacion": "El promedio real en T4 es 2, no 4.",
           "tipo": "barras"
         },
         {
@@ -2229,9 +2229,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] La Serena creció un +30%.",
+          "enunciado": "[T1→T4] La Serena creció un +25%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de La Serena es +10%, no +30%.",
+          "explicacion": "El crecimiento real de La Serena es +10%, no +25%.",
           "tipo": "barras"
         },
         {
@@ -2276,9 +2276,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Concepción es 2.",
+          "enunciado": "El valor de Concepción es 3.",
           "respuesta": "F",
-          "explicacion": "Concepción vale 1 en T2.",
+          "explicacion": "Concepción vale 1 en T2, no 3.",
           "tipo": "lineas"
         },
         {
@@ -2287,7 +2287,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Santiago muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Santiago aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Santiago decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -2323,7 +2323,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Temuco supera a Santiago en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Santiago mantiene valores superiores a Temuco en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Santiago mantiene valores superiores a Temuco en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -2332,7 +2332,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "La Serena alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de La Serena está en T4 (0).",
+          "explicacion": "La afirmación señala T1, pero el máximo de La Serena está en T4 (0).",
           "tipo": "lineas"
         },
         {
@@ -2366,9 +2366,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Valparaíso varió un +24%.",
+          "enunciado": "[T1→T4] Valparaíso varió un +23%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Valparaíso es +3%.",
+          "explicacion": "La variación real de Valparaíso es +3%, no +23%.",
           "tipo": "lineas"
         },
         {
@@ -2377,7 +2377,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Temuco supera a Santiago.",
           "respuesta": "F",
-          "explicacion": "Santiago siempre está por encima de Temuco en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Santiago siempre está por encima de Temuco en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -2413,9 +2413,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Concepción representa el 16.2% del total.",
+          "enunciado": "Concepción representa el 13.7% del total.",
           "respuesta": "F",
-          "explicacion": "Concepción representa el 10.9% del total, no el 16.2%.",
+          "explicacion": "Concepción representa el 10.9% del total, no el 13.7%.",
           "tipo": "torta"
         },
         {
@@ -2458,9 +2458,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Valparaíso y La Serena juntos representan el 21.8% del total.",
+          "enunciado": "Valparaíso y La Serena juntos representan el 18.1% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 14.5%, no 21.8%.",
+          "explicacion": "Suman 14.5%, no 18.1%.",
           "tipo": "torta"
         },
         {
@@ -2469,7 +2469,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Santiago.",
+          "explicacion": "Son 1 variable(s) sobre el 20%: Santiago, no 2.",
           "tipo": "torta"
         },
         {
@@ -2503,18 +2503,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, La Serena tendría un valor de 4.",
+          "enunciado": "Si el total general se duplicara, La Serena tendría un valor de 5.",
           "respuesta": "F",
-          "explicacion": "La Serena duplicado sería 3, no 4.",
+          "explicacion": "La Serena duplicado sería 3, no 5.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Concepción y Valparaíso es 1.5:1.",
+          "enunciado": "La razón entre Concepción y Valparaíso es 3.1:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.1:1.",
+          "explicacion": "La razón real es 1.1:1, no 3.1:1.",
           "tipo": "torta"
         },
         {
@@ -2561,9 +2561,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Derecho tiene un valor de 5.709.",
+          "enunciado": "Derecho tiene un valor de 5.575.",
           "respuesta": "F",
-          "explicacion": "El valor real de Derecho en T4 es 4.460, no 5.709.",
+          "explicacion": "El valor real de Derecho en T4 es 4.460, no 5.575.",
           "tipo": "barras"
         },
         {
@@ -2572,7 +2572,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Periodismo supera a Arquitectura.",
           "respuesta": "F",
-          "explicacion": "En T2, Arquitectura=2.200 > Periodismo=1.420.",
+          "explicacion": "La afirmación es incorrecta. En T2, Arquitectura=2.200 > Periodismo=1.420.",
           "tipo": "barras"
         },
         {
@@ -2606,18 +2606,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Derecho y Arquitectura es de 2.646.",
+          "enunciado": "La diferencia entre Derecho y Arquitectura es de 2.625.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.100, no 2.646.",
+          "explicacion": "La diferencia real es 2.100, no 2.625.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 4.844.",
+          "enunciado": "El promedio de todas las variables es 6.880.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 5.504.",
+          "explicacion": "El promedio real en T4 es 5.504, no 6.880.",
           "tipo": "barras"
         },
         {
@@ -2651,9 +2651,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Arquitectura creció un +32%.",
+          "enunciado": "[T1→T4] Arquitectura creció un +28%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Arquitectura es +12%, no +32%.",
+          "explicacion": "El crecimiento real de Arquitectura es +12%, no +28%.",
           "tipo": "barras"
         },
         {
@@ -2698,9 +2698,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Medicina es 9.007.",
+          "enunciado": "El valor de Medicina es 6.950.",
           "respuesta": "F",
-          "explicacion": "Medicina vale 5.560 en T2.",
+          "explicacion": "Medicina vale 5.560 en T2, no 6.950.",
           "tipo": "lineas"
         },
         {
@@ -2709,7 +2709,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Periodismo muestra una tendencia creciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Periodismo disminuye en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Periodismo crece, pero en realidad disminuye en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -2745,7 +2745,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Periodismo supera a Ingeniería en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Ingeniería mantiene valores superiores a Periodismo en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Ingeniería mantiene valores superiores a Periodismo en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -2754,7 +2754,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Arquitectura alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Arquitectura está en T4 (2.360).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Arquitectura está en T4 (2.360).",
           "tipo": "lineas"
         },
         {
@@ -2788,9 +2788,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Periodismo varió un -10%.",
+          "enunciado": "[T1→T4] Periodismo varió un -25%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Periodismo es -5%.",
+          "explicacion": "La variación real de Periodismo es -5%, no -25%.",
           "tipo": "lineas"
         },
         {
@@ -2799,7 +2799,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Periodismo supera a Ingeniería.",
           "respuesta": "F",
-          "explicacion": "Ingeniería siempre está por encima de Periodismo en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Ingeniería siempre está por encima de Periodismo en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -2835,9 +2835,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Medicina representa el 31.7% del total.",
+          "enunciado": "Medicina representa el 26.4% del total.",
           "respuesta": "F",
-          "explicacion": "Medicina representa el 21.1% del total, no el 31.7%.",
+          "explicacion": "Medicina representa el 21.1% del total, no el 26.4%.",
           "tipo": "torta"
         },
         {
@@ -2880,9 +2880,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Derecho y Arquitectura juntos representan el 32.5% del total.",
+          "enunciado": "Derecho y Arquitectura juntos representan el 31.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 24.8%, no 32.5%.",
+          "explicacion": "Suman 24.8%, no 31.0%.",
           "tipo": "torta"
         },
         {
@@ -2891,7 +2891,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Ingeniería, Medicina.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Ingeniería, Medicina, no 3.",
           "tipo": "torta"
         },
         {
@@ -2925,18 +2925,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Arquitectura tendría un valor de 14.662.",
+          "enunciado": "Si el total general se duplicara, Arquitectura tendría un valor de 22.350.",
           "respuesta": "F",
-          "explicacion": "Arquitectura duplicado sería 17.880, no 14.662.",
+          "explicacion": "Arquitectura duplicado sería 17.880, no 22.350.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Medicina y Derecho es 1.5:1.",
+          "enunciado": "La razón entre Medicina y Derecho es 3.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razón real es 1.3:1, no 3.3:1.",
           "tipo": "torta"
         },
         {
@@ -2983,9 +2983,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "EE.UU. tiene un valor de 217.",
+          "enunciado": "EE.UU. tiene un valor de 175.",
           "respuesta": "F",
-          "explicacion": "El valor real de EE.UU. en T4 es 140, no 217.",
+          "explicacion": "El valor real de EE.UU. en T4 es 140, no 175.",
           "tipo": "barras"
         },
         {
@@ -2994,7 +2994,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Europa supera a Perú.",
           "respuesta": "F",
-          "explicacion": "En T2, Perú=175 > Europa=145.",
+          "explicacion": "La afirmación es incorrecta. En T2, Perú=175 > Europa=145.",
           "tipo": "barras"
         },
         {
@@ -3028,18 +3028,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre EE.UU. y Perú es de 75.",
+          "enunciado": "La diferencia entre EE.UU. y Perú es de 62.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 50, no 75.",
+          "explicacion": "La diferencia real es 50, no 62.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 421.",
+          "enunciado": "El promedio de todas las variables es 331.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 265.",
+          "explicacion": "El promedio real en T4 es 265, no 331.",
           "tipo": "barras"
         },
         {
@@ -3073,9 +3073,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Perú creció un +43%.",
+          "enunciado": "[T1→T4] Perú creció un +36%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Perú es +19%, no +43%.",
+          "explicacion": "El crecimiento real de Perú es +19%, no +36%.",
           "tipo": "barras"
         },
         {
@@ -3120,9 +3120,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Brasil es 311.",
+          "enunciado": "El valor de Brasil es 262.",
           "respuesta": "F",
-          "explicacion": "Brasil vale 210 en T2.",
+          "explicacion": "Brasil vale 210 en T2, no 262.",
           "tipo": "lineas"
         },
         {
@@ -3131,7 +3131,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Argentina muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Argentina aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Argentina decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -3167,7 +3167,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "EE.UU. supera a Argentina en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Argentina mantiene valores superiores a EE.UU. en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Argentina mantiene valores superiores a EE.UU. en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -3176,7 +3176,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Perú alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Perú está en T4 (190).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Perú está en T4 (190).",
           "tipo": "lineas"
         },
         {
@@ -3210,9 +3210,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Perú varió un +49%.",
+          "enunciado": "[T1→T4] Perú varió un +42%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Perú es +19%.",
+          "explicacion": "La variación real de Perú es +19%, no +42%.",
           "tipo": "lineas"
         },
         {
@@ -3221,7 +3221,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, EE.UU. supera a Argentina.",
           "respuesta": "F",
-          "explicacion": "Argentina siempre está por encima de EE.UU. en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Argentina siempre está por encima de EE.UU. en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -3257,9 +3257,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Brasil representa el 28.4% del total.",
+          "enunciado": "Brasil representa el 23.8% del total.",
           "respuesta": "F",
-          "explicacion": "Brasil representa el 19.1% del total, no el 28.4%.",
+          "explicacion": "Brasil representa el 19.1% del total, no el 23.8%.",
           "tipo": "torta"
         },
         {
@@ -3302,9 +3302,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "EE.UU. y Perú juntos representan el 28.1% del total.",
+          "enunciado": "EE.UU. y Perú juntos representan el 31.7% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 25.4%, no 28.1%.",
+          "explicacion": "Suman 25.4%, no 31.7%.",
           "tipo": "torta"
         },
         {
@@ -3313,7 +3313,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Argentina.",
+          "explicacion": "Son 1 variable(s) sobre el 20%: Argentina, no 2.",
           "tipo": "torta"
         },
         {
@@ -3347,18 +3347,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Perú tendría un valor de 1.046.",
+          "enunciado": "Si el total general se duplicara, Perú tendría un valor de 1.768.",
           "respuesta": "F",
-          "explicacion": "Perú duplicado sería 1.414, no 1.046.",
+          "explicacion": "Perú duplicado sería 1.414, no 1.768.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Brasil y EE.UU. es 1.4:1.",
+          "enunciado": "La razón entre Brasil y EE.UU. es 3.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.9:1.",
+          "explicacion": "La razón real es 1.9:1, no 3.9:1.",
           "tipo": "torta"
         },
         {
@@ -3405,9 +3405,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Minería tiene un valor de 367.",
+          "enunciado": "Minería tiene un valor de 410.",
           "respuesta": "F",
-          "explicacion": "El valor real de Minería en T4 es 328, no 367.",
+          "explicacion": "El valor real de Minería en T4 es 328, no 410.",
           "tipo": "barras"
         },
         {
@@ -3416,7 +3416,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Servicios supera a Hogares.",
           "respuesta": "F",
-          "explicacion": "En T2, Hogares=184 > Servicios=98.",
+          "explicacion": "La afirmación es incorrecta. En T2, Hogares=184 > Servicios=98.",
           "tipo": "barras"
         },
         {
@@ -3450,18 +3450,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Minería y Hogares es de 150.",
+          "enunciado": "La diferencia entre Minería y Hogares es de 170.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 136, no 150.",
+          "explicacion": "La diferencia real es 136, no 170.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 481.",
+          "enunciado": "El promedio de todas las variables es 388.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 310.",
+          "explicacion": "El promedio real en T4 es 310, no 388.",
           "tipo": "barras"
         },
         {
@@ -3495,9 +3495,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Hogares creció un +25%.",
+          "enunciado": "[T1→T4] Hogares creció un +21%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Hogares es +7%, no +25%.",
+          "explicacion": "El crecimiento real de Hogares es +7%, no +21%.",
           "tipo": "barras"
         },
         {
@@ -3542,9 +3542,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Industria es 368.",
+          "enunciado": "El valor de Industria es 306.",
           "respuesta": "F",
-          "explicacion": "Industria vale 245 en T2.",
+          "explicacion": "Industria vale 245 en T2, no 306.",
           "tipo": "lineas"
         },
         {
@@ -3553,7 +3553,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Agricultura muestra una tendencia creciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Agricultura disminuye en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Agricultura crece, pero en realidad disminuye en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -3589,7 +3589,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Servicios supera a Agricultura en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Agricultura mantiene valores superiores a Servicios en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Agricultura mantiene valores superiores a Servicios en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -3598,7 +3598,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Hogares alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Hogares está en T4 (192).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Hogares está en T4 (192).",
           "tipo": "lineas"
         },
         {
@@ -3632,9 +3632,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Agricultura varió un -24%.",
+          "enunciado": "[T1→T4] Agricultura varió un -27%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Agricultura es -6%.",
+          "explicacion": "La variación real de Agricultura es -6%, no -27%.",
           "tipo": "lineas"
         },
         {
@@ -3643,7 +3643,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Servicios supera a Agricultura.",
           "respuesta": "F",
-          "explicacion": "Agricultura siempre está por encima de Servicios en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Agricultura siempre está por encima de Servicios en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -3679,9 +3679,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Industria representa el 26.9% del total.",
+          "enunciado": "Industria representa el 19.9% del total.",
           "respuesta": "F",
-          "explicacion": "Industria representa el 15.9% del total, no el 26.9%.",
+          "explicacion": "Industria representa el 15.9% del total, no el 19.9%.",
           "tipo": "torta"
         },
         {
@@ -3724,9 +3724,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Minería y Hogares juntos representan el 26.7% del total.",
+          "enunciado": "Minería y Hogares juntos representan el 40.7% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.6%, no 26.7%.",
+          "explicacion": "Suman 32.6%, no 40.7%.",
           "tipo": "torta"
         },
         {
@@ -3735,7 +3735,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Agricultura, Minería.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Agricultura, Minería, no 3.",
           "tipo": "torta"
         },
         {
@@ -3769,18 +3769,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Hogares tendría un valor de 1.681.",
+          "enunciado": "Si el total general se duplicara, Hogares tendría un valor de 1.860.",
           "respuesta": "F",
-          "explicacion": "Hogares duplicado sería 1.488, no 1.681.",
+          "explicacion": "Hogares duplicado sería 1.488, no 1.860.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Industria y Minería es 1.1:1.",
+          "enunciado": "La razón entre Industria y Minería es 2.8:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.8:1.",
+          "explicacion": "La razón real es 0.8:1, no 2.8:1.",
           "tipo": "torta"
         },
         {
@@ -3827,9 +3827,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Marzo tiene un valor de 7.845.",
+          "enunciado": "Marzo tiene un valor de 6.538.",
           "respuesta": "F",
-          "explicacion": "El valor real de Marzo en T4 es 5.230, no 7.845.",
+          "explicacion": "El valor real de Marzo en T4 es 5.230, no 6.538.",
           "tipo": "barras"
         },
         {
@@ -3838,7 +3838,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Abril supera a Mayo.",
           "respuesta": "F",
-          "explicacion": "En T2, Mayo=5.220 > Abril=5.155.",
+          "explicacion": "La afirmación es incorrecta. En T2, Mayo=5.220 > Abril=5.155.",
           "tipo": "barras"
         },
         {
@@ -3872,18 +3872,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Marzo y Abril es de 95.",
+          "enunciado": "La diferencia entre Marzo y Abril es de 75.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 60, no 95.",
+          "explicacion": "La diferencia real es 60, no 75.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 7.845.",
+          "enunciado": "El promedio de todas las variables es 6.538.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 5.230.",
+          "explicacion": "El promedio real en T4 es 5.230, no 6.538.",
           "tipo": "barras"
         },
         {
@@ -3917,9 +3917,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Abril creció un +16%.",
+          "enunciado": "[T1→T4] Abril creció un +18%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Abril es +4%, no +16%.",
+          "explicacion": "El crecimiento real de Abril es +4%, no +18%.",
           "tipo": "barras"
         },
         {
@@ -3964,9 +3964,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Febrero es 2.505.",
+          "enunciado": "El valor de Febrero es 6.262.",
           "respuesta": "F",
-          "explicacion": "Febrero vale 5.010 en T2.",
+          "explicacion": "Febrero vale 5.010 en T2, no 6.262.",
           "tipo": "lineas"
         },
         {
@@ -3975,7 +3975,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Enero muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Enero aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Enero decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -4011,7 +4011,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Enero supera a Mayo en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Mayo mantiene valores superiores a Enero en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Mayo mantiene valores superiores a Enero en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4020,7 +4020,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Abril alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Abril está en T4 (5.290).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Abril está en T4 (5.290).",
           "tipo": "lineas"
         },
         {
@@ -4054,9 +4054,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Abril varió un +25%.",
+          "enunciado": "[T1→T4] Abril varió un +24%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Abril es +4%.",
+          "explicacion": "La variación real de Abril es +4%, no +24%.",
           "tipo": "lineas"
         },
         {
@@ -4065,7 +4065,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Enero supera a Mayo.",
           "respuesta": "F",
-          "explicacion": "Mayo siempre está por encima de Enero en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Mayo siempre está por encima de Enero en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4101,9 +4101,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Febrero representa el 29.0% del total.",
+          "enunciado": "Febrero representa el 24.6% del total.",
           "respuesta": "F",
-          "explicacion": "Febrero representa el 19.7% del total, no el 29.0%.",
+          "explicacion": "Febrero representa el 19.7% del total, no el 24.6%.",
           "tipo": "torta"
         },
         {
@@ -4146,9 +4146,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Marzo y Abril juntos representan el 60.5% del total.",
+          "enunciado": "Marzo y Abril juntos representan el 50.4% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 40.3%, no 60.5%.",
+          "explicacion": "Suman 40.3%, no 50.4%.",
           "tipo": "torta"
         },
         {
@@ -4157,7 +4157,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Marzo, Abril, Mayo.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Marzo, Abril, Mayo, no 4.",
           "tipo": "torta"
         },
         {
@@ -4191,18 +4191,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Abril tendría un valor de 62.190.",
+          "enunciado": "Si el total general se duplicara, Abril tendría un valor de 51.825.",
           "respuesta": "F",
-          "explicacion": "Abril duplicado sería 41.460, no 62.190.",
+          "explicacion": "Abril duplicado sería 41.460, no 51.825.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Febrero y Marzo es 1.4:1.",
+          "enunciado": "La razón entre Febrero y Marzo es 3.0:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.0:1.",
+          "explicacion": "La razón real es 1.0:1, no 3.0:1.",
           "tipo": "torta"
         },
         {
@@ -4249,9 +4249,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Salar C tiene un valor de 28.067.",
+          "enunciado": "Salar C tiene un valor de 27.625.",
           "respuesta": "F",
-          "explicacion": "El valor real de Salar C en T4 es 22.100, no 28.067.",
+          "explicacion": "El valor real de Salar C en T4 es 22.100, no 27.625.",
           "tipo": "barras"
         },
         {
@@ -4260,7 +4260,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Salar E supera a Salar D.",
           "respuesta": "F",
-          "explicacion": "En T2, Salar D=10.400 > Salar E=5.800.",
+          "explicacion": "La afirmación es incorrecta. En T2, Salar D=10.400 > Salar E=5.800.",
           "tipo": "barras"
         },
         {
@@ -4294,18 +4294,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Salar C y Salar D es de 11.536.",
+          "enunciado": "La diferencia entre Salar C y Salar D es de 12.875.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 10.300, no 11.536.",
+          "explicacion": "La diferencia real es 10.300, no 12.875.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 31.407.",
+          "enunciado": "El promedio de todas las variables es 45.650.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 36.520.",
+          "explicacion": "El promedio real en T4 es 36.520, no 45.650.",
           "tipo": "barras"
         },
         {
@@ -4339,9 +4339,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Salar D creció un +15%.",
+          "enunciado": "[T1→T4] Salar D creció un +38%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Salar D es +20%, no +15%.",
+          "explicacion": "El crecimiento real de Salar D es +20%, no +38%.",
           "tipo": "barras"
         },
         {
@@ -4386,9 +4386,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Salar B es 65.700.",
+          "enunciado": "El valor de Salar B es 54.750.",
           "respuesta": "F",
-          "explicacion": "Salar B vale 43.800 en T2.",
+          "explicacion": "Salar B vale 43.800 en T2, no 54.750.",
           "tipo": "lineas"
         },
         {
@@ -4397,7 +4397,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Salar A muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Salar A aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Salar A decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -4433,7 +4433,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Salar E supera a Salar A en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Salar A mantiene valores superiores a Salar E en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Salar A mantiene valores superiores a Salar E en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4442,7 +4442,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Salar D alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Salar D está en T4 (11.800).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Salar D está en T4 (11.800).",
           "tipo": "lineas"
         },
         {
@@ -4476,9 +4476,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Salar B varió un +22%.",
+          "enunciado": "[T1→T4] Salar B varió un +35%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Salar B es +13%.",
+          "explicacion": "La variación real de Salar B es +13%, no +35%.",
           "tipo": "lineas"
         },
         {
@@ -4487,7 +4487,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Salar E supera a Salar A.",
           "respuesta": "F",
-          "explicacion": "Salar A siempre está por encima de Salar E en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Salar A siempre está por encima de Salar E en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4523,9 +4523,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Salar B representa el 22.9% del total.",
+          "enunciado": "Salar B representa el 32.6% del total.",
           "respuesta": "F",
-          "explicacion": "Salar B representa el 26.1% del total, no el 22.9%.",
+          "explicacion": "Salar B representa el 26.1% del total, no el 32.6%.",
           "tipo": "torta"
         },
         {
@@ -4568,9 +4568,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Salar C y Salar D juntos representan el 13.6% del total.",
+          "enunciado": "Salar C y Salar D juntos representan el 22.7% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 18.2%, no 13.6%.",
+          "explicacion": "Suman 18.2%, no 22.7%.",
           "tipo": "torta"
         },
         {
@@ -4579,7 +4579,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Salar A, Salar B.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Salar A, Salar B, no 3.",
           "tipo": "torta"
         },
         {
@@ -4613,18 +4613,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Salar D tendría un valor de 137.920.",
+          "enunciado": "Si el total general se duplicara, Salar D tendría un valor de 107.750.",
           "respuesta": "F",
-          "explicacion": "Salar D duplicado sería 86.200, no 137.920.",
+          "explicacion": "Salar D duplicado sería 86.200, no 107.750.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Salar B y Salar C es 2.6:1.",
+          "enunciado": "La razón entre Salar B y Salar C es 4.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 2.2:1.",
+          "explicacion": "La razón real es 2.2:1, no 4.2:1.",
           "tipo": "torta"
         },
         {
@@ -4682,7 +4682,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Satelital supera a 5G.",
           "respuesta": "F",
-          "explicacion": "En T2, 5G=240 > Satelital=60.",
+          "explicacion": "La afirmación es incorrecta. En T2, 5G=240 > Satelital=60.",
           "tipo": "barras"
         },
         {
@@ -4716,18 +4716,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre 4G y 5G es de 698.",
+          "enunciado": "La diferencia entre 4G y 5G es de 598.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 478, no 698.",
+          "explicacion": "La diferencia real es 478, no 598.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 360.",
+          "enunciado": "El promedio de todas las variables es 319.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 255.",
+          "explicacion": "El promedio real en T4 es 255, no 319.",
           "tipo": "barras"
         },
         {
@@ -4761,9 +4761,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] 5G creció un +544%.",
+          "enunciado": "[T1→T4] 5G creció un +478%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de 5G es +373%, no +544%.",
+          "explicacion": "El crecimiento real de 5G es +373%, no +478%.",
           "tipo": "barras"
         },
         {
@@ -4808,9 +4808,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Cable es 202.",
+          "enunciado": "El valor de Cable es 169.",
           "respuesta": "F",
-          "explicacion": "Cable vale 135 en T2.",
+          "explicacion": "Cable vale 135 en T2, no 169.",
           "tipo": "lineas"
         },
         {
@@ -4819,7 +4819,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Fibra muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Fibra aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Fibra decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -4855,7 +4855,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "4G supera a 5G en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "5G mantiene valores superiores a 4G en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: 5G mantiene valores superiores a 4G en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4864,7 +4864,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "5G alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de 5G está en T4 (520).",
+          "explicacion": "La afirmación señala T1, pero el máximo de 5G está en T4 (520).",
           "tipo": "lineas"
         },
         {
@@ -4898,9 +4898,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] 4G varió un +59%.",
+          "enunciado": "[T1→T4] 4G varió un +58%.",
           "respuesta": "F",
-          "explicacion": "La variación real de 4G es +31%.",
+          "explicacion": "La variación real de 4G es +31%, no +58%.",
           "tipo": "lineas"
         },
         {
@@ -4909,7 +4909,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, 4G supera a 5G.",
           "respuesta": "F",
-          "explicacion": "5G siempre está por encima de 4G en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: 5G siempre está por encima de 4G en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -4945,9 +4945,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Cable representa el 23.5% del total.",
+          "enunciado": "Cable representa el 20.8% del total.",
           "respuesta": "F",
-          "explicacion": "Cable representa el 16.7% del total, no el 23.5%.",
+          "explicacion": "Cable representa el 16.7% del total, no el 20.8%.",
           "tipo": "torta"
         },
         {
@@ -4990,9 +4990,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "4G y 5G juntos representan el 54.3% del total.",
+          "enunciado": "4G y 5G juntos representan el 51.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 40.8%, no 54.3%.",
+          "explicacion": "Suman 40.8%, no 51.0%.",
           "tipo": "torta"
         },
         {
@@ -5001,7 +5001,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Fibra, 5G.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Fibra, 5G, no 3.",
           "tipo": "torta"
         },
         {
@@ -5035,18 +5035,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, 5G tendría un valor de 2.848.",
+          "enunciado": "Si el total general se duplicara, 5G tendría un valor de 3.150.",
           "respuesta": "F",
-          "explicacion": "5G duplicado sería 2.520, no 2.848.",
+          "explicacion": "5G duplicado sería 2.520, no 3.150.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Cable y 4G es 6.1:1.",
+          "enunciado": "La razón entre Cable y 4G es 5.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 3.9:1.",
+          "explicacion": "La razón real es 3.9:1, no 5.9:1.",
           "tipo": "torta"
         },
         {
@@ -5093,9 +5093,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Drama tiene un valor de 307.",
+          "enunciado": "Drama tiene un valor de 269.",
           "respuesta": "F",
-          "explicacion": "El valor real de Drama en T4 es 215, no 307.",
+          "explicacion": "El valor real de Drama en T4 es 215, no 269.",
           "tipo": "barras"
         },
         {
@@ -5104,7 +5104,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Terror supera a Animación.",
           "respuesta": "F",
-          "explicacion": "En T2, Animación=320 > Terror=175.",
+          "explicacion": "La afirmación es incorrecta. En T2, Animación=320 > Terror=175.",
           "tipo": "barras"
         },
         {
@@ -5138,18 +5138,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Drama y Animación es de 152.",
+          "enunciado": "La diferencia entre Drama y Animación es de 381.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 305, no 152.",
+          "explicacion": "La diferencia real es 305, no 381.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 560.",
+          "enunciado": "El promedio de todas las variables es 486.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 389.",
+          "explicacion": "El promedio real en T4 es 389, no 486.",
           "tipo": "barras"
         },
         {
@@ -5183,9 +5183,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Animación creció un +85%.",
+          "enunciado": "[T1→T4] Animación creció un +138%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Animación es +100%, no +85%.",
+          "explicacion": "El crecimiento real de Animación es +100%, no +138%.",
           "tipo": "barras"
         },
         {
@@ -5230,9 +5230,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Comedia es 432.",
+          "enunciado": "El valor de Comedia es 419.",
           "respuesta": "F",
-          "explicacion": "Comedia vale 335 en T2.",
+          "explicacion": "Comedia vale 335 en T2, no 419.",
           "tipo": "lineas"
         },
         {
@@ -5241,7 +5241,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Acción muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Acción aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Acción decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -5277,7 +5277,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Drama supera a Acción en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Acción mantiene valores superiores a Drama en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Acción mantiene valores superiores a Drama en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -5286,7 +5286,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Animación alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Animación está en T4 (520).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Animación está en T4 (520).",
           "tipo": "lineas"
         },
         {
@@ -5320,9 +5320,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Drama varió un +54%.",
+          "enunciado": "[T1→T4] Drama varió un +43%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Drama es +19%.",
+          "explicacion": "La variación real de Drama es +19%, no +43%.",
           "tipo": "lineas"
         },
         {
@@ -5331,7 +5331,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Drama supera a Acción.",
           "respuesta": "F",
-          "explicacion": "Acción siempre está por encima de Drama en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Acción siempre está por encima de Drama en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -5367,9 +5367,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Comedia representa el 17.7% del total.",
+          "enunciado": "Comedia representa el 27.0% del total.",
           "respuesta": "F",
-          "explicacion": "Comedia representa el 21.6% del total, no el 17.7%.",
+          "explicacion": "Comedia representa el 21.6% del total, no el 27.0%.",
           "tipo": "torta"
         },
         {
@@ -5412,9 +5412,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Drama y Animación juntos representan el 54.1% del total.",
+          "enunciado": "Drama y Animación juntos representan el 44.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 35.6%, no 54.1%.",
+          "explicacion": "Suman 35.6%, no 44.5%.",
           "tipo": "torta"
         },
         {
@@ -5423,7 +5423,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Acción, Comedia, Animación.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Acción, Comedia, Animación, no 4.",
           "tipo": "torta"
         },
         {
@@ -5457,18 +5457,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Animación tendría un valor de 4.107.",
+          "enunciado": "Si el total general se duplicara, Animación tendría un valor de 3.775.",
           "respuesta": "F",
-          "explicacion": "Animación duplicado sería 3.020, no 4.107.",
+          "explicacion": "Animación duplicado sería 3.020, no 3.775.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Comedia y Drama es 2.2:1.",
+          "enunciado": "La razón entre Comedia y Drama es 3.8:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.8:1.",
+          "explicacion": "La razón real es 1.8:1, no 3.8:1.",
           "tipo": "torta"
         },
         {
@@ -5515,9 +5515,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Pickup tiene un valor de 5.494.",
+          "enunciado": "Pickup tiene un valor de 5.012.",
           "respuesta": "F",
-          "explicacion": "El valor real de Pickup en T4 es 4.010, no 5.494.",
+          "explicacion": "El valor real de Pickup en T4 es 4.010, no 5.012.",
           "tipo": "barras"
         },
         {
@@ -5526,7 +5526,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Eléctrico supera a Híbrido.",
           "respuesta": "F",
-          "explicacion": "En T2, Híbrido=1.520 > Eléctrico=1.150.",
+          "explicacion": "La afirmación es incorrecta. En T2, Híbrido=1.520 > Eléctrico=1.150.",
           "tipo": "barras"
         },
         {
@@ -5560,18 +5560,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Pickup y Eléctrico es de 1.675.",
+          "enunciado": "La diferencia entre Pickup y Eléctrico es de 2.650.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.120, no 1.675.",
+          "explicacion": "La diferencia real es 2.120, no 2.650.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 4.352.",
+          "enunciado": "El promedio de todas las variables es 6.112.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 4.890.",
+          "explicacion": "El promedio real en T4 es 4.890, no 6.112.",
           "tipo": "barras"
         },
         {
@@ -5605,9 +5605,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Eléctrico creció un +211%.",
+          "enunciado": "[T1→T4] Eléctrico creció un +176%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Eléctrico es +130%, no +211%.",
+          "explicacion": "El crecimiento real de Eléctrico es +130%, no +176%.",
           "tipo": "barras"
         },
         {
@@ -5652,9 +5652,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Sedán es 7.088.",
+          "enunciado": "El valor de Sedán es 6.562.",
           "respuesta": "F",
-          "explicacion": "Sedán vale 5.250 en T2.",
+          "explicacion": "Sedán vale 5.250 en T2, no 6.562.",
           "tipo": "lineas"
         },
         {
@@ -5663,7 +5663,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "SUV muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "SUV aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que SUV decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -5699,7 +5699,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Eléctrico supera a SUV en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "SUV mantiene valores superiores a Eléctrico en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: SUV mantiene valores superiores a Eléctrico en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -5708,7 +5708,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Eléctrico alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Eléctrico está en T4 (1.890).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Eléctrico está en T4 (1.890).",
           "tipo": "lineas"
         },
         {
@@ -5742,9 +5742,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Sedán varió un +19%.",
+          "enunciado": "[T1→T4] Sedán varió un +31%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Sedán es +10%.",
+          "explicacion": "La variación real de Sedán es +10%, no +31%.",
           "tipo": "lineas"
         },
         {
@@ -5753,7 +5753,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Eléctrico supera a SUV.",
           "respuesta": "F",
-          "explicacion": "SUV siempre está por encima de Eléctrico en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: SUV siempre está por encima de Eléctrico en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -5789,9 +5789,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Sedán representa el 12.1% del total.",
+          "enunciado": "Sedán representa el 30.2% del total.",
           "respuesta": "F",
-          "explicacion": "Sedán representa el 24.2% del total, no el 12.1%.",
+          "explicacion": "Sedán representa el 24.2% del total, no el 30.2%.",
           "tipo": "torta"
         },
         {
@@ -5834,9 +5834,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Pickup y Eléctrico juntos representan el 30.6% del total.",
+          "enunciado": "Pickup y Eléctrico juntos representan el 28.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 22.8%, no 30.6%.",
+          "explicacion": "Suman 22.8%, no 28.5%.",
           "tipo": "torta"
         },
         {
@@ -5845,7 +5845,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: SUV, Sedán.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: SUV, Sedán, no 3.",
           "tipo": "torta"
         },
         {
@@ -5879,18 +5879,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Eléctrico tendría un valor de 16.020.",
+          "enunciado": "Si el total general se duplicara, Eléctrico tendría un valor de 13.350.",
           "respuesta": "F",
-          "explicacion": "Eléctrico duplicado sería 10.680, no 16.020.",
+          "explicacion": "Eléctrico duplicado sería 10.680, no 13.350.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Sedán y Pickup es 0.7:1.",
+          "enunciado": "La razón entre Sedán y Pickup es 3.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.4:1.",
+          "explicacion": "La razón real es 1.4:1, no 3.4:1.",
           "tipo": "torta"
         },
         {
@@ -5937,9 +5937,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Papa tiene un valor de 45.050.",
+          "enunciado": "Papa tiene un valor de 112.625.",
           "respuesta": "F",
-          "explicacion": "El valor real de Papa en T4 es 90.100, no 45.050.",
+          "explicacion": "El valor real de Papa en T4 es 90.100, no 112.625.",
           "tipo": "barras"
         },
         {
@@ -5948,7 +5948,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Quinoa supera a Avena.",
           "respuesta": "F",
-          "explicacion": "En T2, Avena=55.100 > Quinoa=5.200.",
+          "explicacion": "La afirmación es incorrecta. En T2, Avena=55.100 > Quinoa=5.200.",
           "tipo": "barras"
         },
         {
@@ -5982,18 +5982,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Papa y Avena es de 28.623.",
+          "enunciado": "La diferencia entre Papa y Avena es de 41.125.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 32.900, no 28.623.",
+          "explicacion": "La diferencia real es 32.900, no 41.125.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 89.830.",
+          "enunciado": "El promedio de todas las variables es 96.800.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 77.440.",
+          "explicacion": "El promedio real en T4 es 77.440, no 96.800.",
           "tipo": "barras"
         },
         {
@@ -6027,9 +6027,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Avena creció un +24%.",
+          "enunciado": "[T1→T4] Avena creció un +20%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Avena es +6%, no +24%.",
+          "explicacion": "El crecimiento real de Avena es +6%, no +20%.",
           "tipo": "barras"
         },
         {
@@ -6074,9 +6074,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Maíz es 111.555.",
+          "enunciado": "El valor de Maíz es 125.625.",
           "respuesta": "F",
-          "explicacion": "Maíz vale 100.500 en T2.",
+          "explicacion": "Maíz vale 100.500 en T2, no 125.625.",
           "tipo": "lineas"
         },
         {
@@ -6085,7 +6085,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Trigo muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Trigo aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Trigo decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -6121,7 +6121,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Quinoa supera a Trigo en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Trigo mantiene valores superiores a Quinoa en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Trigo mantiene valores superiores a Quinoa en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -6130,7 +6130,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Avena alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Avena está en T4 (57.200).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Avena está en T4 (57.200).",
           "tipo": "lineas"
         },
         {
@@ -6164,9 +6164,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Papa varió un +26%.",
+          "enunciado": "[T1→T4] Papa varió un +25%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Papa es +5%.",
+          "explicacion": "La variación real de Papa es +5%, no +25%.",
           "tipo": "lineas"
         },
         {
@@ -6175,7 +6175,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Quinoa supera a Trigo.",
           "respuesta": "F",
-          "explicacion": "Trigo siempre está por encima de Quinoa en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Trigo siempre está por encima de Quinoa en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -6211,9 +6211,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Maíz representa el 44.1% del total.",
+          "enunciado": "Maíz representa el 33.8% del total.",
           "respuesta": "F",
-          "explicacion": "Maíz representa el 27.0% del total, no el 44.1%.",
+          "explicacion": "Maíz representa el 27.0% del total, no el 33.8%.",
           "tipo": "torta"
         },
         {
@@ -6256,9 +6256,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Papa y Avena juntos representan el 57.4% del total.",
+          "enunciado": "Papa y Avena juntos representan el 47.8% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 38.3%, no 57.4%.",
+          "explicacion": "Suman 38.3%, no 47.8%.",
           "tipo": "torta"
         },
         {
@@ -6267,7 +6267,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Trigo, Maíz, Papa.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Trigo, Maíz, Papa, no 4.",
           "tipo": "torta"
         },
         {
@@ -6301,18 +6301,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Avena tendría un valor de 582.426.",
+          "enunciado": "Si el total general se duplicara, Avena tendría un valor de 555.750.",
           "respuesta": "F",
-          "explicacion": "Avena duplicado sería 444.600, no 582.426.",
+          "explicacion": "Avena duplicado sería 444.600, no 555.750.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Maíz y Papa es 1.7:1.",
+          "enunciado": "La razón entre Maíz y Papa es 3.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.2:1.",
+          "explicacion": "La razón real es 1.2:1, no 3.2:1.",
           "tipo": "torta"
         },
         {
@@ -6359,9 +6359,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Ciencia tiene un valor de 5.895.",
+          "enunciado": "Ciencia tiene un valor de 8.188.",
           "respuesta": "F",
-          "explicacion": "El valor real de Ciencia en T4 es 6.550, no 5.895.",
+          "explicacion": "El valor real de Ciencia en T4 es 6.550, no 8.188.",
           "tipo": "barras"
         },
         {
@@ -6370,7 +6370,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Tecnología supera a Infantil.",
           "respuesta": "F",
-          "explicacion": "En T2, Infantil=9.600 > Tecnología=4.550.",
+          "explicacion": "La afirmación es incorrecta. En T2, Infantil=9.600 > Tecnología=4.550.",
           "tipo": "barras"
         },
         {
@@ -6404,18 +6404,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Ciencia y Infantil es de 6.052.",
+          "enunciado": "La diferencia entre Ciencia y Infantil es de 5.562.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 4.450, no 6.052.",
+          "explicacion": "La diferencia real es 4.450, no 5.562.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 15.990.",
+          "enunciado": "El promedio de todas las variables es 13.325.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 10.660.",
+          "explicacion": "El promedio real en T4 es 10.660, no 13.325.",
           "tipo": "barras"
         },
         {
@@ -6496,9 +6496,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Historia es 11.305.",
+          "enunciado": "El valor de Historia es 10.625.",
           "respuesta": "F",
-          "explicacion": "Historia vale 8.500 en T2.",
+          "explicacion": "Historia vale 8.500 en T2, no 10.625.",
           "tipo": "lineas"
         },
         {
@@ -6507,7 +6507,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Novela muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Novela aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Novela decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -6543,7 +6543,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Tecnología supera a Novela en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Novela mantiene valores superiores a Tecnología en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Novela mantiene valores superiores a Tecnología en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -6552,7 +6552,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Infantil alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Infantil está en T4 (11.000).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Infantil está en T4 (11.000).",
           "tipo": "lineas"
         },
         {
@@ -6586,9 +6586,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Historia varió un +12%.",
+          "enunciado": "[T1→T4] Historia varió un +30%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Historia es +9%.",
+          "explicacion": "La variación real de Historia es +9%, no +30%.",
           "tipo": "lineas"
         },
         {
@@ -6597,7 +6597,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Tecnología supera a Novela.",
           "respuesta": "F",
-          "explicacion": "Novela siempre está por encima de Tecnología en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Novela siempre está por encima de Tecnología en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -6633,9 +6633,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Historia representa el 8.7% del total.",
+          "enunciado": "Historia representa el 21.8% del total.",
           "respuesta": "F",
-          "explicacion": "Historia representa el 17.5% del total, no el 8.7%.",
+          "explicacion": "Historia representa el 17.5% del total, no el 21.8%.",
           "tipo": "torta"
         },
         {
@@ -6678,9 +6678,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Ciencia y Infantil juntos representan el 27.4% del total.",
+          "enunciado": "Ciencia y Infantil juntos representan el 40.8% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.7%, no 27.4%.",
+          "explicacion": "Suman 32.7%, no 40.8%.",
           "tipo": "torta"
         },
         {
@@ -6689,7 +6689,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Novela, Infantil.",
+          "explicacion": "Son 2 variable(s) sobre el 20%: Novela, Infantil, no 3.",
           "tipo": "torta"
         },
         {
@@ -6723,18 +6723,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Infantil tendría un valor de 94.400.",
+          "enunciado": "Si el total general se duplicara, Infantil tendría un valor de 100.000.",
           "respuesta": "F",
-          "explicacion": "Infantil duplicado sería 80.000, no 94.400.",
+          "explicacion": "Infantil duplicado sería 80.000, no 100.000.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Historia y Ciencia es 2.1:1.",
+          "enunciado": "La razón entre Historia y Ciencia es 3.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.4:1.",
+          "explicacion": "La razón real es 1.4:1, no 3.4:1.",
           "tipo": "torta"
         },
         {
@@ -6781,9 +6781,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Comercial tiene un valor de 1.014.",
+          "enunciado": "Comercial tiene un valor de 862.",
           "respuesta": "F",
-          "explicacion": "El valor real de Comercial en T4 es 690, no 1.014.",
+          "explicacion": "El valor real de Comercial en T4 es 690, no 862.",
           "tipo": "barras"
         },
         {
@@ -6792,7 +6792,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Público supera a Minería.",
           "respuesta": "F",
-          "explicacion": "En T2, Minería=1.465 > Público=220.",
+          "explicacion": "La afirmación es incorrecta. En T2, Minería=1.465 > Público=220.",
           "tipo": "barras"
         },
         {
@@ -6826,18 +6826,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Comercial y Minería es de 713.",
+          "enunciado": "La diferencia entre Comercial y Minería es de 1.012.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 810, no 713.",
+          "explicacion": "La diferencia real es 810, no 1.012.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 1.309.",
+          "enunciado": "El promedio de todas las variables es 1.169.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 935.",
+          "explicacion": "El promedio real en T4 es 935, no 1.169.",
           "tipo": "barras"
         },
         {
@@ -6871,9 +6871,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Minería creció un +20%.",
+          "enunciado": "[T1→T4] Minería creció un +17%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Minería es +3%, no +20%.",
+          "explicacion": "El crecimiento real de Minería es +3%, no +17%.",
           "tipo": "barras"
         },
         {
@@ -6918,9 +6918,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Industrial es 1.786.",
+          "enunciado": "El valor de Industrial es 1.550.",
           "respuesta": "F",
-          "explicacion": "Industrial vale 1.240 en T2.",
+          "explicacion": "Industrial vale 1.240 en T2, no 1.550.",
           "tipo": "lineas"
         },
         {
@@ -6929,7 +6929,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Residencial muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Residencial aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Residencial decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -6965,7 +6965,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Público supera a Minería en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Minería mantiene valores superiores a Público en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Minería mantiene valores superiores a Público en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -6974,7 +6974,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Minería alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Minería está en T4 (1.500).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Minería está en T4 (1.500).",
           "tipo": "lineas"
         },
         {
@@ -7008,9 +7008,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Minería varió un +16%.",
+          "enunciado": "[T1→T4] Minería varió un +23%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Minería es +3%.",
+          "explicacion": "La variación real de Minería es +3%, no +23%.",
           "tipo": "lineas"
         },
         {
@@ -7019,7 +7019,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Público supera a Minería.",
           "respuesta": "F",
-          "explicacion": "Minería siempre está por encima de Público en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Minería siempre está por encima de Público en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -7055,9 +7055,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Industrial representa el 37.5% del total.",
+          "enunciado": "Industrial representa el 34.5% del total.",
           "respuesta": "F",
-          "explicacion": "Industrial representa el 27.6% del total, no el 37.5%.",
+          "explicacion": "Industrial representa el 27.6% del total, no el 34.5%.",
           "tipo": "torta"
         },
         {
@@ -7100,9 +7100,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Comercial y Minería juntos representan el 56.5% del total.",
+          "enunciado": "Comercial y Minería juntos representan el 58.9% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 47.1%, no 56.5%.",
+          "explicacion": "Suman 47.1%, no 58.9%.",
           "tipo": "torta"
         },
         {
@@ -7111,7 +7111,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Residencial, Industrial, Minería.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Residencial, Industrial, Minería, no 4.",
           "tipo": "torta"
         },
         {
@@ -7145,18 +7145,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Minería tendría un valor de 9.078.",
+          "enunciado": "Si el total general se duplicara, Minería tendría un valor de 14.738.",
           "respuesta": "F",
-          "explicacion": "Minería duplicado sería 11.790, no 9.078.",
+          "explicacion": "Minería duplicado sería 11.790, no 14.738.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Industrial y Comercial es 1.4:1.",
+          "enunciado": "La razón entre Industrial y Comercial es 3.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.9:1.",
+          "explicacion": "La razón real es 1.9:1, no 3.9:1.",
           "tipo": "torta"
         },
         {
@@ -7203,9 +7203,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Merluza tiene un valor de 108.472.",
+          "enunciado": "Merluza tiene un valor de 91.000.",
           "respuesta": "F",
-          "explicacion": "El valor real de Merluza en T4 es 72.800, no 108.472.",
+          "explicacion": "El valor real de Merluza en T4 es 72.800, no 91.000.",
           "tipo": "barras"
         },
         {
@@ -7214,7 +7214,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Anchoveta supera a Sardina.",
           "respuesta": "F",
-          "explicacion": "En T2, Sardina=101.000 > Anchoveta=65.800.",
+          "explicacion": "La afirmación es incorrecta. En T2, Sardina=101.000 > Anchoveta=65.800.",
           "tipo": "barras"
         },
         {
@@ -7248,18 +7248,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Merluza y Sardina es de 45.408.",
+          "enunciado": "La diferencia entre Merluza y Sardina es de 44.000.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 35.200, no 45.408.",
+          "explicacion": "La diferencia real es 35.200, no 44.000.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 231.104.",
+          "enunciado": "El promedio de todas las variables es 251.200.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 200.960.",
+          "explicacion": "El promedio real en T4 es 200.960, no 251.200.",
           "tipo": "barras"
         },
         {
@@ -7293,9 +7293,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Sardina creció un +34%.",
+          "enunciado": "[T1→T4] Sardina creció un +25%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Sardina es +10%, no +34%.",
+          "explicacion": "El crecimiento real de Sardina es +10%, no +25%.",
           "tipo": "barras"
         },
         {
@@ -7340,9 +7340,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Jurel es 209.440.",
+          "enunciado": "El valor de Jurel es 220.000.",
           "respuesta": "F",
-          "explicacion": "Jurel vale 176.000 en T2.",
+          "explicacion": "Jurel vale 176.000 en T2, no 220.000.",
           "tipo": "lineas"
         },
         {
@@ -7351,7 +7351,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Merluza muestra una tendencia creciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Merluza disminuye en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Merluza crece, pero en realidad disminuye en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -7387,7 +7387,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Anchoveta supera a Salmón en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Salmón mantiene valores superiores a Anchoveta en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Salmón mantiene valores superiores a Anchoveta en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -7396,7 +7396,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Sardina alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Sardina está en T4 (108.000).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Sardina está en T4 (108.000).",
           "tipo": "lineas"
         },
         {
@@ -7430,9 +7430,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Merluza varió un -26%.",
+          "enunciado": "[T1→T4] Merluza varió un -24%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Merluza es -4%.",
+          "explicacion": "La variación real de Merluza es -4%, no -24%.",
           "tipo": "lineas"
         },
         {
@@ -7441,7 +7441,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Anchoveta supera a Salmón.",
           "respuesta": "F",
-          "explicacion": "Salmón siempre está por encima de Anchoveta en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Salmón siempre está por encima de Anchoveta en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -7477,9 +7477,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Jurel representa el 28.6% del total.",
+          "enunciado": "Jurel representa el 23.9% del total.",
           "respuesta": "F",
-          "explicacion": "Jurel representa el 19.1% del total, no el 28.6%.",
+          "explicacion": "Jurel representa el 19.1% del total, no el 23.9%.",
           "tipo": "torta"
         },
         {
@@ -7522,9 +7522,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Merluza y Sardina juntos representan el 28.7% del total.",
+          "enunciado": "Merluza y Sardina juntos representan el 22.8% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 18.3%, no 28.7%.",
+          "explicacion": "Suman 18.3%, no 22.8%.",
           "tipo": "torta"
         },
         {
@@ -7533,7 +7533,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Salmón.",
+          "explicacion": "Son 1 variable(s) sobre el 20%: Salmón, no 2.",
           "tipo": "torta"
         },
         {
@@ -7567,18 +7567,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Sardina tendría un valor de 1.234.500.",
+          "enunciado": "Si el total general se duplicara, Sardina tendría un valor de 1.028.750.",
           "respuesta": "F",
-          "explicacion": "Sardina duplicado sería 823.000, no 1.234.500.",
+          "explicacion": "Sardina duplicado sería 823.000, no 1.028.750.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Jurel y Merluza es 2.1:1.",
+          "enunciado": "La razón entre Jurel y Merluza es 4.5:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 2.5:1.",
+          "explicacion": "La razón real es 2.5:1, no 4.5:1.",
           "tipo": "torta"
         },
         {
@@ -7625,9 +7625,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Adultos Mayores tiene un valor de 138.",
+          "enunciado": "Adultos Mayores tiene un valor de 344.",
           "respuesta": "F",
-          "explicacion": "El valor real de Adultos Mayores en T4 es 275, no 138.",
+          "explicacion": "El valor real de Adultos Mayores en T4 es 275, no 344.",
           "tipo": "barras"
         },
         {
@@ -7636,7 +7636,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Personal Salud supera a Embarazadas.",
           "respuesta": "F",
-          "explicacion": "En T2, Embarazadas=31 > Personal Salud=20.",
+          "explicacion": "La afirmación es incorrecta. En T2, Embarazadas=31 > Personal Salud=20.",
           "tipo": "barras"
         },
         {
@@ -7670,18 +7670,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Adultos Mayores y Embarazadas es de 356.",
+          "enunciado": "La diferencia entre Adultos Mayores y Embarazadas es de 292.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 234, no 356.",
+          "explicacion": "La diferencia real es 234, no 292.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 302.",
+          "enunciado": "El promedio de todas las variables es 251.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 201.",
+          "explicacion": "El promedio real en T4 es 201, no 251.",
           "tipo": "barras"
         },
         {
@@ -7715,9 +7715,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Embarazadas creció un +121%.",
+          "enunciado": "[T1→T4] Embarazadas creció un +101%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Embarazadas es +71%, no +121%.",
+          "explicacion": "El crecimiento real de Embarazadas es +71%, no +101%.",
           "tipo": "barras"
         },
         {
@@ -7762,9 +7762,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Adultos es 351.",
+          "enunciado": "El valor de Adultos es 281.",
           "respuesta": "F",
-          "explicacion": "Adultos vale 225 en T2.",
+          "explicacion": "Adultos vale 225 en T2, no 281.",
           "tipo": "lineas"
         },
         {
@@ -7773,7 +7773,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Niños muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Niños aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Niños decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -7809,7 +7809,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Personal Salud supera a Niños en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Niños mantiene valores superiores a Personal Salud en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Niños mantiene valores superiores a Personal Salud en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -7818,7 +7818,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Embarazadas alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Embarazadas está en T4 (41).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Embarazadas está en T4 (41).",
           "tipo": "lineas"
         },
         {
@@ -7852,9 +7852,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Personal Salud varió un +115%.",
+          "enunciado": "[T1→T4] Personal Salud varió un +95%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Personal Salud es +61%.",
+          "explicacion": "La variación real de Personal Salud es +61%, no +95%.",
           "tipo": "lineas"
         },
         {
@@ -7863,7 +7863,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Personal Salud supera a Niños.",
           "respuesta": "F",
-          "explicacion": "Niños siempre está por encima de Personal Salud en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Niños siempre está por encima de Personal Salud en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -7944,9 +7944,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Adultos Mayores y Embarazadas juntos representan el 23.1% del total.",
+          "enunciado": "Adultos Mayores y Embarazadas juntos representan el 38.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 30.4%, no 23.1%.",
+          "explicacion": "Suman 30.4%, no 38.0%.",
           "tipo": "torta"
         },
         {
@@ -7955,7 +7955,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Niños, Adultos, Adultos Mayores.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Niños, Adultos, Adultos Mayores, no 4.",
           "tipo": "torta"
         },
         {
@@ -7989,18 +7989,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Embarazadas tendría un valor de 396.",
+          "enunciado": "Si el total general se duplicara, Embarazadas tendría un valor de 330.",
           "respuesta": "F",
-          "explicacion": "Embarazadas duplicado sería 264, no 396.",
+          "explicacion": "Embarazadas duplicado sería 264, no 330.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Adultos y Adultos Mayores es 1.4:1.",
+          "enunciado": "La razón entre Adultos y Adultos Mayores es 3.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.2:1.",
+          "explicacion": "La razón real es 1.2:1, no 3.2:1.",
           "tipo": "torta"
         },
         {
@@ -8047,9 +8047,9 @@ var QuestionBank = {
           "id": "03",
           "nivel": "facil",
           "periodo": "T4",
-          "enunciado": "Ciclismo tiene un valor de 15.",
+          "enunciado": "Ciclismo tiene un valor de 12.",
           "respuesta": "F",
-          "explicacion": "El valor real de Ciclismo en T4 es 10, no 15.",
+          "explicacion": "El valor real de Ciclismo en T4 es 10, no 12.",
           "tipo": "barras"
         },
         {
@@ -8058,7 +8058,7 @@ var QuestionBank = {
           "periodo": "T2",
           "enunciado": "Tenis supera a Remo.",
           "respuesta": "F",
-          "explicacion": "En T2, Remo=11 > Tenis=8.",
+          "explicacion": "La afirmación es incorrecta. En T2, Remo=11 > Tenis=8.",
           "tipo": "barras"
         },
         {
@@ -8092,18 +8092,18 @@ var QuestionBank = {
           "id": "08",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "La diferencia entre Ciclismo y Remo es de 7.",
+          "enunciado": "La diferencia entre Ciclismo y Remo es de 8.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 6, no 7.",
+          "explicacion": "La diferencia real es 6, no 8.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
           "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 19.",
+          "enunciado": "El promedio de todas las variables es 18.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 14.",
+          "explicacion": "El promedio real en T4 es 14, no 18.",
           "tipo": "barras"
         },
         {
@@ -8137,9 +8137,9 @@ var QuestionBank = {
           "id": "13",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Remo creció un +104%.",
+          "enunciado": "[T1→T4] Remo creció un +110%.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Remo es +78%, no +104%.",
+          "explicacion": "El crecimiento real de Remo es +78%, no +110%.",
           "tipo": "barras"
         },
         {
@@ -8184,9 +8184,9 @@ var QuestionBank = {
           "id": "18",
           "nivel": "facil",
           "periodo": "T2",
-          "enunciado": "El valor de Natación es 15.",
+          "enunciado": "El valor de Natación es 12.",
           "respuesta": "F",
-          "explicacion": "Natación vale 10 en T2.",
+          "explicacion": "Natación vale 10 en T2, no 12.",
           "tipo": "lineas"
         },
         {
@@ -8195,7 +8195,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Atletismo muestra una tendencia decreciente a lo largo de todos los períodos.",
           "respuesta": "F",
-          "explicacion": "Atletismo aumenta en cada período consecutivo.",
+          "explicacion": "La afirmación dice que Atletismo decrece, pero en realidad aumenta en cada período consecutivo.",
           "tipo": "lineas"
         },
         {
@@ -8231,7 +8231,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Ciclismo supera a Atletismo en al menos dos períodos.",
           "respuesta": "F",
-          "explicacion": "Atletismo mantiene valores superiores a Ciclismo en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Atletismo mantiene valores superiores a Ciclismo en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -8240,7 +8240,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Remo alcanza su valor máximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Remo está en T4 (16).",
+          "explicacion": "La afirmación señala T1, pero el máximo de Remo está en T4 (16).",
           "tipo": "lineas"
         },
         {
@@ -8274,9 +8274,9 @@ var QuestionBank = {
           "id": "28",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "[T1→T4] Atletismo varió un +60%.",
+          "enunciado": "[T1→T4] Atletismo varió un +102%.",
           "respuesta": "F",
-          "explicacion": "La variación real de Atletismo es +67%.",
+          "explicacion": "La variación real de Atletismo es +67%, no +102%.",
           "tipo": "lineas"
         },
         {
@@ -8285,7 +8285,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "En algún momento, Ciclismo supera a Atletismo.",
           "respuesta": "F",
-          "explicacion": "Atletismo siempre está por encima de Ciclismo en todos los períodos.",
+          "explicacion": "La afirmación es incorrecta: Atletismo siempre está por encima de Ciclismo en todos los períodos.",
           "tipo": "lineas"
         },
         {
@@ -8321,9 +8321,9 @@ var QuestionBank = {
           "id": "33",
           "nivel": "facil",
           "periodo": "",
-          "enunciado": "Natación representa el 23.7% del total.",
+          "enunciado": "Natación representa el 25.1% del total.",
           "respuesta": "F",
-          "explicacion": "Natación representa el 20.1% del total, no el 23.7%.",
+          "explicacion": "Natación representa el 20.1% del total, no el 25.1%.",
           "tipo": "torta"
         },
         {
@@ -8366,9 +8366,9 @@ var QuestionBank = {
           "id": "38",
           "nivel": "intermedio",
           "periodo": "",
-          "enunciado": "Ciclismo y Remo juntos representan el 51.4% del total.",
+          "enunciado": "Ciclismo y Remo juntos representan el 44.6% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 35.7%, no 51.4%.",
+          "explicacion": "Suman 35.7%, no 44.6%.",
           "tipo": "torta"
         },
         {
@@ -8377,7 +8377,7 @@ var QuestionBank = {
           "periodo": "",
           "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Atletismo, Natación, Remo.",
+          "explicacion": "Son 3 variable(s) sobre el 20%: Atletismo, Natación, Remo, no 4.",
           "tipo": "torta"
         },
         {
@@ -8411,18 +8411,18 @@ var QuestionBank = {
           "id": "43",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "Si el total general se duplicara, Remo tendría un valor de 50.",
+          "enunciado": "Si el total general se duplicara, Remo tendría un valor de 125.",
           "respuesta": "F",
-          "explicacion": "Remo duplicado sería 100, no 50.",
+          "explicacion": "Remo duplicado sería 100, no 125.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
           "periodo": "",
-          "enunciado": "La razón entre Natación y Ciclismo es 1.7:1.",
+          "enunciado": "La razón entre Natación y Ciclismo es 3.5:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.5:1.",
+          "explicacion": "La razón real es 1.5:1, no 3.5:1.",
           "tipo": "torta"
         },
         {
