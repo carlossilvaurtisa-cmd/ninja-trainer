@@ -840,16 +840,11 @@ const UI = (function() {
   function mostrarResultados(resultados, testData) {
     mostrarPantalla('screen-results');
     
-    // Reproducir video y audio de celebración
+    // Reproducir video de celebración (con audio)
     const video = document.getElementById('video-celebracion');
     if (video) {
       video.currentTime = 0;
       video.play().catch(() => {});
-    }
-    const audio = document.getElementById('audio-celebracion');
-    if (audio) {
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
     }
     
     document.getElementById('results-title').textContent = `RESULTADOS: ${testData.titulo}`;
