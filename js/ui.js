@@ -213,13 +213,13 @@ const UI = (function() {
     const height = (numSeries && numSeries >= 5) ? 300 : 270;
     const json = JSON.stringify(config);
     const encoded = encodeURIComponent(json);
-    return `https://quickchart.io/chart?w=${width}&h=${height}&b=%230d1b2a&c=${encoded}`;
+    return `https://quickchart.io/chart?w=${width}&h=${height}&b=%23FFFFFF&c=${encoded}`;
   }
 
   // --- GRÁFICO DE BARRAS (QuickChart + fallback Chart.js) ---
   function renderizarGraficoBarras(tab) {
     const chartId = 'chart-barras-' + tab.id;
-    const colores = ['#F9B872', '#B6E1E7', '#FAE7A5', '#8899aa'];
+    const colores = ['#0D6EFD', '#198754', '#FD7E14', '#6C757D', '#0DCAF0'];
 
     const labels = tab.categorias;
     const datasets = tab.series.map((serie, i) => ({
@@ -284,7 +284,7 @@ const UI = (function() {
   // --- GRÁFICO DE LÍNEAS (QuickChart + fallback Chart.js) ---
   function renderizarGraficoLineas(tab) {
     const chartId = 'chart-lineas-' + tab.id;
-    const colores = ['#F9B872', '#B6E1E7', '#FAE7A5', '#8899aa'];
+    const colores = ['#0D6EFD', '#198754', '#FD7E14', '#6C757D', '#0DCAF0'];
 
     const labels = tab.categorias;
     const datasets = tab.series.map((serie, i) => ({
@@ -347,7 +347,7 @@ const UI = (function() {
   // --- GRÁFICO DE TORTA (QuickChart + fallback Chart.js) ---
   function renderizarGraficoTorta(tab) {
     const chartId = 'chart-torta-' + tab.id;
-    const colores = ['#F9B872', '#B6E1E7', '#FAE7A5', '#8899aa'];
+    const colores = ['#0D6EFD', '#198754', '#FD7E14', '#6C757D', '#0DCAF0'];
 
     const categoria = tab.categorias[0];
     const labels = tab.series;
