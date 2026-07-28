@@ -361,9 +361,65 @@ const App = (function() {
   }
 
   function cargarQuestionBank() {
-    // Desactivado: se usa el motor algorítmico con 6 pestañas originales
-    // para simular fielmente la prueba real (buscar la pestaña correcta)
-    return null;
+    if (state.testActual !== 'numerico') return null;
+    if (typeof QuestionBank === 'undefined') return null;
+
+    // Seleccionar 6 datasets diferentes al azar para mezclar pestañas
+    const allIds = Object.keys(QuestionBank);
+    if (allIds.length < 6) return null;
+    
+    const shuffled = [...allIds].sort(() => Math.random() - 0.5);
+    const seleccionados = shuffled.slice(0, 6);
+    
+    // Crear tabs mezcladas: cada una de un dataset diferente
+    const tipos = ['barras', 'lineas', 'torta', 'barras', 'lineas', 'torta'];
+    const tabsMezcladas = [];
+    const todasPreguntas = [];
+    
+    seleccionados.forEach((dsId, i) => {
+      const qb = QuestionBank[dsId];
+      const tipo = tipos[i];
+      const preguntasDS = qb.preguntas[tipo] || [];
+      
+      // Crear tab virtual con la imagen real
+      tabsMezcladas.push({
+        id: 'mix_' + dsId + '_' + tipo,
+        titulo: qb.nombre + ' (' + (tipo === 'barras' ? 'Barras' : tipo === 'lineas' ? 'Líneas' : 'Torta') + ')',
+        tipo: tipo,
+        descripcion: qb.periodos || '',
+        imagen: tipo === 'barras' ? qb.imgBarras : tipo === 'lineas' ? qb.imgLineas : qb.imgTorta,
+        categorias: [],
+        series: [],
+        datos: {}
+      });
+      
+      // Agregar preguntas de este dataset (max 7 por tab)
+      const preguntasTab = preguntasDS
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 7)
+        .map(q => ({
+          ...q,
+          grafico: tipo,
+          imgPath: tabsMezcladas[i].imagen,
+          tabId: tabsMezcladas[i].id,
+          tabTitulo: tabsMezcladas[i].titulo
+        }));
+      
+      todasPreguntas.push(...preguntasTab);
+    });
+    
+    // Barajar todas las preguntas y tomar 40
+    const preguntasFinal = todasPreguntas.sort(() => Math.random() - 0.5).slice(0, 40);
+    
+    return {
+      datasetNombre: 'Temáticas combinadas',
+      periodos: 'Datos de 6 fuentes diferentes',
+      preguntas: preguntasFinal,
+      tabsMezcladas: tabsMezcladas,
+      imgBarras: tabsMezcladas[0]?.imagen || '',
+      imgLineas: tabsMezcladas[1]?.imagen || '',
+      imgTorta: tabsMezcladas[2]?.imagen || ''
+    };
   }
 
   function obtenerApiKey() {

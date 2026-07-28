@@ -36,14 +36,49 @@ const UI = (function() {
     document.getElementById('progress-bar-fill').style.width = '0%';
     document.getElementById('feedback-instant').classList.add('hidden');
 
-    // Si hay QuestionBank (preguntas pre-escritas con imágenes reales)
+    // Si hay QuestionBank con tabs mezcladas
     if (typeof App !== 'undefined' && App.state && App.state.questionBankData) {
-      renderizarPestañasImagenes(App.state.questionBankData);
-    } else {
-      // Fallback: tabs con datos + QuickChart
-      const tabs = tabsActivos || testData.tabs;
-      renderizarPestañas(tabs);
+      const qb = App.state.questionBankData;
+      if (qb.tabsMezcladas && qb.tabsMezcladas.length > 0) {
+        renderizarPestañasImagenesMixtas(qb);
+        return;
+      }
+      if (qb.imgBarras) {
+        renderizarPestañasImagenes(qb);
+        return;
+      }
     }
+    // Fallback: tabs con datos + QuickChart
+    const tabs = tabsActivos || testData.tabs;
+    renderizarPestañas(tabs);
+  }
+
+  function renderizarPestañasImagenesMixtas(qbData) {
+    const nav = document.getElementById('tabs-nav');
+    const content = document.getElementById('tabs-content');
+    nav.innerHTML = '';
+    content.innerHTML = '';
+    destruirTodosCharts();
+
+    qbData.tabsMezcladas.forEach((tab, idx) => {
+      const btn = document.createElement('button');
+      btn.className = 'tab-btn' + (idx === 0 ? ' active' : '');
+      btn.textContent = tab.titulo.length > 35 ? tab.titulo.substring(0, 32) + '...' : tab.titulo;
+      btn.title = tab.titulo;
+      btn.dataset.tabId = tab.id;
+      btn.addEventListener('click', () => activarPestañaImagen(tab, btn));
+      nav.appendChild(btn);
+
+      const div = document.createElement('div');
+      div.className = 'tab-content' + (idx === 0 ? '' : ' hidden');
+      div.dataset.tabId = tab.id;
+      div.innerHTML = `<div class="chart-img-container" style="background:transparent;">
+        <p class="chart-desc">${tab.descripcion || ''}</p>
+        <img src="${tab.imagen}" alt="${tab.titulo}" class="chart-img-real"
+             onerror="this.src='';this.alt='Imagen no disponible';">
+      </div>`;
+      content.appendChild(div);
+    });
   }
 
   function renderizarPestañasImagenes(qbData) {
