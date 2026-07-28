@@ -1,0 +1,381 @@
+<!-- ============================================================ -->
+<!-- BLOQUE 1: ESTRUCTURA HTML PRINCIPAL - PLATAFORMA NINJA 5 TEST -->
+<!-- ============================================================ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🥷 Dojo Ninja - Simulador Prueba Habilidades y Destrezas</title>
+    
+    <!-- Fuente Gotham (local) + Montserrat (fallback Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js para gráficos visuales -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/ninja-style.css">
+</head>
+<body>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 1: MENÚ PRINCIPAL                                  -->
+    <!-- ========================================================== -->
+    <div id="screen-menu" class="screen active">
+        <div class="menu-container">
+            <div class="logo-container">
+                <img src="img/logo-ninja.png" alt="Dojo Ninja - Simulador de Habilidades y Destrezas" class="logo-img">
+            </div>
+            
+            <p class="menu-subtitle">Selecciona tu entrenamiento, joven padawan:</p>
+            
+            <div class="menu-buttons">
+                <button class="btn-menu" data-test="trabajo">
+                    ► 1. COMPORTAMIENTOS RELACIONADOS CON EL TRABAJO
+                    <span class="btn-badge badge-no-score">Sin puntaje</span>
+                </button>
+                
+                <button class="btn-menu" data-test="numerico">
+                    ★ 2. RAZONAMIENTO NUMÉRICO
+                    <span class="btn-badge badge-score">Asigna puntaje</span>
+                    <span class="btn-badge badge-time">12:00</span>
+                </button>
+                
+                <button class="btn-menu" data-test="verbal">
+                    ★ 3. RAZONAMIENTO VERBAL
+                    <span class="btn-badge badge-score">Asigna puntaje</span>
+                    <span class="btn-badge badge-time">12:00</span>
+                </button>
+                
+                <button class="btn-menu" data-test="inductivo">
+                    ★ 4. RAZONAMIENTO INDUCTIVO
+                    <span class="btn-badge badge-score">Asigna puntaje</span>
+                    <span class="btn-badge badge-time">6:00</span>
+                </button>
+                
+                <button class="btn-menu" data-test="situacional">
+                    ► 5. COMPORTAMIENTO SITUACIONAL
+                    <span class="btn-badge badge-no-score">Sin puntaje</span>
+                    <span class="btn-badge badge-time">~7:00</span>
+                </button>
+            </div>
+            
+            <button id="btn-global-results" class="btn-menu btn-results-global">
+                📊 VER RESULTADOS GLOBALES
+            </button>
+            <button id="btn-dashboard" class="btn-menu btn-results-global" style="margin-top:8px;">
+                📈 DASHBOARD DE ESTADÍSTICAS
+            </button>
+            
+            <div class="api-status-bar">
+                <span id="api-status-icon">🔑</span>
+                <span id="api-status-text">API DeepSeek: No configurada</span>
+                <button id="btn-config-api" class="btn-api-config">CONFIGURAR</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 2: INSTRUCCIONES DEL TEST                          -->
+    <!-- ========================================================== -->
+    <div id="screen-instructions" class="screen">
+        <div class="instructions-container">
+            <h2 id="instructions-title" class="screen-title"></h2>
+            <div id="instructions-body" class="instructions-body"></div>
+            <div id="dataset-selector" class="dataset-selector hidden">
+                <span id="dataset-ia-badge" class="dataset-ia-badge">🎲 Temática aleatoria</span>
+            </div>
+            <div class="instructions-footer">
+                <div class="instructions-buttons">
+                    <button id="btn-back-menu" class="btn-retro">◄ VOLVER AL MENÚ</button>
+                    <button id="btn-start-test" class="btn-retro btn-start">INICIAR PRUEBA ►</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 3: TEST ACTIVO (VFD - Numérico y Verbal)          -->
+    <!-- ========================================================== -->
+    <div id="screen-test-vfd" class="screen">
+        <!-- Barra superior: timer + progreso -->
+        <div class="test-topbar">
+            <div class="timer-container">
+                <span class="timer-icon">⏱️</span>
+                <span id="timer-display" class="timer-display">12:00</span>
+            </div>
+            <div class="progress-container">
+                <span id="progress-text" class="progress-text">Pregunta 1/15</span>
+                <div class="progress-bar-track">
+                    <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zona de pestañas con datos -->
+        <div class="tabs-container">
+            <div id="tabs-nav" class="tabs-nav"></div>
+            <div id="tabs-content" class="tabs-content"></div>
+        </div>
+        
+        <!-- Zona de pregunta -->
+        <div class="question-zone">
+            <div id="question-tab-indicator" class="question-tab-indicator hidden">
+                📋 Pestaña consultada: <span id="tab-indicator-name"></span>
+            </div>
+            <p id="question-statement" class="question-statement"></p>
+            <div class="question-buttons">
+                <button class="btn-answer btn-verdadero" data-answer="V">
+                    <span class="answer-letter">V</span>
+                    <span class="answer-label">VERDADERO</span>
+                </button>
+                <button class="btn-answer btn-falso" data-answer="F">
+                    <span class="answer-letter">F</span>
+                    <span class="answer-label">FALSO</span>
+                </button>
+                <button class="btn-answer btn-desconocido" data-answer="D">
+                    <span class="answer-letter">D</span>
+                    <span class="answer-label">DESCONOCIDO</span>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Feedback inmediato (modo entrenamiento) -->
+        <div id="feedback-instant" class="feedback-instant hidden"></div>
+        
+        <!-- Botón avanzar manual -->
+        <button id="btn-next-question" class="btn-retro btn-start hidden" style="margin-top:12px;">
+            SIGUIENTE PREGUNTA ►
+        </button>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 4: TEST ACTIVO (INDUCTIVO - Patrones)             -->
+    <!-- ========================================================== -->
+    <div id="screen-test-inductivo" class="screen">
+        <!-- Barra superior -->
+        <div class="test-topbar">
+            <div class="timer-container">
+                <span class="timer-icon">⏱️</span>
+                <span id="timer-display-inductivo" class="timer-display">6:00</span>
+            </div>
+            <div class="progress-container">
+                <span id="progress-text-inductivo" class="progress-text">Ejercicio 1/12</span>
+                <div class="progress-bar-track">
+                    <div id="progress-bar-fill-inductivo" class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Zona de patrones -->
+        <div class="inductivo-container">
+            <div class="inductivo-referencia">
+                <h3 class="inductivo-label">TABLAS DE REFERENCIA</h3>
+                <p class="inductivo-hint">Estas dos tablas siguen la MISMA regla. Descúbrela.</p>
+                <div class="inductivo-tables" id="inductivo-ref-tables"></div>
+            </div>
+            
+            <div class="inductivo-opciones">
+                <h3 class="inductivo-label">SELECCIONA LAS 2 TABLAS QUE SIGUEN LA MISMA REGLA</h3>
+                <div class="inductivo-tables" id="inductivo-opt-tables"></div>
+            </div>
+        </div>
+        
+        <button id="btn-inductivo-confirm" class="btn-retro btn-confirm" disabled>
+            CONFIRMAR SELECCIÓN
+        </button>
+        
+        <!-- Botón avanzar manual -->
+        <button id="btn-next-inductivo" class="btn-retro btn-start hidden" style="margin-top:12px;">
+            SIGUIENTE EJERCICIO ►
+        </button>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 5: TEST ACTIVO (CUESTIONARIOS - Trabajo/Situacional) -->
+    <!-- ========================================================== -->
+    <div id="screen-test-cuestionario" class="screen">
+        <div class="test-topbar">
+            <div class="timer-container">
+                <span class="timer-icon">⏱️</span>
+                <span id="timer-display-cuest" class="timer-display">--:--</span>
+            </div>
+            <div class="progress-container">
+                <span id="progress-text-cuest" class="progress-text">Pregunta 1/25</span>
+                <div class="progress-bar-track">
+                    <div id="progress-bar-fill-cuest" class="progress-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contenido del cuestionario (pares o afirmaciones) -->
+        <div id="cuestionario-content" class="cuestionario-content"></div>
+        
+        <div class="cuestionario-nav">
+            <button id="btn-cuest-prev" class="btn-retro" disabled>◄ ANTERIOR</button>
+            <button id="btn-cuest-next" class="btn-retro">SIGUIENTE ►</button>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 6: RESULTADOS POR TEST                             -->
+    <!-- ========================================================== -->
+    <div id="screen-results" class="screen">
+        <div class="results-container">
+            <h2 id="results-title" class="screen-title">RESULTADOS</h2>
+            
+            <div id="celebration-video" class="celebration-video">
+                <video id="video-celebracion" width="400" autoplay playsinline style="border-radius:8px;max-width:100%;">
+                    <source src="img/celebracion.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="results-summary">
+                <div class="result-card">
+                    <span class="result-number" id="result-score">0%</span>
+                    <span class="result-label">Puntaje</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number" id="result-correct">0</span>
+                    <span class="result-label">Aciertos</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number" id="result-wrong">0</span>
+                    <span class="result-label">Errores</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-number" id="result-time">00:00</span>
+                    <span class="result-label">Tiempo usado</span>
+                </div>
+            </div>
+            
+            <!-- Solo para test VFD: desglose de errores -->
+            <div id="results-errors" class="results-errors hidden">
+                <h3>📋 Desglose de errores</h3>
+                <div id="errors-list" class="errors-list"></div>
+            </div>
+            
+            <!-- Para cuestionarios: perfil cualitativo -->
+            <div id="results-profile" class="results-profile hidden">
+                <h3>📋 Perfil</h3>
+                <div id="profile-content"></div>
+            </div>
+            
+            <!-- Dashboard de estadísticas -->
+            <div id="results-dashboard" class="results-dashboard hidden">
+                <h3>📈 Dashboard de Rendimiento</h3>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h4>Aciertos vs Errores</h4>
+                        <canvas id="chart-dona"></canvas>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Tipos de Error</h4>
+                        <canvas id="chart-errores"></canvas>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Puntajes por Test</h4>
+                        <canvas id="chart-test-scores"></canvas>
+                    </div>
+                    <div class="dashboard-card">
+                        <h4>Evolución Histórica</h4>
+                        <canvas id="chart-history"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="results-actions">
+                <button id="btn-retry" class="btn-retro">🔄 REINTENTAR</button>
+                <button id="btn-menu-from-results" class="btn-retro">🏠 MENÚ PRINCIPAL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 7: RESULTADOS GLOBALES                             -->
+    <!-- ========================================================== -->
+    <div id="screen-global-results" class="screen">
+        <div class="results-container">
+            <h2 class="screen-title">📊 RESULTADOS GLOBALES</h2>
+            
+            <div id="global-scores" class="global-scores">
+                <!-- Se llena dinámicamente con los puntajes de cada test -->
+            </div>
+            
+            <div class="global-summary">
+                <h3>Puntaje Combinado (test cognitivos)</h3>
+                <span id="global-combined-score" class="result-number">--</span>
+            </div>
+            
+            <button id="btn-menu-from-global" class="btn-retro">🏠 MENÚ PRINCIPAL</button>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- PANTALLA 8: DASHBOARD COMPLETO                               -->
+    <!-- ========================================================== -->
+    <div id="screen-dashboard" class="screen">
+        <div class="results-container" style="max-width:950px;">
+            <h2 class="screen-title">📈 DASHBOARD DE ESTADÍSTICAS</h2>
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h4>Aciertos vs Errores (última sesión)</h4>
+                    <canvas id="chart-dona-global"></canvas>
+                </div>
+                <div class="dashboard-card">
+                    <h4>Puntajes por Test</h4>
+                    <canvas id="chart-test-scores-global"></canvas>
+                </div>
+                <div class="dashboard-card dashboard-card-wide">
+                    <h4>Evolución Histórica de Puntajes</h4>
+                    <canvas id="chart-history-global"></canvas>
+                </div>
+                <div class="dashboard-card dashboard-card-wide">
+                    <h4>Tipos de Error Más Frecuentes</h4>
+                    <canvas id="chart-errores-global"></canvas>
+                </div>
+            </div>
+            <div class="results-actions" style="margin-top:20px;">
+                <button id="btn-menu-from-dashboard" class="btn-retro">🏠 MENÚ PRINCIPAL</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- MODAL: CONFIGURACIÓN API KEY                                -->
+    <!-- ========================================================== -->
+    <div id="modal-api" class="modal-overlay hidden">
+        <div class="modal-box">
+            <h3 class="modal-title">🔑 Configurar API DeepSeek</h3>
+            <p class="modal-desc">Ingresa tu API Key una sola vez. Quedará guardada en este navegador.</p>
+            <input type="password" id="modal-api-input" class="api-key-input" placeholder="sk-xxxxxxxxxxxxxxxx">
+            <p class="api-key-hint" style="margin-top:4px;">
+                La key se usa para generar preguntas ilimitadas con IA en los test Numérico y Verbal.
+            </p>
+            <div class="modal-buttons">
+                <button id="btn-api-save" class="btn-retro btn-start">💾 GUARDAR</button>
+                <button id="btn-api-cancel" class="btn-retro">CANCELAR</button>
+                <button id="btn-api-delete" class="btn-retro" style="border-color:var(--rojo-error);color:var(--rojo-error);font-size:0.7rem;">🗑️ ELIMINAR KEY</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- SCRIPTS (orden importa: datos → motores → UI → controlador) -->
+    <!-- ========================================================== -->
+    <script src="js/data.js?v=3"></script>
+    <script src="js/questionbank.js?v=3"></script>
+    <script src="js/engine-vfd.js?v=3"></script>
+    <script src="js/engine-inductivo.js?v=3"></script>
+    <script src="js/patrones_db.js?v=3"></script>
+    <script src="js/engine-inductivo-db.js?v=3"></script>
+    <script src="js/deepseek.js?v=3"></script>
+    <script src="js/ui.js?v=3"></script>
+    <script src="js/app.js?v=3"></script>
+    
+	</body>
+</html>
+<!-- FIN BLOQUE 1 -->
