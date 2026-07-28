@@ -772,11 +772,17 @@ const App = (function() {
       var msg = '<strong>' + (esCorrecto ? '✅ ¡CORRECTO!' : '❌ INCORRECTO') + '</strong><br>';
       msg += evaluacion.mensaje + '<br>';
       if (ejercicio.esDB) {
-        var dif = '🟢 Fácil';
         var p = ejercicio.patron || '';
-        if (p.match(/^[23]-[23]-[23]|2-3-3|3-3/)) dif = '🔴 Difícil';
-        else if (p.match(/^4-[23]|^[23]-4/)) dif = '🟡 Intermedio';
-        msg += '<small style="opacity:0.8;">' + dif + ' | Patrón: ' + (ejercicio.patron || 'N/A') + ' | Eje: ' + (ejercicio.eje || 'N/A') + '</small>';
+        var dif = '🟢 Fácil';
+        var expl = 'El símbolo dominante aparece claramente más veces que los demás.';
+        if (p.match(/^[23]-[23]-[23]|2-3-3|3-3/)) {
+          dif = '🔴 Difícil';
+          expl = '¡Hay empate o el dominante NO es el más frecuente! Debes fijarte en las posiciones, no solo en contar.';
+        } else if (p.match(/^4-[23]|^[23]-4/)) {
+          dif = '🟡 Intermedio';
+          expl = 'El dominante gana por poco margen. Hay que verificar bien las posiciones.';
+        }
+        msg += '<br><small style="opacity:0.8;">' + dif + ' | ' + expl + '<br>Patrón: ' + (ejercicio.patron || 'N/A') + ' | Eje: ' + (ejercicio.eje || 'N/A') + '</small>';
       }
       feedback.innerHTML = msg;
     }
