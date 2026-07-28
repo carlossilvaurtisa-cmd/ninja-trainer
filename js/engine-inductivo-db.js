@@ -51,6 +51,7 @@ const EngineInductivoDB = (function() {
       eje: ej.eje || '',
       patron: ej.patron || '',
       simboloDom: ej.simbolo_dom || '',
+      colores: ej.colores || {},
       esDB: true
     };
   }

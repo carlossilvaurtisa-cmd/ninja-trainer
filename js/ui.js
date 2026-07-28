@@ -507,7 +507,7 @@ const UI = (function() {
       refContainer.innerHTML = '';
       if (ejercicio.referencia && Array.isArray(ejercicio.referencia)) {
         ejercicio.referencia.forEach(grid => {
-          const gridEl = crearGridIconos(grid, ejercicio.size || 2, false);
+          const gridEl = crearGridIconos(grid, ejercicio.size || 2, false, ejercicio.colores);
           if (gridEl) refContainer.appendChild(gridEl);
         });
       }
@@ -531,7 +531,7 @@ const UI = (function() {
       optContainer.innerHTML = '';
       if (ejercicio.opciones && Array.isArray(ejercicio.opciones)) {
         ejercicio.opciones.forEach((grid, idx) => {
-          const gridEl = crearGridIconos(grid, ejercicio.size || 2, true);
+          const gridEl = crearGridIconos(grid, ejercicio.size || 2, true, ejercicio.colores);
           if (gridEl) {
             gridEl.dataset.index = idx;
             gridEl.addEventListener('click', function() {
@@ -547,10 +547,10 @@ const UI = (function() {
     document.querySelectorAll('#inductivo-opt-tables .icon-grid').forEach(g => g.classList.remove('selected'));
   }
 
-  function crearGridIconos(grid, size, seleccionable) {
+  function crearGridIconos(grid, size, seleccionable, colores) {
     if (!grid || !Array.isArray(grid)) {
       console.error('crearGridIconos: grid inválido', grid);
-      return document.createElement('div'); // elemento vacío como fallback
+      return document.createElement('div');
     }
 
     const container = document.createElement('div');
@@ -564,6 +564,10 @@ const UI = (function() {
           const cell = document.createElement('span');
           cell.className = 'icon-cell';
           cell.textContent = icon || '?';
+          // Aplicar color del mapa de colores
+          if (colores && colores[icon]) {
+            cell.style.color = colores[icon];
+          }
           container.appendChild(cell);
         });
       });
