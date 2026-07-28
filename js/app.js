@@ -101,6 +101,17 @@ const App = (function() {
     // Botón dashboard
     document.getElementById('btn-dashboard').addEventListener('click', abrirDashboard);
 
+    // Botón curso de porcentajes
+    document.getElementById('btn-curso').addEventListener('click', function() {
+      alert('📚 Curso Interactivo de Porcentajes\n\n' +
+        'Es una aplicación de escritorio (Python).\n\n' +
+        'Para ejecutarla:\n' +
+        '1. Instala Python 3\n' +
+        '2. pip install customtkinter requests\n' +
+        '3. python curso_porcentajes.py\n\n' +
+        'El archivo está en la carpeta del proyecto.');
+    });
+
     // --- Modal API Key ---
     document.getElementById('btn-config-api').addEventListener('click', abrirModalAPI);
     document.getElementById('btn-api-save').addEventListener('click', guardarApiKey);
