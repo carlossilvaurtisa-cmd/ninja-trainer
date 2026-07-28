@@ -241,8 +241,8 @@ const UI = (function() {
         var x = e.clientX - rect.left;
         var y = e.clientY - rect.top;
         lens.style.backgroundImage = 'url(' + img.src + ')';
-        lens.style.backgroundSize = (rect.width * 3) + 'px ' + (rect.height * 3) + 'px';
-        lens.style.backgroundPosition = '-' + (x * 3 - 80) + 'px -' + (y * 3 - 80) + 'px';
+        lens.style.backgroundSize = (rect.width * 2) + 'px ' + (rect.height * 2) + 'px';
+        lens.style.backgroundPosition = '-' + (x * 2 - 160) + 'px -' + (y * 2 - 120) + 'px';
       });
       img.addEventListener('mouseleave', function() {
         lens.style.display = 'none';
