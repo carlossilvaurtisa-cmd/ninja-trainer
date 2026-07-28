@@ -772,7 +772,11 @@ const App = (function() {
       var msg = '<strong>' + (esCorrecto ? '✅ ¡CORRECTO!' : '❌ INCORRECTO') + '</strong><br>';
       msg += evaluacion.mensaje + '<br>';
       if (ejercicio.esDB) {
-        msg += '<small style="opacity:0.8;">Patrón: frecuencia ' + (ejercicio.patron || 'N/A') + ' | Eje: ' + (ejercicio.eje || 'N/A') + '</small>';
+        var dif = '🟢 Fácil';
+        var p = ejercicio.patron || '';
+        if (p.match(/^[23]-[23]-[23]|2-3-3|3-3/)) dif = '🔴 Difícil';
+        else if (p.match(/^4-[23]|^[23]-4/)) dif = '🟡 Intermedio';
+        msg += '<small style="opacity:0.8;">' + dif + ' | Patrón: ' + (ejercicio.patron || 'N/A') + ' | Eje: ' + (ejercicio.eje || 'N/A') + '</small>';
       }
       feedback.innerHTML = msg;
     }
