@@ -829,7 +829,7 @@ const DataBank = {
     titulo: 'Razonamiento Inductivo',
     tiempo: 6 * 60,
     totalPreguntas: 30,
-    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 30</p><p>Observa las <strong>dos tablas de referencia</strong> (izquierda). Ellas comparten una <strong>regla</strong> en común.</p><p>Luego, entre las <strong>cuatro tablas de opción</strong> (derecha), <strong>selecciona las 2</strong> que también siguen esa misma regla.</p>',
+    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 30</p><p>Observa las <strong>dos tablas de referencia</strong>. Ellas comparten:</p><ul><li>La <strong>misma frecuencia</strong> de cada símbolo (cuántas veces aparece cada figura).</li><li>Las <strong>mismas posiciones</strong> del símbolo predominante, pero una es el <strong>espejo</strong> de la otra (horizontal, vertical o 180°).</li></ul><p>Entre las <strong>cuatro opciones</strong>, <strong>selecciona las 2</strong> que también cumplen con el mismo patrón de frecuencia y posición.</p><p><em>Consejo:</em> Primero cuenta cuántas veces se repite cada símbolo, luego observa dónde está ubicado el que más se repite.</p>',
     iconos: ['♦','♥','♠','♣','★','●','▲','■','◆','⬟'],
     reglas: [
       { id:'espejo_h', nombre:'Espejo Horizontal', descripcion:'Los íconos se invierten de izquierda a derecha en cada fila.', aplicar:function(grid){return grid.map(row=>[...row].reverse());} },

@@ -512,16 +512,16 @@ const UI = (function() {
         });
       }
 
-      // Si es ejercicio DB, mostrar label con eje
-      if (ejercicio.esDB && ejercicio.eje) {
-        const labelEl = refContainer.querySelector('.inductivo-ref-label');
-        if (!labelEl) {
-          const infoLabel = document.createElement('span');
-          infoLabel.className = 'inductivo-ref-label';
-          infoLabel.textContent = ejercicio.eje + ' | ' + ejercicio.patron;
-          infoLabel.style.cssText = 'display:block;text-align:center;font-size:0.6rem;color:var(--azul-polvo);margin-top:4px;';
-          refContainer.appendChild(infoLabel);
-        }
+      // Si es ejercicio DB, mostrar label con eje y patrón
+      if (ejercicio.esDB) {
+        const infoLabel = document.createElement('span');
+        infoLabel.className = 'inductivo-ref-label';
+        const partes = [];
+        if (ejercicio.eje) partes.push(ejercicio.eje);
+        if (ejercicio.patron) partes.push('Frecuencia: ' + ejercicio.patron);
+        if (ejercicio.simboloDom) partes.push('Domina: ' + ejercicio.simboloDom);
+        infoLabel.textContent = partes.join(' | ');
+        refContainer.appendChild(infoLabel);
       }
     }
 
