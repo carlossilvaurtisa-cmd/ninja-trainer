@@ -159,6 +159,29 @@ html, body {
 }
 .btn-zoom:hover { border-color: var(--primario); background: var(--seleccionado); }
 /* FIN ZOOM */
+
+/* ============================================================
+   ESTRATEGIA INDUCTIVO
+   ============================================================ */
+.estrategia-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+.estrategia-card { background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; padding: 18px 20px; position: relative; }
+.estrategia-num { position: absolute; top: -12px; left: -12px; width: 34px; height: 34px; background: var(--primario); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1.1rem; }
+.estrategia-card h4 { font-size: 0.95rem; margin-bottom: 6px; color: var(--texto); }
+.estrategia-card p { font-size: 0.85rem; color: var(--texto-muted); line-height: 1.5; }
+.estrategia-niveles { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 12px; }
+.nivel-card { border-radius: 10px; padding: 16px 18px; text-align: center; }
+.nivel-facil { background: #D1E7DD; border: 1px solid #BADBCC; }
+.nivel-medio { background: #FFF3CD; border: 1px solid #FFECB5; }
+.nivel-dificil { background: #F8D7DA; border: 1px solid #F5C2C7; }
+.nivel-card h4 { font-size: 0.95rem; margin-bottom: 6px; }
+.nivel-card p { font-size: 0.8rem; line-height: 1.5; color: var(--texto); }
+.estrategia-ejemplo { background: var(--bg-alt); border-radius: 10px; padding: 20px; margin-top: 12px; }
+
+@media (max-width: 768px) {
+    .estrategia-grid { grid-template-columns: 1fr; }
+    .estrategia-niveles { grid-template-columns: 1fr; }
+}
+/* FIN ESTRATEGIA */
 .tabs-container { width: 100%; max-width: 900px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; overflow: visible; margin-bottom: 16px; box-shadow: var(--sombra); }
 .tabs-nav { display: flex; background: var(--bg-alt); border-bottom: 1px solid var(--borde); overflow-x: auto; }
 .tab-btn {

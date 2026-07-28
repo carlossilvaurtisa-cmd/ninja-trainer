@@ -117,8 +117,94 @@
     </div>
     
     <!-- ========================================================== -->
-    <!-- PANTALLA 2: INSTRUCCIONES DEL TEST                          -->
+    <!-- PANTALLA: ESTRATEGIA INDUCTIVO                              -->
     <!-- ========================================================== -->
+    <div id="screen-estrategia" class="screen">
+        <div class="instructions-container" style="max-width:850px;">
+            <h2 class="screen-title">🧠 Estrategia de Resolución</h2>
+            
+            <div class="estrategia-grid">
+                <div class="estrategia-card">
+                    <div class="estrategia-num">1</div>
+                    <h4>🔢 CUENTA</h4>
+                    <p>Cuántas veces aparece <strong>cada símbolo</strong> en Ref 1. Si uno destaca claramente (5 o 6 veces), es <span style="color:#198754">fácil</span>. Si hay empate, es <span style="color:#DC3545">difícil</span>.</p>
+                </div>
+                <div class="estrategia-card">
+                    <div class="estrategia-num">2</div>
+                    <h4>📍 UBICA</h4>
+                    <p>Encuentra <strong>dónde</strong> está el símbolo dominante. Usa las posiciones 0-8 de la cuadrícula 3×3 para identificarlo.</p>
+                </div>
+                <div class="estrategia-card">
+                    <div class="estrategia-num">3</div>
+                    <h4>🪞 COMPARA</h4>
+                    <p>Ref 2 es un <strong>espejo</strong> de Ref 1. Detecta el eje: <strong>↔ horizontal</strong> (columnas), <strong>↕ vertical</strong> (filas) o <strong>🔄 180°</strong> (giro completo).</p>
+                </div>
+                <div class="estrategia-card">
+                    <div class="estrategia-num">4</div>
+                    <h4>✅ VERIFICA</h4>
+                    <p>2 opciones correctas deben cumplir <strong>AMBAS</strong> condiciones: misma frecuencia Y posiciones que coincidan con Ref 1 o Ref 2.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top:24px;">🎯 Niveles de Dificultad</h3>
+            <div class="estrategia-niveles">
+                <div class="nivel-card nivel-facil">
+                    <h4>🟢 FÁCIL</h4>
+                    <p><strong>Patrones:</strong> 3-2-2-2, 4-2-2-1, 5-2-1-1, 6-1-1-1</p>
+                    <p>El dominante es <strong>obvio</strong>. Solo cuenta, ubica y compara.</p>
+                </div>
+                <div class="nivel-card nivel-medio">
+                    <h4>🟡 INTERMEDIO</h4>
+                    <p><strong>Patrón:</strong> 4-3-1-1</p>
+                    <p>El dominante gana por <strong>poco margen</strong> (4 vs 3). Verifica bien.</p>
+                </div>
+                <div class="nivel-card nivel-dificil">
+                    <h4>🔴 DIFÍCIL</h4>
+                    <p><strong>Patrones:</strong> 3-3-2-1, 2-3-2-2, 2-3-3-1</p>
+                    <p>¡<strong>TRAMPA!</strong> Hay empate o el dominante NO es el más frecuente. Mira las <strong>POSICIONES</strong>, no solo cuentes.</p>
+                </div>
+            </div>
+            
+            <h3 style="margin-top:24px;">📋 Ejemplo Visual</h3>
+            <div class="estrategia-ejemplo">
+                <div style="display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;">
+                    <div style="text-align:center;">
+                        <p style="font-weight:700;">Ref 1</p>
+                        <div class="icon-grid size-3" style="margin:0 auto;">
+                            <span class="icon-cell" style="color:#FF0000">■</span><span class="icon-cell" style="color:#0066FF">▲</span><span class="icon-cell" style="color:#FFCC00">★</span>
+                            <span class="icon-cell" style="color:#FF0000">■</span><span class="icon-cell" style="color:#FFCC00">★</span><span class="icon-cell" style="color:#FF6600">●</span>
+                            <span class="icon-cell" style="color:#FFCC00">★</span><span class="icon-cell" style="color:#FF6600">●</span><span class="icon-cell" style="color:#0066FF">▲</span>
+                        </div>
+                        <p style="font-size:0.8rem;margin-top:4px;">■=2 ★=3 ▲=2 ●=2</p>
+                    </div>
+                    <div style="font-size:2rem;font-weight:700;">→</div>
+                    <div style="text-align:center;">
+                        <p style="font-weight:700;">Ref 2 (espejo ↔)</p>
+                        <div class="icon-grid size-3" style="margin:0 auto;">
+                            <span class="icon-cell" style="color:#FFCC00">★</span><span class="icon-cell" style="color:#0066FF">▲</span><span class="icon-cell" style="color:#FF0000">■</span>
+                            <span class="icon-cell" style="color:#FF6600">●</span><span class="icon-cell" style="color:#FFCC00">★</span><span class="icon-cell" style="color:#FF0000">■</span>
+                            <span class="icon-cell" style="color:#0066FF">▲</span><span class="icon-cell" style="color:#FF6600">●</span><span class="icon-cell" style="color:#FFCC00">★</span>
+                        </div>
+                        <p style="font-size:0.8rem;margin-top:4px;">Columnas invertidas</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top:24px;">⚡ Consejos Rápidos</h3>
+            <ul style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <li>🔢 Cuenta primero, nunca adivines</li>
+                <li>🎨 Los colores fijos ayudan a identificar</li>
+                <li>🗑️ Descarta frecuencias muy distintas</li>
+                <li>👀 Verifica las 4 opciones antes de decidir</li>
+                <li>📐 En difíciles: mira posiciones, no cantidad</li>
+                <li>🪞 Practica los 3 ejes de espejo</li>
+            </ul>
+            
+            <div class="instructions-footer" style="margin-top:20px;">
+                <button onclick="UI.mostrarPantalla('screen-menu')" class="btn-retro">◄ VOLVER AL MENÚ</button>
+            </div>
+        </div>
+    </div>
     <div id="screen-instructions" class="screen">
         <div class="instructions-container">
             <h2 id="instructions-title" class="screen-title"></h2>
@@ -232,6 +318,10 @@
         
         <button id="btn-inductivo-confirm" class="btn-retro btn-confirm" disabled>
             CONFIRMAR SELECCIÓN
+        </button>
+        
+        <button onclick="UI.mostrarPantalla('screen-estrategia')" class="btn-retro" style="margin-top:8px;font-size:0.8rem;border-color:#FF6600;color:#FF6600;">
+            📖 ESTRATEGIA
         </button>
         
         <!-- Feedback del ejercicio -->

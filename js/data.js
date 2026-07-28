@@ -829,7 +829,7 @@ const DataBank = {
     titulo: 'Razonamiento Inductivo',
     tiempo: 6 * 60,
     totalPreguntas: 30,
-    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 30</p><p>Observa las <strong>dos tablas de referencia</strong>. Ellas comparten:</p><ul><li>La <strong>misma frecuencia</strong> de cada símbolo.</li><li>Las <strong>mismas posiciones</strong> del símbolo predominante, pero una es el <strong>espejo</strong> de la otra.</li></ul><p>Selecciona <strong>2 de las 4 opciones</strong> que siguen el mismo patrón.</p><p><a href="ESTRATEGIA_INDUCTIVO.md" target="_blank" style="color:#FF6600;">📖 Ver estrategia de resolución</a></p>',
+    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 30</p><p>Observa las <strong>dos tablas de referencia</strong>. Ellas comparten:</p><ul><li>La <strong>misma frecuencia</strong> de cada símbolo.</li><li>Las <strong>mismas posiciones</strong> del símbolo predominante, pero una es el <strong>espejo</strong> de la otra.</li></ul><p>Selecciona <strong>2 de las 4 opciones</strong> que siguen el mismo patrón.</p><p><span style="color:#FF6600;cursor:pointer;text-decoration:underline;" onclick="UI.mostrarPantalla(\'screen-estrategia\')">📖 Ver estrategia de resolución</span></p>',
     iconos: ['♦','♥','♠','♣','★','●','▲','■','◆','⬟'],
     reglas: [
       { id:'espejo_h', nombre:'Espejo Horizontal', descripcion:'Los íconos se invierten de izquierda a derecha en cada fila.', aplicar:function(grid){return grid.map(row=>[...row].reverse());} },
