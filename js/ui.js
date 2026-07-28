@@ -206,7 +206,19 @@ const UI = (function() {
     });
   }
 
-  // --- QUICKCHART.IO: Genera URL de gráfico como imagen ---
+  // Mapa FIJO: cada símbolo siempre tiene el mismo color
+  const COLOR_FIJO = {
+    '■': '#FF0000',  // Cuadrado = Rojo
+    '♦': '#0066FF',  // Diamante = Azul
+    '♥': '#FF0099',  // Corazón = Magenta
+    '♠': '#000000',  // Pica = Negro
+    '♣': '#00CC00',  // Trébol = Verde
+    '★': '#FFCC00',  // Estrella = Amarillo
+    '●': '#FF6600',  // Círculo = Naranja
+    '▲': '#9900CC',  // Triángulo = Púrpura
+    '◆': '#00CCCC',  // Rombo = Cian
+    '⬟': '#FF0000'   // Pentágono = Rojo
+  };
   function generarQuickChartURL(config, numSeries) {
     // Ajustar ancho según complejidad
     const width = (numSeries && numSeries >= 5) ? 700 : 580;
@@ -557,13 +569,8 @@ const UI = (function() {
           cell.textContent = icon || '?';
           // Aplicar color del mapa de colores
           if (colores && colores[icon]) {
-            // Mapear a colores saturados
-            const colorMap = {
-              '#e05555':'#FF0000','#4caf50':'#00CC00','#64b5f6':'#0066FF',
-              '#f0a040':'#FF6600','#ce93d8':'#9900CC','#ffeb3b':'#FFCC00',
-              '#80deea':'#00CCCC','#ef9a9a':'#FF0099','#a5d6a7':'#00AA00'
-            };
-            cell.style.color = colorMap[colores[icon]] || colores[icon];
+            // Color FIJO por símbolo (ignora colores del JSON)
+          cell.style.color = COLOR_FIJO[icon] || '#000000';
           }
           container.appendChild(cell);
         });
