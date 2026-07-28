@@ -263,7 +263,7 @@ const App = (function() {
       if (state.questionBankData) {
         state.preguntas = state.questionBankData.preguntas;
         state.usandoIA = false;
-        UI.iniciarTestVFD(testData, []);
+        UI.iniciarTestVFD(testData, testData.tabs);
         state.indiceActual = 0;
         state.respuestas = new Array(state.questionBankData.preguntas.length).fill(null);
         state.segundosRestantes = testData.tiempo || 9999;
@@ -286,7 +286,7 @@ const App = (function() {
         btnStart.disabled = true;
 
         const tipo = testKey === 'numerico' ? 'numerico' : 'verbal';
-        const tabsActivos = testKey === 'numerico' ? obtenerTabsActivos() : testData.tabs;
+        const tabsActivos = testData.tabs; // 6 pestañas por defecto
         state.preguntas = await DeepSeek.generarPreguntas(apiKey, tabsActivos, testData.totalPreguntas, tipo);
         state.usandoIA = true;
 
@@ -306,7 +306,7 @@ const App = (function() {
     switch (testKey) {
       case 'numerico':
       case 'verbal':
-        UI.iniciarTestVFD(testData, obtenerTabsActivos());
+        UI.iniciarTestVFD(testData, testData.tabs);
         break;
       case 'inductivo':
         UI.iniciarTestInductivo(testData);
@@ -340,8 +340,8 @@ const App = (function() {
   function generarPreguntasLocales(testKey, testData) {
     switch (testKey) {
       case 'numerico':
-        // Fallback: motor algorítmico (QuestionBank ya se intentó en iniciarTest)
-        state.preguntas = EngineVFD.generarSesionNumerico(obtenerTabsActivos(), testData.totalPreguntas);
+        // Siempre usar tabs por defecto (6 pestañas con temas diferentes)
+        state.preguntas = EngineVFD.generarSesionNumerico(testData.tabs, testData.totalPreguntas);
         break;
       case 'verbal':
         state.preguntas = EngineVFD.generarSesionVerbal(testData.tabs, testData.datosEstructurados, testData.totalPreguntas);
@@ -361,44 +361,9 @@ const App = (function() {
   }
 
   function cargarQuestionBank() {
-    if (state.testActual !== 'numerico') return null;
-    if (typeof QuestionBank === 'undefined') return null;
-    
-    // Intentar con el dataset elegido, o buscar cualquier ds_ disponible
-    let dsId = '';
-    const val = state.datasetElegido || '';
-    if (val.startsWith('ds_')) {
-      dsId = val.replace('ds_', '');
-    } else {
-      // Buscar cualquier key ds_ en los datasets
-      const datasets = state.testData?.datasets || {};
-      const dsKey = Object.keys(datasets).find(k => k.startsWith('ds_'));
-      if (dsKey) dsId = dsKey.replace('ds_', '');
-    }
-    
-    if (!dsId) return null;
-    const qb = QuestionBank[dsId];
-    if (!qb) return null;
-    
-    // Mezclar preguntas de los 3 tipos de gráfico
-    const todas = [
-      ...qb.preguntas.barras.map(q => ({...q, grafico: 'barras', imgPath: qb.imgBarras})),
-      ...qb.preguntas.lineas.map(q => ({...q, grafico: 'lineas', imgPath: qb.imgLineas})),
-      ...qb.preguntas.torta.map(q => ({...q, grafico: 'torta', imgPath: qb.imgTorta}))
-    ];
-    
-    const total = Math.min(state.testData.totalPreguntas, todas.length);
-    const shuffled = todas.sort(() => Math.random() - 0.5);
-    const dsName = state.testData?.datasets?.['ds_' + dsId]?.nombre || qb.nombre;
-    
-    return {
-      datasetNombre: dsName,
-      periodos: qb.periodos,
-      preguntas: shuffled.slice(0, total),
-      imgBarras: qb.imgBarras,
-      imgLineas: qb.imgLineas,
-      imgTorta: qb.imgTorta
-    };
+    // Desactivado: se usa el motor algorítmico con 6 pestañas originales
+    // para simular fielmente la prueba real (buscar la pestaña correcta)
+    return null;
   }
 
   function obtenerApiKey() {
