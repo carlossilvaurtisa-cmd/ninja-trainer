@@ -704,6 +704,8 @@ const App = (function() {
     }
     if (state.testActual === 'inductivo') {
       document.getElementById('btn-inductivo-confirm').disabled = true;
+      var fb = document.getElementById('inductivo-feedback');
+      if (fb) fb.classList.add('hidden');
       document.querySelectorAll('#inductivo-opt-tables .icon-grid').forEach(g => {
         g.classList.remove('selected');
         g.style.borderColor = '';
@@ -753,9 +755,27 @@ const App = (function() {
       grid.style.boxShadow = '';
       if (ejercicio.correctas.includes(i)) {
         grid.style.borderColor = '#198754';
-        grid.style.boxShadow = '0 0 0 2px #198754';
+        grid.style.boxShadow = '0 0 0 3px #198754';
+      }
+      if (seleccion.includes(i) && !ejercicio.correctas.includes(i)) {
+        grid.style.borderColor = '#DC3545';
+        grid.style.boxShadow = '0 0 0 3px #DC3545';
       }
     });
+
+    // Mostrar feedback con explicación
+    var feedback = document.getElementById('inductivo-feedback');
+    if (feedback) {
+      feedback.classList.remove('hidden');
+      var esCorrecto = evaluacion.esCorrecta;
+      feedback.className = 'feedback-instant ' + (esCorrecto ? 'correct' : 'incorrect');
+      var msg = '<strong>' + (esCorrecto ? '✅ ¡CORRECTO!' : '❌ INCORRECTO') + '</strong><br>';
+      msg += evaluacion.mensaje + '<br>';
+      if (ejercicio.esDB) {
+        msg += '<small style="opacity:0.8;">Patrón: frecuencia ' + (ejercicio.patron || 'N/A') + ' | Eje: ' + (ejercicio.eje || 'N/A') + '</small>';
+      }
+      feedback.innerHTML = msg;
+    }
 
     // Mostrar botón de avance manual (usar el del inductivo)
     const btnNext = document.getElementById('btn-next-inductivo') || document.getElementById('btn-next-question');
