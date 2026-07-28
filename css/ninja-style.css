@@ -208,11 +208,11 @@ html, body {
 .inductivo-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; justify-items: center; }
 .inductivo-ref-label { display: block; text-align: center; font-size: 0.75rem; color: var(--primario); margin-top: 4px; font-weight: 600; }
 
-.icon-grid { display: grid; gap: 6px; background: #000000; border: 3px solid #000000; border-radius: 8px; padding: 6px; }
-.icon-grid.size-2 { grid-template-columns: repeat(2, 120px); }
-.icon-grid.size-3 { grid-template-columns: repeat(3, 100px); }
-.icon-cell { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; background: #FFFFFF; border-radius: 4px; font-weight: 700; }
-.icon-grid.size-3 .icon-cell { width: 100px; height: 100px; font-size: 2.4rem; }
+.icon-grid { display: grid; gap: 3px; background: #000000; border: 3px solid #000000; border-radius: 6px; padding: 3px; }
+.icon-grid.size-2 { grid-template-columns: repeat(2, 60px); }
+.icon-grid.size-3 { grid-template-columns: repeat(3, 50px); }
+.icon-cell { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; background: #FFFFFF; border-radius: 3px; font-weight: 700; }
+.icon-grid.size-3 .icon-cell { width: 50px; height: 50px; font-size: 1.2rem; }
 .icon-grid.selectable { cursor: pointer; transition: all 0.15s; background: #000000; border-color: #000000; }
 .icon-grid.selectable:hover { border-color: var(--primario); }
 .icon-grid.selectable.selected { border-color: var(--primario); background: var(--seleccionado); box-shadow: 0 0 0 4px var(--primario); }
