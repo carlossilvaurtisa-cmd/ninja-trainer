@@ -208,14 +208,14 @@ html, body {
 .inductivo-tables { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
 .inductivo-ref-label { display: block; text-align: center; font-size: 0.75rem; color: var(--primario); margin-top: 4px; font-weight: 600; }
 
-.icon-grid { display: grid; gap: 3px; background: var(--bg-alt); border: 2px solid var(--borde); border-radius: 6px; padding: 4px; }
-.icon-grid.size-2 { grid-template-columns: repeat(2, 54px); }
-.icon-grid.size-3 { grid-template-columns: repeat(3, 48px); }
-.icon-cell { width: 54px; height: 54px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; background: #fff; border-radius: 4px; }
-.icon-grid.size-3 .icon-cell { width: 48px; height: 48px; font-size: 1.3rem; }
+.icon-grid { display: grid; gap: 4px; background: #000; border: 3px solid #000; border-radius: 6px; padding: 4px; }
+.icon-grid.size-2 { grid-template-columns: repeat(2, 72px); }
+.icon-grid.size-3 { grid-template-columns: repeat(3, 64px); }
+.icon-cell { width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; font-size: 2rem; background: #fff; border-radius: 3px; }
+.icon-grid.size-3 .icon-cell { width: 64px; height: 64px; font-size: 1.7rem; }
 .icon-grid.selectable { cursor: pointer; transition: all 0.15s; }
 .icon-grid.selectable:hover { border-color: var(--primario); transform: scale(1.02); }
-.icon-grid.selectable.selected { border-color: var(--primario); background: var(--seleccionado); box-shadow: 0 0 0 2px var(--primario); }
+.icon-grid.selectable.selected { border-color: var(--primario); background: var(--seleccionado); box-shadow: 0 0 0 3px var(--primario); }
 
 /* ============================================================
    CUESTIONARIOS
