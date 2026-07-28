@@ -1,44 +1,40 @@
-/* Banco de preguntas V/F/D con gráficos reales */
+/* Banco de preguntas V/F/D con identificación de gráfico */
 var QuestionBank = {
   "001": {
     "id": "001",
     "nombre": "Exportación de Frutas (Miles Ton)",
-    "periodos": "Trimestres 2023 | Variables: 5",
+    "periodos": "2023",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Uva tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre exportación de frutas (miles ton) (Trimestres 2023). Uva tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Uva=450, el mayor en T1.",
+          "explicacion": "Uva=450 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Manzana alcanza un valor de 405.",
+          "enunciado": "gráfico de barras agrupadas donde exportación de frutas (miles ton) se compara por T1 a T4. Manzana registra 405 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Manzana=405 en T3.",
+          "explicacion": "El valor de Manzana en T3 es exactamente 405.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Cereza tiene un valor de 688.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton). Cereza alcanza 663 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Cereza en T4 es 510, no 688.",
+          "explicacion": "Cereza vale 510 en T4, no 663.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Kiwi supera a Arándano.",
+          "enunciado": "gráfico de barras agrupadas sobre exportación de frutas (miles ton). En T2, Kiwi supera en valor a Arándano.",
           "respuesta": "F",
           "explicacion": "En T2, Arándano=250 > Kiwi=190.",
           "tipo": "barras"
@@ -46,17 +42,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Uva se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton). La caida de Uva entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Uva pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Uva y Manzana es de 15.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton) (Trimestres 2023). La diferencia entre Uva y Manzana en T3 es de 15 unidades.",
           "respuesta": "V",
           "explicacion": "Uva(420) - Manzana(405) = 15.",
           "tipo": "barras"
@@ -64,8 +58,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Uva y Manzana suman 880.",
+          "enunciado": "gráfico de barras agrupadas donde Uva es la categoría dominante y Kiwi la más pequeña. En T2, Uva y Manzana suman 880.",
           "respuesta": "V",
           "explicacion": "470 + 410 = 880.",
           "tipo": "barras"
@@ -73,73 +66,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Cereza y Arándano es de 287.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton). La diferencia entre Cereza y Arándano en T4 es de 247.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 190, no 287.",
+          "explicacion": "La diferencia real es 190, no 247.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 519.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Cereza muestra un crecimiento excepcional del 325%. El promedio en T4 es 523.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 402.",
+          "explicacion": "El promedio real en T4 es 402, no 523.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre exportación de frutas (miles ton). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Cereza creció un +325% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton) donde Cereza muestra un crecimiento excepcional del 325%. Especificamente, Cereza crecio un +325% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Cereza pasó de 120 a 510, un cambio del +325%.",
+          "explicacion": "Cereza paso de 120 a 510 = +325%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Cereza es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Cereza es la variable con mayor diferencia entre su valor maximo y minimo (rango: 390).",
           "respuesta": "V",
-          "explicacion": "Rango de Cereza: 390.",
+          "explicacion": "El rango de Cereza es efectivamente 390.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Arándano creció un +52%.",
+          "enunciado": "gráfico de barras agrupadas sobre exportación de frutas (miles ton). Arándano vario un +81% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Arándano es +52%, no +52%.",
+          "explicacion": "Arándano vario +52%, no +81%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Kiwi es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de exportación de frutas (miles ton) (Trimestres 2023). En T4, Kiwi es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Uva tiene el mayor valor (510), no Kiwi.",
+          "explicacion": "En T4 el mayor es Uva (510), no Kiwi.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Uva respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde exportación de frutas (miles ton). El cambio de tendencia de Uva se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -147,136 +132,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Uva alcanza exactamente 420.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton). El punto de Uva en T3 marca exactamente 420.",
           "respuesta": "V",
-          "explicacion": "El punto de Uva en T3 marca 420.",
+          "explicacion": "El valor de Uva en T3 es 420.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Uva finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre exportación de frutas (miles ton) donde los marcadores diferencian cada variable. Uva termina en T4 con el valor mas alto: 510.",
           "respuesta": "V",
-          "explicacion": "Uva=510, el mayor en T4.",
+          "explicacion": "Uva lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Manzana es 205.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton) (Trimestres 2023). Manzana registra 533 en T2.",
           "respuesta": "F",
-          "explicacion": "Manzana vale 410 en T2.",
+          "explicacion": "Manzana vale 410 en T2, no 533.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Cereza muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton) con marcadores distintos. Cereza muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Cereza aumenta en cada período consecutivo.",
+          "explicacion": "Cereza crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Uva representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton). El valor inicial de Uva representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Cereza aumentó en 390 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para exportación de frutas (miles ton). Cereza aumento en 390 unidades de T1 a T4 (+325%).",
           "respuesta": "V",
-          "explicacion": "De 120 a 510: cambio de 390 (+325%).",
+          "explicacion": "De 120 a 510: 390 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Cereza (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton). La curva de Cereza tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +133%.",
+          "explicacion": "Cereza crece +325%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Kiwi supera a Uva en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre exportación de frutas (miles ton) (Trimestres 2023). Kiwi supera a Uva en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Uva mantiene valores superiores a Kiwi en todos los períodos.",
+          "explicacion": "Uva mantiene valores superiores a Kiwi en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Arándano alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton). Arándano alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Arándano está en T4 (320).",
+          "explicacion": "El maximo de Arándano esta en T4 (320).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre exportación de frutas (miles ton). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Cereza tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Cereza varía un +325%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton) donde Cereza muestra un crecimiento excepcional del 325%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para exportación de frutas (miles ton). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Cereza, Arándano, Kiwi crece en todos los períodos consecutivos.",
+          "explicacion": "Cereza, Arándano, Kiwi crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Manzana varió un +19%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre exportación de frutas (miles ton). Manzana vario un +33% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Manzana es +10%.",
+          "explicacion": "La variacion real de Manzana es +10%, no +33%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Kiwi supera a Uva.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de exportación de frutas (miles ton). En algun momento Kiwi logra superar a Uva.",
           "respuesta": "F",
-          "explicacion": "Uva siempre está por encima de Kiwi en todos los períodos.",
+          "explicacion": "Uva siempre esta por encima de Kiwi.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Uva alcanzaría un valor de 536 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde exportación de frutas (miles ton). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -284,53 +254,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Uva representa el 28.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). Uva representa el 28.1% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 28.1%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Kiwi es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton) donde el total central es 6.590. Kiwi es la porcion mas pequena (12.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 12.4% del total.",
+          "explicacion": "Kiwi tiene solo el 12.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Manzana representa el 21.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). Manzana ocupa el 32.3% del total.",
           "respuesta": "F",
-          "explicacion": "Manzana representa el 24.8% del total, no el 21.6%.",
+          "explicacion": "Manzana ocupa el 24.8%, no el 32.3%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Kiwi es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton). Kiwi es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Uva es quien más contribuye (28.1%), no Kiwi.",
+          "explicacion": "La mayor contribucion es Uva (28.1%), no Kiwi.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Uva y Manzana suman el 52.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 6.590 sobre exportación de frutas (miles ton). Uva y Manzana suman el 52.9% del total.",
           "respuesta": "V",
           "explicacion": "28.1% + 24.8% = 52.9%.",
           "tipo": "torta"
@@ -338,82 +302,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 15.6 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). La diferencia entre la mayor y menor porcion es de 15.6 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "28.1% - 12.4% = 15.6 puntos.",
+          "explicacion": "28.1% - 12.4% = 15.6.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Cereza y Arándano juntos representan el 43.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton). Cereza y Arándano juntos representan el 45.1% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 34.7%, no 43.3%.",
+          "explicacion": "Suman 34.7%, no 45.1%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton) con centro 6.590. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Uva, Manzana.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Uva, Manzana, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (6.590) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton). El total de 6.590 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Uva es aproximadamente 2.3 veces mayor que Kiwi en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). Uva es aproximadamente 2.3 veces mayor que Kiwi en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "1.850 ÷ 820 ≈ 2.3.",
+          "explicacion": "1.850 / 820 = 2.3.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Uva, Manzana, Cereza) concentran el 71.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton). Las tres categorias principales (Uva, Manzana, Cereza) concentran el 71.5% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 71.5%.",
+          "explicacion": "Efectivamente suman 71.5%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Arándano tendría un valor de 1.646.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton) con centro 6.590. Si el total se duplicara, Arándano tendria 2.743.",
           "respuesta": "F",
-          "explicacion": "Arándano duplicado sería 2.110, no 1.646.",
+          "explicacion": "Arándano duplicado seria 2.110, no 2.743.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Manzana y Cereza es 0.7:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre exportación de frutas (miles ton). La razon entre Manzana y Cereza es 4.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razon real es 1.3:1, no 4.3:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de exportación de frutas (miles ton). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -425,42 +380,38 @@ var QuestionBank = {
   "002": {
     "id": "002",
     "nombre": "Producción de Energía (GWh)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Hidroeléctrica tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de energía (gwh) (Años 2020-2023). Hidroeléctrica tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Hidroeléctrica=6.200, el mayor en T1.",
+          "explicacion": "Hidroeléctrica=6.200 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Eólica alcanza un valor de 2.950.",
+          "enunciado": "gráfico de barras agrupadas donde producción de energía (gwh) se compara por T1 a T4. Eólica registra 2.950 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Eólica=2.950 en T3.",
+          "explicacion": "El valor de Eólica en T3 es exactamente 2.950.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Hidroeléctrica tiene un valor de 5.895.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh). Hidroeléctrica alcanza 8.515 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Hidroeléctrica en T4 es 6.550, no 5.895.",
+          "explicacion": "Hidroeléctrica vale 6.550 en T4, no 8.515.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Gas Natural supera a Carbón.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de energía (gwh). En T2, Gas Natural supera en valor a Carbón.",
           "respuesta": "F",
           "explicacion": "En T2, Carbón=4.700 > Gas Natural=3.500.",
           "tipo": "barras"
@@ -468,17 +419,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Solar se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh). La caida de Hidroeléctrica entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Solar pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Solar y Eólica es de 350.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh) (Años 2020-2023). La diferencia entre Solar y Eólica en T3 es de 350 unidades.",
           "respuesta": "V",
           "explicacion": "Solar(2.600) - Eólica(2.950) = 350.",
           "tipo": "barras"
@@ -486,8 +435,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Hidroeléctrica y Carbón suman 10.750.",
+          "enunciado": "gráfico de barras agrupadas donde Hidroeléctrica es la categoría dominante y Solar la más pequeña. En T2, Hidroeléctrica y Carbón suman 10.750.",
           "respuesta": "V",
           "explicacion": "6.050 + 4.700 = 10.750.",
           "tipo": "barras"
@@ -495,73 +443,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Hidroeléctrica y Carbón es de 4.125.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh). La diferencia entre Hidroeléctrica y Carbón en T4 es de 3.575.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.750, no 4.125.",
+          "explicacion": "La diferencia real es 2.750, no 3.575.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 6.811.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Solar muestra un crecimiento excepcional del 78%. El promedio en T4 es 5.239.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 4.030.",
+          "explicacion": "El promedio real en T4 es 4.030, no 5.239.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de energía (gwh). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Solar creció un +78% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh) donde Solar muestra un crecimiento excepcional del 78%. Especificamente, Solar crecio un +78% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Solar pasó de 1.800 a 3.200, un cambio del +78%.",
+          "explicacion": "Solar paso de 1.800 a 3.200 = +78%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Solar es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Solar es la variable con mayor diferencia entre su valor maximo y minimo (rango: 1.400).",
           "respuesta": "V",
-          "explicacion": "Rango de Solar: 1.400.",
+          "explicacion": "El rango de Solar es efectivamente 1.400.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Carbón creció un -44%.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de energía (gwh). Carbón vario un -11% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Carbón es -25%, no -44%.",
+          "explicacion": "Carbón vario -25%, no -11%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Solar es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de producción de energía (gwh) (Años 2020-2023). En T4, Solar es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Hidroeléctrica tiene el mayor valor (6.550), no Solar.",
+          "explicacion": "En T4 el mayor es Hidroeléctrica (6.550), no Solar.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Solar respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde producción de energía (gwh). El cambio de tendencia de Hidroeléctrica se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -569,136 +509,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Solar alcanza exactamente 2.600.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh). El punto de Solar en T3 marca exactamente 2.600.",
           "respuesta": "V",
-          "explicacion": "El punto de Solar en T3 marca 2.600.",
+          "explicacion": "El valor de Solar en T3 es 2.600.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Hidroeléctrica finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de energía (gwh) donde los marcadores diferencian cada variable. Hidroeléctrica termina en T4 con el valor mas alto: 6.550.",
           "respuesta": "V",
-          "explicacion": "Hidroeléctrica=6.550, el mayor en T4.",
+          "explicacion": "Hidroeléctrica lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Eólica es 2.340.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh) (Años 2020-2023). Eólica registra 3.380 en T2.",
           "respuesta": "F",
-          "explicacion": "Eólica vale 2.600 en T2.",
+          "explicacion": "Eólica vale 2.600 en T2, no 3.380.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Carbón muestra una tendencia creciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh) con marcadores distintos. Carbón muestra una tendencia creciente.",
           "respuesta": "F",
-          "explicacion": "Carbón disminuye en cada período consecutivo.",
+          "explicacion": "Carbón decrece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Solar representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh). El valor inicial de Hidroeléctrica representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Hidroeléctrica aumentó en 350 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para producción de energía (gwh). Hidroeléctrica aumento en 350 unidades de T1 a T4 (+6%).",
           "respuesta": "V",
-          "explicacion": "De 6.200 a 6.550: cambio de 350 (+6%).",
+          "explicacion": "De 6.200 a 6.550: 350 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Solar (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh). La curva de Solar tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +24%.",
+          "explicacion": "Solar crece +78%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Solar supera a Hidroeléctrica en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de energía (gwh) (Años 2020-2023). Solar supera a Hidroeléctrica en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Hidroeléctrica mantiene valores superiores a Solar en todos los períodos.",
+          "explicacion": "Hidroeléctrica mantiene valores superiores a Solar en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Carbón alcanza su valor máximo en T2.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh). Carbón alcanza su punto maximo en T2.",
           "respuesta": "F",
-          "explicacion": "El máximo de Carbón está en T1 (5.100).",
+          "explicacion": "El maximo de Carbón esta en T1 (5.100).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de energía (gwh). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Solar tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Solar varía un +78%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh) donde Solar muestra un crecimiento excepcional del 78%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para producción de energía (gwh). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Solar, Eólica crece en todos los períodos consecutivos.",
+          "explicacion": "Solar, Eólica crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Carbón varió un -20%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de energía (gwh). Carbón vario un -53% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Carbón es -25%.",
+          "explicacion": "La variacion real de Carbón es -25%, no -53%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Solar supera a Hidroeléctrica.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de energía (gwh). En algun momento Solar logra superar a Hidroeléctrica.",
           "respuesta": "F",
-          "explicacion": "Hidroeléctrica siempre está por encima de Solar en todos los períodos.",
+          "explicacion": "Hidroeléctrica siempre esta por encima de Solar.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Hidroeléctrica alcanzaría un valor de 6.878 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde producción de energía (gwh). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -706,53 +631,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Hidroeléctrica representa el 32.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). Hidroeléctrica representa el 32.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 32.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Solar es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh) donde el total central es 77.600. Solar es la porcion mas pequena (12.5%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 12.5% del total.",
+          "explicacion": "Solar tiene solo el 12.5% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Eólica representa el 18.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). Eólica ocupa el 18.8% del total.",
           "respuesta": "F",
-          "explicacion": "Eólica representa el 14.5% del total, no el 18.3%.",
+          "explicacion": "Eólica ocupa el 14.5%, no el 18.8%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Solar es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh). Solar es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Hidroeléctrica es quien más contribuye (32.5%), no Solar.",
+          "explicacion": "La mayor contribucion es Hidroeléctrica (32.5%), no Solar.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Solar y Eólica suman el 27.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 77.600 sobre producción de energía (gwh). Solar y Eólica suman el 27.0% del total.",
           "respuesta": "V",
           "explicacion": "12.5% + 14.5% = 27.0%.",
           "tipo": "torta"
@@ -760,82 +679,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 20.0 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). La diferencia entre la mayor y menor porcion es de 20.0 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "32.5% - 12.5% = 20.0 puntos.",
+          "explicacion": "32.5% - 12.5% = 20.0.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Hidroeléctrica y Carbón juntos representan el 39.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh). Hidroeléctrica y Carbón juntos representan el 72.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 55.4%, no 39.3%.",
+          "explicacion": "Suman 55.4%, no 72.0%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh) con centro 77.600. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Hidroeléctrica, Carbón.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Hidroeléctrica, Carbón, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (77.600) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh). El total de 77.600 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Hidroeléctrica es aproximadamente 2.6 veces mayor que Solar en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). Hidroeléctrica es aproximadamente 2.6 veces mayor que Solar en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "25.200 ÷ 9.700 ≈ 2.6.",
+          "explicacion": "25.200 / 9.700 = 2.6.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Hidroeléctrica, Carbón, Gas Natural) concentran el 73.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh). Las tres categorias principales (Hidroeléctrica, Carbón, Gas Natural) concentran el 73.0% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 73.0%.",
+          "explicacion": "Efectivamente suman 73.0%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Carbón tendría un valor de 49.484.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh) con centro 77.600. Si el total se duplicara, Carbón tendria 46.280.",
           "respuesta": "F",
-          "explicacion": "Carbón duplicado sería 35.600, no 49.484.",
+          "explicacion": "Carbón duplicado seria 35.600, no 46.280.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Eólica y Hidroeléctrica es 0.7:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de energía (gwh). La razon entre Eólica y Hidroeléctrica es 3.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.4:1.",
+          "explicacion": "La razon real es 0.4:1, no 3.4:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de energía (gwh). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -847,42 +757,38 @@ var QuestionBank = {
   "003": {
     "id": "003",
     "nombre": "Ventas de Smartphones (Miles Unid)",
-    "periodos": "Trimestres 2024 | Variables: 5",
+    "periodos": "2024",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Samsung tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de smartphones (miles unid) (Trimestres 2024). Samsung tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Samsung=780, el mayor en T1.",
+          "explicacion": "Samsung=780 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Apple alcanza un valor de 690.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de smartphones (miles unid) se compara por T1 a T4. Apple registra 690 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Apple=690 en T3.",
+          "explicacion": "El valor de Apple en T3 es exactamente 690.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Xiaomi tiene un valor de 506.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid). Xiaomi alcanza 793 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Xiaomi en T4 es 610, no 506.",
+          "explicacion": "Xiaomi vale 610 en T4, no 793.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Honor supera a Motorola.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de smartphones (miles unid). En T2, Honor supera en valor a Motorola.",
           "respuesta": "F",
           "explicacion": "En T2, Motorola=230 > Honor=150.",
           "tipo": "barras"
@@ -890,17 +796,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Samsung se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid). La caida de Samsung entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Samsung pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Samsung y Apple es de 100.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid) (Trimestres 2024). La diferencia entre Samsung y Apple en T3 es de 100 unidades.",
           "respuesta": "V",
           "explicacion": "Samsung(790) - Apple(690) = 100.",
           "tipo": "barras"
@@ -908,8 +812,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Samsung y Apple suman 1.510.",
+          "enunciado": "gráfico de barras agrupadas donde Samsung es la categoría dominante y Honor la más pequeña. En T2, Samsung y Apple suman 1.510.",
           "respuesta": "V",
           "explicacion": "810 + 700 = 1.510.",
           "tipo": "barras"
@@ -917,73 +820,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Xiaomi y Motorola es de 539.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid). La diferencia entre Xiaomi y Motorola en T4 es de 455.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 350, no 539.",
+          "explicacion": "La diferencia real es 350, no 455.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 383.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Honor muestra un crecimiento excepcional del 62%. El promedio en T4 es 711.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 547.",
+          "explicacion": "El promedio real en T4 es 547, no 711.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de smartphones (miles unid). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Honor creció un +62% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid) donde Honor muestra un crecimiento excepcional del 62%. Especificamente, Honor crecio un +62% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Honor pasó de 120 a 195, un cambio del +62%.",
+          "explicacion": "Honor paso de 120 a 195 = +62%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Apple es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Apple es la variable con mayor diferencia entre su valor maximo y minimo (rango: 180).",
           "respuesta": "V",
-          "explicacion": "Rango de Apple: 180.",
+          "explicacion": "El rango de Apple es efectivamente 180.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Motorola creció un +52%.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de smartphones (miles unid). Motorola vario un +44% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Motorola es +24%, no +52%.",
+          "explicacion": "Motorola vario +24%, no +44%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Honor es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de ventas de smartphones (miles unid) (Trimestres 2024). En T4, Honor es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Samsung tiene el mayor valor (850), no Honor.",
+          "explicacion": "En T4 el mayor es Samsung (850), no Honor.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Samsung respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de smartphones (miles unid). El cambio de tendencia de Samsung se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -991,136 +886,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Samsung alcanza exactamente 790.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid). El punto de Samsung en T3 marca exactamente 790.",
           "respuesta": "V",
-          "explicacion": "El punto de Samsung en T3 marca 790.",
+          "explicacion": "El valor de Samsung en T3 es 790.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Samsung finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de smartphones (miles unid) donde los marcadores diferencian cada variable. Samsung termina en T4 con el valor mas alto: 850.",
           "respuesta": "V",
-          "explicacion": "Samsung=850, el mayor en T4.",
+          "explicacion": "Samsung lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Apple es 868.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid) (Trimestres 2024). Apple registra 910 en T2.",
           "respuesta": "F",
-          "explicacion": "Apple vale 700 en T2.",
+          "explicacion": "Apple vale 700 en T2, no 910.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Xiaomi muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid) con marcadores distintos. Xiaomi muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Xiaomi aumenta en cada período consecutivo.",
+          "explicacion": "Xiaomi crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Samsung representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid). El valor inicial de Samsung representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Xiaomi aumentó en 90 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para ventas de smartphones (miles unid). Xiaomi aumento en 90 unidades de T1 a T4 (+17%).",
           "respuesta": "V",
-          "explicacion": "De 520 a 610: cambio de 90 (+17%).",
+          "explicacion": "De 520 a 610: 90 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Honor (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid). La curva de Honor tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +25%.",
+          "explicacion": "Honor crece +62%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Honor supera a Samsung en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de smartphones (miles unid) (Trimestres 2024). Honor supera a Samsung en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Samsung mantiene valores superiores a Honor en todos los períodos.",
+          "explicacion": "Samsung mantiene valores superiores a Honor en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Motorola alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid). Motorola alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Motorola está en T4 (260).",
+          "explicacion": "El maximo de Motorola esta en T4 (260).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de smartphones (miles unid). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Honor tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Honor varía un +62%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid) donde Honor muestra un crecimiento excepcional del 62%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para ventas de smartphones (miles unid). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Xiaomi, Motorola, Honor crece en todos los períodos consecutivos.",
+          "explicacion": "Xiaomi, Motorola, Honor crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Samsung varió un +20%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de smartphones (miles unid). Samsung vario un +31% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Samsung es +9%.",
+          "explicacion": "La variacion real de Samsung es +9%, no +31%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Honor supera a Samsung.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de smartphones (miles unid). En algun momento Honor logra superar a Samsung.",
           "respuesta": "F",
-          "explicacion": "Samsung siempre está por encima de Honor en todos los períodos.",
+          "explicacion": "Samsung siempre esta por encima de Honor.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Samsung alcanzaría un valor de 892 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde ventas de smartphones (miles unid). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -1128,53 +1008,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Samsung representa el 32.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). Samsung representa el 32.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 32.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Honor es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid) donde el total central es 9.930. Honor es la porcion mas pequena (6.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 6.4% del total.",
+          "explicacion": "Honor tiene solo el 6.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Apple representa el 42.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). Apple ocupa el 37.3% del total.",
           "respuesta": "F",
-          "explicacion": "Apple representa el 28.7% del total, no el 42.5%.",
+          "explicacion": "Apple ocupa el 28.7%, no el 37.3%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Honor es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid). Honor es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Samsung es quien más contribuye (32.5%), no Honor.",
+          "explicacion": "La mayor contribucion es Samsung (32.5%), no Honor.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Samsung y Apple suman el 61.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 9.930 sobre ventas de smartphones (miles unid). Samsung y Apple suman el 61.2% del total.",
           "respuesta": "V",
           "explicacion": "32.5% + 28.7% = 61.2%.",
           "tipo": "torta"
@@ -1182,82 +1056,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 26.1 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). La diferencia entre la mayor y menor porcion es de 26.1 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "32.5% - 6.4% = 26.1 puntos.",
+          "explicacion": "32.5% - 6.4% = 26.1.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Xiaomi y Motorola juntos representan el 25.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid). Xiaomi y Motorola juntos representan el 42.1% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.4%, no 25.9%.",
+          "explicacion": "Suman 32.4%, no 42.1%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid) con centro 9.930. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Samsung, Apple, Xiaomi.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Samsung, Apple, Xiaomi, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (9.930) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid). El total de 9.930 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Samsung es aproximadamente 5.1 veces mayor que Honor en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). Samsung es aproximadamente 5.1 veces mayor que Honor en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "3.230 ÷ 635 ≈ 5.1.",
+          "explicacion": "3.230 / 635 = 5.1.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Samsung, Apple, Xiaomi) concentran el 84.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid). Las tres categorias principales (Samsung, Apple, Xiaomi) concentran el 84.1% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 84.1%.",
+          "explicacion": "Efectivamente suman 84.1%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Motorola tendría un valor de 2.627.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid) con centro 9.930. Si el total se duplicara, Motorola tendria 2.457.",
           "respuesta": "F",
-          "explicacion": "Motorola duplicado sería 1.890, no 2.627.",
+          "explicacion": "Motorola duplicado seria 1.890, no 2.457.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Apple y Xiaomi es 1.6:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de smartphones (miles unid). La razon entre Apple y Xiaomi es 4.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razon real es 1.3:1, no 4.3:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de smartphones (miles unid). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -1269,42 +1134,38 @@ var QuestionBank = {
   "004": {
     "id": "004",
     "nombre": "Producción Audiovisual (Proyectos)",
-    "periodos": "Años 2021-2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Publicidad tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre producción audiovisual (proyectos) (Años 2021-2024). Publicidad tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Publicidad=180, el mayor en T1.",
+          "explicacion": "Publicidad=180 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Documentales alcanza un valor de 58.",
+          "enunciado": "gráfico de barras agrupadas donde producción audiovisual (proyectos) se compara por T1 a T4. Documentales registra 58 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Documentales=58 en T3.",
+          "explicacion": "El valor de Documentales en T3 es exactamente 58.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Videoclips tiene un valor de 162.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos). Videoclips alcanza 135 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Videoclips en T4 es 104, no 162.",
+          "explicacion": "Videoclips vale 104 en T4, no 135.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Series supera a Cortometrajes.",
+          "enunciado": "gráfico de barras agrupadas sobre producción audiovisual (proyectos). En T2, Series supera en valor a Cortometrajes.",
           "respuesta": "F",
           "explicacion": "En T2, Cortometrajes=34 > Series=15.",
           "tipo": "barras"
@@ -1312,17 +1173,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Publicidad se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos). La caida de Publicidad entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Publicidad pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Publicidad y Documentales es de 182.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos) (Años 2021-2024). La diferencia entre Publicidad y Documentales en T3 es de 182 unidades.",
           "respuesta": "V",
           "explicacion": "Publicidad(240) - Documentales(58) = 182.",
           "tipo": "barras"
@@ -1330,8 +1189,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Publicidad y Videoclips suman 287.",
+          "enunciado": "gráfico de barras agrupadas donde Publicidad es la categoría dominante y Series la más pequeña. En T2, Publicidad y Videoclips suman 287.",
           "respuesta": "V",
           "explicacion": "205 + 82 = 287.",
           "tipo": "barras"
@@ -1339,73 +1197,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Videoclips y Series es de 119.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos). La diferencia entre Videoclips y Series en T4 es de 109.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 84, no 119.",
+          "explicacion": "La diferencia real es 84, no 109.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 75.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Series muestra un crecimiento excepcional del 67%. El promedio en T4 es 130.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 100.",
+          "explicacion": "El promedio real en T4 es 100, no 130.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre producción audiovisual (proyectos). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Series creció un +67% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos) donde Series muestra un crecimiento excepcional del 67%. Especificamente, Series crecio un +67% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Series pasó de 12 a 20, un cambio del +67%.",
+          "explicacion": "Series paso de 12 a 20 = +67%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Publicidad es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Publicidad es la variable con mayor diferencia entre su valor maximo y minimo (rango: 85).",
           "respuesta": "V",
-          "explicacion": "Rango de Publicidad: 85.",
+          "explicacion": "El rango de Publicidad es efectivamente 85.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Series creció un +115%.",
+          "enunciado": "gráfico de barras agrupadas sobre producción audiovisual (proyectos). Series vario un +100% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Series es +67%, no +115%.",
+          "explicacion": "Series vario +67%, no +100%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Series es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de producción audiovisual (proyectos) (Años 2021-2024). En T4, Series es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Publicidad tiene el mayor valor (265), no Series.",
+          "explicacion": "En T4 el mayor es Publicidad (265), no Series.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Publicidad respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde producción audiovisual (proyectos). El cambio de tendencia de Publicidad se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -1413,136 +1263,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Publicidad alcanza exactamente 240.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos). El punto de Publicidad en T3 marca exactamente 240.",
           "respuesta": "V",
-          "explicacion": "El punto de Publicidad en T3 marca 240.",
+          "explicacion": "El valor de Publicidad en T3 es 240.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Publicidad finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción audiovisual (proyectos) donde los marcadores diferencian cada variable. Publicidad termina en T4 con el valor mas alto: 265.",
           "respuesta": "V",
-          "explicacion": "Publicidad=265, el mayor en T4.",
+          "explicacion": "Publicidad lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Documentales es 70.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos) (Años 2021-2024). Documentales registra 68 en T2.",
           "respuesta": "F",
-          "explicacion": "Documentales vale 52 en T2.",
+          "explicacion": "Documentales vale 52 en T2, no 68.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Publicidad muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos) con marcadores distintos. Publicidad muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Publicidad aumenta en cada período consecutivo.",
+          "explicacion": "Publicidad crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Publicidad representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos). El valor inicial de Publicidad representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Videoclips aumentó en 29 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para producción audiovisual (proyectos). Videoclips aumento en 29 unidades de T1 a T4 (+39%).",
           "respuesta": "V",
-          "explicacion": "De 75 a 104: cambio de 29 (+39%).",
+          "explicacion": "De 75 a 104: 29 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Series (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos). La curva de Series tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +25%.",
+          "explicacion": "Series crece +67%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Series supera a Publicidad en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción audiovisual (proyectos) (Años 2021-2024). Series supera a Publicidad en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Publicidad mantiene valores superiores a Series en todos los períodos.",
+          "explicacion": "Publicidad mantiene valores superiores a Series en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Series alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos). Series alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Series está en T4 (20).",
+          "explicacion": "El maximo de Series esta en T4 (20).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción audiovisual (proyectos). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Series tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Series varía un +67%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos) donde Series muestra un crecimiento excepcional del 67%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para producción audiovisual (proyectos). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Publicidad, Documentales, Videoclips, Series, Cortometrajes crece en todos los períodos consecutivos.",
+          "explicacion": "Publicidad, Documentales, Videoclips, Series, Cortometrajes crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Videoclips varió un +39%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción audiovisual (proyectos). Videoclips vario un +70% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Videoclips es +39%.",
+          "explicacion": "La variacion real de Videoclips es +39%, no +70%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Series supera a Publicidad.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción audiovisual (proyectos). En algun momento Series logra superar a Publicidad.",
           "respuesta": "F",
-          "explicacion": "Publicidad siempre está por encima de Series en todos los períodos.",
+          "explicacion": "Publicidad siempre esta por encima de Series.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Publicidad alcanzaría un valor de 278 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde producción audiovisual (proyectos). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -1550,53 +1385,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Publicidad representa el 53.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). Publicidad representa el 53.2% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 53.2%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Series es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos) donde el total central es 1.672. Series es la porcion mas pequena (3.9%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 3.9% del total.",
+          "explicacion": "Series tiene solo el 3.9% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Documentales representa el 6.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). Documentales ocupa el 17.2% del total.",
           "respuesta": "F",
-          "explicacion": "Documentales representa el 13.2% del total, no el 6.6%.",
+          "explicacion": "Documentales ocupa el 13.2%, no el 17.2%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Series es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos). Series es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Publicidad es quien más contribuye (53.2%), no Series.",
+          "explicacion": "La mayor contribucion es Publicidad (53.2%), no Series.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Publicidad y Documentales suman el 66.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 1.672 sobre producción audiovisual (proyectos). Publicidad y Documentales suman el 66.4% del total.",
           "respuesta": "V",
           "explicacion": "53.2% + 13.2% = 66.4%.",
           "tipo": "torta"
@@ -1604,82 +1433,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 49.3 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). La diferencia entre la mayor y menor porcion es de 49.3 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "53.2% - 3.9% = 49.3 puntos.",
+          "explicacion": "53.2% - 3.9% = 49.3.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Videoclips y Series juntos representan el 37.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos). Videoclips y Series juntos representan el 32.3% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 24.9%, no 37.3%.",
+          "explicacion": "Suman 24.9%, no 32.3%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos) con centro 1.672. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Publicidad, Videoclips.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Publicidad, Videoclips, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (1.672) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos). El total de 1.672 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Publicidad es aproximadamente 13.7 veces mayor que Series en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). Publicidad es aproximadamente 13.7 veces mayor que Series en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "890 ÷ 65 ≈ 13.7.",
+          "explicacion": "890 / 65 = 13.7.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Publicidad, Videoclips, Documentales) concentran el 87.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos). Las tres categorias principales (Publicidad, Videoclips, Documentales) concentran el 87.4% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 87.4%.",
+          "explicacion": "Efectivamente suman 87.4%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Series tendría un valor de 195.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos) con centro 1.672. Si el total se duplicara, Series tendria 169.",
           "respuesta": "F",
-          "explicacion": "Series duplicado sería 130, no 195.",
+          "explicacion": "Series duplicado seria 130, no 169.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Documentales y Videoclips es 1.0:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción audiovisual (proyectos). La razon entre Documentales y Videoclips es 3.6:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.6:1.",
+          "explicacion": "La razon real es 0.6:1, no 3.6:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción audiovisual (proyectos). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -1691,42 +1511,38 @@ var QuestionBank = {
   "005": {
     "id": "005",
     "nombre": "Temperatura Promedio (°C)",
-    "periodos": "Estaciones 2024 | Variables: 5",
-    "totalPreguntas": 45,
+    "periodos": "",
+    "totalPreguntas": 44,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Norte tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre temperatura promedio (°c) (Estaciones 2024). Norte tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Norte=28, el mayor en T1.",
+          "explicacion": "Norte=28 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Centro alcanza un valor de 12.",
+          "enunciado": "gráfico de barras agrupadas donde temperatura promedio (°c) se compara por T1 a T4. Centro registra 12 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Centro=12 en T3.",
+          "explicacion": "El valor de Centro en T3 es exactamente 12.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Sur tiene un valor de 26.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c). Sur alcanza 22 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Sur en T4 es 17, no 26.",
+          "explicacion": "Sur vale 17 en T4, no 22.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Patagonia supera a Altiplano.",
+          "enunciado": "gráfico de barras agrupadas sobre temperatura promedio (°c). En T2, Patagonia supera en valor a Altiplano.",
           "respuesta": "F",
           "explicacion": "En T2, Altiplano=14 > Patagonia=8.",
           "tipo": "barras"
@@ -1734,17 +1550,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Norte se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c). La caida de Norte entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Norte pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Norte y Centro es de 6.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c) (Estaciones 2024). La diferencia entre Norte y Centro en T3 es de 6 unidades.",
           "respuesta": "V",
           "explicacion": "Norte(18) - Centro(12) = 6.",
           "tipo": "barras"
@@ -1752,8 +1566,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Norte y Centro suman 37.",
+          "enunciado": "gráfico de barras agrupadas donde Norte es la categoría dominante y Patagonia la más pequeña. En T2, Norte y Centro suman 37.",
           "respuesta": "V",
           "explicacion": "21 + 16 = 37.",
           "tipo": "barras"
@@ -1761,73 +1574,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Sur y Patagonia es de 6.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c). La diferencia entre Sur y Patagonia en T4 es de 8.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 5, no 6.",
+          "explicacion": "La diferencia real es 5, no 8.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 16.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Patagonia es la única que decrece significativamente (-20%). El promedio en T4 es 25.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 19.",
+          "explicacion": "El promedio real en T4 es 19, no 25.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre temperatura promedio (°c). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Altiplano creció un -5% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c) donde Patagonia es la única que decrece significativamente (-20%). Especificamente, Altiplano crecio un -5% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Altiplano pasó de 19 a 18, un cambio del -5%.",
+          "explicacion": "Altiplano paso de 19 a 18 = -5%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Centro es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Centro es la variable con mayor diferencia entre su valor maximo y minimo (rango: 12).",
           "respuesta": "V",
-          "explicacion": "Rango de Centro: 12.",
+          "explicacion": "El rango de Centro es efectivamente 12.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Patagonia creció un -50%.",
+          "enunciado": "gráfico de barras agrupadas sobre temperatura promedio (°c). Patagonia vario un -7% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Patagonia es -20%, no -50%.",
+          "explicacion": "Patagonia vario -20%, no -7%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Patagonia es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de temperatura promedio (°c) (Estaciones 2024). En T4, Patagonia es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Norte tiene el mayor valor (26), no Patagonia.",
+          "explicacion": "En T4 el mayor es Norte (26), no Patagonia.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Norte respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde temperatura promedio (°c). El cambio de tendencia de Norte se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -1835,136 +1640,113 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Norte alcanza exactamente 18.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c). El punto de Norte en T3 marca exactamente 18.",
           "respuesta": "V",
-          "explicacion": "El punto de Norte en T3 marca 18.",
+          "explicacion": "El valor de Norte en T3 es 18.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Norte finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre temperatura promedio (°c) donde los marcadores diferencian cada variable. Norte termina en T4 con el valor mas alto: 26.",
           "respuesta": "V",
-          "explicacion": "Norte=26, el mayor en T4.",
+          "explicacion": "Norte lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Centro es 23.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c) (Estaciones 2024). Centro registra 21 en T2.",
           "respuesta": "F",
-          "explicacion": "Centro vale 16 en T2.",
+          "explicacion": "Centro vale 16 en T2, no 21.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Todos los valores de Sur son iguales entre sí.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre temperatura promedio (°c). Todos los valores de Sur son iguales entre si.",
           "respuesta": "F",
-          "explicacion": "Sur varía entre 8 y 20.",
+          "explicacion": "Sur varia entre 8 y 20.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Norte representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c). El valor inicial de Norte representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Sur disminuyó en 3 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para temperatura promedio (°c). Sur disminuyo en 3 unidades de T1 a T4 (-15%).",
           "respuesta": "V",
-          "explicacion": "De 20 a 17: cambio de -3 (-15%).",
+          "explicacion": "De 20 a 17: -3 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Patagonia (T3→T4).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c). La curva de Altiplano tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +300%.",
+          "explicacion": "Altiplano crece -5%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Patagonia supera a Norte en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre temperatura promedio (°c) (Estaciones 2024). Patagonia supera a Norte en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Norte mantiene valores superiores a Patagonia en todos los períodos.",
+          "explicacion": "Norte mantiene valores superiores a Patagonia en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Patagonia alcanza su valor máximo en T2.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c). Patagonia alcanza su punto maximo en T2.",
           "respuesta": "F",
-          "explicacion": "El máximo de Patagonia está en T1 (15).",
+          "explicacion": "El maximo de Patagonia esta en T1 (15).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre temperatura promedio (°c). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Altiplano tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Altiplano varía un -5%, la mayor de todas las variables.",
-          "tipo": "lineas"
-        },
-        {
-          "id": "27",
-          "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "No existe ninguna variable que crezca en absolutamente todos los períodos consecutivos.",
-          "respuesta": "V",
-          "explicacion": "Todas las variables tienen al menos un período donde no crecen.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c) donde Patagonia es la única que decrece significativamente (-20%). Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Patagonia varió un -26%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre temperatura promedio (°c). Patagonia vario un -46% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Patagonia es -20%.",
+          "explicacion": "La variacion real de Patagonia es -20%, no -46%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Patagonia supera a Norte.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de temperatura promedio (°c). En algun momento Patagonia logra superar a Norte.",
           "respuesta": "F",
-          "explicacion": "Norte siempre está por encima de Patagonia en todos los períodos.",
+          "explicacion": "Norte siempre esta por encima de Patagonia.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Norte alcanzaría un valor de 27 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde temperatura promedio (°c). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -1972,53 +1754,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Norte representa el 28.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). Norte representa el 28.7% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 28.7%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Patagonia es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c) donde el total central es 324. Patagonia es la porcion mas pequena (11.7%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 11.7% del total.",
+          "explicacion": "Patagonia tiene solo el 11.7% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Centro representa el 33.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). Centro ocupa el 29.7% del total.",
           "respuesta": "F",
-          "explicacion": "Centro representa el 22.8% del total, no el 33.6%.",
+          "explicacion": "Centro ocupa el 22.8%, no el 29.7%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Patagonia es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c). Patagonia es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Norte es quien más contribuye (28.7%), no Patagonia.",
+          "explicacion": "La mayor contribucion es Norte (28.7%), no Patagonia.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Norte y Centro suman el 51.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 324 sobre temperatura promedio (°c). Norte y Centro suman el 51.5% del total.",
           "respuesta": "V",
           "explicacion": "28.7% + 22.8% = 51.5%.",
           "tipo": "torta"
@@ -2026,82 +1802,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 17.0 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). La diferencia entre la mayor y menor porcion es de 17.0 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "28.7% - 11.7% = 17.0 puntos.",
+          "explicacion": "28.7% - 11.7% = 17.0.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Sur y Patagonia juntos representan el 34.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c). Sur y Patagonia juntos representan el 38.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 29.6%, no 34.1%.",
+          "explicacion": "Suman 29.6%, no 38.5%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c) con centro 324. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Norte, Centro.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Norte, Centro, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (324) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c). El total de 324 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Norte es aproximadamente 2.4 veces mayor que Patagonia en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). Norte es aproximadamente 2.4 veces mayor que Patagonia en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "93 ÷ 38 ≈ 2.4.",
+          "explicacion": "93 / 38 = 2.4.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Norte, Centro, Altiplano) concentran el 70.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c). Las tres categorias principales (Norte, Centro, Altiplano) concentran el 70.4% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 70.4%.",
+          "explicacion": "Efectivamente suman 70.4%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Patagonia tendría un valor de 109.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c) con centro 324. Si el total se duplicara, Patagonia tendria 99.",
           "respuesta": "F",
-          "explicacion": "Patagonia duplicado sería 76, no 109.",
+          "explicacion": "Patagonia duplicado seria 76, no 99.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Centro y Sur es 1.5:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre temperatura promedio (°c). La razon entre Centro y Sur es 4.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razon real es 1.3:1, no 4.3:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de temperatura promedio (°c). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -2113,42 +1880,38 @@ var QuestionBank = {
   "006": {
     "id": "006",
     "nombre": "Población Urbana (Millones)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Santiago tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre población urbana (millones) (Años 2020-2023). Santiago tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Santiago=7, el mayor en T1.",
+          "explicacion": "Santiago=7 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Concepción alcanza un valor de 1.",
+          "enunciado": "gráfico de barras agrupadas donde población urbana (millones) se compara por T1 a T4. Concepción registra 1 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Concepción=1 en T3.",
+          "explicacion": "El valor de Concepción en T3 es exactamente 1.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Valparaíso tiene un valor de 1.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones). Valparaíso alcanza 4 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Valparaíso en T4 es 1, no 1.",
+          "explicacion": "Valparaíso vale 1 en T4, no 4.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Temuco supera a La Serena.",
+          "enunciado": "gráfico de barras agrupadas sobre población urbana (millones). En T2, Temuco supera en valor a La Serena.",
           "respuesta": "F",
           "explicacion": "En T2, La Serena=0 > Temuco=0.",
           "tipo": "barras"
@@ -2156,17 +1919,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Santiago se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones). La caida de Santiago entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Santiago pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Santiago y Concepción es de 6.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones) (Años 2020-2023). La diferencia entre Santiago y Concepción en T3 es de 6 unidades.",
           "respuesta": "V",
           "explicacion": "Santiago(7) - Concepción(1) = 6.",
           "tipo": "barras"
@@ -2174,8 +1935,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Santiago y Concepción suman 8.",
+          "enunciado": "gráfico de barras agrupadas donde Santiago es la categoría dominante y Temuco la más pequeña. En T2, Santiago y Concepción suman 8.",
           "respuesta": "V",
           "explicacion": "7 + 1 = 8.",
           "tipo": "barras"
@@ -2183,73 +1943,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Valparaíso y La Serena es de 0.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones). La diferencia entre Valparaíso y La Serena en T4 es de 4.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 1, no 0.",
+          "explicacion": "La diferencia real es 1, no 4.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 2.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre 3% y 10%. El promedio en T4 es 5.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 2.",
+          "explicacion": "El promedio real en T4 es 2, no 5.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre población urbana (millones). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] La Serena creció un +10% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones) donde las variables tienen crecimientos moderados entre 3% y 10%. Especificamente, La Serena crecio un +10% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "La Serena pasó de 0 a 0, un cambio del +10%.",
+          "explicacion": "La Serena paso de 0 a 0 = +10%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Santiago es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Santiago es la variable con mayor diferencia entre su valor maximo y minimo (rango: 0).",
           "respuesta": "V",
-          "explicacion": "Rango de Santiago: 0.",
+          "explicacion": "El rango de Santiago es efectivamente 0.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] La Serena creció un +30%.",
+          "enunciado": "gráfico de barras agrupadas sobre población urbana (millones). La Serena vario un +26% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de La Serena es +10%, no +30%.",
+          "explicacion": "La Serena vario +10%, no +26%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Temuco es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de población urbana (millones) (Años 2020-2023). En T4, Temuco es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Santiago tiene el mayor valor (7), no Temuco.",
+          "explicacion": "En T4 el mayor es Santiago (7), no Temuco.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Santiago respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde población urbana (millones). El cambio de tendencia de Santiago se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -2257,136 +2009,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Santiago alcanza exactamente 7.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones). El punto de Santiago en T3 marca exactamente 7.",
           "respuesta": "V",
-          "explicacion": "El punto de Santiago en T3 marca 7.",
+          "explicacion": "El valor de Santiago en T3 es 7.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Santiago finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre población urbana (millones) donde los marcadores diferencian cada variable. Santiago termina en T4 con el valor mas alto: 7.",
           "respuesta": "V",
-          "explicacion": "Santiago=7, el mayor en T4.",
+          "explicacion": "Santiago lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Concepción es 2.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones) (Años 2020-2023). Concepción registra 4 en T2.",
           "respuesta": "F",
-          "explicacion": "Concepción vale 1 en T2.",
+          "explicacion": "Concepción vale 1 en T2, no 4.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Santiago muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones) con marcadores distintos. Santiago muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Santiago aumenta en cada período consecutivo.",
+          "explicacion": "Santiago crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Santiago representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones). El valor inicial de Santiago representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Valparaíso aumentó en 0 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para población urbana (millones). Valparaíso aumento en 0 unidades de T1 a T4 (+3%).",
           "respuesta": "V",
-          "explicacion": "De 1 a 1: cambio de 0 (+3%).",
+          "explicacion": "De 1 a 1: 0 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra La Serena (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones). La curva de La Serena tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +5%.",
+          "explicacion": "La Serena crece +10%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Temuco supera a Santiago en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre población urbana (millones) (Años 2020-2023). Temuco supera a Santiago en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Santiago mantiene valores superiores a Temuco en todos los períodos.",
+          "explicacion": "Santiago mantiene valores superiores a Temuco en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La Serena alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones). La Serena alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de La Serena está en T4 (0).",
+          "explicacion": "El maximo de La Serena esta en T4 (0).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre población urbana (millones). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] La Serena tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "La Serena varía un +10%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones) donde las variables tienen crecimientos moderados entre 3% y 10%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para población urbana (millones). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Santiago, Concepción, Valparaíso, La Serena, Temuco crece en todos los períodos consecutivos.",
+          "explicacion": "Santiago, Concepción, Valparaíso, La Serena, Temuco crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Valparaíso varió un +24%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre población urbana (millones). Valparaíso vario un +24% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Valparaíso es +3%.",
+          "explicacion": "La variacion real de Valparaíso es +3%, no +24%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Temuco supera a Santiago.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de población urbana (millones). En algun momento Temuco logra superar a Santiago.",
           "respuesta": "F",
-          "explicacion": "Santiago siempre está por encima de Temuco en todos los períodos.",
+          "explicacion": "Santiago siempre esta por encima de Temuco.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Santiago alcanzaría un valor de 7 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde población urbana (millones). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -2394,53 +2131,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Santiago representa el 70.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). Santiago representa el 70.7% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 70.7%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Temuco es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones) donde el total central es 39. Temuco es la porcion mas pequena (3.8%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 3.8% del total.",
+          "explicacion": "Temuco tiene solo el 3.8% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Concepción representa el 16.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). Concepción ocupa el 14.2% del total.",
           "respuesta": "F",
-          "explicacion": "Concepción representa el 10.9% del total, no el 16.2%.",
+          "explicacion": "Concepción ocupa el 10.9%, no el 14.2%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Temuco es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones). Temuco es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Santiago es quien más contribuye (70.7%), no Temuco.",
+          "explicacion": "La mayor contribucion es Santiago (70.7%), no Temuco.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Santiago y Concepción suman el 81.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 39 sobre población urbana (millones). Santiago y Concepción suman el 81.7% del total.",
           "respuesta": "V",
           "explicacion": "70.7% + 10.9% = 81.7%.",
           "tipo": "torta"
@@ -2448,82 +2179,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 66.9 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). La diferencia entre la mayor y menor porcion es de 66.9 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "70.7% - 3.8% = 66.9 puntos.",
+          "explicacion": "70.7% - 3.8% = 66.9.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Valparaíso y La Serena juntos representan el 21.8% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones). Valparaíso y La Serena juntos representan el 18.9% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 14.5%, no 21.8%.",
+          "explicacion": "Suman 14.5%, no 18.9%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones) con centro 39. Exactamente 2 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Santiago.",
+          "explicacion": "Son 1 categoria(s) sobre 20%: Santiago, no 2.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (39) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones). El total de 39 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Santiago es aproximadamente 18.5 veces mayor que Temuco en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). Santiago es aproximadamente 18.5 veces mayor que Temuco en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "28 ÷ 2 ≈ 18.5.",
+          "explicacion": "28 / 2 = 18.5.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Santiago, Concepción, Valparaíso) concentran el 91.8% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones). Las tres categorias principales (Santiago, Concepción, Valparaíso) concentran el 91.8% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 91.8%.",
+          "explicacion": "Efectivamente suman 91.8%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, La Serena tendría un valor de 4.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones) con centro 39. Si el total se duplicara, La Serena tendria 6.",
           "respuesta": "F",
-          "explicacion": "La Serena duplicado sería 3, no 4.",
+          "explicacion": "La Serena duplicado seria 3, no 6.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Concepción y Valparaíso es 1.5:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre población urbana (millones). La razon entre Concepción y Valparaíso es 4.1:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.1:1.",
+          "explicacion": "La razon real es 1.1:1, no 4.1:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de población urbana (millones). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -2535,42 +2257,38 @@ var QuestionBank = {
   "007": {
     "id": "007",
     "nombre": "Matrículas Universitarias",
-    "periodos": "Años 2021-2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Ingeniería tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre matrículas universitarias (Años 2021-2024). Ingeniería tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Ingeniería=12.400, el mayor en T1.",
+          "explicacion": "Ingeniería=12.400 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Medicina alcanza un valor de 5.690.",
+          "enunciado": "gráfico de barras agrupadas donde matrículas universitarias se compara por T1 a T4. Medicina registra 5.690 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Medicina=5.690 en T3.",
+          "explicacion": "El valor de Medicina en T3 es exactamente 5.690.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Derecho tiene un valor de 5.709.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias. Derecho alcanza 5.798 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Derecho en T4 es 4.460, no 5.709.",
+          "explicacion": "Derecho vale 4.460 en T4, no 5.798.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Periodismo supera a Arquitectura.",
+          "enunciado": "gráfico de barras agrupadas sobre matrículas universitarias. En T2, Periodismo supera en valor a Arquitectura.",
           "respuesta": "F",
           "explicacion": "En T2, Arquitectura=2.200 > Periodismo=1.420.",
           "tipo": "barras"
@@ -2578,17 +2296,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Ingeniería se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias. La caida de Ingeniería entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Ingeniería pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Ingeniería y Medicina es de 7.410.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias (Años 2021-2024). La diferencia entre Ingeniería y Medicina en T3 es de 7.410 unidades.",
           "respuesta": "V",
           "explicacion": "Ingeniería(13.100) - Medicina(5.690) = 7.410.",
           "tipo": "barras"
@@ -2596,8 +2312,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Ingeniería y Medicina suman 18.310.",
+          "enunciado": "gráfico de barras agrupadas donde Ingeniería es la categoría dominante y Periodismo la más pequeña. En T2, Ingeniería y Medicina suman 18.310.",
           "respuesta": "V",
           "explicacion": "12.750 + 5.560 = 18.310.",
           "tipo": "barras"
@@ -2605,73 +2320,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Derecho y Arquitectura es de 2.646.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias. La diferencia entre Derecho y Arquitectura en T4 es de 2.730.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.100, no 2.646.",
+          "explicacion": "La diferencia real es 2.100, no 2.730.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 4.844.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre -5% y 12%. El promedio en T4 es 7.155.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 5.504.",
+          "explicacion": "El promedio real en T4 es 5.504, no 7.155.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre matrículas universitarias. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Arquitectura creció un +12% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias donde las variables tienen crecimientos moderados entre -5% y 12%. Especificamente, Arquitectura crecio un +12% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Arquitectura pasó de 2.100 a 2.360, un cambio del +12%.",
+          "explicacion": "Arquitectura paso de 2.100 a 2.360 = +12%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Ingeniería es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Ingeniería es la variable con mayor diferencia entre su valor maximo y minimo (rango: 1.120).",
           "respuesta": "V",
-          "explicacion": "Rango de Ingeniería: 1.120.",
+          "explicacion": "El rango de Ingeniería es efectivamente 1.120.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Arquitectura creció un +32%.",
+          "enunciado": "gráfico de barras agrupadas sobre matrículas universitarias. Arquitectura vario un +29% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Arquitectura es +12%, no +32%.",
+          "explicacion": "Arquitectura vario +12%, no +29%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Periodismo es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de matrículas universitarias (Años 2021-2024). En T4, Periodismo es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Ingeniería tiene el mayor valor (13.520), no Periodismo.",
+          "explicacion": "En T4 el mayor es Ingeniería (13.520), no Periodismo.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Ingeniería respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde matrículas universitarias. El cambio de tendencia de Ingeniería se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -2679,136 +2386,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Ingeniería alcanza exactamente 13.100.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias. El punto de Ingeniería en T3 marca exactamente 13.100.",
           "respuesta": "V",
-          "explicacion": "El punto de Ingeniería en T3 marca 13.100.",
+          "explicacion": "El valor de Ingeniería en T3 es 13.100.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Ingeniería finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre matrículas universitarias donde los marcadores diferencian cada variable. Ingeniería termina en T4 con el valor mas alto: 13.520.",
           "respuesta": "V",
-          "explicacion": "Ingeniería=13.520, el mayor en T4.",
+          "explicacion": "Ingeniería lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Medicina es 9.007.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias (Años 2021-2024). Medicina registra 7.228 en T2.",
           "respuesta": "F",
-          "explicacion": "Medicina vale 5.560 en T2.",
+          "explicacion": "Medicina vale 5.560 en T2, no 7.228.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Periodismo muestra una tendencia creciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias con marcadores distintos. Periodismo muestra una tendencia creciente.",
           "respuesta": "F",
-          "explicacion": "Periodismo disminuye en cada período consecutivo.",
+          "explicacion": "Periodismo decrece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Ingeniería representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias. El valor inicial de Ingeniería representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Derecho aumentó en 160 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para matrículas universitarias. Derecho aumento en 160 unidades de T1 a T4 (+4%).",
           "respuesta": "V",
-          "explicacion": "De 4.300 a 4.460: cambio de 160 (+4%).",
+          "explicacion": "De 4.300 a 4.460: 160 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Arquitectura (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias. La curva de Arquitectura tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +5%.",
+          "explicacion": "Arquitectura crece +12%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Periodismo supera a Ingeniería en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre matrículas universitarias (Años 2021-2024). Periodismo supera a Ingeniería en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Ingeniería mantiene valores superiores a Periodismo en todos los períodos.",
+          "explicacion": "Ingeniería mantiene valores superiores a Periodismo en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Arquitectura alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias. Arquitectura alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Arquitectura está en T4 (2.360).",
+          "explicacion": "El maximo de Arquitectura esta en T4 (2.360).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre matrículas universitarias. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Arquitectura tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Arquitectura varía un +12%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias donde las variables tienen crecimientos moderados entre -5% y 12%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para matrículas universitarias. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Ingeniería, Medicina, Arquitectura crece en todos los períodos consecutivos.",
+          "explicacion": "Ingeniería, Medicina, Arquitectura crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Periodismo varió un -10%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre matrículas universitarias. Periodismo vario un -26% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Periodismo es -5%.",
+          "explicacion": "La variacion real de Periodismo es -5%, no -26%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Periodismo supera a Ingeniería.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de matrículas universitarias. En algun momento Periodismo logra superar a Ingeniería.",
           "respuesta": "F",
-          "explicacion": "Ingeniería siempre está por encima de Periodismo en todos los períodos.",
+          "explicacion": "Ingeniería siempre esta por encima de Periodismo.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Ingeniería alcanzaría un valor de 14.196 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde matrículas universitarias. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -2816,53 +2508,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Ingeniería representa el 48.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. Ingeniería representa el 48.7% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 48.7%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Periodismo es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias donde el total central es 106.200. Periodismo es la porcion mas pequena (5.3%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 5.3% del total.",
+          "explicacion": "Periodismo tiene solo el 5.3% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Medicina representa el 31.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. Medicina ocupa el 27.5% del total.",
           "respuesta": "F",
-          "explicacion": "Medicina representa el 21.1% del total, no el 31.7%.",
+          "explicacion": "Medicina ocupa el 21.1%, no el 27.5%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Periodismo es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias. Periodismo es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Ingeniería es quien más contribuye (48.7%), no Periodismo.",
+          "explicacion": "La mayor contribucion es Ingeniería (48.7%), no Periodismo.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Ingeniería y Medicina suman el 69.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 106.200 sobre matrículas universitarias. Ingeniería y Medicina suman el 69.9% del total.",
           "respuesta": "V",
           "explicacion": "48.7% + 21.1% = 69.9%.",
           "tipo": "torta"
@@ -2870,82 +2556,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 43.4 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. La diferencia entre la mayor y menor porcion es de 43.4 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "48.7% - 5.3% = 43.4 puntos.",
+          "explicacion": "48.7% - 5.3% = 43.4.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Derecho y Arquitectura juntos representan el 32.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias. Derecho y Arquitectura juntos representan el 32.2% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 24.8%, no 32.5%.",
+          "explicacion": "Suman 24.8%, no 32.2%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias con centro 106.200. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Ingeniería, Medicina.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Ingeniería, Medicina, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (106.200) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias. El total de 106.200 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Ingeniería es aproximadamente 9.2 veces mayor que Periodismo en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. Ingeniería es aproximadamente 9.2 veces mayor que Periodismo en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "51.770 ÷ 5.650 ≈ 9.2.",
+          "explicacion": "51.770 / 5.650 = 9.2.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Ingeniería, Medicina, Derecho) concentran el 86.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias. Las tres categorias principales (Ingeniería, Medicina, Derecho) concentran el 86.3% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 86.3%.",
+          "explicacion": "Efectivamente suman 86.3%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Arquitectura tendría un valor de 14.662.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias con centro 106.200. Si el total se duplicara, Arquitectura tendria 23.244.",
           "respuesta": "F",
-          "explicacion": "Arquitectura duplicado sería 17.880, no 14.662.",
+          "explicacion": "Arquitectura duplicado seria 17.880, no 23.244.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Medicina y Derecho es 1.5:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre matrículas universitarias. La razon entre Medicina y Derecho es 4.3:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.3:1.",
+          "explicacion": "La razon real es 1.3:1, no 4.3:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de matrículas universitarias. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -2957,42 +2634,38 @@ var QuestionBank = {
   "008": {
     "id": "008",
     "nombre": "Turismo Internacional (Miles)",
-    "periodos": "Trimestres 2024 | Variables: 5",
+    "periodos": "2024",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Argentina tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre turismo internacional (miles) (Trimestres 2024). Argentina tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Argentina=420, el mayor en T1.",
+          "explicacion": "Argentina=420 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Brasil alcanza un valor de 235.",
+          "enunciado": "gráfico de barras agrupadas donde turismo internacional (miles) se compara por T1 a T4. Brasil registra 235 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Brasil=235 en T3.",
+          "explicacion": "El valor de Brasil en T3 es exactamente 235.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "EE.UU. tiene un valor de 217.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles). EE.UU. alcanza 182 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de EE.UU. en T4 es 140, no 217.",
+          "explicacion": "EE.UU. vale 140 en T4, no 182.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Europa supera a Perú.",
+          "enunciado": "gráfico de barras agrupadas sobre turismo internacional (miles). En T2, Europa supera en valor a Perú.",
           "respuesta": "F",
           "explicacion": "En T2, Perú=175 > Europa=145.",
           "tipo": "barras"
@@ -3000,17 +2673,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Argentina se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles). La caida de Argentina entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Argentina pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Argentina y Brasil es de 275.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles) (Trimestres 2024). La diferencia entre Argentina y Brasil en T3 es de 275 unidades.",
           "respuesta": "V",
           "explicacion": "Argentina(510) - Brasil(235) = 275.",
           "tipo": "barras"
@@ -3018,8 +2689,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Argentina y Brasil suman 690.",
+          "enunciado": "gráfico de barras agrupadas donde Argentina es la categoría dominante y EE.UU. la más pequeña. En T2, Argentina y Brasil suman 690.",
           "respuesta": "V",
           "explicacion": "480 + 210 = 690.",
           "tipo": "barras"
@@ -3027,73 +2697,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre EE.UU. y Perú es de 75.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles). La diferencia entre EE.UU. y Perú en T4 es de 65.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 50, no 75.",
+          "explicacion": "La diferencia real es 50, no 65.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 421.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y EE.UU. muestra un crecimiento excepcional del 47%. El promedio en T4 es 344.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 265.",
+          "explicacion": "El promedio real en T4 es 265, no 344.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre turismo internacional (miles). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] EE.UU. creció un +47% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles) donde EE.UU. muestra un crecimiento excepcional del 47%. Especificamente, EE.UU. crecio un +47% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "EE.UU. pasó de 95 a 140, un cambio del +47%.",
+          "explicacion": "EE.UU. paso de 95 a 140 = +47%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Argentina es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Argentina es la variable con mayor diferencia entre su valor maximo y minimo (rango: 140).",
           "respuesta": "V",
-          "explicacion": "Rango de Argentina: 140.",
+          "explicacion": "El rango de Argentina es efectivamente 140.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Perú creció un +43%.",
+          "enunciado": "gráfico de barras agrupadas sobre turismo internacional (miles). Perú vario un +37% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Perú es +19%, no +43%.",
+          "explicacion": "Perú vario +19%, no +37%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "EE.UU. es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de turismo internacional (miles) (Trimestres 2024). En T4, EE.UU. es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Argentina tiene el mayor valor (560), no EE.UU..",
+          "explicacion": "En T4 el mayor es Argentina (560), no EE.UU..",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Argentina respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde turismo internacional (miles). El cambio de tendencia de Argentina se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -3101,136 +2763,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Argentina alcanza exactamente 510.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles). El punto de Argentina en T3 marca exactamente 510.",
           "respuesta": "V",
-          "explicacion": "El punto de Argentina en T3 marca 510.",
+          "explicacion": "El valor de Argentina en T3 es 510.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Argentina finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre turismo internacional (miles) donde los marcadores diferencian cada variable. Argentina termina en T4 con el valor mas alto: 560.",
           "respuesta": "V",
-          "explicacion": "Argentina=560, el mayor en T4.",
+          "explicacion": "Argentina lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Brasil es 311.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles) (Trimestres 2024). Brasil registra 273 en T2.",
           "respuesta": "F",
-          "explicacion": "Brasil vale 210 en T2.",
+          "explicacion": "Brasil vale 210 en T2, no 273.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Argentina muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles) con marcadores distintos. Argentina muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Argentina aumenta en cada período consecutivo.",
+          "explicacion": "Argentina crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Argentina representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles). El valor inicial de Argentina representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] EE.UU. aumentó en 45 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para turismo internacional (miles). EE.UU. aumento en 45 unidades de T1 a T4 (+47%).",
           "respuesta": "V",
-          "explicacion": "De 95 a 140: cambio de 45 (+47%).",
+          "explicacion": "De 95 a 140: 45 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Brasil (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles). La curva de EE.UU. tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +17%.",
+          "explicacion": "EE.UU. crece +47%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "EE.UU. supera a Argentina en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre turismo internacional (miles) (Trimestres 2024). EE.UU. supera a Argentina en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Argentina mantiene valores superiores a EE.UU. en todos los períodos.",
+          "explicacion": "Argentina mantiene valores superiores a EE.UU. en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Perú alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles). Perú alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Perú está en T4 (190).",
+          "explicacion": "El maximo de Perú esta en T4 (190).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre turismo internacional (miles). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] EE.UU. tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "EE.UU. varía un +47%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles) donde EE.UU. muestra un crecimiento excepcional del 47%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para turismo internacional (miles). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Argentina, Brasil, EE.UU., Perú, Europa crece en todos los períodos consecutivos.",
+          "explicacion": "Argentina, Brasil, EE.UU., Perú, Europa crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Perú varió un +49%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre turismo internacional (miles). Perú vario un +44% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Perú es +19%.",
+          "explicacion": "La variacion real de Perú es +19%, no +44%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, EE.UU. supera a Argentina.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de turismo internacional (miles). En algun momento EE.UU. logra superar a Argentina.",
           "respuesta": "F",
-          "explicacion": "Argentina siempre está por encima de EE.UU. en todos los períodos.",
+          "explicacion": "Argentina siempre esta por encima de EE.UU..",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Argentina alcanzaría un valor de 588 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde turismo internacional (miles). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -3238,53 +2885,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Argentina representa el 42.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). Argentina representa el 42.4% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 42.4%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "EE.UU. es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles) donde el total central es 4.642. EE.UU. es la porcion mas pequena (10.1%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 10.1% del total.",
+          "explicacion": "EE.UU. tiene solo el 10.1% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Brasil representa el 28.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). Brasil ocupa el 24.8% del total.",
           "respuesta": "F",
-          "explicacion": "Brasil representa el 19.1% del total, no el 28.4%.",
+          "explicacion": "Brasil ocupa el 19.1%, no el 24.8%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "EE.UU. es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles). EE.UU. es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Argentina es quien más contribuye (42.4%), no EE.UU..",
+          "explicacion": "La mayor contribucion es Argentina (42.4%), no EE.UU..",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Argentina y Brasil suman el 61.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 4.642 sobre turismo internacional (miles). Argentina y Brasil suman el 61.5% del total.",
           "respuesta": "V",
           "explicacion": "42.4% + 19.1% = 61.5%.",
           "tipo": "torta"
@@ -3292,82 +2933,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 32.3 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). La diferencia entre la mayor y menor porcion es de 32.3 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "42.4% - 10.1% = 32.3 puntos.",
+          "explicacion": "42.4% - 10.1% = 32.3.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "EE.UU. y Perú juntos representan el 28.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles). EE.UU. y Perú juntos representan el 33.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 25.4%, no 28.1%.",
+          "explicacion": "Suman 25.4%, no 33.0%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles) con centro 4.642. Exactamente 2 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Argentina.",
+          "explicacion": "Son 1 categoria(s) sobre 20%: Argentina, no 2.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (4.642) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles). El total de 4.642 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Argentina es aproximadamente 4.2 veces mayor que EE.UU. en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). Argentina es aproximadamente 4.2 veces mayor que EE.UU. en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "1.970 ÷ 470 ≈ 4.2.",
+          "explicacion": "1.970 / 470 = 4.2.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Argentina, Brasil, Perú) concentran el 76.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles). Las tres categorias principales (Argentina, Brasil, Perú) concentran el 76.7% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 76.7%.",
+          "explicacion": "Efectivamente suman 76.7%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Perú tendría un valor de 1.046.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles) con centro 4.642. Si el total se duplicara, Perú tendria 1.838.",
           "respuesta": "F",
-          "explicacion": "Perú duplicado sería 1.414, no 1.046.",
+          "explicacion": "Perú duplicado seria 1.414, no 1.838.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Brasil y EE.UU. es 1.4:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre turismo internacional (miles). La razon entre Brasil y EE.UU. es 4.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.9:1.",
+          "explicacion": "La razon real es 1.9:1, no 4.9:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de turismo internacional (miles). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -3379,42 +3011,38 @@ var QuestionBank = {
   "009": {
     "id": "009",
     "nombre": "Consumo de Agua (Hm3)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Agricultura tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo de agua (hm3) (Años 2020-2023). Agricultura tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Agricultura=720, el mayor en T1.",
+          "explicacion": "Agricultura=720 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Industria alcanza un valor de 248.",
+          "enunciado": "gráfico de barras agrupadas donde consumo de agua (hm3) se compara por T1 a T4. Industria registra 248 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Industria=248 en T3.",
+          "explicacion": "El valor de Industria en T3 es exactamente 248.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Minería tiene un valor de 367.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3). Minería alcanza 426 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Minería en T4 es 328, no 367.",
+          "explicacion": "Minería vale 328 en T4, no 426.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Servicios supera a Hogares.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo de agua (hm3). En T2, Servicios supera en valor a Hogares.",
           "respuesta": "F",
           "explicacion": "En T2, Hogares=184 > Servicios=98.",
           "tipo": "barras"
@@ -3422,17 +3050,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Agricultura se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3). La caida de Agricultura entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Agricultura pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Agricultura y Industria es de 442.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3) (Años 2020-2023). La diferencia entre Agricultura y Industria en T3 es de 442 unidades.",
           "respuesta": "V",
           "explicacion": "Agricultura(690) - Industria(248) = 442.",
           "tipo": "barras"
@@ -3440,8 +3066,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Agricultura y Minería suman 1.020.",
+          "enunciado": "gráfico de barras agrupadas donde Agricultura es la categoría dominante y Servicios la más pequeña. En T2, Agricultura y Minería suman 1.020.",
           "respuesta": "V",
           "explicacion": "705 + 315 = 1.020.",
           "tipo": "barras"
@@ -3449,73 +3074,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Minería y Hogares es de 150.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3). La diferencia entre Minería y Hogares en T4 es de 177.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 136, no 150.",
+          "explicacion": "La diferencia real es 136, no 177.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 481.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre -6% y 9%. El promedio en T4 es 403.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 310.",
+          "explicacion": "El promedio real en T4 es 310, no 403.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo de agua (hm3). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Servicios creció un +9% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3) donde las variables tienen crecimientos moderados entre -6% y 9%. Especificamente, Servicios crecio un +9% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Servicios pasó de 95 a 104, un cambio del +9%.",
+          "explicacion": "Servicios paso de 95 a 104 = +9%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Agricultura es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Agricultura es la variable con mayor diferencia entre su valor maximo y minimo (rango: 45).",
           "respuesta": "V",
-          "explicacion": "Rango de Agricultura: 45.",
+          "explicacion": "El rango de Agricultura es efectivamente 45.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Hogares creció un +25%.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo de agua (hm3). Hogares vario un +22% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Hogares es +7%, no +25%.",
+          "explicacion": "Hogares vario +7%, no +22%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Servicios es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de consumo de agua (hm3) (Años 2020-2023). En T4, Servicios es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Agricultura tiene el mayor valor (675), no Servicios.",
+          "explicacion": "En T4 el mayor es Agricultura (675), no Servicios.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Agricultura respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde consumo de agua (hm3). El cambio de tendencia de Agricultura se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -3523,136 +3140,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Agricultura alcanza exactamente 690.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3). El punto de Agricultura en T3 marca exactamente 690.",
           "respuesta": "V",
-          "explicacion": "El punto de Agricultura en T3 marca 690.",
+          "explicacion": "El valor de Agricultura en T3 es 690.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Agricultura finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo de agua (hm3) donde los marcadores diferencian cada variable. Agricultura termina en T4 con el valor mas alto: 675.",
           "respuesta": "V",
-          "explicacion": "Agricultura=675, el mayor en T4.",
+          "explicacion": "Agricultura lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Industria es 368.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3) (Años 2020-2023). Industria registra 318 en T2.",
           "respuesta": "F",
-          "explicacion": "Industria vale 245 en T2.",
+          "explicacion": "Industria vale 245 en T2, no 318.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Agricultura muestra una tendencia creciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3) con marcadores distintos. Agricultura muestra una tendencia creciente.",
           "respuesta": "F",
-          "explicacion": "Agricultura disminuye en cada período consecutivo.",
+          "explicacion": "Agricultura decrece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Agricultura representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3). El valor inicial de Agricultura representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Minería aumentó en 18 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para consumo de agua (hm3). Minería aumento en 18 unidades de T1 a T4 (+6%).",
           "respuesta": "V",
-          "explicacion": "De 310 a 328: cambio de 18 (+6%).",
+          "explicacion": "De 310 a 328: 18 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Servicios (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3). La curva de Servicios tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +3%.",
+          "explicacion": "Servicios crece +9%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Servicios supera a Agricultura en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo de agua (hm3) (Años 2020-2023). Servicios supera a Agricultura en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Agricultura mantiene valores superiores a Servicios en todos los períodos.",
+          "explicacion": "Agricultura mantiene valores superiores a Servicios en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Hogares alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3). Hogares alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Hogares está en T4 (192).",
+          "explicacion": "El maximo de Hogares esta en T4 (192).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo de agua (hm3). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Servicios tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Servicios varía un +9%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3) donde las variables tienen crecimientos moderados entre -6% y 9%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para consumo de agua (hm3). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Industria, Minería, Hogares, Servicios crece en todos los períodos consecutivos.",
+          "explicacion": "Industria, Minería, Hogares, Servicios crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Agricultura varió un -24%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo de agua (hm3). Agricultura vario un -28% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Agricultura es -6%.",
+          "explicacion": "La variacion real de Agricultura es -6%, no -28%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Servicios supera a Agricultura.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo de agua (hm3). En algun momento Servicios logra superar a Agricultura.",
           "respuesta": "F",
-          "explicacion": "Agricultura siempre está por encima de Servicios en todos los períodos.",
+          "explicacion": "Agricultura siempre esta por encima de Servicios.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Agricultura alcanzaría un valor de 709 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde consumo de agua (hm3). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -3660,53 +3262,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Agricultura representa el 45.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). Agricultura representa el 45.1% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 45.1%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Servicios es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3) donde el total central es 6.190. Servicios es la porcion mas pequena (6.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 6.4% del total.",
+          "explicacion": "Servicios tiene solo el 6.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Industria representa el 26.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). Industria ocupa el 20.7% del total.",
           "respuesta": "F",
-          "explicacion": "Industria representa el 15.9% del total, no el 26.9%.",
+          "explicacion": "Industria ocupa el 15.9%, no el 20.7%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Servicios es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3). Servicios es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Agricultura es quien más contribuye (45.1%), no Servicios.",
+          "explicacion": "La mayor contribucion es Agricultura (45.1%), no Servicios.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Agricultura y Industria suman el 61.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 6.190 sobre consumo de agua (hm3). Agricultura y Industria suman el 61.0% del total.",
           "respuesta": "V",
           "explicacion": "45.1% + 15.9% = 61.0%.",
           "tipo": "torta"
@@ -3714,82 +3310,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 38.6 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). La diferencia entre la mayor y menor porcion es de 38.6 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "45.1% - 6.4% = 38.6 puntos.",
+          "explicacion": "45.1% - 6.4% = 38.6.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Minería y Hogares juntos representan el 26.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3). Minería y Hogares juntos representan el 42.4% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.6%, no 26.7%.",
+          "explicacion": "Suman 32.6%, no 42.4%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3) con centro 6.190. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Agricultura, Minería.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Agricultura, Minería, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (6.190) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3). El total de 6.190 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Agricultura es aproximadamente 7.0 veces mayor que Servicios en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). Agricultura es aproximadamente 7.0 veces mayor que Servicios en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "2.790 ÷ 398 ≈ 7.0.",
+          "explicacion": "2.790 / 398 = 7.0.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Agricultura, Minería, Industria) concentran el 81.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3). Las tres categorias principales (Agricultura, Minería, Industria) concentran el 81.6% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 81.6%.",
+          "explicacion": "Efectivamente suman 81.6%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Hogares tendría un valor de 1.681.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3) con centro 6.190. Si el total se duplicara, Hogares tendria 1.934.",
           "respuesta": "F",
-          "explicacion": "Hogares duplicado sería 1.488, no 1.681.",
+          "explicacion": "Hogares duplicado seria 1.488, no 1.934.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Industria y Minería es 1.1:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo de agua (hm3). La razon entre Industria y Minería es 3.8:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 0.8:1.",
+          "explicacion": "La razon real es 0.8:1, no 3.8:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo de agua (hm3). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -3801,42 +3388,38 @@ var QuestionBank = {
   "010": {
     "id": "010",
     "nombre": "Índice Bursátil",
-    "periodos": "Meses 2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Mayo tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre índice bursátil (Meses 2024). Mayo tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Mayo=5.140, el mayor en T1.",
+          "explicacion": "Mayo=5.140 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Febrero alcanza un valor de 5.075.",
+          "enunciado": "gráfico de barras agrupadas donde índice bursátil se compara por T1 a T4. Febrero registra 5.075 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Febrero=5.075 en T3.",
+          "explicacion": "El valor de Febrero en T3 es exactamente 5.075.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Marzo tiene un valor de 7.845.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil. Marzo alcanza 6.799 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Marzo en T4 es 5.230, no 7.845.",
+          "explicacion": "Marzo vale 5.230 en T4, no 6.799.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Abril supera a Mayo.",
+          "enunciado": "gráfico de barras agrupadas sobre índice bursátil. En T2, Abril supera en valor a Mayo.",
           "respuesta": "F",
           "explicacion": "En T2, Mayo=5.220 > Abril=5.155.",
           "tipo": "barras"
@@ -3844,17 +3427,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Enero se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil. La caida de Mayo entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Enero pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Enero y Febrero es de 70.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil (Meses 2024). La diferencia entre Enero y Febrero en T3 es de 70 unidades.",
           "respuesta": "V",
           "explicacion": "Enero(5.005) - Febrero(5.075) = 70.",
           "tipo": "barras"
@@ -3862,8 +3443,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Mayo y Abril suman 10.375.",
+          "enunciado": "gráfico de barras agrupadas donde Mayo es la categoría dominante y Enero la más pequeña. En T2, Mayo y Abril suman 10.375.",
           "respuesta": "V",
           "explicacion": "5.220 + 5.155 = 10.375.",
           "tipo": "barras"
@@ -3871,73 +3451,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Marzo y Abril es de 95.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil. La diferencia entre Marzo y Abril en T4 es de 78.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 60, no 95.",
+          "explicacion": "La diferencia real es 60, no 78.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 7.845.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre 4% y 5%. El promedio en T4 es 6.799.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 5.230.",
+          "explicacion": "El promedio real en T4 es 5.230, no 6.799.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre índice bursátil. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Enero creció un +5% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil donde las variables tienen crecimientos moderados entre 4% y 5%. Especificamente, Enero crecio un +5% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Enero pasó de 4.850 a 5.090, un cambio del +5%.",
+          "explicacion": "Enero paso de 4.850 a 5.090 = +5%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Enero es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Enero es la variable con mayor diferencia entre su valor maximo y minimo (rango: 240).",
           "respuesta": "V",
-          "explicacion": "Rango de Enero: 240.",
+          "explicacion": "El rango de Enero es efectivamente 240.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Abril creció un +16%.",
+          "enunciado": "gráfico de barras agrupadas sobre índice bursátil. Abril vario un +18% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Abril es +4%, no +16%.",
+          "explicacion": "Abril vario +4%, no +18%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Enero es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de índice bursátil (Meses 2024). En T4, Enero es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Mayo tiene el mayor valor (5.380), no Enero.",
+          "explicacion": "En T4 el mayor es Mayo (5.380), no Enero.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Enero respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde índice bursátil. El cambio de tendencia de Mayo se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -3945,136 +3517,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Enero alcanza exactamente 5.005.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil. El punto de Enero en T3 marca exactamente 5.005.",
           "respuesta": "V",
-          "explicacion": "El punto de Enero en T3 marca 5.005.",
+          "explicacion": "El valor de Enero en T3 es 5.005.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Mayo finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre índice bursátil donde los marcadores diferencian cada variable. Mayo termina en T4 con el valor mas alto: 5.380.",
           "respuesta": "V",
-          "explicacion": "Mayo=5.380, el mayor en T4.",
+          "explicacion": "Mayo lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Febrero es 2.505.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil (Meses 2024). Febrero registra 6.513 en T2.",
           "respuesta": "F",
-          "explicacion": "Febrero vale 5.010 en T2.",
+          "explicacion": "Febrero vale 5.010 en T2, no 6.513.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Enero muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil con marcadores distintos. Enero muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Enero aumenta en cada período consecutivo.",
+          "explicacion": "Enero crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Enero representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil. El valor inicial de Mayo representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Marzo aumentó en 220 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para índice bursátil. Marzo aumento en 220 unidades de T1 a T4 (+4%).",
           "respuesta": "V",
-          "explicacion": "De 5.010 a 5.230: cambio de 220 (+4%).",
+          "explicacion": "De 5.010 a 5.230: 220 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Enero (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil. La curva de Enero tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +2%.",
+          "explicacion": "Enero crece +5%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Enero supera a Mayo en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre índice bursátil (Meses 2024). Enero supera a Mayo en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Mayo mantiene valores superiores a Enero en todos los períodos.",
+          "explicacion": "Mayo mantiene valores superiores a Enero en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Abril alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil. Abril alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Abril está en T4 (5.290).",
+          "explicacion": "El maximo de Abril esta en T4 (5.290).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre índice bursátil. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Enero tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Enero varía un +5%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil donde las variables tienen crecimientos moderados entre 4% y 5%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para índice bursátil. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Enero, Febrero, Marzo, Abril, Mayo crece en todos los períodos consecutivos.",
+          "explicacion": "Enero, Febrero, Marzo, Abril, Mayo crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Abril varió un +25%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre índice bursátil. Abril vario un +25% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Abril es +4%.",
+          "explicacion": "La variacion real de Abril es +4%, no +25%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Enero supera a Mayo.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de índice bursátil. En algun momento Enero logra superar a Mayo.",
           "respuesta": "F",
-          "explicacion": "Mayo siempre está por encima de Enero en todos los períodos.",
+          "explicacion": "Mayo siempre esta por encima de Enero.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Mayo alcanzaría un valor de 5.649 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde índice bursátil. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -4082,53 +3639,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Mayo representa el 20.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. Mayo representa el 20.6% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 20.6%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Enero es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil donde el total central es 102.315. Enero es la porcion mas pequena (19.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 19.4% del total.",
+          "explicacion": "Enero tiene solo el 19.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Febrero representa el 29.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. Febrero ocupa el 25.6% del total.",
           "respuesta": "F",
-          "explicacion": "Febrero representa el 19.7% del total, no el 29.0%.",
+          "explicacion": "Febrero ocupa el 19.7%, no el 25.6%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Enero es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil. Enero es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Mayo es quien más contribuye (20.6%), no Enero.",
+          "explicacion": "La mayor contribucion es Mayo (20.6%), no Enero.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Enero y Febrero suman el 39.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 102.315 sobre índice bursátil. Enero y Febrero suman el 39.1% del total.",
           "respuesta": "V",
           "explicacion": "19.4% + 19.7% = 39.1%.",
           "tipo": "torta"
@@ -4136,82 +3687,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 1.2 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. La diferencia entre la mayor y menor porcion es de 1.2 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "20.6% - 19.4% = 1.2 puntos.",
+          "explicacion": "20.6% - 19.4% = 1.2.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Marzo y Abril juntos representan el 60.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil. Marzo y Abril juntos representan el 52.4% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 40.3%, no 60.5%.",
+          "explicacion": "Suman 40.3%, no 52.4%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil con centro 102.315. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Marzo, Abril, Mayo.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Marzo, Abril, Mayo, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (102.315) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil. El total de 102.315 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Mayo es aproximadamente 1.1 veces mayor que Enero en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. Mayo es aproximadamente 1.1 veces mayor que Enero en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "21.045 ÷ 19.865 ≈ 1.1.",
+          "explicacion": "21.045 / 19.865 = 1.1.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Mayo, Abril, Marzo) concentran el 60.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil. Las tres categorias principales (Mayo, Abril, Marzo) concentran el 60.9% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 60.9%.",
+          "explicacion": "Efectivamente suman 60.9%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Abril tendría un valor de 62.190.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil con centro 102.315. Si el total se duplicara, Abril tendria 53.898.",
           "respuesta": "F",
-          "explicacion": "Abril duplicado sería 41.460, no 62.190.",
+          "explicacion": "Abril duplicado seria 41.460, no 53.898.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Febrero y Marzo es 1.4:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre índice bursátil. La razon entre Febrero y Marzo es 4.0:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.0:1.",
+          "explicacion": "La razon real es 1.0:1, no 4.0:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de índice bursátil. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -4223,42 +3765,38 @@ var QuestionBank = {
   "011": {
     "id": "011",
     "nombre": "Producción de Litio (Ton)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Salar A tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de litio (ton) (Años 2020-2023). Salar A tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Salar A=82.000, el mayor en T1.",
+          "explicacion": "Salar A=82.000 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Salar B alcanza un valor de 45.200.",
+          "enunciado": "gráfico de barras agrupadas donde producción de litio (ton) se compara por T1 a T4. Salar B registra 45.200 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Salar B=45.200 en T3.",
+          "explicacion": "El valor de Salar B en T3 es exactamente 45.200.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Salar C tiene un valor de 28.067.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton). Salar C alcanza 28.730 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Salar C en T4 es 22.100, no 28.067.",
+          "explicacion": "Salar C vale 22.100 en T4, no 28.730.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Salar E supera a Salar D.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de litio (ton). En T2, Salar E supera en valor a Salar D.",
           "respuesta": "F",
           "explicacion": "En T2, Salar D=10.400 > Salar E=5.800.",
           "tipo": "barras"
@@ -4266,17 +3804,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Salar A se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton). La caida de Salar A entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Salar A pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Salar A y Salar B es de 46.300.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton) (Años 2020-2023). La diferencia entre Salar A y Salar B en T3 es de 46.300 unidades.",
           "respuesta": "V",
           "explicacion": "Salar A(91.500) - Salar B(45.200) = 46.300.",
           "tipo": "barras"
@@ -4284,8 +3820,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Salar A y Salar B suman 130.800.",
+          "enunciado": "gráfico de barras agrupadas donde Salar A es la categoría dominante y Salar E la más pequeña. En T2, Salar A y Salar B suman 130.800.",
           "respuesta": "V",
           "explicacion": "87.000 + 43.800 = 130.800.",
           "tipo": "barras"
@@ -4293,73 +3828,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Salar C y Salar D es de 11.536.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton). La diferencia entre Salar C y Salar D en T4 es de 13.390.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 10.300, no 11.536.",
+          "explicacion": "La diferencia real es 10.300, no 13.390.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 31.407.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Salar E muestra un crecimiento excepcional del 33%. El promedio en T4 es 47.476.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 36.520.",
+          "explicacion": "El promedio real en T4 es 36.520, no 47.476.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de litio (ton). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Salar E creció un +33% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton) donde Salar E muestra un crecimiento excepcional del 33%. Especificamente, Salar E crecio un +33% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Salar E pasó de 5.200 a 6.900, un cambio del +33%.",
+          "explicacion": "Salar E paso de 5.200 a 6.900 = +33%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Salar A es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Salar A es la variable con mayor diferencia entre su valor maximo y minimo (rango: 12.800).",
           "respuesta": "V",
-          "explicacion": "Rango de Salar A: 12.800.",
+          "explicacion": "El rango de Salar A es efectivamente 12.800.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Salar D creció un +15%.",
+          "enunciado": "gráfico de barras agrupadas sobre producción de litio (ton). Salar D vario un +40% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Salar D es +20%, no +15%.",
+          "explicacion": "Salar D vario +20%, no +40%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Salar E es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de producción de litio (ton) (Años 2020-2023). En T4, Salar E es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Salar A tiene el mayor valor (94.800), no Salar E.",
+          "explicacion": "En T4 el mayor es Salar A (94.800), no Salar E.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Salar A respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde producción de litio (ton). El cambio de tendencia de Salar A se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -4367,136 +3894,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Salar A alcanza exactamente 91.500.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton). El punto de Salar A en T3 marca exactamente 91.500.",
           "respuesta": "V",
-          "explicacion": "El punto de Salar A en T3 marca 91.500.",
+          "explicacion": "El valor de Salar A en T3 es 91.500.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Salar A finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de litio (ton) donde los marcadores diferencian cada variable. Salar A termina en T4 con el valor mas alto: 94.800.",
           "respuesta": "V",
-          "explicacion": "Salar A=94.800, el mayor en T4.",
+          "explicacion": "Salar A lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Salar B es 65.700.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton) (Años 2020-2023). Salar B registra 56.940 en T2.",
           "respuesta": "F",
-          "explicacion": "Salar B vale 43.800 en T2.",
+          "explicacion": "Salar B vale 43.800 en T2, no 56.940.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salar A muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton) con marcadores distintos. Salar A muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Salar A aumenta en cada período consecutivo.",
+          "explicacion": "Salar A crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Salar A representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton). El valor inicial de Salar A representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Salar C aumentó en 3.800 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para producción de litio (ton). Salar C aumento en 3.800 unidades de T1 a T4 (+21%).",
           "respuesta": "V",
-          "explicacion": "De 18.300 a 22.100: cambio de 3.800 (+21%).",
+          "explicacion": "De 18.300 a 22.100: 3.800 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Salar E (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton). La curva de Salar E tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +12%.",
+          "explicacion": "Salar E crece +33%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Salar E supera a Salar A en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de litio (ton) (Años 2020-2023). Salar E supera a Salar A en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Salar A mantiene valores superiores a Salar E en todos los períodos.",
+          "explicacion": "Salar A mantiene valores superiores a Salar E en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Salar D alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton). Salar D alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Salar D está en T4 (11.800).",
+          "explicacion": "El maximo de Salar D esta en T4 (11.800).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de litio (ton). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Salar E tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Salar E varía un +33%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton) donde Salar E muestra un crecimiento excepcional del 33%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para producción de litio (ton). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Salar A, Salar B, Salar C, Salar D, Salar E crece en todos los períodos consecutivos.",
+          "explicacion": "Salar A, Salar B, Salar C, Salar D, Salar E crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Salar B varió un +22%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción de litio (ton). Salar B vario un +37% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Salar B es +13%.",
+          "explicacion": "La variacion real de Salar B es +13%, no +37%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Salar E supera a Salar A.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción de litio (ton). En algun momento Salar E logra superar a Salar A.",
           "respuesta": "F",
-          "explicacion": "Salar A siempre está por encima de Salar E en todos los períodos.",
+          "explicacion": "Salar A siempre esta por encima de Salar E.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Salar A alcanzaría un valor de 99.540 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde producción de litio (ton). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -4504,53 +4016,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salar A representa el 52.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). Salar A representa el 52.2% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 52.2%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salar E es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton) donde el total central es 680.800. Salar E es la porcion mas pequena (3.6%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 3.6% del total.",
+          "explicacion": "Salar E tiene solo el 3.6% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salar B representa el 22.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). Salar B ocupa el 33.9% del total.",
           "respuesta": "F",
-          "explicacion": "Salar B representa el 26.1% del total, no el 22.9%.",
+          "explicacion": "Salar B ocupa el 26.1%, no el 33.9%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salar E es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton). Salar E es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Salar A es quien más contribuye (52.2%), no Salar E.",
+          "explicacion": "La mayor contribucion es Salar A (52.2%), no Salar E.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Salar A y Salar B suman el 78.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 680.800 sobre producción de litio (ton). Salar A y Salar B suman el 78.3% del total.",
           "respuesta": "V",
           "explicacion": "52.2% + 26.1% = 78.3%.",
           "tipo": "torta"
@@ -4558,82 +4064,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 48.6 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). La diferencia entre la mayor y menor porcion es de 48.6 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "52.2% - 3.6% = 48.6 puntos.",
+          "explicacion": "52.2% - 3.6% = 48.6.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Salar C y Salar D juntos representan el 13.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton). Salar C y Salar D juntos representan el 23.6% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 18.2%, no 13.6%.",
+          "explicacion": "Suman 18.2%, no 23.6%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton) con centro 680.800. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Salar A, Salar B.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Salar A, Salar B, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (680.800) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton). El total de 680.800 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Salar A es aproximadamente 14.7 veces mayor que Salar E en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). Salar A es aproximadamente 14.7 veces mayor que Salar E en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "355.300 ÷ 24.200 ≈ 14.7.",
+          "explicacion": "355.300 / 24.200 = 14.7.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Salar A, Salar B, Salar C) concentran el 90.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton). Las tres categorias principales (Salar A, Salar B, Salar C) concentran el 90.1% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 90.1%.",
+          "explicacion": "Efectivamente suman 90.1%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Salar D tendría un valor de 137.920.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton) con centro 680.800. Si el total se duplicara, Salar D tendria 112.060.",
           "respuesta": "F",
-          "explicacion": "Salar D duplicado sería 86.200, no 137.920.",
+          "explicacion": "Salar D duplicado seria 86.200, no 112.060.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Salar B y Salar C es 2.6:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción de litio (ton). La razon entre Salar B y Salar C es 5.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 2.2:1.",
+          "explicacion": "La razon real es 2.2:1, no 5.2:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción de litio (ton). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -4645,42 +4142,38 @@ var QuestionBank = {
   "012": {
     "id": "012",
     "nombre": "Velocidad Internet (Mbps)",
-    "periodos": "Años 2021-2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Fibra tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre velocidad internet (mbps) (Años 2021-2024). Fibra tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Fibra=180, el mayor en T1.",
+          "explicacion": "Fibra=180 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Cable alcanza un valor de 150.",
+          "enunciado": "gráfico de barras agrupadas donde velocidad internet (mbps) se compara por T1 a T4. Cable registra 150 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Cable=150 en T3.",
+          "explicacion": "El valor de Cable en T3 es exactamente 150.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "4G tiene un valor de 52.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps). 4G alcanza 55 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de 4G en T4 es 42, no 52.",
+          "explicacion": "4G vale 42 en T4, no 55.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Satelital supera a 5G.",
+          "enunciado": "gráfico de barras agrupadas sobre velocidad internet (mbps). En T2, Satelital supera en valor a 5G.",
           "respuesta": "F",
           "explicacion": "En T2, 5G=240 > Satelital=60.",
           "tipo": "barras"
@@ -4688,17 +4181,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Fibra se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps). La caida de 5G entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Fibra pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Fibra y Cable es de 170.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps) (Años 2021-2024). La diferencia entre Fibra y Cable en T3 es de 170 unidades.",
           "respuesta": "V",
           "explicacion": "Fibra(320) - Cable(150) = 170.",
           "tipo": "barras"
@@ -4706,8 +4197,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "5G y Fibra suman 480.",
+          "enunciado": "gráfico de barras agrupadas donde 5G es la categoría dominante y 4G la más pequeña. En T2, 5G y Fibra suman 480.",
           "respuesta": "V",
           "explicacion": "240 + 240 = 480.",
           "tipo": "barras"
@@ -4715,73 +4205,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre 4G y 5G es de 698.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps). La diferencia entre 4G y 5G en T4 es de 621.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 478, no 698.",
+          "explicacion": "La diferencia real es 478, no 621.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 360.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y 5G muestra un crecimiento excepcional del 373%. El promedio en T4 es 332.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 255.",
+          "explicacion": "El promedio real en T4 es 255, no 332.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre velocidad internet (mbps). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] 5G creció un +373% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps) donde 5G muestra un crecimiento excepcional del 373%. Especificamente, 5G crecio un +373% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "5G pasó de 110 a 520, un cambio del +373%.",
+          "explicacion": "5G paso de 110 a 520 = +373%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "5G es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. 5G es la variable con mayor diferencia entre su valor maximo y minimo (rango: 410).",
           "respuesta": "V",
-          "explicacion": "Rango de 5G: 410.",
+          "explicacion": "El rango de 5G es efectivamente 410.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] 5G creció un +544%.",
+          "enunciado": "gráfico de barras agrupadas sobre velocidad internet (mbps). 5G vario un +498% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de 5G es +373%, no +544%.",
+          "explicacion": "5G vario +373%, no +498%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "4G es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de velocidad internet (mbps) (Años 2021-2024). En T4, 4G es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, 5G tiene el mayor valor (520), no 4G.",
+          "explicacion": "En T4 el mayor es 5G (520), no 4G.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Fibra respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde velocidad internet (mbps). El cambio de tendencia de 5G se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -4789,136 +4271,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Fibra alcanza exactamente 320.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps). El punto de Fibra en T3 marca exactamente 320.",
           "respuesta": "V",
-          "explicacion": "El punto de Fibra en T3 marca 320.",
+          "explicacion": "El valor de Fibra en T3 es 320.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "5G finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre velocidad internet (mbps) donde los marcadores diferencian cada variable. 5G termina en T4 con el valor mas alto: 520.",
           "respuesta": "V",
-          "explicacion": "5G=520, el mayor en T4.",
+          "explicacion": "5G lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Cable es 202.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps) (Años 2021-2024). Cable registra 176 en T2.",
           "respuesta": "F",
-          "explicacion": "Cable vale 135 en T2.",
+          "explicacion": "Cable vale 135 en T2, no 176.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Fibra muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps) con marcadores distintos. Fibra muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Fibra aumenta en cada período consecutivo.",
+          "explicacion": "Fibra crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Fibra representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps). El valor inicial de 5G representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] 4G aumentó en 10 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para velocidad internet (mbps). 4G aumento en 10 unidades de T1 a T4 (+31%).",
           "respuesta": "V",
-          "explicacion": "De 32 a 42: cambio de 10 (+31%).",
+          "explicacion": "De 32 a 42: 10 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra 5G (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps). La curva de 5G tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +118%.",
+          "explicacion": "5G crece +373%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "4G supera a 5G en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre velocidad internet (mbps) (Años 2021-2024). 4G supera a 5G en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "5G mantiene valores superiores a 4G en todos los períodos.",
+          "explicacion": "5G mantiene valores superiores a 4G en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "5G alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps). 5G alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de 5G está en T4 (520).",
+          "explicacion": "El maximo de 5G esta en T4 (520).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre velocidad internet (mbps). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] 5G tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "5G varía un +373%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps) donde 5G muestra un crecimiento excepcional del 373%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para velocidad internet (mbps). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Fibra, Cable, 4G, 5G, Satelital crece en todos los períodos consecutivos.",
+          "explicacion": "Fibra, Cable, 4G, 5G, Satelital crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] 4G varió un +59%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre velocidad internet (mbps). 4G vario un +60% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de 4G es +31%.",
+          "explicacion": "La variacion real de 4G es +31%, no +60%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, 4G supera a 5G.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de velocidad internet (mbps). En algun momento 4G logra superar a 5G.",
           "respuesta": "F",
-          "explicacion": "5G siempre está por encima de 4G en todos los períodos.",
+          "explicacion": "5G siempre esta por encima de 4G.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, 5G alcanzaría un valor de 546 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde velocidad internet (mbps). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -4926,53 +4393,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "5G representa el 36.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). 5G representa el 36.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 36.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "4G es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps) donde el total central es 3.451. 4G es la porcion mas pequena (4.3%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 4.3% del total.",
+          "explicacion": "4G tiene solo el 4.3% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Cable representa el 23.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). Cable ocupa el 21.7% del total.",
           "respuesta": "F",
-          "explicacion": "Cable representa el 16.7% del total, no el 23.5%.",
+          "explicacion": "Cable ocupa el 16.7%, no el 21.7%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "4G es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps). 4G es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "5G es quien más contribuye (36.5%), no 4G.",
+          "explicacion": "La mayor contribucion es 5G (36.5%), no 4G.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Fibra y Cable suman el 51.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 3.451 sobre velocidad internet (mbps). Fibra y Cable suman el 51.1% del total.",
           "respuesta": "V",
           "explicacion": "34.5% + 16.7% = 51.1%.",
           "tipo": "torta"
@@ -4980,82 +4441,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 32.2 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). La diferencia entre la mayor y menor porcion es de 32.2 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "36.5% - 4.3% = 32.2 puntos.",
+          "explicacion": "36.5% - 4.3% = 32.2.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "4G y 5G juntos representan el 54.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps). 4G y 5G juntos representan el 53.0% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 40.8%, no 54.3%.",
+          "explicacion": "Suman 40.8%, no 53.0%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps) con centro 3.451. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Fibra, 5G.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Fibra, 5G, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (3.451) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps). El total de 3.451 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "5G es aproximadamente 8.5 veces mayor que 4G en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). 5G es aproximadamente 8.5 veces mayor que 4G en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "1.260 ÷ 148 ≈ 8.5.",
+          "explicacion": "1.260 / 148 = 8.5.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (5G, Fibra, Cable) concentran el 87.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps). Las tres categorias principales (5G, Fibra, Cable) concentran el 87.7% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 87.7%.",
+          "explicacion": "Efectivamente suman 87.7%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, 5G tendría un valor de 2.848.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps) con centro 3.451. Si el total se duplicara, 5G tendria 3.276.",
           "respuesta": "F",
-          "explicacion": "5G duplicado sería 2.520, no 2.848.",
+          "explicacion": "5G duplicado seria 2.520, no 3.276.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Cable y 4G es 6.1:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre velocidad internet (mbps). La razon entre Cable y 4G es 6.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 3.9:1.",
+          "explicacion": "La razon real es 3.9:1, no 6.9:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de velocidad internet (mbps). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -5067,42 +4519,38 @@ var QuestionBank = {
   "013": {
     "id": "013",
     "nombre": "Asistencia al Cine (Miles)",
-    "periodos": "Trimestres 2024 | Variables: 5",
+    "periodos": "2024",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Acción tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre asistencia al cine (miles) (Trimestres 2024). Acción tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Acción=420, el mayor en T1.",
+          "explicacion": "Acción=420 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Comedia alcanza un valor de 360.",
+          "enunciado": "gráfico de barras agrupadas donde asistencia al cine (miles) se compara por T1 a T4. Comedia registra 360 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Comedia=360 en T3.",
+          "explicacion": "El valor de Comedia en T3 es exactamente 360.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Drama tiene un valor de 307.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles). Drama alcanza 280 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Drama en T4 es 215, no 307.",
+          "explicacion": "Drama vale 215 en T4, no 280.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Terror supera a Animación.",
+          "enunciado": "gráfico de barras agrupadas sobre asistencia al cine (miles). En T2, Terror supera en valor a Animación.",
           "respuesta": "F",
           "explicacion": "En T2, Animación=320 > Terror=175.",
           "tipo": "barras"
@@ -5110,17 +4558,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Acción se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles). La caida de Acción entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Acción pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Acción y Comedia es de 150.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles) (Trimestres 2024). La diferencia entre Acción y Comedia en T3 es de 150 unidades.",
           "respuesta": "V",
           "explicacion": "Acción(510) - Comedia(360) = 150.",
           "tipo": "barras"
@@ -5128,8 +4574,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Acción y Animación suman 800.",
+          "enunciado": "gráfico de barras agrupadas donde Acción es la categoría dominante y Drama la más pequeña. En T2, Acción y Animación suman 800.",
           "respuesta": "V",
           "explicacion": "480 + 320 = 800.",
           "tipo": "barras"
@@ -5137,73 +4582,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Drama y Animación es de 152.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles). La diferencia entre Drama y Animación en T4 es de 396.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 305, no 152.",
+          "explicacion": "La diferencia real es 305, no 396.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 560.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Animación muestra un crecimiento excepcional del 100%. El promedio en T4 es 506.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 389.",
+          "explicacion": "El promedio real en T4 es 389, no 506.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre asistencia al cine (miles). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Animación creció un +100% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles) donde Animación muestra un crecimiento excepcional del 100%. Especificamente, Animación crecio un +100% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Animación pasó de 260 a 520, un cambio del +100%.",
+          "explicacion": "Animación paso de 260 a 520 = +100%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Animación es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Animación es la variable con mayor diferencia entre su valor maximo y minimo (rango: 260).",
           "respuesta": "V",
-          "explicacion": "Rango de Animación: 260.",
+          "explicacion": "El rango de Animación es efectivamente 260.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Animación creció un +85%.",
+          "enunciado": "gráfico de barras agrupadas sobre asistencia al cine (miles). Animación vario un +143% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Animación es +100%, no +85%.",
+          "explicacion": "Animación vario +100%, no +143%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Drama es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de asistencia al cine (miles) (Trimestres 2024). En T4, Drama es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Acción tiene el mayor valor (560), no Drama.",
+          "explicacion": "En T4 el mayor es Acción (560), no Drama.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Acción respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde asistencia al cine (miles). El cambio de tendencia de Acción se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -5211,136 +4648,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Acción alcanza exactamente 510.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles). El punto de Acción en T3 marca exactamente 510.",
           "respuesta": "V",
-          "explicacion": "El punto de Acción en T3 marca 510.",
+          "explicacion": "El valor de Acción en T3 es 510.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Acción finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre asistencia al cine (miles) donde los marcadores diferencian cada variable. Acción termina en T4 con el valor mas alto: 560.",
           "respuesta": "V",
-          "explicacion": "Acción=560, el mayor en T4.",
+          "explicacion": "Acción lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Comedia es 432.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles) (Trimestres 2024). Comedia registra 436 en T2.",
           "respuesta": "F",
-          "explicacion": "Comedia vale 335 en T2.",
+          "explicacion": "Comedia vale 335 en T2, no 436.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Acción muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles) con marcadores distintos. Acción muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Acción aumenta en cada período consecutivo.",
+          "explicacion": "Acción crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Acción representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles). El valor inicial de Acción representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Drama aumentó en 35 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para asistencia al cine (miles). Drama aumento en 35 unidades de T1 a T4 (+19%).",
           "respuesta": "V",
-          "explicacion": "De 180 a 215: cambio de 35 (+19%).",
+          "explicacion": "De 180 a 215: 35 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Animación (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles). La curva de Animación tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +28%.",
+          "explicacion": "Animación crece +100%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Drama supera a Acción en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre asistencia al cine (miles) (Trimestres 2024). Drama supera a Acción en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Acción mantiene valores superiores a Drama en todos los períodos.",
+          "explicacion": "Acción mantiene valores superiores a Drama en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Animación alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles). Animación alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Animación está en T4 (520).",
+          "explicacion": "El maximo de Animación esta en T4 (520).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre asistencia al cine (miles). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Animación tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Animación varía un +100%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles) donde Animación muestra un crecimiento excepcional del 100%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para asistencia al cine (miles). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Acción, Comedia, Drama, Animación, Terror crece en todos los períodos consecutivos.",
+          "explicacion": "Acción, Comedia, Drama, Animación, Terror crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Drama varió un +54%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre asistencia al cine (miles). Drama vario un +45% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Drama es +19%.",
+          "explicacion": "La variacion real de Drama es +19%, no +45%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Drama supera a Acción.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de asistencia al cine (miles). En algun momento Drama logra superar a Acción.",
           "respuesta": "F",
-          "explicacion": "Acción siempre está por encima de Drama en todos los períodos.",
+          "explicacion": "Acción siempre esta por encima de Drama.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Acción alcanzaría un valor de 588 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde asistencia al cine (miles). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -5348,53 +4770,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Acción representa el 30.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). Acción representa el 30.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 30.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Drama es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles) donde el total central es 6.465. Drama es la porcion mas pequena (12.2%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 12.2% del total.",
+          "explicacion": "Drama tiene solo el 12.2% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Comedia representa el 17.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). Comedia ocupa el 28.1% del total.",
           "respuesta": "F",
-          "explicacion": "Comedia representa el 21.6% del total, no el 17.7%.",
+          "explicacion": "Comedia ocupa el 21.6%, no el 28.1%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Drama es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles). Drama es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Acción es quien más contribuye (30.5%), no Drama.",
+          "explicacion": "La mayor contribucion es Acción (30.5%), no Drama.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Acción y Comedia suman el 52.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 6.465 sobre asistencia al cine (miles). Acción y Comedia suman el 52.0% del total.",
           "respuesta": "V",
           "explicacion": "30.5% + 21.6% = 52.0%.",
           "tipo": "torta"
@@ -5402,82 +4818,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 18.3 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). La diferencia entre la mayor y menor porcion es de 18.3 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "30.5% - 12.2% = 18.3 puntos.",
+          "explicacion": "30.5% - 12.2% = 18.3.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Drama y Animación juntos representan el 54.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles). Drama y Animación juntos representan el 46.2% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 35.6%, no 54.1%.",
+          "explicacion": "Suman 35.6%, no 46.2%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles) con centro 6.465. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Acción, Comedia, Animación.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Acción, Comedia, Animación, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (6.465) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles). El total de 6.465 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Acción es aproximadamente 2.5 veces mayor que Drama en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). Acción es aproximadamente 2.5 veces mayor que Drama en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "1.970 ÷ 790 ≈ 2.5.",
+          "explicacion": "1.970 / 790 = 2.5.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Acción, Animación, Comedia) concentran el 75.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles). Las tres categorias principales (Acción, Animación, Comedia) concentran el 75.4% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 75.4%.",
+          "explicacion": "Efectivamente suman 75.4%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Animación tendría un valor de 4.107.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles) con centro 6.465. Si el total se duplicara, Animación tendria 3.926.",
           "respuesta": "F",
-          "explicacion": "Animación duplicado sería 3.020, no 4.107.",
+          "explicacion": "Animación duplicado seria 3.020, no 3.926.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Comedia y Drama es 2.2:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre asistencia al cine (miles). La razon entre Comedia y Drama es 4.8:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.8:1.",
+          "explicacion": "La razon real es 1.8:1, no 4.8:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de asistencia al cine (miles). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -5489,42 +4896,38 @@ var QuestionBank = {
   "014": {
     "id": "014",
     "nombre": "Ventas de Vehículos",
-    "periodos": "Trimestres 2024 | Variables: 5",
+    "periodos": "2024",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "SUV tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de vehículos (Trimestres 2024). SUV tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "SUV=9.200, el mayor en T1.",
+          "explicacion": "SUV=9.200 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Sedán alcanza un valor de 5.400.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de vehículos se compara por T1 a T4. Sedán registra 5.400 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Sedán=5.400 en T3.",
+          "explicacion": "El valor de Sedán en T3 es exactamente 5.400.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Pickup tiene un valor de 5.494.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos. Pickup alcanza 5.213 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Pickup en T4 es 4.010, no 5.494.",
+          "explicacion": "Pickup vale 4.010 en T4, no 5.213.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Eléctrico supera a Híbrido.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de vehículos. En T2, Eléctrico supera en valor a Híbrido.",
           "respuesta": "F",
           "explicacion": "En T2, Híbrido=1.520 > Eléctrico=1.150.",
           "tipo": "barras"
@@ -5532,17 +4935,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de SUV se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos. La caida de SUV entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de SUV pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre SUV y Sedán es de 4.900.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos (Trimestres 2024). La diferencia entre SUV y Sedán en T3 es de 4.900 unidades.",
           "respuesta": "V",
           "explicacion": "SUV(10.300) - Sedán(5.400) = 4.900.",
           "tipo": "barras"
@@ -5550,8 +4951,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "SUV y Sedán suman 15.050.",
+          "enunciado": "gráfico de barras agrupadas donde SUV es la categoría dominante y Eléctrico la más pequeña. En T2, SUV y Sedán suman 15.050.",
           "respuesta": "V",
           "explicacion": "9.800 + 5.250 = 15.050.",
           "tipo": "barras"
@@ -5559,73 +4959,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Pickup y Eléctrico es de 1.675.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos. La diferencia entre Pickup y Eléctrico en T4 es de 2.756.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 2.120, no 1.675.",
+          "explicacion": "La diferencia real es 2.120, no 2.756.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 4.352.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Eléctrico muestra un crecimiento excepcional del 130%. El promedio en T4 es 6.357.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 4.890.",
+          "explicacion": "El promedio real en T4 es 4.890, no 6.357.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de vehículos. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Eléctrico creció un +130% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos donde Eléctrico muestra un crecimiento excepcional del 130%. Especificamente, Eléctrico crecio un +130% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Eléctrico pasó de 820 a 1.890, un cambio del +130%.",
+          "explicacion": "Eléctrico paso de 820 a 1.890 = +130%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "SUV es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. SUV es la variable con mayor diferencia entre su valor maximo y minimo (rango: 1.700).",
           "respuesta": "V",
-          "explicacion": "Rango de SUV: 1.700.",
+          "explicacion": "El rango de SUV es efectivamente 1.700.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Eléctrico creció un +211%.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de vehículos. Eléctrico vario un +183% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Eléctrico es +130%, no +211%.",
+          "explicacion": "Eléctrico vario +130%, no +183%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Eléctrico es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de ventas de vehículos (Trimestres 2024). En T4, Eléctrico es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, SUV tiene el mayor valor (10.900), no Eléctrico.",
+          "explicacion": "En T4 el mayor es SUV (10.900), no Eléctrico.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de SUV respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de vehículos. El cambio de tendencia de SUV se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -5633,136 +5025,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "SUV alcanza exactamente 10.300.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos. El punto de SUV en T3 marca exactamente 10.300.",
           "respuesta": "V",
-          "explicacion": "El punto de SUV en T3 marca 10.300.",
+          "explicacion": "El valor de SUV en T3 es 10.300.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "SUV finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de vehículos donde los marcadores diferencian cada variable. SUV termina en T4 con el valor mas alto: 10.900.",
           "respuesta": "V",
-          "explicacion": "SUV=10.900, el mayor en T4.",
+          "explicacion": "SUV lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Sedán es 7.088.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos (Trimestres 2024). Sedán registra 6.825 en T2.",
           "respuesta": "F",
-          "explicacion": "Sedán vale 5.250 en T2.",
+          "explicacion": "Sedán vale 5.250 en T2, no 6.825.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "SUV muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos con marcadores distintos. SUV muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "SUV aumenta en cada período consecutivo.",
+          "explicacion": "SUV crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de SUV representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos. El valor inicial de SUV representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Pickup aumentó en 610 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para ventas de vehículos. Pickup aumento en 610 unidades de T1 a T4 (+18%).",
           "respuesta": "V",
-          "explicacion": "De 3.400 a 4.010: cambio de 610 (+18%).",
+          "explicacion": "De 3.400 a 4.010: 610 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Eléctrico (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos. La curva de Eléctrico tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +40%.",
+          "explicacion": "Eléctrico crece +130%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Eléctrico supera a SUV en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de vehículos (Trimestres 2024). Eléctrico supera a SUV en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "SUV mantiene valores superiores a Eléctrico en todos los períodos.",
+          "explicacion": "SUV mantiene valores superiores a Eléctrico en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Eléctrico alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos. Eléctrico alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Eléctrico está en T4 (1.890).",
+          "explicacion": "El maximo de Eléctrico esta en T4 (1.890).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de vehículos. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Eléctrico tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Eléctrico varía un +130%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos donde Eléctrico muestra un crecimiento excepcional del 130%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para ventas de vehículos. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "SUV, Sedán, Pickup, Eléctrico, Híbrido crece en todos los períodos consecutivos.",
+          "explicacion": "SUV, Sedán, Pickup, Eléctrico, Híbrido crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Sedán varió un +19%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de vehículos. Sedán vario un +32% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Sedán es +10%.",
+          "explicacion": "La variacion real de Sedán es +10%, no +32%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Eléctrico supera a SUV.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de vehículos. En algun momento Eléctrico logra superar a SUV.",
           "respuesta": "F",
-          "explicacion": "SUV siempre está por encima de Eléctrico en todos los períodos.",
+          "explicacion": "SUV siempre esta por encima de Eléctrico.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, SUV alcanzaría un valor de 11.445 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde ventas de vehículos. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -5770,53 +5147,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "SUV representa el 45.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. SUV representa el 45.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 45.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Eléctrico es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos donde el total central es 88.330. Eléctrico es la porcion mas pequena (6.0%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 6.0% del total.",
+          "explicacion": "Eléctrico tiene solo el 6.0% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Sedán representa el 12.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. Sedán ocupa el 31.4% del total.",
           "respuesta": "F",
-          "explicacion": "Sedán representa el 24.2% del total, no el 12.1%.",
+          "explicacion": "Sedán ocupa el 24.2%, no el 31.4%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Eléctrico es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos. Eléctrico es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "SUV es quien más contribuye (45.5%), no Eléctrico.",
+          "explicacion": "La mayor contribucion es SUV (45.5%), no Eléctrico.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "SUV y Sedán suman el 69.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 88.330 sobre ventas de vehículos. SUV y Sedán suman el 69.7% del total.",
           "respuesta": "V",
           "explicacion": "45.5% + 24.2% = 69.7%.",
           "tipo": "torta"
@@ -5824,82 +5195,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 39.5 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. La diferencia entre la mayor y menor porcion es de 39.5 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "45.5% - 6.0% = 39.5 puntos.",
+          "explicacion": "45.5% - 6.0% = 39.5.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Pickup y Eléctrico juntos representan el 30.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos. Pickup y Eléctrico juntos representan el 29.7% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 22.8%, no 30.6%.",
+          "explicacion": "Suman 22.8%, no 29.7%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos con centro 88.330. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: SUV, Sedán.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: SUV, Sedán, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (88.330) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos. El total de 88.330 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "SUV es aproximadamente 7.5 veces mayor que Eléctrico en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. SUV es aproximadamente 7.5 veces mayor que Eléctrico en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "40.200 ÷ 5.340 ≈ 7.5.",
+          "explicacion": "40.200 / 5.340 = 7.5.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (SUV, Sedán, Pickup) concentran el 86.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos. Las tres categorias principales (SUV, Sedán, Pickup) concentran el 86.5% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 86.5%.",
+          "explicacion": "Efectivamente suman 86.5%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Eléctrico tendría un valor de 16.020.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos con centro 88.330. Si el total se duplicara, Eléctrico tendria 13.884.",
           "respuesta": "F",
-          "explicacion": "Eléctrico duplicado sería 10.680, no 16.020.",
+          "explicacion": "Eléctrico duplicado seria 10.680, no 13.884.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Sedán y Pickup es 0.7:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de vehículos. La razon entre Sedán y Pickup es 4.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.4:1.",
+          "explicacion": "La razon real es 1.4:1, no 4.4:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de vehículos. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -5911,42 +5273,38 @@ var QuestionBank = {
   "015": {
     "id": "015",
     "nombre": "Producción Agrícola (Ton)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Trigo tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre producción agrícola (ton) (Años 2020-2023). Trigo tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Trigo=120.000, el mayor en T1.",
+          "explicacion": "Trigo=120.000 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Maíz alcanza un valor de 102.300.",
+          "enunciado": "gráfico de barras agrupadas donde producción agrícola (ton) se compara por T1 a T4. Maíz registra 102.300 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Maíz=102.300 en T3.",
+          "explicacion": "El valor de Maíz en T3 es exactamente 102.300.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Papa tiene un valor de 45.050.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton). Papa alcanza 117.130 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Papa en T4 es 90.100, no 45.050.",
+          "explicacion": "Papa vale 90.100 en T4, no 117.130.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Quinoa supera a Avena.",
+          "enunciado": "gráfico de barras agrupadas sobre producción agrícola (ton). En T2, Quinoa supera en valor a Avena.",
           "respuesta": "F",
           "explicacion": "En T2, Avena=55.100 > Quinoa=5.200.",
           "tipo": "barras"
@@ -5954,17 +5312,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Trigo se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton). La caida de Trigo entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Trigo pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Trigo y Maíz es de 24.200.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton) (Años 2020-2023). La diferencia entre Trigo y Maíz en T3 es de 24.200 unidades.",
           "respuesta": "V",
           "explicacion": "Trigo(126.500) - Maíz(102.300) = 24.200.",
           "tipo": "barras"
@@ -5972,8 +5328,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Trigo y Maíz suman 223.500.",
+          "enunciado": "gráfico de barras agrupadas donde Trigo es la categoría dominante y Quinoa la más pequeña. En T2, Trigo y Maíz suman 223.500.",
           "respuesta": "V",
           "explicacion": "123.000 + 100.500 = 223.500.",
           "tipo": "barras"
@@ -5981,73 +5336,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Papa y Avena es de 28.623.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton). La diferencia entre Papa y Avena en T4 es de 42.770.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 32.900, no 28.623.",
+          "explicacion": "La diferencia real es 32.900, no 42.770.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 89.830.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre 5% y 27%. El promedio en T4 es 100.672.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 77.440.",
+          "explicacion": "El promedio real en T4 es 77.440, no 100.672.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre producción agrícola (ton). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Quinoa creció un +27% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton) donde las variables tienen crecimientos moderados entre 5% y 27%. Especificamente, Quinoa crecio un +27% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Quinoa pasó de 4.800 a 6.100, un cambio del +27%.",
+          "explicacion": "Quinoa paso de 4.800 a 6.100 = +27%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Trigo es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Trigo es la variable con mayor diferencia entre su valor maximo y minimo (rango: 9.000).",
           "respuesta": "V",
-          "explicacion": "Rango de Trigo: 9.000.",
+          "explicacion": "El rango de Trigo es efectivamente 9.000.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Avena creció un +24%.",
+          "enunciado": "gráfico de barras agrupadas sobre producción agrícola (ton). Avena vario un +21% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Avena es +6%, no +24%.",
+          "explicacion": "Avena vario +6%, no +21%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Quinoa es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de producción agrícola (ton) (Años 2020-2023). En T4, Quinoa es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Trigo tiene el mayor valor (129.000), no Quinoa.",
+          "explicacion": "En T4 el mayor es Trigo (129.000), no Quinoa.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Trigo respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde producción agrícola (ton). El cambio de tendencia de Trigo se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -6055,136 +5402,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Trigo alcanza exactamente 126.500.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton). El punto de Trigo en T3 marca exactamente 126.500.",
           "respuesta": "V",
-          "explicacion": "El punto de Trigo en T3 marca 126.500.",
+          "explicacion": "El valor de Trigo en T3 es 126.500.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Trigo finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción agrícola (ton) donde los marcadores diferencian cada variable. Trigo termina en T4 con el valor mas alto: 129.000.",
           "respuesta": "V",
-          "explicacion": "Trigo=129.000, el mayor en T4.",
+          "explicacion": "Trigo lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Maíz es 111.555.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton) (Años 2020-2023). Maíz registra 130.650 en T2.",
           "respuesta": "F",
-          "explicacion": "Maíz vale 100.500 en T2.",
+          "explicacion": "Maíz vale 100.500 en T2, no 130.650.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Trigo muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton) con marcadores distintos. Trigo muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Trigo aumenta en cada período consecutivo.",
+          "explicacion": "Trigo crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Trigo representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton). El valor inicial de Trigo representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Papa aumentó en 4.100 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para producción agrícola (ton). Papa aumento en 4.100 unidades de T1 a T4 (+5%).",
           "respuesta": "V",
-          "explicacion": "De 86.000 a 90.100: cambio de 4.100 (+5%).",
+          "explicacion": "De 86.000 a 90.100: 4.100 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Quinoa (T3→T4).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton). La curva de Quinoa tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +9%.",
+          "explicacion": "Quinoa crece +27%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Quinoa supera a Trigo en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción agrícola (ton) (Años 2020-2023). Quinoa supera a Trigo en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Trigo mantiene valores superiores a Quinoa en todos los períodos.",
+          "explicacion": "Trigo mantiene valores superiores a Quinoa en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Avena alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton). Avena alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Avena está en T4 (57.200).",
+          "explicacion": "El maximo de Avena esta en T4 (57.200).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción agrícola (ton). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Quinoa tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Quinoa varía un +27%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton) donde las variables tienen crecimientos moderados entre 5% y 27%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para producción agrícola (ton). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Trigo, Maíz, Papa, Avena, Quinoa crece en todos los períodos consecutivos.",
+          "explicacion": "Trigo, Maíz, Papa, Avena, Quinoa crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Papa varió un +26%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción agrícola (ton). Papa vario un +26% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Papa es +5%.",
+          "explicacion": "La variacion real de Papa es +5%, no +26%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Quinoa supera a Trigo.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción agrícola (ton). En algun momento Quinoa logra superar a Trigo.",
           "respuesta": "F",
-          "explicacion": "Trigo siempre está por encima de Quinoa en todos los períodos.",
+          "explicacion": "Trigo siempre esta por encima de Quinoa.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Trigo alcanzaría un valor de 135.450 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde producción agrícola (ton). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -6192,53 +5524,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Trigo representa el 33.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). Trigo representa el 33.2% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 33.2%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Quinoa es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton) donde el total central es 1.499.900. Quinoa es la porcion mas pequena (1.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 1.4% del total.",
+          "explicacion": "Quinoa tiene solo el 1.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Maíz representa el 44.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). Maíz ocupa el 35.2% del total.",
           "respuesta": "F",
-          "explicacion": "Maíz representa el 27.0% del total, no el 44.1%.",
+          "explicacion": "Maíz ocupa el 27.0%, no el 35.2%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Quinoa es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton). Quinoa es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Trigo es quien más contribuye (33.2%), no Quinoa.",
+          "explicacion": "La mayor contribucion es Trigo (33.2%), no Quinoa.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Trigo y Maíz suman el 60.3% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 1.499.900 sobre producción agrícola (ton). Trigo y Maíz suman el 60.3% del total.",
           "respuesta": "V",
           "explicacion": "33.2% + 27.0% = 60.3%.",
           "tipo": "torta"
@@ -6246,82 +5572,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 31.8 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). La diferencia entre la mayor y menor porcion es de 31.8 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "33.2% - 1.4% = 31.8 puntos.",
+          "explicacion": "33.2% - 1.4% = 31.8.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Papa y Avena juntos representan el 57.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton). Papa y Avena juntos representan el 49.8% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 38.3%, no 57.4%.",
+          "explicacion": "Suman 38.3%, no 49.8%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton) con centro 1.499.900. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Trigo, Maíz, Papa.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Trigo, Maíz, Papa, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (1.499.900) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton). El total de 1.499.900 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Trigo es aproximadamente 23.0 veces mayor que Quinoa en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). Trigo es aproximadamente 23.0 veces mayor que Quinoa en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "498.500 ÷ 21.700 ≈ 23.0.",
+          "explicacion": "498.500 / 21.700 = 23.0.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Trigo, Maíz, Papa) concentran el 83.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton). Las tres categorias principales (Trigo, Maíz, Papa) concentran el 83.7% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 83.7%.",
+          "explicacion": "Efectivamente suman 83.7%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Avena tendría un valor de 582.426.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton) con centro 1.499.900. Si el total se duplicara, Avena tendria 577.980.",
           "respuesta": "F",
-          "explicacion": "Avena duplicado sería 444.600, no 582.426.",
+          "explicacion": "Avena duplicado seria 444.600, no 577.980.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Maíz y Papa es 1.7:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción agrícola (ton). La razon entre Maíz y Papa es 4.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.2:1.",
+          "explicacion": "La razon real es 1.2:1, no 4.2:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción agrícola (ton). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -6333,42 +5650,38 @@ var QuestionBank = {
   "016": {
     "id": "016",
     "nombre": "Ventas de Libros",
-    "periodos": "Años 2021-2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Novela tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de libros (Años 2021-2024). Novela tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Novela=18.000, el mayor en T1.",
+          "explicacion": "Novela=18.000 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Historia alcanza un valor de 8.700.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de libros se compara por T1 a T4. Historia registra 8.700 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Historia=8.700 en T3.",
+          "explicacion": "El valor de Historia en T3 es exactamente 8.700.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Ciencia tiene un valor de 5.895.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros. Ciencia alcanza 8.515 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Ciencia en T4 es 6.550, no 5.895.",
+          "explicacion": "Ciencia vale 6.550 en T4, no 8.515.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Tecnología supera a Infantil.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de libros. En T2, Tecnología supera en valor a Infantil.",
           "respuesta": "F",
           "explicacion": "En T2, Infantil=9.600 > Tecnología=4.550.",
           "tipo": "barras"
@@ -6376,17 +5689,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Novela se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros. La caida de Novela entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Novela pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Novela y Historia es de 11.800.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros (Años 2021-2024). La diferencia entre Novela y Historia en T3 es de 11.800 unidades.",
           "respuesta": "V",
           "explicacion": "Novela(20.500) - Historia(8.700) = 11.800.",
           "tipo": "barras"
@@ -6394,8 +5705,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Novela y Infantil suman 28.800.",
+          "enunciado": "gráfico de barras agrupadas donde Novela es la categoría dominante y Tecnología la más pequeña. En T2, Novela y Infantil suman 28.800.",
           "respuesta": "V",
           "explicacion": "19.200 + 9.600 = 28.800.",
           "tipo": "barras"
@@ -6403,73 +5713,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Ciencia y Infantil es de 6.052.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros. La diferencia entre Ciencia y Infantil en T4 es de 5.785.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 4.450, no 6.052.",
+          "explicacion": "La diferencia real es 4.450, no 5.785.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 15.990.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Tecnología muestra un crecimiento excepcional del 32%. El promedio en T4 es 13.858.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 10.660.",
+          "explicacion": "El promedio real en T4 es 10.660, no 13.858.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de libros. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Tecnología creció un +32% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros donde Tecnología muestra un crecimiento excepcional del 32%. Especificamente, Tecnología crecio un +32% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Tecnología pasó de 4.100 a 5.400, un cambio del +32%.",
+          "explicacion": "Tecnología paso de 4.100 a 5.400 = +32%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Novela es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Novela es la variable con mayor diferencia entre su valor maximo y minimo (rango: 3.400).",
           "respuesta": "V",
-          "explicacion": "Rango de Novela: 3.400.",
+          "explicacion": "El rango de Novela es efectivamente 3.400.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Infantil creció un +39%.",
+          "enunciado": "gráfico de barras agrupadas sobre ventas de libros. Infantil vario un +40% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Infantil es +21%, no +39%.",
+          "explicacion": "Infantil vario +21%, no +40%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Tecnología es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de ventas de libros (Años 2021-2024). En T4, Tecnología es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Novela tiene el mayor valor (21.400), no Tecnología.",
+          "explicacion": "En T4 el mayor es Novela (21.400), no Tecnología.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Novela respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde ventas de libros. El cambio de tendencia de Novela se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -6477,136 +5779,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Novela alcanza exactamente 20.500.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros. El punto de Novela en T3 marca exactamente 20.500.",
           "respuesta": "V",
-          "explicacion": "El punto de Novela en T3 marca 20.500.",
+          "explicacion": "El valor de Novela en T3 es 20.500.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Novela finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de libros donde los marcadores diferencian cada variable. Novela termina en T4 con el valor mas alto: 21.400.",
           "respuesta": "V",
-          "explicacion": "Novela=21.400, el mayor en T4.",
+          "explicacion": "Novela lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Historia es 11.305.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros (Años 2021-2024). Historia registra 11.050 en T2.",
           "respuesta": "F",
-          "explicacion": "Historia vale 8.500 en T2.",
+          "explicacion": "Historia vale 8.500 en T2, no 11.050.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Novela muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros con marcadores distintos. Novela muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Novela aumenta en cada período consecutivo.",
+          "explicacion": "Novela crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Novela representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros. El valor inicial de Novela representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Ciencia aumentó en 950 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para ventas de libros. Ciencia aumento en 950 unidades de T1 a T4 (+17%).",
           "respuesta": "V",
-          "explicacion": "De 5.600 a 6.550: cambio de 950 (+17%).",
+          "explicacion": "De 5.600 a 6.550: 950 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Tecnología (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros. La curva de Tecnología tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +11%.",
+          "explicacion": "Tecnología crece +32%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Tecnología supera a Novela en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de libros (Años 2021-2024). Tecnología supera a Novela en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Novela mantiene valores superiores a Tecnología en todos los períodos.",
+          "explicacion": "Novela mantiene valores superiores a Tecnología en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Infantil alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros. Infantil alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Infantil está en T4 (11.000).",
+          "explicacion": "El maximo de Infantil esta en T4 (11.000).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de libros. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Tecnología tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Tecnología varía un +32%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros donde Tecnología muestra un crecimiento excepcional del 32%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para ventas de libros. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Novela, Historia, Ciencia, Infantil, Tecnología crece en todos los períodos consecutivos.",
+          "explicacion": "Novela, Historia, Ciencia, Infantil, Tecnología crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Historia varió un +12%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre ventas de libros. Historia vario un +31% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Historia es +9%.",
+          "explicacion": "La variacion real de Historia es +9%, no +31%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Tecnología supera a Novela.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de ventas de libros. En algun momento Tecnología logra superar a Novela.",
           "respuesta": "F",
-          "explicacion": "Novela siempre está por encima de Tecnología en todos los períodos.",
+          "explicacion": "Novela siempre esta por encima de Tecnología.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Novela alcanzaría un valor de 22.470 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde ventas de libros. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -6614,53 +5901,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Novela representa el 40.2% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. Novela representa el 40.2% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 40.2%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Tecnología es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros donde el total central es 196.650. Tecnología es la porcion mas pequena (9.6%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 9.6% del total.",
+          "explicacion": "Tecnología tiene solo el 9.6% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Historia representa el 8.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. Historia ocupa el 22.7% del total.",
           "respuesta": "F",
-          "explicacion": "Historia representa el 17.5% del total, no el 8.7%.",
+          "explicacion": "Historia ocupa el 17.5%, no el 22.7%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Tecnología es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros. Tecnología es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Novela es quien más contribuye (40.2%), no Tecnología.",
+          "explicacion": "La mayor contribucion es Novela (40.2%), no Tecnología.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Novela y Historia suman el 57.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 196.650 sobre ventas de libros. Novela y Historia suman el 57.7% del total.",
           "respuesta": "V",
           "explicacion": "40.2% + 17.5% = 57.7%.",
           "tipo": "torta"
@@ -6668,82 +5949,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 30.6 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. La diferencia entre la mayor y menor porcion es de 30.6 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "40.2% - 9.6% = 30.6 puntos.",
+          "explicacion": "40.2% - 9.6% = 30.6.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Ciencia y Infantil juntos representan el 27.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros. Ciencia y Infantil juntos representan el 42.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 32.7%, no 27.4%.",
+          "explicacion": "Suman 32.7%, no 42.5%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 3 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros con centro 196.650. Exactamente 3 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 2 variable(s) sobre el 20%: Novela, Infantil.",
+          "explicacion": "Son 2 categoria(s) sobre 20%: Novela, Infantil, no 3.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (196.650) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros. El total de 196.650 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Novela es aproximadamente 4.2 veces mayor que Tecnología en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. Novela es aproximadamente 4.2 veces mayor que Tecnología en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "79.100 ÷ 18.950 ≈ 4.2.",
+          "explicacion": "79.100 / 18.950 = 4.2.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Novela, Infantil, Historia) concentran el 78.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros. Las tres categorias principales (Novela, Infantil, Historia) concentran el 78.0% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 78.0%.",
+          "explicacion": "Efectivamente suman 78.0%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Infantil tendría un valor de 94.400.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros con centro 196.650. Si el total se duplicara, Infantil tendria 104.000.",
           "respuesta": "F",
-          "explicacion": "Infantil duplicado sería 80.000, no 94.400.",
+          "explicacion": "Infantil duplicado seria 80.000, no 104.000.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Historia y Ciencia es 2.1:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre ventas de libros. La razon entre Historia y Ciencia es 4.4:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.4:1.",
+          "explicacion": "La razon real es 1.4:1, no 4.4:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de ventas de libros. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -6755,42 +6027,38 @@ var QuestionBank = {
   "017": {
     "id": "017",
     "nombre": "Consumo Eléctrico (GWh)",
-    "periodos": "Meses Invierno | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Minería tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo eléctrico (gwh) (Meses Invierno). Minería tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Minería=1.450, el mayor en T1.",
+          "explicacion": "Minería=1.450 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Industrial alcanza un valor de 1.265.",
+          "enunciado": "gráfico de barras agrupadas donde consumo eléctrico (gwh) se compara por T1 a T4. Industrial registra 1.265 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Industrial=1.265 en T3.",
+          "explicacion": "El valor de Industrial en T3 es exactamente 1.265.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Comercial tiene un valor de 1.014.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh). Comercial alcanza 897 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Comercial en T4 es 690, no 1.014.",
+          "explicacion": "Comercial vale 690 en T4, no 897.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Público supera a Minería.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo eléctrico (gwh). En T2, Público supera en valor a Minería.",
           "respuesta": "F",
           "explicacion": "En T2, Minería=1.465 > Público=220.",
           "tipo": "barras"
@@ -6798,17 +6066,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Residencial se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh). La caida de Minería entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Residencial pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Residencial y Industrial es de 325.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh) (Meses Invierno). La diferencia entre Residencial y Industrial en T3 es de 325 unidades.",
           "respuesta": "V",
           "explicacion": "Residencial(940) - Industrial(1.265) = 325.",
           "tipo": "barras"
@@ -6816,8 +6082,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Minería y Industrial suman 2.705.",
+          "enunciado": "gráfico de barras agrupadas donde Minería es la categoría dominante y Público la más pequeña. En T2, Minería y Industrial suman 2.705.",
           "respuesta": "V",
           "explicacion": "1.465 + 1.240 = 2.705.",
           "tipo": "barras"
@@ -6825,73 +6090,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Comercial y Minería es de 713.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh). La diferencia entre Comercial y Minería en T4 es de 1.053.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 810, no 713.",
+          "explicacion": "La diferencia real es 810, no 1.053.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 1.309.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre 3% y 10%. El promedio en T4 es 1.216.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 935.",
+          "explicacion": "El promedio real en T4 es 935, no 1.216.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo eléctrico (gwh). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Residencial creció un +10% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh) donde las variables tienen crecimientos moderados entre 3% y 10%. Especificamente, Residencial crecio un +10% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Residencial pasó de 880 a 970, un cambio del +10%.",
+          "explicacion": "Residencial paso de 880 a 970 = +10%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Residencial es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Residencial es la variable con mayor diferencia entre su valor maximo y minimo (rango: 90).",
           "respuesta": "V",
-          "explicacion": "Rango de Residencial: 90.",
+          "explicacion": "El rango de Residencial es efectivamente 90.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Minería creció un +20%.",
+          "enunciado": "gráfico de barras agrupadas sobre consumo eléctrico (gwh). Minería vario un +18% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Minería es +3%, no +20%.",
+          "explicacion": "Minería vario +3%, no +18%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Público es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de consumo eléctrico (gwh) (Meses Invierno). En T4, Público es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Minería tiene el mayor valor (1.500), no Público.",
+          "explicacion": "En T4 el mayor es Minería (1.500), no Público.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Residencial respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde consumo eléctrico (gwh). El cambio de tendencia de Minería se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -6899,136 +6156,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Residencial alcanza exactamente 940.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh). El punto de Residencial en T3 marca exactamente 940.",
           "respuesta": "V",
-          "explicacion": "El punto de Residencial en T3 marca 940.",
+          "explicacion": "El valor de Residencial en T3 es 940.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Minería finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo eléctrico (gwh) donde los marcadores diferencian cada variable. Minería termina en T4 con el valor mas alto: 1.500.",
           "respuesta": "V",
-          "explicacion": "Minería=1.500, el mayor en T4.",
+          "explicacion": "Minería lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Industrial es 1.786.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh) (Meses Invierno). Industrial registra 1.612 en T2.",
           "respuesta": "F",
-          "explicacion": "Industrial vale 1.240 en T2.",
+          "explicacion": "Industrial vale 1.240 en T2, no 1.612.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Residencial muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh) con marcadores distintos. Residencial muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Residencial aumenta en cada período consecutivo.",
+          "explicacion": "Residencial crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Residencial representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh). El valor inicial de Minería representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Comercial aumentó en 50 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para consumo eléctrico (gwh). Comercial aumento en 50 unidades de T1 a T4 (+8%).",
           "respuesta": "V",
-          "explicacion": "De 640 a 690: cambio de 50 (+8%).",
+          "explicacion": "De 640 a 690: 50 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Público (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh). La curva de Residencial tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +4%.",
+          "explicacion": "Residencial crece +10%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Público supera a Minería en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo eléctrico (gwh) (Meses Invierno). Público supera a Minería en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Minería mantiene valores superiores a Público en todos los períodos.",
+          "explicacion": "Minería mantiene valores superiores a Público en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Minería alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh). Minería alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Minería está en T4 (1.500).",
+          "explicacion": "El maximo de Minería esta en T4 (1.500).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo eléctrico (gwh). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Residencial tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Residencial varía un +10%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh) donde las variables tienen crecimientos moderados entre 3% y 10%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para consumo eléctrico (gwh). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Residencial, Industrial, Comercial, Minería, Público crece en todos los períodos consecutivos.",
+          "explicacion": "Residencial, Industrial, Comercial, Minería, Público crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Minería varió un +16%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre consumo eléctrico (gwh). Minería vario un +24% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Minería es +3%.",
+          "explicacion": "La variacion real de Minería es +3%, no +24%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Público supera a Minería.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de consumo eléctrico (gwh). En algun momento Público logra superar a Minería.",
           "respuesta": "F",
-          "explicacion": "Minería siempre está por encima de Público en todos los períodos.",
+          "explicacion": "Minería siempre esta por encima de Público.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Minería alcanzaría un valor de 1.575 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde consumo eléctrico (gwh). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -7036,53 +6278,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Minería representa el 32.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). Minería representa el 32.5% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 32.5%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Público es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh) donde el total central es 18.153. Público es la porcion mas pequena (4.9%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 4.9% del total.",
+          "explicacion": "Público tiene solo el 4.9% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Industrial representa el 37.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). Industrial ocupa el 35.8% del total.",
           "respuesta": "F",
-          "explicacion": "Industrial representa el 27.6% del total, no el 37.5%.",
+          "explicacion": "Industrial ocupa el 27.6%, no el 35.8%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Público es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh). Público es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Minería es quien más contribuye (32.5%), no Público.",
+          "explicacion": "La mayor contribucion es Minería (32.5%), no Público.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Residencial y Industrial suman el 48.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 18.153 sobre consumo eléctrico (gwh). Residencial y Industrial suman el 48.0% del total.",
           "respuesta": "V",
           "explicacion": "20.4% + 27.6% = 48.0%.",
           "tipo": "torta"
@@ -7090,82 +6326,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 27.5 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). La diferencia entre la mayor y menor porcion es de 27.5 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "32.5% - 4.9% = 27.5 puntos.",
+          "explicacion": "32.5% - 4.9% = 27.5.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Comercial y Minería juntos representan el 56.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh). Comercial y Minería juntos representan el 61.2% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 47.1%, no 56.5%.",
+          "explicacion": "Suman 47.1%, no 61.2%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh) con centro 18.153. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Residencial, Industrial, Minería.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Residencial, Industrial, Minería, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (18.153) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh). El total de 18.153 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Minería es aproximadamente 6.6 veces mayor que Público en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). Minería es aproximadamente 6.6 veces mayor que Público en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "5.895 ÷ 898 ≈ 6.6.",
+          "explicacion": "5.895 / 898 = 6.6.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Minería, Industrial, Residencial) concentran el 80.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh). Las tres categorias principales (Minería, Industrial, Residencial) concentran el 80.4% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 80.4%.",
+          "explicacion": "Efectivamente suman 80.4%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Minería tendría un valor de 9.078.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh) con centro 18.153. Si el total se duplicara, Minería tendria 15.327.",
           "respuesta": "F",
-          "explicacion": "Minería duplicado sería 11.790, no 9.078.",
+          "explicacion": "Minería duplicado seria 11.790, no 15.327.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Industrial y Comercial es 1.4:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre consumo eléctrico (gwh). La razon entre Industrial y Comercial es 4.9:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.9:1.",
+          "explicacion": "La razon real es 1.9:1, no 4.9:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de consumo eléctrico (gwh). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -7177,42 +6404,38 @@ var QuestionBank = {
   "018": {
     "id": "018",
     "nombre": "Producción Pesquera (Ton)",
-    "periodos": "Años 2020-2023 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Salmón tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre producción pesquera (ton) (Años 2020-2023). Salmón tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Salmón=520.000, el mayor en T1.",
+          "explicacion": "Salmón=520.000 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Jurel alcanza un valor de 188.000.",
+          "enunciado": "gráfico de barras agrupadas donde producción pesquera (ton) se compara por T1 a T4. Jurel registra 188.000 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Jurel=188.000 en T3.",
+          "explicacion": "El valor de Jurel en T3 es exactamente 188.000.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Merluza tiene un valor de 108.472.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton). Merluza alcanza 94.640 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Merluza en T4 es 72.800, no 108.472.",
+          "explicacion": "Merluza vale 72.800 en T4, no 94.640.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Anchoveta supera a Sardina.",
+          "enunciado": "gráfico de barras agrupadas sobre producción pesquera (ton). En T2, Anchoveta supera en valor a Sardina.",
           "respuesta": "F",
           "explicacion": "En T2, Sardina=101.000 > Anchoveta=65.800.",
           "tipo": "barras"
@@ -7220,17 +6443,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Salmón se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton). La caida de Salmón entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Salmón pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Salmón y Jurel es de 360.000.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton) (Años 2020-2023). La diferencia entre Salmón y Jurel en T3 es de 360.000 unidades.",
           "respuesta": "V",
           "explicacion": "Salmón(548.000) - Jurel(188.000) = 360.000.",
           "tipo": "barras"
@@ -7238,8 +6459,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Salmón y Jurel suman 711.000.",
+          "enunciado": "gráfico de barras agrupadas donde Salmón es la categoría dominante y Anchoveta la más pequeña. En T2, Salmón y Jurel suman 711.000.",
           "respuesta": "V",
           "explicacion": "535.000 + 176.000 = 711.000.",
           "tipo": "barras"
@@ -7247,73 +6467,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Merluza y Sardina es de 45.408.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton). La diferencia entre Merluza y Sardina en T4 es de 45.760.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 35.200, no 45.408.",
+          "explicacion": "La diferencia real es 35.200, no 45.760.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 231.104.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y las variables tienen crecimientos moderados entre -4% y 10%. El promedio en T4 es 261.248.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 200.960.",
+          "explicacion": "El promedio real en T4 es 200.960, no 261.248.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre producción pesquera (ton). Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Sardina creció un +10% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton) donde las variables tienen crecimientos moderados entre -4% y 10%. Especificamente, Sardina crecio un +10% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Sardina pasó de 98.000 a 108.000, un cambio del +10%.",
+          "explicacion": "Sardina paso de 98.000 a 108.000 = +10%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Salmón es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Salmón es la variable con mayor diferencia entre su valor maximo y minimo (rango: 41.000).",
           "respuesta": "V",
-          "explicacion": "Rango de Salmón: 41.000.",
+          "explicacion": "El rango de Salmón es efectivamente 41.000.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Sardina creció un +34%.",
+          "enunciado": "gráfico de barras agrupadas sobre producción pesquera (ton). Sardina vario un +26% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Sardina es +10%, no +34%.",
+          "explicacion": "Sardina vario +10%, no +26%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Anchoveta es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de producción pesquera (ton) (Años 2020-2023). En T4, Anchoveta es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Salmón tiene el mayor valor (561.000), no Anchoveta.",
+          "explicacion": "En T4 el mayor es Salmón (561.000), no Anchoveta.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Salmón respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde producción pesquera (ton). El cambio de tendencia de Salmón se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -7321,136 +6533,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Salmón alcanza exactamente 548.000.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton). El punto de Salmón en T3 marca exactamente 548.000.",
           "respuesta": "V",
-          "explicacion": "El punto de Salmón en T3 marca 548.000.",
+          "explicacion": "El valor de Salmón en T3 es 548.000.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Salmón finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción pesquera (ton) donde los marcadores diferencian cada variable. Salmón termina en T4 con el valor mas alto: 561.000.",
           "respuesta": "V",
-          "explicacion": "Salmón=561.000, el mayor en T4.",
+          "explicacion": "Salmón lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Jurel es 209.440.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton) (Años 2020-2023). Jurel registra 228.800 en T2.",
           "respuesta": "F",
-          "explicacion": "Jurel vale 176.000 en T2.",
+          "explicacion": "Jurel vale 176.000 en T2, no 228.800.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Merluza muestra una tendencia creciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton) con marcadores distintos. Merluza muestra una tendencia creciente.",
           "respuesta": "F",
-          "explicacion": "Merluza disminuye en cada período consecutivo.",
+          "explicacion": "Merluza decrece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Salmón representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton). El valor inicial de Salmón representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Merluza disminuyó en 3.200 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para producción pesquera (ton). Merluza disminuyo en 3.200 unidades de T1 a T4 (-4%).",
           "respuesta": "V",
-          "explicacion": "De 76.000 a 72.800: cambio de -3.200 (-4%).",
+          "explicacion": "De 76.000 a 72.800: -3.200 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Jurel (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton). La curva de Sardina tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +7%.",
+          "explicacion": "Sardina crece +10%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Anchoveta supera a Salmón en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción pesquera (ton) (Años 2020-2023). Anchoveta supera a Salmón en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Salmón mantiene valores superiores a Anchoveta en todos los períodos.",
+          "explicacion": "Salmón mantiene valores superiores a Anchoveta en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Sardina alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton). Sardina alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Sardina está en T4 (108.000).",
+          "explicacion": "El maximo de Sardina esta en T4 (108.000).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción pesquera (ton). La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Sardina tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Sardina varía un +10%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton) donde las variables tienen crecimientos moderados entre -4% y 10%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para producción pesquera (ton). Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Salmón, Sardina, Anchoveta crece en todos los períodos consecutivos.",
+          "explicacion": "Salmón, Sardina, Anchoveta crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Merluza varió un -26%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre producción pesquera (ton). Merluza vario un -25% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Merluza es -4%.",
+          "explicacion": "La variacion real de Merluza es -4%, no -25%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Anchoveta supera a Salmón.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de producción pesquera (ton). En algun momento Anchoveta logra superar a Salmón.",
           "respuesta": "F",
-          "explicacion": "Salmón siempre está por encima de Anchoveta en todos los períodos.",
+          "explicacion": "Salmón siempre esta por encima de Anchoveta.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Salmón alcanzaría un valor de 589.050 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde producción pesquera (ton). La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -7458,53 +6655,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Salmón representa el 55.8% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). Salmón representa el 55.8% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 55.8%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Anchoveta es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton) donde el total central es 3.877.900. Anchoveta es la porcion mas pequena (6.9%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 6.9% del total.",
+          "explicacion": "Anchoveta tiene solo el 6.9% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Jurel representa el 28.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). Jurel ocupa el 24.8% del total.",
           "respuesta": "F",
-          "explicacion": "Jurel representa el 19.1% del total, no el 28.6%.",
+          "explicacion": "Jurel ocupa el 19.1%, no el 24.8%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Anchoveta es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton). Anchoveta es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Salmón es quien más contribuye (55.8%), no Anchoveta.",
+          "explicacion": "La mayor contribucion es Salmón (55.8%), no Anchoveta.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Salmón y Jurel suman el 74.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 3.877.900 sobre producción pesquera (ton). Salmón y Jurel suman el 74.9% del total.",
           "respuesta": "V",
           "explicacion": "55.8% + 19.1% = 74.9%.",
           "tipo": "torta"
@@ -7512,82 +6703,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 48.9 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). La diferencia entre la mayor y menor porcion es de 48.9 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "55.8% - 6.9% = 48.9 puntos.",
+          "explicacion": "55.8% - 6.9% = 48.9.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Merluza y Sardina juntos representan el 28.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton). Merluza y Sardina juntos representan el 23.7% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 18.3%, no 28.7%.",
+          "explicacion": "Suman 18.3%, no 23.7%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 2 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton) con centro 3.877.900. Exactamente 2 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 1 variable(s) sobre el 20%: Salmón.",
+          "explicacion": "Son 1 categoria(s) sobre 20%: Salmón, no 2.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (3.877.900) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton). El total de 3.877.900 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Salmón es aproximadamente 8.1 veces mayor que Anchoveta en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). Salmón es aproximadamente 8.1 veces mayor que Anchoveta en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "2.164.000 ÷ 265.900 ≈ 8.1.",
+          "explicacion": "2.164.000 / 265.900 = 8.1.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Salmón, Jurel, Sardina) concentran el 85.5% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton). Las tres categorias principales (Salmón, Jurel, Sardina) concentran el 85.5% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 85.5%.",
+          "explicacion": "Efectivamente suman 85.5%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Sardina tendría un valor de 1.234.500.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton) con centro 3.877.900. Si el total se duplicara, Sardina tendria 1.069.900.",
           "respuesta": "F",
-          "explicacion": "Sardina duplicado sería 823.000, no 1.234.500.",
+          "explicacion": "Sardina duplicado seria 823.000, no 1.069.900.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Jurel y Merluza es 2.1:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre producción pesquera (ton). La razon entre Jurel y Merluza es 5.5:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 2.5:1.",
+          "explicacion": "La razon real es 2.5:1, no 5.5:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de producción pesquera (ton). Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -7599,42 +6781,38 @@ var QuestionBank = {
   "019": {
     "id": "019",
     "nombre": "Casos de Influenza",
-    "periodos": "Semanas 1-4 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Niños tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre casos de influenza (Semanas 1-4). Niños tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Niños=210, el mayor en T1.",
+          "explicacion": "Niños=210 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Adultos alcanza un valor de 280.",
+          "enunciado": "gráfico de barras agrupadas donde casos de influenza se compara por T1 a T4. Adultos registra 280 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Adultos=280 en T3.",
+          "explicacion": "El valor de Adultos en T3 es exactamente 280.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Adultos Mayores tiene un valor de 138.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza. Adultos Mayores alcanza 358 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Adultos Mayores en T4 es 275, no 138.",
+          "explicacion": "Adultos Mayores vale 275 en T4, no 358.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Personal Salud supera a Embarazadas.",
+          "enunciado": "gráfico de barras agrupadas sobre casos de influenza. En T2, Personal Salud supera en valor a Embarazadas.",
           "respuesta": "F",
           "explicacion": "En T2, Embarazadas=31 > Personal Salud=20.",
           "tipo": "barras"
@@ -7642,17 +6820,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Niños se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza. La caida de Niños entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Niños pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Niños y Adultos es de 40.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza (Semanas 1-4). La diferencia entre Niños y Adultos en T3 es de 40 unidades.",
           "respuesta": "V",
           "explicacion": "Niños(320) - Adultos(280) = 40.",
           "tipo": "barras"
@@ -7660,8 +6836,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Niños y Adultos suman 485.",
+          "enunciado": "gráfico de barras agrupadas donde Niños es la categoría dominante y Personal Salud la más pequeña. En T2, Niños y Adultos suman 485.",
           "respuesta": "V",
           "explicacion": "260 + 225 = 485.",
           "tipo": "barras"
@@ -7669,73 +6844,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Adultos Mayores y Embarazadas es de 356.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza. La diferencia entre Adultos Mayores y Embarazadas en T4 es de 304.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 234, no 356.",
+          "explicacion": "La diferencia real es 234, no 304.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 302.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Adultos Mayores muestra un crecimiento excepcional del 90%. El promedio en T4 es 261.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 201.",
+          "explicacion": "El promedio real en T4 es 201, no 261.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre casos de influenza. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Adultos Mayores creció un +90% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza donde Adultos Mayores muestra un crecimiento excepcional del 90%. Especificamente, Adultos Mayores crecio un +90% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Adultos Mayores pasó de 145 a 275, un cambio del +90%.",
+          "explicacion": "Adultos Mayores paso de 145 a 275 = +90%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Niños es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Niños es la variable con mayor diferencia entre su valor maximo y minimo (rango: 140).",
           "respuesta": "V",
-          "explicacion": "Rango de Niños: 140.",
+          "explicacion": "El rango de Niños es efectivamente 140.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Embarazadas creció un +121%.",
+          "enunciado": "gráfico de barras agrupadas sobre casos de influenza. Embarazadas vario un +105% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Embarazadas es +71%, no +121%.",
+          "explicacion": "Embarazadas vario +71%, no +105%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Personal Salud es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de casos de influenza (Semanas 1-4). En T4, Personal Salud es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Niños tiene el mayor valor (350), no Personal Salud.",
+          "explicacion": "En T4 el mayor es Niños (350), no Personal Salud.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Niños respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde casos de influenza. El cambio de tendencia de Niños se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -7743,136 +6910,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Niños alcanza exactamente 320.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza. El punto de Niños en T3 marca exactamente 320.",
           "respuesta": "V",
-          "explicacion": "El punto de Niños en T3 marca 320.",
+          "explicacion": "El valor de Niños en T3 es 320.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Niños finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre casos de influenza donde los marcadores diferencian cada variable. Niños termina en T4 con el valor mas alto: 350.",
           "respuesta": "V",
-          "explicacion": "Niños=350, el mayor en T4.",
+          "explicacion": "Niños lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Adultos es 351.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza (Semanas 1-4). Adultos registra 292 en T2.",
           "respuesta": "F",
-          "explicacion": "Adultos vale 225 en T2.",
+          "explicacion": "Adultos vale 225 en T2, no 292.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Niños muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza con marcadores distintos. Niños muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Niños aumenta en cada período consecutivo.",
+          "explicacion": "Niños crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Niños representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza. El valor inicial de Niños representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Adultos Mayores aumentó en 130 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para casos de influenza. Adultos Mayores aumento en 130 unidades de T1 a T4 (+90%).",
           "respuesta": "V",
-          "explicacion": "De 145 a 275: cambio de 130 (+90%).",
+          "explicacion": "De 145 a 275: 130 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Adultos Mayores (T2→T3).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza. La curva de Adultos Mayores tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +33%.",
+          "explicacion": "Adultos Mayores crece +90%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Personal Salud supera a Niños en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre casos de influenza (Semanas 1-4). Personal Salud supera a Niños en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Niños mantiene valores superiores a Personal Salud en todos los períodos.",
+          "explicacion": "Niños mantiene valores superiores a Personal Salud en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Embarazadas alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza. Embarazadas alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Embarazadas está en T4 (41).",
+          "explicacion": "El maximo de Embarazadas esta en T4 (41).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre casos de influenza. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Adultos Mayores tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Adultos Mayores varía un +90%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza donde Adultos Mayores muestra un crecimiento excepcional del 90%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para casos de influenza. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Niños, Adultos, Adultos Mayores, Embarazadas, Personal Salud crece en todos los períodos consecutivos.",
+          "explicacion": "Niños, Adultos, Adultos Mayores, Embarazadas, Personal Salud crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Personal Salud varió un +115%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre casos de influenza. Personal Salud vario un +99% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Personal Salud es +61%.",
+          "explicacion": "La variacion real de Personal Salud es +61%, no +99%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Personal Salud supera a Niños.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de casos de influenza. En algun momento Personal Salud logra superar a Niños.",
           "respuesta": "F",
-          "explicacion": "Niños siempre está por encima de Personal Salud en todos los períodos.",
+          "explicacion": "Niños siempre esta por encima de Personal Salud.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Niños alcanzaría un valor de 368 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde casos de influenza. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -7880,53 +7032,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Niños representa el 35.6% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. Niños representa el 35.6% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 35.6%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Personal Salud es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza donde el total central es 3.200. Personal Salud es la porcion mas pequena (2.9%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 2.9% del total.",
+          "explicacion": "Personal Salud tiene solo el 2.9% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Adultos representa el 38.9% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. Adultos ocupa el 40.4% del total.",
           "respuesta": "F",
-          "explicacion": "Adultos representa el 31.1% del total, no el 38.9%.",
+          "explicacion": "Adultos ocupa el 31.1%, no el 40.4%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Personal Salud es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza. Personal Salud es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Niños es quien más contribuye (35.6%), no Personal Salud.",
+          "explicacion": "La mayor contribucion es Niños (35.6%), no Personal Salud.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Niños y Adultos suman el 66.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 3.200 sobre casos de influenza. Niños y Adultos suman el 66.7% del total.",
           "respuesta": "V",
           "explicacion": "35.6% + 31.1% = 66.7%.",
           "tipo": "torta"
@@ -7934,82 +7080,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 32.7 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. La diferencia entre la mayor y menor porcion es de 32.7 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "35.6% - 2.9% = 32.7 puntos.",
+          "explicacion": "35.6% - 2.9% = 32.7.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Adultos Mayores y Embarazadas juntos representan el 23.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza. Adultos Mayores y Embarazadas juntos representan el 39.5% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 30.4%, no 23.1%.",
+          "explicacion": "Suman 30.4%, no 39.5%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza con centro 3.200. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Niños, Adultos, Adultos Mayores.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Niños, Adultos, Adultos Mayores, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (3.200) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza. El total de 3.200 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Niños es aproximadamente 12.3 veces mayor que Personal Salud en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. Niños es aproximadamente 12.3 veces mayor que Personal Salud en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "1.140 ÷ 93 ≈ 12.3.",
+          "explicacion": "1.140 / 93 = 12.3.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Niños, Adultos, Adultos Mayores) concentran el 93.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza. Las tres categorias principales (Niños, Adultos, Adultos Mayores) concentran el 93.0% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 93.0%.",
+          "explicacion": "Efectivamente suman 93.0%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Embarazadas tendría un valor de 396.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza con centro 3.200. Si el total se duplicara, Embarazadas tendria 343.",
           "respuesta": "F",
-          "explicacion": "Embarazadas duplicado sería 264, no 396.",
+          "explicacion": "Embarazadas duplicado seria 264, no 343.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Adultos y Adultos Mayores es 1.4:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre casos de influenza. La razon entre Adultos y Adultos Mayores es 4.2:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.2:1.",
+          "explicacion": "La razon real es 1.2:1, no 4.2:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de casos de influenza. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
@@ -8021,42 +7158,38 @@ var QuestionBank = {
   "020": {
     "id": "020",
     "nombre": "Medallas Deportivas",
-    "periodos": "Años 2021-2024 | Variables: 5",
+    "periodos": "",
     "totalPreguntas": 45,
     "preguntas": {
       "barras": [
         {
           "id": "01",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "Atletismo tiene el valor más alto entre todas las variables.",
+          "enunciado": "gráfico de barras agrupadas sobre medallas deportivas (Años 2021-2024). Atletismo tiene el valor mas alto en T1.",
           "respuesta": "V",
-          "explicacion": "Atletismo=12, el mayor en T1.",
+          "explicacion": "Atletismo=12 es el mayor en T1.",
           "tipo": "barras"
         },
         {
           "id": "02",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Natación alcanza un valor de 12.",
+          "enunciado": "gráfico de barras agrupadas donde medallas deportivas se compara por T1 a T4. Natación registra 12 en T3.",
           "respuesta": "V",
-          "explicacion": "El gráfico muestra Natación=12 en T3.",
+          "explicacion": "El valor de Natación en T3 es exactamente 12.",
           "tipo": "barras"
         },
         {
           "id": "03",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Ciclismo tiene un valor de 15.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas. Ciclismo alcanza 13 en T4.",
           "respuesta": "F",
-          "explicacion": "El valor real de Ciclismo en T4 es 10, no 15.",
+          "explicacion": "Ciclismo vale 10 en T4, no 13.",
           "tipo": "barras"
         },
         {
           "id": "04",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "Tenis supera a Remo.",
+          "enunciado": "gráfico de barras agrupadas sobre medallas deportivas. En T2, Tenis supera en valor a Remo.",
           "respuesta": "F",
           "explicacion": "En T2, Remo=11 > Tenis=8.",
           "tipo": "barras"
@@ -8064,17 +7197,15 @@ var QuestionBank = {
         {
           "id": "05",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Atletismo se debe exclusivamente a las campañas de marketing digital realizadas durante ese período.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas. La caida de Atletismo entre algunos periodos se debe a una crisis de oferta.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el valor de Atletismo pero no informa sobre las causas que lo produjeron.",
+          "explicacion": "El grafico muestra valores pero no explica las causas de los cambios.",
           "tipo": "barras"
         },
         {
           "id": "06",
           "nivel": "intermedio",
-          "periodo": "T3",
-          "enunciado": "La diferencia entre Atletismo y Natación es de 6.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas (Años 2021-2024). La diferencia entre Atletismo y Natación en T3 es de 6 unidades.",
           "respuesta": "V",
           "explicacion": "Atletismo(18) - Natación(12) = 6.",
           "tipo": "barras"
@@ -8082,8 +7213,7 @@ var QuestionBank = {
         {
           "id": "07",
           "nivel": "intermedio",
-          "periodo": "T2",
-          "enunciado": "Atletismo y Remo suman 26.",
+          "enunciado": "gráfico de barras agrupadas donde Atletismo es la categoría dominante y Ciclismo la más pequeña. En T2, Atletismo y Remo suman 26.",
           "respuesta": "V",
           "explicacion": "15 + 11 = 26.",
           "tipo": "barras"
@@ -8091,73 +7221,65 @@ var QuestionBank = {
         {
           "id": "08",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "La diferencia entre Ciclismo y Remo es de 7.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas. La diferencia entre Ciclismo y Remo en T4 es de 9.",
           "respuesta": "F",
-          "explicacion": "La diferencia real es 6, no 7.",
+          "explicacion": "La diferencia real es 6, no 9.",
           "tipo": "barras"
         },
         {
           "id": "09",
           "nivel": "intermedio",
-          "periodo": "T4",
-          "enunciado": "El promedio de todas las variables es 19.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias y Ciclismo muestra un crecimiento excepcional del 100%. El promedio en T4 es 19.",
           "respuesta": "F",
-          "explicacion": "El promedio real en T4 es 14.",
+          "explicacion": "El promedio real en T4 es 14, no 19.",
           "tipo": "barras"
         },
         {
           "id": "10",
           "nivel": "intermedio",
-          "periodo": "T1",
-          "enunciado": "Los valores mostrados incluyen márgenes de error de ±3% según la metodología de recolección de datos.",
+          "enunciado": "gráfico de barras agrupadas sobre medallas deportivas. Los datos incluyen margenes de error de +/-3% segun la metodologia de recoleccion.",
           "respuesta": "D",
-          "explicacion": "El gráfico no indica márgenes de error ni metodología de recolección.",
+          "explicacion": "El grafico no muestra intervalos de confianza ni metodologia.",
           "tipo": "barras"
         },
         {
           "id": "11",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Ciclismo creció un +100% entre el primer y el último período.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas donde Ciclismo muestra un crecimiento excepcional del 100%. Especificamente, Ciclismo crecio un +100% de T1 a T4.",
           "respuesta": "V",
-          "explicacion": "Ciclismo pasó de 5 a 10, un cambio del +100%.",
+          "explicacion": "Ciclismo paso de 5 a 10 = +100%.",
           "tipo": "barras"
         },
         {
           "id": "12",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Atletismo es la variable con mayor diferencia entre su valor máximo y mínimo.",
+          "enunciado": "gráfico de barras agrupadas con 5 categorias. Atletismo es la variable con mayor diferencia entre su valor maximo y minimo (rango: 8).",
           "respuesta": "V",
-          "explicacion": "Rango de Atletismo: 8.",
+          "explicacion": "El rango de Atletismo es efectivamente 8.",
           "tipo": "barras"
         },
         {
           "id": "13",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Remo creció un +104%.",
+          "enunciado": "gráfico de barras agrupadas sobre medallas deportivas. Remo vario un +114% entre el primer y ultimo periodo.",
           "respuesta": "F",
-          "explicacion": "El crecimiento real de Remo es +78%, no +104%.",
+          "explicacion": "Remo vario +78%, no +114%.",
           "tipo": "barras"
         },
         {
           "id": "14",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Ciclismo es la variable con mayor valor.",
+          "enunciado": "gráfico de barras agrupadas de medallas deportivas (Años 2021-2024). En T4, Ciclismo es la categoria con mayor valor.",
           "respuesta": "F",
-          "explicacion": "En T4, Atletismo tiene el mayor valor (20), no Ciclismo.",
+          "explicacion": "En T4 el mayor es Atletismo (20), no Ciclismo.",
           "tipo": "barras"
         },
         {
           "id": "15",
           "nivel": "avanzado",
-          "periodo": "T3",
-          "enunciado": "La disminución de Atletismo respecto al período anterior se debe a condiciones climáticas adversas.",
+          "enunciado": "gráfico de barras agrupadas donde medallas deportivas. El cambio de tendencia de Atletismo se explica por factores estacionales propios del sector.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra el cambio pero no explica sus causas.",
+          "explicacion": "El grafico no analiza causas; solo presenta los valores.",
           "tipo": "barras"
         }
       ],
@@ -8165,136 +7287,121 @@ var QuestionBank = {
         {
           "id": "16",
           "nivel": "facil",
-          "periodo": "T3",
-          "enunciado": "Atletismo alcanza exactamente 18.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas. El punto de Atletismo en T3 marca exactamente 18.",
           "respuesta": "V",
-          "explicacion": "El punto de Atletismo en T3 marca 18.",
+          "explicacion": "El valor de Atletismo en T3 es 18.",
           "tipo": "lineas"
         },
         {
           "id": "17",
           "nivel": "facil",
-          "periodo": "T4",
-          "enunciado": "Atletismo finaliza con el valor más alto.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre medallas deportivas donde los marcadores diferencian cada variable. Atletismo termina en T4 con el valor mas alto: 20.",
           "respuesta": "V",
-          "explicacion": "Atletismo=20, el mayor en T4.",
+          "explicacion": "Atletismo lidera en T4.",
           "tipo": "lineas"
         },
         {
           "id": "18",
           "nivel": "facil",
-          "periodo": "T2",
-          "enunciado": "El valor de Natación es 15.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas (Años 2021-2024). Natación registra 13 en T2.",
           "respuesta": "F",
-          "explicacion": "Natación vale 10 en T2.",
+          "explicacion": "Natación vale 10 en T2, no 13.",
           "tipo": "lineas"
         },
         {
           "id": "19",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Atletismo muestra una tendencia decreciente a lo largo de todos los períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas con marcadores distintos. Atletismo muestra una tendencia decreciente.",
           "respuesta": "F",
-          "explicacion": "Atletismo aumenta en cada período consecutivo.",
+          "explicacion": "Atletismo crece en cada periodo consecutivo.",
           "tipo": "lineas"
         },
         {
           "id": "20",
           "nivel": "facil",
-          "periodo": "T1",
-          "enunciado": "El valor inicial de Atletismo representa el 15% del total de la industria a nivel nacional.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas. El valor inicial de Atletismo representa el 50% del total del sector a nivel pais.",
           "respuesta": "D",
-          "explicacion": "El gráfico no muestra el total de la industria ni datos de otras empresas/regiones.",
+          "explicacion": "El grafico no muestra el total del sector ni otras entidades.",
           "tipo": "lineas"
         },
         {
           "id": "21",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T1→T4] Ciclismo aumentó en 5 unidades.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores unicos para medallas deportivas. Ciclismo aumento en 5 unidades de T1 a T4 (+100%).",
           "respuesta": "V",
-          "explicacion": "De 5 a 10: cambio de 5 (+100%).",
+          "explicacion": "De 5 a 10: 5 unidades.",
           "tipo": "lineas"
         },
         {
           "id": "22",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El mayor cambio porcentual entre períodos consecutivos lo registra Ciclismo (T1→T2).",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas. La curva de Ciclismo tiene la pendiente mas pronunciada de todo el grafico.",
           "respuesta": "V",
-          "explicacion": "Cambio del +40%.",
+          "explicacion": "Ciclismo crece +100%, la mayor variacion.",
           "tipo": "lineas"
         },
         {
           "id": "23",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Ciclismo supera a Atletismo en al menos dos períodos.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre medallas deportivas (Años 2021-2024). Ciclismo supera a Atletismo en al menos dos periodos.",
           "respuesta": "F",
-          "explicacion": "Atletismo mantiene valores superiores a Ciclismo en todos los períodos.",
+          "explicacion": "Atletismo mantiene valores superiores a Ciclismo en todos los periodos.",
           "tipo": "lineas"
         },
         {
           "id": "24",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Remo alcanza su valor máximo en T1.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas. Remo alcanza su punto maximo en T1.",
           "respuesta": "F",
-          "explicacion": "El máximo de Remo está en T4 (16).",
+          "explicacion": "El maximo de Remo esta en T4 (16).",
           "tipo": "lineas"
         },
         {
           "id": "25",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "[T3→T4] El cambio observado en este período se mantendrá durante los próximos 3 años.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre medallas deportivas. La tendencia observada en el ultimo periodo se mantendra durante los proximos 2 anos.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra datos históricos, no permite predecir el futuro con certeza.",
+          "explicacion": "El grafico solo muestra datos pasados; no permite predecir el futuro.",
           "tipo": "lineas"
         },
         {
           "id": "26",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Ciclismo tiene la mayor tasa de variación porcentual total.",
-          "respuesta": "V",
-          "explicacion": "Ciclismo varía un +100%, la mayor de todas las variables.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas donde Ciclismo muestra un crecimiento excepcional del 100%. Esta diferencia de crecimiento entre categorias es la mayor entre todas las tematicas disponibles.",
+          "respuesta": "D",
+          "explicacion": "El grafico solo muestra esta tematica; no permite comparar con otras.",
           "tipo": "lineas"
         },
         {
           "id": "27",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Existe al menos una variable que crece en cada período consecutivo sin excepciones.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) con marcadores distintos para medallas deportivas. Hay al menos una variable que crece en absolutamente todos los periodos consecutivos.",
           "respuesta": "V",
-          "explicacion": "Atletismo, Natación, Ciclismo, Remo, Tenis crece en todos los períodos consecutivos.",
+          "explicacion": "Atletismo, Natación, Ciclismo, Remo, Tenis crece en cada periodo sin excepcion.",
           "tipo": "lineas"
         },
         {
           "id": "28",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "[T1→T4] Atletismo varió un +60%.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) sobre medallas deportivas. Atletismo vario un +106% de T1 a T4.",
           "respuesta": "F",
-          "explicacion": "La variación real de Atletismo es +67%.",
+          "explicacion": "La variacion real de Atletismo es +67%, no +106%.",
           "tipo": "lineas"
         },
         {
           "id": "29",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "En algún momento, Ciclismo supera a Atletismo.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) de medallas deportivas. En algun momento Ciclismo logra superar a Atletismo.",
           "respuesta": "F",
-          "explicacion": "Atletismo siempre está por encima de Ciclismo en todos los períodos.",
+          "explicacion": "Atletismo siempre esta por encima de Ciclismo.",
           "tipo": "lineas"
         },
         {
           "id": "30",
           "nivel": "avanzado",
-          "periodo": "T4",
-          "enunciado": "Si se aplicara una política de incentivos del 5%, Atletismo alcanzaría un valor de 21 en el próximo período.",
+          "enunciado": "gráfico de líneas con marcadores de formas distintas (círculo, cuadrado, triángulo, diamante, triángulo invertido) donde medallas deportivas. La aceleracion del crecimiento en el ultimo tramo indica exito de politicas implementadas.",
           "respuesta": "D",
-          "explicacion": "El gráfico no puede confirmar el efecto de una política futura; es una proyección especulativa.",
+          "explicacion": "El grafico no vincula los cambios con politicas especificas.",
           "tipo": "lineas"
         }
       ],
@@ -8302,53 +7409,47 @@ var QuestionBank = {
         {
           "id": "31",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Atletismo representa el 29.0% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. Atletismo representa el 29.0% del total, siendo la porcion mas grande.",
           "respuesta": "V",
-          "explicacion": "Es la porción más grande del gráfico de torta.",
+          "explicacion": "Efectivamente es la mayor porcion con 29.0%.",
           "tipo": "torta"
         },
         {
           "id": "32",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Ciclismo es la variable con menor participación porcentual.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas donde el total central es 224. Ciclismo es la porcion mas pequena (13.4%).",
           "respuesta": "V",
-          "explicacion": "Representa solo el 13.4% del total.",
+          "explicacion": "Ciclismo tiene solo el 13.4% del total.",
           "tipo": "torta"
         },
         {
           "id": "33",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Natación representa el 23.7% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. Natación ocupa el 26.1% del total.",
           "respuesta": "F",
-          "explicacion": "Natación representa el 20.1% del total, no el 23.7%.",
+          "explicacion": "Natación ocupa el 20.1%, no el 26.1%.",
           "tipo": "torta"
         },
         {
           "id": "34",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Ciclismo es la variable que más contribuye al total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas. Ciclismo es la categoria que mas contribuye al total.",
           "respuesta": "F",
-          "explicacion": "Atletismo es quien más contribuye (29.0%), no Ciclismo.",
+          "explicacion": "La mayor contribucion es Atletismo (29.0%), no Ciclismo.",
           "tipo": "torta"
         },
         {
           "id": "35",
           "nivel": "facil",
-          "periodo": "",
-          "enunciado": "Los porcentajes mostrados se calcularon usando datos preliminares sujetos a revisión por auditoría externa.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. Los porcentajes fueron calculados con datos verificados por auditoria externa independiente.",
           "respuesta": "D",
-          "explicacion": "El gráfico muestra porcentajes pero no indica si los datos son preliminares o definitivos.",
+          "explicacion": "El grafico no menciona verificacion ni auditoria.",
           "tipo": "torta"
         },
         {
           "id": "36",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Atletismo y Natación suman el 49.1% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel con centro 224 sobre medallas deportivas. Atletismo y Natación suman el 49.1% del total.",
           "respuesta": "V",
           "explicacion": "29.0% + 20.1% = 49.1%.",
           "tipo": "torta"
@@ -8356,82 +7457,73 @@ var QuestionBank = {
         {
           "id": "37",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "La diferencia entre la mayor y menor participación es de 15.6 puntos porcentuales.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. La diferencia entre la mayor y menor porcion es de 15.6 puntos porcentuales.",
           "respuesta": "V",
-          "explicacion": "29.0% - 13.4% = 15.6 puntos.",
+          "explicacion": "29.0% - 13.4% = 15.6.",
           "tipo": "torta"
         },
         {
           "id": "38",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Ciclismo y Remo juntos representan el 51.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas. Ciclismo y Remo juntos representan el 46.4% del total.",
           "respuesta": "F",
-          "explicacion": "Suman 35.7%, no 51.4%.",
+          "explicacion": "Suman 35.7%, no 46.4%.",
           "tipo": "torta"
         },
         {
           "id": "39",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "Exactamente 4 variable(s) representa(n) más del 20% del total cada una.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas con centro 224. Exactamente 4 categoria(s) supera(n) el 20% individual.",
           "respuesta": "F",
-          "explicacion": "Hay 3 variable(s) sobre el 20%: Atletismo, Natación, Remo.",
+          "explicacion": "Son 3 categoria(s) sobre 20%: Atletismo, Natación, Remo, no 4.",
           "tipo": "torta"
         },
         {
           "id": "40",
           "nivel": "intermedio",
-          "periodo": "",
-          "enunciado": "El valor absoluto total (224) incluye ajustes por inflación según el IPC del último año.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas. El total de 224 incluye ajustes estacionales y correcciones por valores atipicos.",
           "respuesta": "D",
-          "explicacion": "El gráfico no especifica si los valores están ajustados por inflación u otros factores.",
+          "explicacion": "El grafico no detalla la metodologia de calculo del total.",
           "tipo": "torta"
         },
         {
           "id": "41",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Atletismo es aproximadamente 2.2 veces mayor que Ciclismo en valor absoluto.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. Atletismo es aproximadamente 2.2 veces mayor que Ciclismo en valor absoluto.",
           "respuesta": "V",
-          "explicacion": "65 ÷ 30 ≈ 2.2.",
+          "explicacion": "65 / 30 = 2.2.",
           "tipo": "torta"
         },
         {
           "id": "42",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Las tres variables principales (Atletismo, Remo, Natación) concentran el 71.4% del total.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas. Las tres categorias principales (Atletismo, Remo, Natación) concentran el 71.4% del total.",
           "respuesta": "V",
-          "explicacion": "Suman exactamente 71.4%.",
+          "explicacion": "Efectivamente suman 71.4%.",
           "tipo": "torta"
         },
         {
           "id": "43",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "Si el total general se duplicara, Remo tendría un valor de 50.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas con centro 224. Si el total se duplicara, Remo tendria 130.",
           "respuesta": "F",
-          "explicacion": "Remo duplicado sería 100, no 50.",
+          "explicacion": "Remo duplicado seria 100, no 130.",
           "tipo": "torta"
         },
         {
           "id": "44",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La razón entre Natación y Ciclismo es 1.7:1.",
+          "enunciado": "gráfico de donut con porciones de colores pastel sobre medallas deportivas. La razon entre Natación y Ciclismo es 4.5:1.",
           "respuesta": "F",
-          "explicacion": "La razón real es 1.5:1.",
+          "explicacion": "La razon real es 1.5:1, no 4.5:1.",
           "tipo": "torta"
         },
         {
           "id": "45",
           "nivel": "avanzado",
-          "periodo": "",
-          "enunciado": "La distribución porcentual mostrada es representativa de la tendencia global del sector a nivel mundial.",
+          "enunciado": "gráfico de donut con porciones de colores pastel de medallas deportivas. Esta distribucion porcentual es representativa del comportamiento del sector a nivel global.",
           "respuesta": "D",
-          "explicacion": "El gráfico solo muestra estos datos; no se puede inferir si representa la tendencia mundial.",
+          "explicacion": "El grafico no compara con datos globales ni de otros mercados.",
           "tipo": "torta"
         }
       ]
