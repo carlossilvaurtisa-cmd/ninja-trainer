@@ -30,7 +30,15 @@
                 <img src="img/logo-ninja.png" alt="Dojo Ninja - Simulador de Habilidades y Destrezas" class="logo-img">
             </div>
             
-            <p class="menu-subtitle">Selecciona tu entrenamiento, joven padawan:</p>
+            <div class="user-bar">
+                <span class="user-icon">👤</span>
+                <input type="text" id="input-username" class="user-input" placeholder="Tu nombre" maxlength="20">
+                <button id="btn-enter" class="btn-user-enter">ENTRAR</button>
+            </div>
+            <div id="welcome-msg" class="welcome-msg hidden"></div>
+            
+            <div id="menu-tests" class="hidden">
+            <p class="menu-subtitle">Selecciona tu entrenamiento:</p>
             
             <div class="menu-buttons">
                 <button class="btn-menu" data-test="trabajo">
@@ -69,6 +77,7 @@
             <button id="btn-dashboard" class="btn-menu btn-results-global" style="margin-top:8px;">
                 📈 DASHBOARD DE ESTADÍSTICAS
             </button>
+            </div><!-- menu-tests -->
             
             <div class="api-status-bar">
                 <span id="api-status-icon">🔑</span>

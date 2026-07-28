@@ -19,20 +19,60 @@ const App = (function() {
     timerInterval: null,      // ID del setInterval del timer
     segundosRestantes: 0,     // Tiempo restante en segundos
     tiempoInicio: null,       // Timestamp de inicio
-    finalizado: false         // Si el test ya terminó
+    finalizado: false,        // Si el test ya terminó
+    usuario: ''               // Usuario activo
   };
+
+  // ==========================================================
+  // SISTEMA DE USUARIO
+  // ==========================================================
+
+  function loginUsuario() {
+    const input = document.getElementById('input-username');
+    const nombre = input.value.trim();
+    if (!nombre) return;
+    
+    state.usuario = nombre;
+    localStorage.setItem('ninja_current_user', nombre);
+    input.value = '';
+    mostrarMenuTests(nombre);
+  }
+
+  function mostrarMenuTests(nombre) {
+    document.getElementById('menu-tests').classList.remove('hidden');
+    document.getElementById('welcome-msg').classList.remove('hidden');
+    document.getElementById('welcome-msg').innerHTML = '🥷 Bienvenido, <strong>' + nombre + '</strong>';
+    document.querySelector('.user-bar').classList.add('hidden');
+  }
+
+  function userKey(suffix) {
+    return state.usuario ? 'ninja_' + state.usuario + '_' + suffix : 'ninja_' + suffix;
+  }
 
   // ==========================================================
   // INICIALIZACIÓN
   // ==========================================================
 
   function init() {
+    // Verificar si hay usuario guardado (auto-login)
+    const savedUser = localStorage.getItem(userKey('current_user'));
+    if (savedUser) {
+      state.usuario = savedUser;
+      mostrarMenuTests(savedUser);
+    }
+
     // Inicializar motor inductivo con sus datos
     EngineInductivo.init(DataBank.inductivo);
     EngineInductivoDB.init();
 
     // Actualizar estado visual de la API key
     actualizarEstadoAPI();
+
+    // Login
+    document.getElementById('btn-enter').addEventListener('click', loginUsuario);
+    document.getElementById('input-username').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') loginUsuario();
+    });
 
     // Configurar event listeners del menú
     document.querySelectorAll('.btn-menu[data-test]').forEach(btn => {
@@ -362,7 +402,7 @@ const App = (function() {
   }
 
   function obtenerApiKey() {
-    return localStorage.getItem('ninja_deepseek_key') || '';
+    return localStorage.getItem(userKey('deepseek_key')) || '';
   }
 
   // --- Modal API Key ---
@@ -425,7 +465,7 @@ const App = (function() {
 
     // Obtener última sesión de cada test
     ['numerico', 'verbal', 'inductivo'].forEach(key => {
-      const raw = localStorage.getItem(`ninja_${key}`);
+      const raw = localStorage.getItem(userKey(key));
       if (raw) {
         try {
           const data = JSON.parse(raw);
@@ -437,7 +477,7 @@ const App = (function() {
     });
 
     // Histórico de sesiones
-    const historialRaw = localStorage.getItem('ninja_historial');
+    const historialRaw = localStorage.getItem(userKey('historial'));
     if (historialRaw) {
       try {
         stats.historico = JSON.parse(historialRaw);
@@ -445,7 +485,7 @@ const App = (function() {
     }
 
     // Tipos de error (de la última sesión VFD)
-    const ultimaSesion = localStorage.getItem('ninja_ultima_sesion');
+    const ultimaSesion = localStorage.getItem(userKey('ultima_sesion'));
     if (ultimaSesion) {
       try {
         const sesion = JSON.parse(ultimaSesion);
@@ -849,7 +889,7 @@ const App = (function() {
   // ==========================================================
 
   function guardarEnHistorial(resultados) {
-    const key = `ninja_${state.testActual}`;
+    const ukey = userKey(state.testActual);
     const data = {
       puntaje: resultados.puntaje,
       aciertos: resultados.aciertos,
@@ -857,11 +897,11 @@ const App = (function() {
       tiempoUsado: resultados.tiempoUsado,
       fecha: new Date().toISOString()
     };
-    localStorage.setItem(key, JSON.stringify(data));
+    localStorage.setItem(ukey, JSON.stringify(data));
 
-    // Guardar última sesión para dashboard (incluye detalle de errores)
+    // Guardar última sesión para dashboard
     if (resultados.detalleErrores) {
-      localStorage.setItem('ninja_ultima_sesion', JSON.stringify({
+      localStorage.setItem(userKey('ultima_sesion'), JSON.stringify({
         tipo: state.testActual,
         puntaje: resultados.puntaje,
         detalleErrores: resultados.detalleErrores,
@@ -871,7 +911,7 @@ const App = (function() {
 
     // Actualizar historial para gráfico de evolución
     if (state.testActual === 'numerico' || state.testActual === 'verbal' || state.testActual === 'inductivo') {
-      const historialRaw = localStorage.getItem('ninja_historial');
+      const historialRaw = localStorage.getItem(userKey('historial'));
       let historial = [];
       if (historialRaw) {
         try { historial = JSON.parse(historialRaw); } catch (e) { historial = []; }
@@ -892,14 +932,14 @@ const App = (function() {
 
       // Mantener últimas 20 sesiones
       if (historial.length > 20) historial = historial.slice(-20);
-      localStorage.setItem('ninja_historial', JSON.stringify(historial));
+      localStorage.setItem(userKey('historial'), JSON.stringify(historial));
     }
   }
 
   function obtenerHistorial() {
     const historial = {};
     ['numerico', 'verbal', 'inductivo'].forEach(key => {
-      const raw = localStorage.getItem(`ninja_${key}`);
+      const raw = localStorage.getItem(userKey(key));
       if (raw) {
         try {
           historial[key] = JSON.parse(raw);
