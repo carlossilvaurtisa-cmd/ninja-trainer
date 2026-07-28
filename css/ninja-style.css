@@ -201,21 +201,21 @@ html, body {
 /* ============================================================
    INDUCTIVO
    ============================================================ */
-.inductivo-container { width: 100%; max-width: 900px; display: flex; gap: 20px; margin-bottom: 12px; }
-.inductivo-referencia, .inductivo-opciones { flex: 1; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; padding: 18px; box-shadow: var(--sombra); }
+.inductivo-container { width: 100%; max-width: 1000px; display: flex; gap: 20px; margin-bottom: 12px; flex-wrap: wrap; }
+.inductivo-referencia, .inductivo-opciones { flex: 1; min-width: 300px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; padding: 18px; box-shadow: var(--sombra); }
 .inductivo-label { font-size: 0.85rem; font-weight: 700; color: var(--texto); margin-bottom: 8px; text-align: center; }
 .inductivo-hint { font-size: 0.8rem; color: var(--texto-muted); text-align: center; margin-bottom: 12px; }
-.inductivo-tables { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.inductivo-tables { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; justify-items: center; }
 .inductivo-ref-label { display: block; text-align: center; font-size: 0.75rem; color: var(--primario); margin-top: 4px; font-weight: 600; }
 
-.icon-grid { display: grid; gap: 4px; background: #000000; border: 3px solid #000000; border-radius: 6px; padding: 4px; }
-.icon-grid.size-2 { grid-template-columns: repeat(2, 72px); }
-.icon-grid.size-3 { grid-template-columns: repeat(3, 64px); }
-.icon-cell { width: 72px; height: 72px; display: flex; align-items: center; justify-content: center; font-size: 2rem; background: #FFFFFF; border-radius: 3px; font-weight: 700; }
-.icon-grid.size-3 .icon-cell { width: 64px; height: 64px; font-size: 1.7rem; }
+.icon-grid { display: grid; gap: 6px; background: #000000; border: 3px solid #000000; border-radius: 8px; padding: 6px; }
+.icon-grid.size-2 { grid-template-columns: repeat(2, 120px); }
+.icon-grid.size-3 { grid-template-columns: repeat(3, 100px); }
+.icon-cell { width: 120px; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; background: #FFFFFF; border-radius: 4px; font-weight: 700; }
+.icon-grid.size-3 .icon-cell { width: 100px; height: 100px; font-size: 2.4rem; }
 .icon-grid.selectable { cursor: pointer; transition: all 0.15s; background: #000000; border-color: #000000; }
 .icon-grid.selectable:hover { border-color: var(--primario); }
-.icon-grid.selectable.selected { border-color: var(--primario); background: var(--seleccionado); box-shadow: 0 0 0 3px var(--primario); }
+.icon-grid.selectable.selected { border-color: var(--primario); background: var(--seleccionado); box-shadow: 0 0 0 4px var(--primario); }
 
 /* ============================================================
    CUESTIONARIOS
