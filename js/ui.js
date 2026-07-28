@@ -206,18 +206,18 @@ const UI = (function() {
     });
   }
 
-  // Mapa FIJO: cada símbolo siempre tiene el mismo color
+  // 6 símbolos con colores primarios y secundarios bien separados
   const COLOR_FIJO = {
-    '■': '#FF0000',  // Cuadrado = Rojo
-    '♦': '#0066FF',  // Diamante = Azul
-    '♥': '#FF0099',  // Corazón = Magenta
-    '♠': '#000000',  // Pica = Negro
-    '♣': '#00CC00',  // Trébol = Verde
-    '★': '#FFCC00',  // Estrella = Amarillo
-    '●': '#FF6600',  // Círculo = Naranja
-    '▲': '#9900CC',  // Triángulo = Púrpura
-    '◆': '#00CCCC',  // Rombo = Cian
-    '⬟': '#FF0000'   // Pentágono = Rojo
+    '■': '#FF0000',  // Rojo (primario)
+    '♦': '#0066FF',  // Azul (primario)
+    '♥': '#FFCC00',  // Amarillo (primario)
+    '♠': '#00CC00',  // Verde (secundario)
+    '★': '#FF6600',  // Naranja (secundario)
+    '●': '#9900CC',  // Púrpura (secundario)
+    '♣': '#FF0000',  // fallback
+    '▲': '#0066FF',  // fallback
+    '◆': '#FFCC00',  // fallback
+    '⬟': '#FF6600'   // fallback
   };
   function generarQuickChartURL(config, numSeries) {
     // Ajustar ancho según complejidad
