@@ -95,35 +95,21 @@
     <!-- PANTALLA: CURSO DE PORCENTAJES                               -->
     <!-- ========================================================== -->
     <div id="screen-curso" class="screen">
-        <div class="instructions-container" style="max-width:800px;">
+        <div class="instructions-container" style="max-width:850px;">
             <h2 class="screen-title">📚 Curso Interactivo de Porcentajes</h2>
-            <div class="instructions-body">
-                <p>Bienvenido al curso de porcentajes. Aquí aprenderás a calcular, interpretar y aplicar porcentajes en contextos reales.</p>
-                
-                <h3 style="color:var(--texto);margin-top:20px;">📖 ¿Qué es un porcentaje?</h3>
-                <p>Un porcentaje es una fracción de 100. La palabra "por ciento" significa "de cada cien".</p>
-                <p><strong>Fórmula básica:</strong> Porcentaje = (Parte ÷ Total) × 100</p>
-                
-                <h3 style="color:var(--texto);margin-top:20px;">🧮 Calculadora rápida</h3>
-                <div style="background:var(--bg-alt);padding:16px;border-radius:8px;margin:10px 0;">
-                    <p><strong>Calcular qué porcentaje es A de B:</strong></p>
-                    <input type="number" id="calc-parte" placeholder="Parte (A)" style="width:120px;padding:6px;margin:4px;border-radius:4px;border:1px solid var(--borde);">
-                    <input type="number" id="calc-total" placeholder="Total (B)" style="width:120px;padding:6px;margin:4px;border-radius:4px;border:1px solid var(--borde);">
-                    <button onclick="calcularPorcentaje()" style="padding:8px 16px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">Calcular</button>
-                    <p id="calc-resultado" style="font-size:1.2rem;font-weight:700;color:var(--primario);margin-top:8px;"></p>
-                </div>
-                
-                <h3 style="color:var(--texto);margin-top:20px;">📝 Ejemplos comunes</h3>
-                <ul>
-                    <li><strong>25% de 200</strong> = 200 × 0.25 = <strong>50</strong></li>
-                    <li><strong>¿Qué % es 30 de 150?</strong> = (30÷150)×100 = <strong>20%</strong></li>
-                    <li><strong>Aumento del 15% sobre 80</strong> = 80 × 1.15 = <strong>92</strong></li>
-                    <li><strong>Descuento del 20% sobre 500</strong> = 500 × 0.80 = <strong>400</strong></li>
-                </ul>
-                
-                <h3 style="color:var(--texto);margin-top:20px;">🎯 Ejercicios prácticos</h3>
-                <div id="curso-ejercicios"></div>
+            
+            <!-- Navegación del curso -->
+            <div class="tabs-nav" style="margin-bottom:16px;border-radius:8px;">
+                <button class="tab-btn active" onclick="cambiarFaseCurso('teoria')">📖 Teoría</button>
+                <button class="tab-btn" onclick="cambiarFaseCurso('calc')">🧮 Calculadora</button>
+                <button class="tab-btn" onclick="cambiarFaseCurso('practica')">🎯 Práctica</button>
+                <button class="tab-btn" onclick="cambiarFaseCurso('descuentos')">🏷️ Descuentos</button>
+                <button class="tab-btn" onclick="cambiarFaseCurso('examen')">📝 Examen</button>
             </div>
+            
+            <!-- Contenido dinámico del curso -->
+            <div id="curso-content" class="instructions-body"></div>
+            
             <div class="instructions-footer">
                 <button onclick="UI.mostrarPantalla('screen-menu')" class="btn-retro">◄ VOLVER AL MENÚ</button>
             </div>
@@ -437,35 +423,102 @@
     <script src="js/app.js?v=3"></script>
     
     <script>
+    var faseActual = 'teoria';
+    
+    function cambiarFaseCurso(fase) {
+        faseActual = fase;
+        var btns = document.querySelectorAll('#screen-curso .tab-btn');
+        btns.forEach(function(b, i) {
+            b.classList.toggle('active', i === ['teoria','calc','practica','descuentos','examen'].indexOf(fase));
+        });
+        mostrarFaseCurso(fase);
+    }
+    
+    function mostrarFaseCurso(fase) {
+        var c = document.getElementById('curso-content');
+        if (fase === 'teoria') {
+            c.innerHTML = '<h3>📖 ¿Qué es un porcentaje?</h3><p>Un porcentaje es una fracción de 100. "Por ciento" significa "de cada cien".</p><p><strong>Fórmula:</strong> % = (Parte ÷ Total) × 100</p><p><strong>Para calcular el X% de Y:</strong> Y × (X ÷ 100)</p><p><strong>Para saber qué % es A de B:</strong> (A ÷ B) × 100</p><h3 style="margin-top:16px;">📝 Ejemplos</h3><ul><li><strong>25% de 200</strong> = 200 × 0.25 = <strong>50</strong></li><li><strong>¿Qué % es 30 de 150?</strong> = (30÷150)×100 = <strong>20%</strong></li><li><strong>Aumento 15% sobre 80</strong> = 80 × 1.15 = <strong>92</strong></li><li><strong>Descuento 20% sobre 500</strong> = 500 × 0.80 = <strong>400</strong></li></ul>';
+        } else if (fase === 'calc') {
+            c.innerHTML = '<div style="background:var(--bg-alt);padding:20px;border-radius:8px;"><p><strong>Calcular qué porcentaje es A de B:</strong></p><input type="number" id="calc-parte" placeholder="Parte (A)" style="width:140px;padding:8px;margin:6px;border-radius:4px;border:1px solid var(--borde);font-size:1rem;"><input type="number" id="calc-total" placeholder="Total (B)" style="width:140px;padding:8px;margin:6px;border-radius:4px;border:1px solid var(--borde);font-size:1rem;"><br><button onclick="calcularPorcentaje()" style="padding:10px 24px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem;margin-top:8px;">Calcular</button><p id="calc-resultado" style="font-size:1.3rem;font-weight:700;color:var(--primario);margin-top:12px;"></p></div><div style="margin-top:16px;background:var(--bg-alt);padding:20px;border-radius:8px;"><p><strong>Calcular el X% de un número:</strong></p><input type="number" id="calc-pct" placeholder="Porcentaje %" style="width:140px;padding:8px;margin:6px;border-radius:4px;border:1px solid var(--borde);font-size:1rem;"><input type="number" id="calc-base" placeholder="Número base" style="width:140px;padding:8px;margin:6px;border-radius:4px;border:1px solid var(--borde);font-size:1rem;"><br><button onclick="calcularPorcentajeDe()" style="padding:10px 24px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem;margin-top:8px;">Calcular</button><p id="calc-resultado2" style="font-size:1.3rem;font-weight:700;color:var(--primario);margin-top:12px;"></p></div>';
+        } else if (fase === 'practica') {
+            var html = '<p>Resuelve estos ejercicios. Haz clic para ver la respuesta.</p>';
+            for (var i = 0; i < 5; i++) {
+                var total = Math.floor(Math.random()*900)+100;
+                var pct = Math.floor(Math.random()*50)+10;
+                var resultado = Math.round(total*pct/100);
+                var tipo = Math.floor(Math.random()*3);
+                var pregunta = '', respuesta = '';
+                if (tipo===0){pregunta='¿Cuánto es el '+pct+'% de '+total+'?';respuesta=resultado;}
+                else if(tipo===1){var parte=Math.floor(Math.random()*total);pregunta='¿Qué porcentaje es '+parte+' de '+total+'?';respuesta=((parte/total)*100).toFixed(1)+'%';}
+                else {var original=Math.floor(Math.random()*900)+100;var aum=Math.floor(Math.random()*30)+5;pregunta='Si '+original+' aumenta '+aum+'%, ¿nuevo valor?';respuesta=Math.round(original*(1+aum/100));}
+                html+='<div style="background:var(--bg-alt);padding:12px 16px;margin:8px 0;border-radius:6px;"><p><strong>'+(i+1)+'.</strong> '+pregunta+'</p><p style="color:var(--texto-muted);font-size:0.85rem;cursor:pointer;" onclick="this.textContent=\'✅ '+respuesta+'\'">Haz clic para ver respuesta</p></div>';
+            }
+            html+='<button onclick="mostrarFaseCurso(\'practica\')" style="margin-top:12px;padding:8px 20px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">🔄 Nuevos ejercicios</button>';
+            c.innerHTML = html;
+        } else if (fase === 'descuentos') {
+            c.innerHTML = '<h3>🏷️ Cálculo de Descuentos y Aumentos</h3><p><strong>Descuento:</strong> Precio final = Precio × (1 - %descuento/100)</p><p><strong>Aumento:</strong> Precio final = Precio × (1 + %aumento/100)</p><p><strong>IVA (19%):</strong> Precio final = Precio × 1.19</p><div style="background:var(--bg-alt);padding:16px;border-radius:8px;margin:12px 0;"><p><strong>Ejemplo:</strong> Un producto de $40.000 con 30% de descuento</p><p>= 40000 × (1 - 0.30) = 40000 × 0.70 = <strong>$28.000</strong></p></div><h3 style="margin-top:16px;">🎯 Ejercicios de descuentos</h3><div id="curso-desc"></div><button onclick="generarEjerciciosDescuento()" style="margin-top:8px;padding:8px 20px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">🔄 Nuevos ejercicios</button>';
+            setTimeout(generarEjerciciosDescuento, 100);
+        } else if (fase === 'examen') {
+            generarExamen();
+        }
+    }
+    
     function calcularPorcentaje() {
         var parte = parseFloat(document.getElementById('calc-parte').value);
         var total = parseFloat(document.getElementById('calc-total').value);
-        if (isNaN(parte) || isNaN(total) || total === 0) {
-            document.getElementById('calc-resultado').textContent = 'Ingresa valores válidos';
-            return;
-        }
-        var pct = ((parte / total) * 100).toFixed(1);
-        document.getElementById('calc-resultado').textContent = parte + ' es el ' + pct + '% de ' + total;
+        if (isNaN(parte)||isNaN(total)||total===0){document.getElementById('calc-resultado').textContent='Ingresa valores válidos';return;}
+        document.getElementById('calc-resultado').textContent = parte+' es el '+((parte/total)*100).toFixed(1)+'% de '+total;
     }
-    function generarEjerciciosCurso() {
-        var ejercicios = [];
-        for (var i = 0; i < 5; i++) {
-            var total = Math.floor(Math.random() * 900) + 100;
-            var pct = Math.floor(Math.random() * 50) + 10;
-            var resultado = Math.round(total * pct / 100);
-            var tipo = Math.floor(Math.random() * 3);
-            var pregunta = '', respuesta = '';
-            if (tipo === 0) { pregunta = '¿Cuánto es el ' + pct + '% de ' + total + '?'; respuesta = resultado; }
-            else if (tipo === 1) { var parte = Math.floor(Math.random() * total); pregunta = '¿Qué porcentaje es ' + parte + ' de ' + total + '?'; respuesta = ((parte/total)*100).toFixed(1) + '%'; }
-            else { var original = Math.floor(Math.random()*900)+100; var aum = Math.floor(Math.random()*30)+5; pregunta = 'Si ' + original + ' aumenta un ' + aum + '%, ¿nuevo valor?'; respuesta = Math.round(original*(1+aum/100)); }
-            ejercicios.push({pregunta: pregunta, respuesta: respuesta});
-        }
+    
+    function calcularPorcentajeDe() {
+        var pct = parseFloat(document.getElementById('calc-pct').value);
+        var base = parseFloat(document.getElementById('calc-base').value);
+        if (isNaN(pct)||isNaN(base)){document.getElementById('calc-resultado2').textContent='Ingresa valores válidos';return;}
+        document.getElementById('calc-resultado2').textContent = 'El '+pct+'% de '+base+' = '+(base*pct/100).toFixed(1);
+    }
+    
+    function generarEjerciciosDescuento() {
         var html = '';
-        ejercicios.forEach(function(ej, i) {
-            html += '<div style="background:var(--bg-alt);padding:12px 16px;margin:8px 0;border-radius:6px;"><p><strong>'+(i+1)+'.</strong> '+ej.pregunta+'</p><p style="color:var(--texto-muted);font-size:0.85rem;cursor:pointer;" onclick="this.textContent=\'✅ '+ej.respuesta+'\'">Haz clic para ver la respuesta</p></div>';
-        });
-        document.getElementById('curso-ejercicios').innerHTML = html;
+        for (var i = 0; i < 5; i++) {
+            var precio = Math.floor(Math.random()*90000)+10000;
+            var desc = [10,15,20,25,30,40,50][Math.floor(Math.random()*7)];
+            var final = Math.round(precio*(1-desc/100));
+            html += '<div style="background:var(--bg-alt);padding:12px 16px;margin:8px 0;border-radius:6px;"><p><strong>'+(i+1)+'.</strong> Producto de $'+precio.toLocaleString()+' con '+desc+'% de descuento. ¿Precio final?</p><p style="color:var(--texto-muted);font-size:0.85rem;cursor:pointer;" onclick="this.textContent=\'✅ $'+final.toLocaleString()+'\'">Haz clic para ver respuesta</p></div>';
+        }
+        document.getElementById('curso-desc').innerHTML = html;
     }
+    
+    function generarExamen() {
+        var html = '<h3>📝 Examen rápido (5 preguntas)</h3><p>Resuelve y luego haz clic para verificar:</p>';
+        var score = 0;
+        window.examenAnswers = [];
+        for (var i = 0; i < 5; i++) {
+            var total = Math.floor(Math.random()*900)+100;
+            var pct = Math.floor(Math.random()*40)+5;
+            var resultado = Math.round(total*pct/100);
+            var preg = '¿Cuánto es el '+pct+'% de '+total+'?';
+            window.examenAnswers.push({pregunta:preg,respuesta:resultado});
+            html += '<div style="background:var(--bg-alt);padding:12px 16px;margin:8px 0;border-radius:6px;"><p><strong>'+(i+1)+'.</strong> '+preg+'</p><input type="number" id="exam-'+i+'" style="width:140px;padding:6px;border-radius:4px;border:1px solid var(--borde);"></div>';
+        }
+        html += '<button onclick="corregirExamen()" style="padding:10px 24px;background:var(--verde);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;font-size:1rem;">✅ Corregir</button><p id="exam-resultado" style="font-size:1.3rem;font-weight:700;margin-top:12px;"></p>';
+        html += '<button onclick="generarExamen()" style="margin-top:8px;padding:8px 20px;background:var(--primario);color:#fff;border:none;border-radius:6px;cursor:pointer;font-weight:600;">🔄 Nuevo examen</button>';
+        document.getElementById('curso-content').innerHTML = html;
+    }
+    
+    function corregirExamen() {
+        var correctas = 0;
+        for (var i = 0; i < 5; i++) {
+            var userAns = parseFloat(document.getElementById('exam-'+i).value);
+            var correct = window.examenAnswers[i].respuesta;
+            if (!isNaN(userAns) && userAns === correct) correctas++;
+        }
+        var nota = (correctas/5)*100;
+        var color = nota>=80?'var(--verde)':nota>=50?'var(--ambar)':'var(--rojo)';
+        document.getElementById('exam-resultado').innerHTML = '<span style="color:'+color+'">'+correctas+'/5 correctas — ' + nota + '%</span>';
+    }
+    
+    // Iniciar con teoría al cargar el curso
+    document.getElementById('btn-curso').addEventListener('click', function() { setTimeout(function(){mostrarFaseCurso('teoria');},100); });
     </script>
 </body>
 </html>

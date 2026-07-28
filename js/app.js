@@ -101,10 +101,9 @@ const App = (function() {
     // Botón dashboard
     document.getElementById('btn-dashboard').addEventListener('click', abrirDashboard);
 
-    // Botón curso de porcentajes
+    // Botón curso - manejado inline en index.html
     document.getElementById('btn-curso').addEventListener('click', function() {
       UI.mostrarPantalla('screen-curso');
-      generarEjerciciosCurso();
     });
 
     // --- Modal API Key ---
