@@ -557,7 +557,13 @@ const UI = (function() {
           cell.textContent = icon || '?';
           // Aplicar color del mapa de colores
           if (colores && colores[icon]) {
-            cell.style.color = colores[icon];
+            // Mapear a colores saturados
+            const colorMap = {
+              '#e05555':'#FF0000','#4caf50':'#00CC00','#64b5f6':'#0066FF',
+              '#f0a040':'#FF6600','#ce93d8':'#9900CC','#ffeb3b':'#FFCC00',
+              '#80deea':'#00CCCC','#ef9a9a':'#FF0099','#a5d6a7':'#00AA00'
+            };
+            cell.style.color = colorMap[colores[icon]] || colores[icon];
           }
           container.appendChild(cell);
         });
