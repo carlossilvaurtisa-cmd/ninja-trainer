@@ -141,9 +141,25 @@ html, body {
 .progress-bar-fill { height: 100%; background: var(--primario); border-radius: 5px; transition: width 0.3s; width: 0%; }
 
 /* ============================================================
-   PESTAÑAS
+   CONTROL DE ZOOM DE TEXTO
    ============================================================ */
-.tabs-container { width: 100%; max-width: 900px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; overflow: hidden; margin-bottom: 16px; box-shadow: var(--sombra); }
+.zoom-controls {
+    width: 100%; max-width: 900px;
+    display: flex; align-items: center; justify-content: flex-end; gap: 6px;
+    margin-bottom: 8px;
+}
+.zoom-label { font-size: 0.8rem; color: var(--texto-muted); }
+.zoom-value { font-size: 0.8rem; color: var(--texto); font-weight: 600; min-width: 36px; text-align: center; }
+.btn-zoom {
+    font-family: var(--fuente); font-size: 0.9rem; font-weight: 700;
+    width: 32px; height: 32px; border: 2px solid var(--borde); border-radius: 6px;
+    background: #fff; color: var(--texto); cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.15s;
+}
+.btn-zoom:hover { border-color: var(--primario); background: var(--seleccionado); }
+/* FIN ZOOM */
+.tabs-container { width: 100%; max-width: 900px; background: var(--bg-card); border: 1px solid var(--borde); border-radius: 10px; overflow: visible; margin-bottom: 16px; box-shadow: var(--sombra); }
 .tabs-nav { display: flex; background: var(--bg-alt); border-bottom: 1px solid var(--borde); overflow-x: auto; }
 .tab-btn {
     font-family: var(--fuente); font-size: 0.85rem; font-weight: 600;
@@ -152,9 +168,9 @@ html, body {
 }
 .tab-btn:hover { color: var(--texto); }
 .tab-btn.active { color: var(--primario); border-bottom-color: var(--primario); background: #fff; }
-.tabs-content { padding: 20px 24px; min-height: 120px; }
-.tab-content { font-size: 0.95rem; line-height: 1.7; color: var(--texto); }
-.tab-text { font-size: 0.95rem; line-height: 1.8; }
+.tabs-content { padding: 20px 24px; min-height: 120px; overflow: visible; }
+.tab-content { font-size: 0.95rem; line-height: 1.7; color: var(--texto); overflow: visible; min-height: auto; }
+.tab-text { font-size: 0.95rem; line-height: 1.8; overflow: visible; }
 
 /* Gráficos */
 .chart-title { font-size: 0.95rem; font-weight: 700; color: var(--texto); margin-bottom: 4px; }

@@ -74,6 +74,19 @@ const App = (function() {
       if (e.key === 'Enter') loginUsuario();
     });
 
+    // Zoom de texto
+    let zoomLevel = 100;
+    document.querySelectorAll('.btn-zoom').forEach(btn => {
+      btn.addEventListener('click', function() {
+        const delta = parseInt(this.dataset.zoom);
+        zoomLevel = Math.max(60, Math.min(200, zoomLevel + delta * 10));
+        document.getElementById('zoom-value').textContent = zoomLevel + '%';
+        document.querySelectorAll('.tab-content, .tab-text, .question-statement').forEach(el => {
+          el.style.fontSize = (zoomLevel / 100) + 'em';
+        });
+      });
+    });
+
     // Configurar event listeners del menú
     document.querySelectorAll('.btn-menu[data-test]').forEach(btn => {
       btn.addEventListener('click', function() {
