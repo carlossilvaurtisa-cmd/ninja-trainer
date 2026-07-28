@@ -13,8 +13,8 @@ const DataBank = {
     tiempo: 12 * 60,
     totalPreguntas: 40,
     instrucciones: `
-      <p>Esta prueba mide tu capacidad para <strong>comprender información numérica</strong> presentada en tablas y gráficos.</p>
-      <p><strong>Duración:</strong> 12 minutos | <strong>Preguntas:</strong> 15</p>
+	      <p>Esta prueba mide tu capacidad para <strong>comprender información numérica</strong> presentada en tablas y gráficos.</p>
+	      <p><strong>Duración:</strong> 12 minutos | <strong>Preguntas:</strong> 40</p>
       <p>Deberás analizar los datos en las pestañas y evaluar cada afirmación como:</p>
       <ul>
         <li><strong>VERDADERO (V):</strong> La afirmación es correcta según los datos.</li>
@@ -803,8 +803,8 @@ const DataBank = {
     tiempo: 12 * 60,
     totalPreguntas: 50,
     instrucciones: `
-      <p>Esta prueba mide tu capacidad para <strong>comprender información escrita</strong> y sacar conclusiones lógicas.</p>
-      <p><strong>Duración:</strong> 12 minutos | <strong>Preguntas:</strong> 15</p>
+	      <p>Esta prueba mide tu capacidad para <strong>comprender información escrita</strong> y sacar conclusiones lógicas.</p>
+	      <p><strong>Duración:</strong> 12 minutos | <strong>Preguntas:</strong> 50</p>
       <p>Deberás leer los textos en las pestañas y evaluar cada afirmación como:</p>
       <ul>
         <li><strong>VERDADERO (V):</strong> El texto confirma explícitamente la afirmación.</li>
@@ -829,7 +829,7 @@ const DataBank = {
     titulo: 'Razonamiento Inductivo',
     tiempo: 6 * 60,
     totalPreguntas: 30,
-    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 12</p><p>Observa las <strong>dos tablas de referencia</strong> (izquierda). Ellas comparten una <strong>regla</strong> en común.</p><p>Luego, entre las <strong>cuatro tablas de opción</strong> (derecha), <strong>selecciona las 2</strong> que también siguen esa misma regla.</p>',
+    instrucciones: '<p>Esta prueba mide tu capacidad para <strong>reconocer patrones</strong> entre un grupo de elementos.</p><p><strong>Duración:</strong> 6 minutos | <strong>Ejercicios:</strong> 30</p><p>Observa las <strong>dos tablas de referencia</strong> (izquierda). Ellas comparten una <strong>regla</strong> en común.</p><p>Luego, entre las <strong>cuatro tablas de opción</strong> (derecha), <strong>selecciona las 2</strong> que también siguen esa misma regla.</p>',
     iconos: ['♦','♥','♠','♣','★','●','▲','■','◆','⬟'],
     reglas: [
       { id:'espejo_h', nombre:'Espejo Horizontal', descripcion:'Los íconos se invierten de izquierda a derecha en cada fila.', aplicar:function(grid){return grid.map(row=>[...row].reverse());} },
@@ -876,8 +876,8 @@ const DataBank = {
   trabajo: {
     titulo: 'Comportamientos Relacionados con el Trabajo',
     tiempo: 7 * 60,
-    totalPreguntas: 100,
-    instrucciones: '<p>Este cuestionario mide tu <strong>comportamiento típico en el lugar de trabajo</strong>.</p><p>Se mostrarán <strong>pares de afirmaciones</strong>. En cada par, deberás elegir con cuál estás <strong>más de acuerdo</strong> y en qué medida.</p><p><strong>Duración: 7 minutos.</strong> Contesta la mayor cantidad posible.</p><p>No existen respuestas correctas o incorrectas. Sé honesto/a.</p>',
+    totalPreguntas: 25,
+    instrucciones: '<p>Este cuestionario mide tu <strong>comportamiento típico en el lugar de trabajo</strong>.</p><p><strong>Duración:</strong> 7 minutos | <strong>Preguntas:</strong> 25</p><p>Se mostrarán <strong>pares de afirmaciones</strong>. En cada par, elige con cuál estás <strong>más de acuerdo</strong>. No existen respuestas correctas o incorrectas.</p>',
     pares: [
             { a:'Prefiero trabajar en proyectos que requieran atención al detalle.', b:'Prefiero trabajar en proyectos que requieran visión global.' },
       { a:'Disfruto más cuando mi trabajo sigue un procedimiento establecido.', b:'Disfruto más cuando mi trabajo requiere adaptarse a cambios constantes.' },
@@ -1140,7 +1140,7 @@ const DataBank = {
     titulo: 'Comportamiento Situacional',
     tiempo: 7 * 60,
     totalPreguntas: 25,
-    instrucciones: '<p>Este cuestionario mide tu <strong>comportamiento en situaciones cotidianas</strong>.</p><p>Para cada afirmación, indica <strong>en qué medida te describe</strong> en comparación con otras personas.</p><ul><li><strong>Menos que los demás:</strong> La afirmación te describe menos que al promedio.</li><li><strong>Igual que los demás:</strong> La afirmación te describe de forma similar al promedio.</li><li><strong>Más que los demás:</strong> La afirmación te describe más que al promedio.</li></ul>',
+    instrucciones: '<p>Este cuestionario mide tu <strong>comportamiento en situaciones cotidianas</strong>.</p><p><strong>Duración:</strong> 7 minutos | <strong>Preguntas:</strong> 25</p><p>Para cada afirmación, indica <strong>en qué medida te describe</strong> en comparación con otras personas.</p><ul><li><strong>Menos que los demás:</strong> La afirmación te describe menos que al promedio.</li><li><strong>Igual que los demás:</strong> La afirmación te describe de forma similar al promedio.</li><li><strong>Más que los demás:</strong> La afirmación te describe más que al promedio.</li></ul>',
     afirmaciones: [
             'He tomado objetos de la oficina para uso personal sin pedir permiso.',
       'He justificado ausencias laborales con razones falsas.',
