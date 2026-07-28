@@ -254,7 +254,7 @@ const UI = (function() {
             anchor: 'end',
             align: 'top',
             color: '#e8edf2',
-            font: { size: 9 },
+            font: { size: 13 },
             formatter: function(value) { return value; }
           }
         },
@@ -271,7 +271,7 @@ const UI = (function() {
       data: { labels, datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { labels: { color: '#8899aa', font: { size: 10 }, usePointStyle: true } } },
+        plugins: { legend: { labels: { color: '#8899aa', font: { size: 14 }, usePointStyle: true } } },
         scales: {
           x: { ticks: { color: '#8899aa' }, grid: { color: '#2a3a4a33' } },
           y: { ticks: { color: '#8899aa' }, grid: { color: '#2a3a4a33' }, beginAtZero: true }
@@ -320,7 +320,7 @@ const UI = (function() {
             anchor: 'end',
             align: 'top',
             color: '#e8edf2',
-            font: { size: 8 },
+            font: { size: 12 },
             formatter: function(value) { return value; }
           }
         },
@@ -336,7 +336,7 @@ const UI = (function() {
       data: { labels, datasets },
       options: {
         responsive: true, maintainAspectRatio: false,
-        plugins: { legend: { labels: { color: '#8899aa', font: { size: 10 }, usePointStyle: true } } },
+        plugins: { legend: { labels: { color: '#8899aa', font: { size: 14 }, usePointStyle: true } } },
         scales: {
           x: { ticks: { color: '#8899aa' }, grid: { color: '#2a3a4a33' } },
           y: { ticks: { color: '#8899aa' }, grid: { color: '#2a3a4a33' }, beginAtZero: false }
@@ -397,7 +397,7 @@ const UI = (function() {
       },
       options: {
         responsive: true, maintainAspectRatio: false, cutout: '55%',
-        plugins: { legend: { position: 'bottom', labels: { color: '#8899aa', font: { size: 10 }, usePointStyle: true, padding: 14 } } }
+        plugins: { legend: { position: 'bottom', labels: { color: '#8899aa', font: { size: 14 }, usePointStyle: true, padding: 14 } } }
       }
     };
     const canvasConfigStr = JSON.stringify(canvasConfig).replace(/'/g, "&#39;");
@@ -1100,8 +1100,8 @@ const UI = (function() {
               legend: { display: false }
             },
             scales: {
-              x: { ticks: { color: '#8899aa', font: { size: 10 } }, grid: { display: false } },
-              y: { ticks: { color: '#8899aa', font: { size: 10 }, callback: v => v + '%' }, grid: { color: '#2a3a4a33' }, beginAtZero: true, max: 100 }
+              x: { ticks: { color: '#8899aa', font: { size: 14 } }, grid: { display: false } },
+              y: { ticks: { color: '#8899aa', font: { size: 14 }, callback: v => v + '%' }, grid: { color: '#2a3a4a33' }, beginAtZero: true, max: 100 }
             }
           }
         });
@@ -1147,8 +1147,8 @@ const UI = (function() {
               }
             },
             scales: {
-              x: { ticks: { color: '#8899aa', font: { size: 10 } }, grid: { color: '#2a3a4a33' } },
-              y: { ticks: { color: '#8899aa', font: { size: 10 }, callback: v => v + '%' }, grid: { color: '#2a3a4a33' }, beginAtZero: true, max: 100 }
+              x: { ticks: { color: '#8899aa', font: { size: 14 } }, grid: { color: '#2a3a4a33' } },
+              y: { ticks: { color: '#8899aa', font: { size: 14 }, callback: v => v + '%' }, grid: { color: '#2a3a4a33' }, beginAtZero: true, max: 100 }
             }
           }
         });
@@ -1180,8 +1180,8 @@ const UI = (function() {
               legend: { display: false }
             },
             scales: {
-              x: { ticks: { color: '#8899aa', font: { size: 10 }, stepSize: 1 }, grid: { color: '#2a3a4a33' }, beginAtZero: true },
-              y: { ticks: { color: '#8899aa', font: { size: 10 } }, grid: { display: false } }
+              x: { ticks: { color: '#8899aa', font: { size: 14 }, stepSize: 1 }, grid: { color: '#2a3a4a33' }, beginAtZero: true },
+              y: { ticks: { color: '#8899aa', font: { size: 14 } }, grid: { display: false } }
             }
           }
         });
