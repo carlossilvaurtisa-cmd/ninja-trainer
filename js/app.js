@@ -304,7 +304,12 @@ const App = (function() {
         btnStart.disabled = true;
 
         const tipo = testKey === 'numerico' ? 'numerico' : 'verbal';
-        const tabsActivos = testData.tabs; // 6 pestañas por defecto
+        let tabsActivos = testData.tabs;
+        // Para verbal: seleccionar 4 tabs aleatorios por sesión
+        if (testKey === 'verbal') {
+          tabsActivos = seleccionarTabsAleatorios(testData.tabs, 4);
+          state.verbalActiveTabs = tabsActivos;
+        }
         state.preguntas = await DeepSeek.generarPreguntas(apiKey, tabsActivos, testData.totalPreguntas, tipo);
         state.usandoIA = true;
 
@@ -324,7 +329,7 @@ const App = (function() {
     switch (testKey) {
       case 'numerico':
       case 'verbal':
-        UI.iniciarTestVFD(testData, testData.tabs);
+        UI.iniciarTestVFD(testData, state.verbalActiveTabs || testData.tabs);
         break;
       case 'inductivo':
         UI.iniciarTestInductivo(testData);
@@ -351,6 +356,13 @@ const App = (function() {
     mostrarPreguntaActual();
   }
 
+  function seleccionarTabsAleatorios(tabs, cantidad) {
+    if (!tabs || tabs.length <= cantidad) return tabs || [];
+    // Barajar y tomar los primeros N
+    const shuffled = [...tabs].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, cantidad);
+  }
+
   // ==========================================================
   // HELPERS: API KEY + PREGUNTAS LOCALES + DASHBOARD
   // ==========================================================
@@ -362,7 +374,11 @@ const App = (function() {
         state.preguntas = EngineVFD.generarSesionNumerico(testData.tabs, testData.totalPreguntas);
         break;
       case 'verbal':
-        state.preguntas = EngineVFD.generarSesionVerbal(testData.tabs, testData.datosEstructurados, testData.totalPreguntas);
+        // Seleccionar 4 tabs aleatorios para esta sesión (varían cada vez)
+        const tabsAleatorios = seleccionarTabsAleatorios(testData.tabs, 4);
+        state.verbalActiveTabs = tabsAleatorios; // Guardar para UI
+        const activeTabIds = tabsAleatorios.map(t => t.id);
+        state.preguntas = EngineVFD.generarSesionVerbal(tabsAleatorios, testData.datosEstructurados, testData.totalPreguntas, activeTabIds);
         break;
       case 'inductivo':
         try {

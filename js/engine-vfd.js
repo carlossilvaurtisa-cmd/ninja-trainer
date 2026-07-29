@@ -498,23 +498,49 @@ const EngineVFD = (function() {
     return preguntas;
   }
 
-  function generarSesionVerbal(tabs, datosEstructurados, total) {
-    const preguntas = [];
+  function generarSesionVerbal(tabs, datosEstructurados, total, activeTabIds) {
+    // Si hay tabs activos especificados, filtrar para priorizar esos tabs
+    const tabIdsActivos = activeTabIds || (tabs ? tabs.map(t => t.id) : null);
+
     // Para evitar repetición, hacemos un pool y barajamos
     const pool = [];
     // Generamos más preguntas de las necesarias y tomamos las primeras N
     for (let i = 0; i < total * 5; i++) {
       pool.push(generarPreguntaVerbal(tabs, datosEstructurados));
     }
+
     // Eliminar duplicados por enunciado
     const unicas = [];
     const vistos = new Set();
-    for (const p of pool) {
-      if (!vistos.has(p.enunciado)) {
-        vistos.add(p.enunciado);
-        unicas.push(p);
+
+    // Si hay tabs activos, PRIORIZAR preguntas de esos tabs primero
+    if (tabIdsActivos && tabIdsActivos.length > 0) {
+      // Primera pasada: solo preguntas de los tabs activos
+      for (const p of pool) {
+        if (!vistos.has(p.enunciado) && tabIdsActivos.includes(p.tabId)) {
+          vistos.add(p.enunciado);
+          unicas.push(p);
+        }
+      }
+      // Segunda pasada: si faltan, agregar del resto
+      if (unicas.length < total) {
+        for (const p of pool) {
+          if (!vistos.has(p.enunciado)) {
+            vistos.add(p.enunciado);
+            unicas.push(p);
+          }
+        }
+      }
+    } else {
+      // Sin filtro: todas las preguntas
+      for (const p of pool) {
+        if (!vistos.has(p.enunciado)) {
+          vistos.add(p.enunciado);
+          unicas.push(p);
+        }
       }
     }
+
     // Si no hay suficientes únicas, rellenar con duplicados barajados
     while (unicas.length < total) {
       const dup = {...pool[Math.floor(Math.random() * pool.length)]};
