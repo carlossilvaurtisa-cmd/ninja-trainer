@@ -139,6 +139,7 @@ const App = (function() {
 
     // Botones de resultados
     document.getElementById('btn-retry').addEventListener('click', reiniciarTest);
+    document.getElementById('btn-reforzar').addEventListener('click', reforzarErrores);
     document.getElementById('btn-menu-from-results').addEventListener('click', () => UI.mostrarPantalla('screen-menu'));
     document.getElementById('btn-menu-from-global').addEventListener('click', () => UI.mostrarPantalla('screen-menu'));
     document.getElementById('btn-menu-from-dashboard').addEventListener('click', () => UI.mostrarPantalla('screen-menu'));
@@ -924,6 +925,7 @@ const App = (function() {
 
     // Calcular resultados
     const resultados = calcularResultados();
+    state._ultimosResultados = resultados; // Guardar para posible refuerzo
     UI.mostrarResultados(resultados, state.testData);
 
     // Guardar en historial
@@ -987,6 +989,7 @@ const App = (function() {
         const pregunta = state.preguntas[i] || {};
         detalleErrores.push({
           numero: i + 1,
+          area: pregunta.area || testData.subtitulo || '',
           enunciado: pregunta.enunciado || '',
           respuestaUsuario: r.respuesta || r.seleccion?.join(',') || 'Sin responder',
           respuestaCorrecta: pregunta.respuesta || pregunta.correctas?.join(',') || '',
@@ -994,11 +997,13 @@ const App = (function() {
         });
       } else {
         // No respondida
+        const pregunta = state.preguntas[i] || {};
         detalleErrores.push({
           numero: i + 1,
-          enunciado: state.preguntas[i]?.enunciado || '',
+          area: pregunta.area || '',
+          enunciado: pregunta.enunciado || '',
           respuestaUsuario: 'Sin responder',
-          respuestaCorrecta: state.preguntas[i]?.respuesta || '',
+          respuestaCorrecta: pregunta.respuesta || '',
           explicacion: 'No se respondió esta pregunta.'
         });
       }
@@ -1024,6 +1029,97 @@ const App = (function() {
     detenerTimer();
     state.finalizado = false;
     iniciarTest();
+  }
+
+  // ==========================================================
+  // REFORZAR ERRORES (DeepSeek genera preguntas sobre temas débiles)
+  // ==========================================================
+
+  async function reforzarErrores() {
+    const apiKey = obtenerApiKey();
+    if (!apiKey) {
+      alert('⚠️ Necesitas configurar tu API Key de DeepSeek para usar esta función.\n\nVe a "Configurar API" en el menú principal.');
+      return;
+    }
+
+    // Obtener errores de la última sesión
+    const ultimaSesion = state._ultimosResultados;
+    if (!ultimaSesion || !ultimaSesion.detalleErrores || ultimaSesion.detalleErrores.length === 0) {
+      alert('🎉 ¡No hay errores que reforzar! Excelente trabajo.');
+      return;
+    }
+
+    const errores = ultimaSesion.detalleErrores.filter(e => e.area);
+
+    // Identificar temas débiles únicos
+    const temasDebiles = [...new Set(errores.map(e => e.area))];
+
+    // Mostrar estado de carga
+    const btnReforzar = document.getElementById('btn-reforzar');
+    const statusDiv = document.getElementById('results-dashboard');
+    if (btnReforzar) {
+      btnReforzar.textContent = '⏳ GENERANDO PREGUNTAS...';
+      btnReforzar.disabled = true;
+    }
+    if (statusDiv) {
+      statusDiv.classList.remove('hidden');
+      statusDiv.innerHTML = '<div style="text-align:center;padding:16px;"><h3>⏳ Analizando tus errores...</h3><p style="font-size:0.9rem;color:var(--texto-muted);">DeepSeek está generando preguntas personalizadas sobre:<br><strong>' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? '...' : '') + '</strong></p><p style="font-size:0.75rem;color:var(--texto-muted);">Esto puede tomar 10-20 segundos...</p></div>';
+    }
+
+    try {
+      const cantidad = Math.min(errores.length + 5, 20); // Entre 5 y 20 preguntas de refuerzo
+      const preguntasRefuerzo = await DeepSeek.generarPreguntasRefuerzo(
+        apiKey,
+        temasDebiles,
+        errores,
+        cantidad
+      );
+
+      if (!preguntasRefuerzo || preguntasRefuerzo.length === 0) {
+        throw new Error('No se generaron preguntas');
+      }
+
+      // Configurar nueva sesión de refuerzo
+      detenerTimer();
+      state.testActual = state.testActual; // mantener el tipo de test
+      state.preguntas = preguntasRefuerzo;
+      state.respuestas = new Array(preguntasRefuerzo.length).fill(null);
+      state.indiceActual = 0;
+      state.segundosRestantes = Math.max(preguntasRefuerzo.length * 75, 600); // ~75 seg por pregunta, min 10 min
+      state.tiempoInicio = Date.now();
+      state.finalizado = false;
+      state._modoRefuerzo = true;
+
+      // Mostrar UI de refuerzo
+      UI.iniciarTestCuestionario({
+        titulo: '🎯 REFUERZO: ' + state.testData.titulo,
+        subtitulo: 'Preguntas generadas por IA sobre tus temas débiles',
+        tiempo: state.segundosRestantes,
+        totalPreguntas: preguntasRefuerzo.length
+      });
+
+      // Actualizar información de refuerzo
+      if (statusDiv) {
+        statusDiv.classList.remove('hidden');
+        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#D1E7DD;border-radius:8px;"><h3 style="color:#0F5132;">✅ ' + preguntasRefuerzo.length + ' preguntas generadas</h3><p style="font-size:0.8rem;color:#0F5132;">Temas: ' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? ' y ' + (temasDebiles.length - 5) + ' más' : '') + '</p></div>';
+        setTimeout(() => { if (statusDiv) statusDiv.classList.add('hidden'); }, 3000);
+      }
+
+      // Iniciar timer y mostrar primera pregunta
+      iniciarTimer();
+      mostrarPreguntaActual();
+
+    } catch (error) {
+      console.error('Error en refuerzo:', error);
+      if (statusDiv) {
+        statusDiv.classList.remove('hidden');
+        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#F8D7DA;border-radius:8px;"><h3 style="color:#842029;">❌ Error al generar preguntas</h3><p style="font-size:0.8rem;color:#842029;">' + error.message + '</p><p style="font-size:0.8rem;">Verifica tu conexión y API Key. Luego intenta de nuevo.</p></div>';
+      }
+      if (btnReforzar) {
+        btnReforzar.textContent = '🎯 REFORZAR ERRORES';
+        btnReforzar.disabled = false;
+      }
+    }
   }
 
   // ==========================================================

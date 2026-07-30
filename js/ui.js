@@ -976,20 +976,33 @@ const UI = (function() {
     // Mostrar/ocultar secciones según tipo de test
     const errorsDiv = document.getElementById('results-errors');
     const profileDiv = document.getElementById('results-profile');
+    const reforzarBtn = document.getElementById('btn-reforzar');
+    const dashboardDiv = document.getElementById('results-dashboard');
+
+    // Ocultar dashboard de refuerzo por defecto
+    if (dashboardDiv) dashboardDiv.classList.add('hidden');
 
     if (testData.pares || testData.afirmaciones) {
       // Cuestionario: mostrar perfil cualitativo
       errorsDiv.classList.add('hidden');
       profileDiv.classList.remove('hidden');
       document.getElementById('profile-content').innerHTML = generarPerfilCuestionario(testData, resultados);
+      if (reforzarBtn) reforzarBtn.classList.add('hidden');
     } else if (resultados.detalleErrores && resultados.detalleErrores.length > 0) {
       // Test VFD o Inductivo: mostrar errores
       errorsDiv.classList.remove('hidden');
       profileDiv.classList.add('hidden');
       document.getElementById('errors-list').innerHTML = renderizarListaErrores(resultados.detalleErrores);
+      // Mostrar botón de refuerzo para tests de conocimiento (profesional, numérico, verbal)
+      if (reforzarBtn) {
+        reforzarBtn.classList.remove('hidden');
+        reforzarBtn.textContent = '🎯 REFORZAR ERRORES';
+        reforzarBtn.disabled = false;
+      }
     } else {
       errorsDiv.classList.add('hidden');
       profileDiv.classList.add('hidden');
+      if (reforzarBtn) reforzarBtn.classList.add('hidden');
     }
   }
 
