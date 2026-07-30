@@ -1298,6 +1298,9 @@ const UI = (function() {
     mostrarPreguntaCuestionario: mostrarPreguntaCuestionario,
     obtenerRespuestaCuestionario: obtenerRespuestaCuestionario,
 
+    // Profesional
+    mostrarPreguntaProfesional: mostrarPreguntaProfesional,
+
     // Timer
     actualizarTimer: actualizarTimer,
 
