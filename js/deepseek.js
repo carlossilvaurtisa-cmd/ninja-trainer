@@ -83,7 +83,8 @@ REGLAS:
             { role: 'user', content: userPrompt }
           ],
           temperature: 0.7,
-          max_tokens: 4000
+          max_tokens: 4000,
+          response_format: { type: "json_object" }
         })
       });
 
@@ -144,7 +145,8 @@ Responde en formato JSON: { "analisis": "...", "debilidades": "...", "recomendac
             { role: 'user', content: userPrompt }
           ],
           temperature: 0.6,
-          max_tokens: 1500
+          max_tokens: 1500,
+          response_format: { type: "json_object" }
         })
       });
 
@@ -189,16 +191,89 @@ Responde en formato JSON: { "analisis": "...", "debilidades": "...", "recomendac
   function extraerJSON(texto) {
     // Intentar extraer JSON de posible bloque markdown ```json ... ```
     const match = texto.match(/```(?:json)?\s*([\s\S]*?)```/);
-    if (match) return match[1].trim();
+    if (match) return repararJSON(match[1].trim());
 
     // Intentar encontrar { } más externo
     const inicio = texto.indexOf('{');
     const fin = texto.lastIndexOf('}');
     if (inicio >= 0 && fin > inicio) {
-      return texto.substring(inicio, fin + 1);
+      return repararJSON(texto.substring(inicio, fin + 1));
     }
 
-    return texto;
+    return repararJSON(texto);
+  }
+
+  /**
+   * Repara errores comunes del JSON generado por DeepSeek:
+   * - Comas finales sobrantes (trailing commas)
+   * - Comas faltantes entre elementos de array
+   * - Saltos de línea sin escapar dentro de strings
+   * - Comillas sin escapar dentro de strings
+   */
+  function repararJSON(jsonStr) {
+    try {
+      // Verificar si ya es válido
+      JSON.parse(jsonStr);
+      return jsonStr;
+    } catch (e) {
+      // Continuar con reparaciones
+    }
+
+    var fijo = jsonStr;
+
+    // 1. Quitar comas antes de } o ] (trailing commas)
+    fijo = fijo.replace(/,(\s*[}\]])/g, '$1');
+
+    // 2. Quitar comentarios de línea (// ...)
+    fijo = fijo.replace(/\/\/.*$/gm, '');
+
+    // 3. Arreglar comillas tipográficas (curly quotes) que a veces mete DeepSeek
+    fijo = fijo.replace(/[\u201C\u201D]/g, '"');
+
+    // 4. Intentar parsear. Si todavía falla, intentar reparación agresiva
+    try {
+      JSON.parse(fijo);
+      return fijo;
+    } catch (e2) {
+      // Extraer el mensaje de error para diagnóstico
+      var errMsg = e2.message;
+      var posMatch = errMsg.match(/position\s+(\d+)/);
+      
+      if (posMatch) {
+        var pos = parseInt(posMatch[1]);
+        var contexto = fijo.substring(Math.max(0, pos - 40), Math.min(fijo.length, pos + 40));
+        console.warn('JSON error en posición ' + pos + ': ...' + contexto + '...');
+        
+        // 5. Intentar reparar comillas dentro de strings (el error más común de DeepSeek)
+        // Buscar patrones como: "texto "citado" dentro"
+        var reparado = fijo;
+        // Reemplazar comillas internas en valores de string por comillas simples
+        reparado = reparado.replace(/"([^"]*?)"([^"]*?)"/g, function(m, antes, despues) {
+          return '"' + antes + "'" + despues + '"';
+        });
+        
+        try {
+          JSON.parse(reparado);
+          console.warn('JSON reparado con sustitución de comillas internas');
+          return reparado;
+        } catch (e3) {
+          // No se pudo reparar, devolver el mejor intento
+        }
+      }
+
+      // Último intento: extraer solo el array de preguntas con regex tolerante
+      var preguntasMatch = fijo.match(/"preguntas"\s*:\s*(\[[\s\S]*\])/);
+      if (preguntasMatch) {
+        try {
+          var arr = JSON.parse(preguntasMatch[1]);
+          return JSON.stringify({ preguntas: arr });
+        } catch (e4) {
+          // No se pudo
+        }
+      }
+
+      throw e2; // Re-lanzar el error original
+    }
   }
 
   // ==========================================================
@@ -252,7 +327,8 @@ Responde ÚNICAMENTE con este JSON:
             { role: 'user', content: prompt }
           ],
           temperature: 0.8,
-          max_tokens: 3000
+          max_tokens: 3000,
+          response_format: { type: "json_object" }
         })
       });
 
@@ -549,7 +625,8 @@ CRITERIOS DE CALIDAD:
             { role: 'user', content: userPrompt }
           ],
           temperature: 0.6,
-          max_tokens: 6000
+          max_tokens: 6000,
+          response_format: { type: "json_object" }
         })
       });
 
@@ -667,7 +744,8 @@ Mantén alta calidad: explicaciones con ley+artículo, opciones verosímiles en 
             { role: 'user', content: userPrompt }
           ],
           temperature: 0.6,
-          max_tokens: 3000
+          max_tokens: 3000,
+          response_format: { type: "json_object" }
         })
       });
 
