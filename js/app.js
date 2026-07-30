@@ -483,14 +483,14 @@ const App = (function() {
   function guardarApiKey() {
     const key = document.getElementById('modal-api-input').value.trim();
     if (key) {
-      localStorage.setItem('ninja_deepseek_key', key);
+      localStorage.setItem(userKey('deepseek_key'), key);
     }
     cerrarModalAPI();
     actualizarEstadoAPI();
   }
 
   function eliminarApiKey() {
-    localStorage.removeItem('ninja_deepseek_key');
+    localStorage.removeItem(userKey('deepseek_key'));
     document.getElementById('modal-api-input').value = '';
     cerrarModalAPI();
     actualizarEstadoAPI();
