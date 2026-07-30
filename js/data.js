@@ -1415,20 +1415,305 @@ const DataBank = {
     totalPreguntas: 15,
     instrucciones: '<p><strong>Prueba de Conocimientos Profesional</strong> sobre <strong>Protección de Víctimas y Testigos</strong>.</p><p><strong>Duración: 15 minutos | Preguntas: 15</strong></p><p>Formato mixto: V/F/D y Selección Múltiple.</p><p>Áreas: Victimología, Trauma y Duelo, Fenomenología, Sistema de Justicia, Crimen Organizado, Protección Especializada, Medidas de Protección.</p>',
     banco: [
-      { tipo:'VFD', nivel:'facil', area:'Victimología', enunciado:'La victimización es el proceso por el cual una persona se convierte en víctima de un delito.', respuesta:'V', explicacion:'Correcto.' },
-      { tipo:'VFD', nivel:'facil', area:'Victimología', enunciado:'La revictimización ocurre cuando una persona es víctima de múltiples delitos simultáneamente.', respuesta:'F', explicacion:'La revictimización es daño adicional del sistema judicial.' },
-      { tipo:'MC', nivel:'facil', area:'Victimología', enunciado:'¿Qué concepto describe la exposición repetida de una víctima al sistema de justicia?', opciones:['Victimización primaria','Revictimización','Polivictimización','Victimización secundaria'], respuesta:1, explicacion:'Revictimización.' },
-      { tipo:'MC', nivel:'intermedio', area:'Trauma y Duelo', enunciado:'Según el DSM-5, ¿cuál es la característica esencial del TEPT?', opciones:['Exposición a evento traumático','Cambios en apetito','Problemas de sueño','Fobia social'], respuesta:0, explicacion:'Exposición a evento traumático.' },
-      { tipo:'VFD', nivel:'facil', area:'Trauma y Duelo', enunciado:'El duelo es exclusivamente una reacción ante la muerte de un ser querido.', respuesta:'F', explicacion:'Puede manifestarse ante diversas pérdidas.' },
-      { tipo:'MC', nivel:'facil', area:'Fenomenología', enunciado:'¿Qué caracteriza al crimen organizado?', opciones:['Actuación individual','Estructura jerarquizada','Delitos impulsivos','Sin planificación'], respuesta:1, explicacion:'Estructura jerarquizada y permanente.' },
-      { tipo:'VFD', nivel:'facil', area:'Sistema de Justicia', enunciado:'El Código Procesal Penal regula el procedimiento penal en Chile.', respuesta:'V', explicacion:'Correcto.' },
-      { tipo:'MC', nivel:'facil', area:'Sistema de Justicia', enunciado:'¿Qué ley establece la LOC del Ministerio Público?', opciones:['Ley 19.640','Ley 20.000','Ley 21.057','Ley 19.733'], respuesta:0, explicacion:'Ley 19.640.' },
-      { tipo:'MC', nivel:'intermedio', area:'Delitos', enunciado:'La Ley 20.000 sanciona el tráfico ilícito de:', opciones:['Armas','Estupefacientes','Migrantes','Especies'], respuesta:1, explicacion:'Estupefacientes y sustancias sicotrópicas.' },
-      { tipo:'VFD', nivel:'intermedio', area:'Protección', enunciado:'Ley 21.057 regula entrevistas grabadas en video para NNA víctimas de delitos sexuales.', respuesta:'V', explicacion:'Correcto.' },
-      { tipo:'MC', nivel:'dificil', area:'Protección', enunciado:'Ley 21.675 estatuye medidas para prevenir, sancionar y erradicar:', opciones:['Trata de personas','Violencia contra mujeres en razón de género','Crimen organizado','Tráfico de armas'], respuesta:1, explicacion:'Violencia contra las mujeres en razón de género.' },
-      { tipo:'VFD', nivel:'facil', area:'Medidas', enunciado:'Las medidas de protección buscan evitar la revictimización.', respuesta:'V', explicacion:'Correcto.' },
-      { tipo:'MC', nivel:'intermedio', area:'Medidas', enunciado:'¿Cuál es una medida de protección para víctimas y testigos?', opciones:['Reserva de identidad','Atención psicológica','Asignación de vivienda','Todas'], respuesta:3, explicacion:'Todas son medidas disponibles.' },
-      { tipo:'VFD', nivel:'dificil', area:'Medidas', enunciado:'Las medidas de protección solo aplican durante el juicio oral.', respuesta:'F', explicacion:'Aplican en diversas etapas del proceso.' }
+      // ===========================================
+      // VICTIMOLOGÍA (6 preguntas)
+      // ===========================================
+      {
+        tipo:'VFD', nivel:'facil', area:'Victimología',
+        enunciado:'La victimización primaria es el daño directo que sufre la persona como consecuencia inmediata del delito.',
+        respuesta:'V',
+        explicacion:'La victimización primaria corresponde al daño directo e inmediato que experimenta la víctima como resultado del hecho delictivo. El Código Procesal Penal chileno (Ley N°19.696), en su Artículo 6, reconoce la protección de la víctima como principio básico del proceso penal, estableciendo que el Ministerio Público debe velar por su protección durante todas las etapas. La doctrina victimológica clásica de Benjamín Mendelsohn (1947) y Hans von Hentig (1948) distingue tres niveles: primaria (daño directo del delito), secundaria (revictimización institucional) y terciaria (afectación al entorno social).'
+      },
+      {
+        tipo:'VFD', nivel:'facil', area:'Victimología',
+        enunciado:'La revictimización o victimización secundaria ocurre cuando una persona es víctima de múltiples delitos cometidos por distintos autores en un mismo período.',
+        respuesta:'F',
+        explicacion:'FALSO. La revictimización o victimización secundaria NO se refiere a sufrir múltiples delitos, sino al daño adicional que experimenta la víctima al interactuar con el sistema de justicia penal (policía, fiscalía, tribunales). Según la Unidad de Atención a Víctimas y Testigos (URAVIT) del Ministerio Público, regulada en la Ley N°19.640 (LOC del MP, Art. 34), la revictimización ocurre cuando el sistema obliga a la víctima a repetir su relato múltiples veces, la expone a careos innecesarios, o la somete a procesos prolongados sin apoyo. La Ley N°21.057 (Entrevistas Videograbadas) fue creada precisamente para prevenir la revictimización de NNA. La polivictimización (múltiples delitos) es un concepto distinto desarrollado por Finkelhor et al. (2007).'
+      },
+      {
+        tipo:'MC', nivel:'facil', area:'Victimología',
+        enunciado:'Según la clasificación victimológica de Benjamín Mendelsohn (1947), ¿cómo se denomina a la víctima que provoca o contribuye activamente a su propia victimización mediante un comportamiento imprudente o provocador?',
+        opciones:[
+          'Víctima completamente inocente',
+          'Víctima por ignorancia o imprudencia',
+          'Víctima provocadora o culpable',
+          'Víctima simuladora o imaginaria'
+        ],
+        respuesta:2,
+        explicacion:'Mendelsohn, considerado el "padre de la victimología", propuso en su obra "Une nouvelle branche de la science bio-psycho-sociale: la victimologie" (1956) una clasificación de víctimas basada en el grado de participación en el delito: (1) Completamente inocente (ej. niños); (2) Por ignorancia o imprudencia menor; (3) Provocadora o tan culpable como el ofensor (ej. quien inicia una pelea); (4) Más culpable que el ofensor (ej. quien tiende una emboscada y es repelido); (5) Única culpable (ej. legítima defensa). Esta clasificación, aunque controvertida, es la base de la victimología moderna y es citada en manuales de la Academia Judicial de Chile para la formación de jueces penales.'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Victimología',
+        enunciado:'El Artículo 109 del Código Procesal Penal chileno establece que la víctima tiene derecho a solicitar medidas de protección frente a hostigamientos, amenazas o atentados. ¿Ante qué autoridad puede solicitar dichas medidas?',
+        opciones:[
+          'Solo ante el tribunal de garantía',
+          'Ante el Ministerio Público o el tribunal de garantía',
+          'Exclusivamente ante Carabineros de Chile',
+          'Solo mediante abogado patrocinante ante la Corte de Apelaciones'
+        ],
+        respuesta:1,
+        explicacion:'El Artículo 109 del CPP (Ley N°19.696) dispone que "la víctima podrá solicitar al Ministerio Público o al tribunal de garantía las medidas de protección que resulten necesarias" frente a hostigamientos, amenazas o atentados en su contra o de su familia. Las medidas pueden ser solicitadas directamente por la víctima, sin necesidad de abogado patrocinante (Art. 109 inc. 2°). El tribunal de garantía, a solicitud del Ministerio Público o de la víctima, puede ordenar protección policial, prohibición de acercamiento del imputado, u otras medidas cautelares del Art. 155 CPP. La Ley 20.931 (2016, Agenda Corta Antidelincuencia) reforzó estas facultades para facilitar su aplicación oportuna.'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Victimología',
+        enunciado:'Según Hans von Hentig, en su obra "The Criminal and His Victim" (1948), ciertas características personales de las víctimas —como ser muy joven, muy anciano, inmigrante, o tener discapacidad mental— constituyen factores de riesgo que aumentan la probabilidad de victimización.',
+        respuesta:'V',
+        explicacion:'VERDADERO. En su obra pionera "The Criminal and His Victim: Studies in the Sociobiology of Crime" (1948, Yale University Press), Hans von Hentig identificó 13 categorías de víctimas con mayor vulnerabilidad: jóvenes, ancianos, mujeres, inmigrantes, minorías, personas con discapacidad mental, deprimidos, codiciosos, solitarios, atormentadores, entre otros. Esta es la primera clasificación victimológica sistemática y fue precursora de los modernos estudios de factores de riesgo victimológico. La Fiscalía de Chile, a través de la URAVIT, utiliza evaluaciones de factores de vulnerabilidad —edad, género, pertenencia a grupos históricamente discriminados, discapacidad— para priorizar la asignación de medidas de protección conforme al Art. 109 CPP.'
+      },
+      {
+        tipo:'MC', nivel:'dificil', area:'Victimología',
+        enunciado:'La "victimización terciaria", según la doctrina victimológica contemporánea, se refiere a:',
+        opciones:[
+          'El daño causado por medios de comunicación al exponer a la víctima',
+          'El impacto del delito sobre el entorno social y familiar de la víctima directa',
+          'La tercera vez que una persona es víctima del mismo delito',
+          'La intervención de terceros en la comisión de un delito'
+        ],
+        respuesta:1,
+        explicacion:'La victimización terciaria se refiere al impacto o daño que el delito produce en el entorno social, familiar y comunitario de la víctima directa. Por ejemplo, los hijos de una mujer víctima de violencia intrafamiliar (Ley 20.066) experimentan victimización terciaria al presenciar los hechos o sufrir las consecuencias del clima de violencia. La doctrina distingue: primaria (daño directo del delito), secundaria (daño del sistema institucional) y terciaria (afectación al círculo social). La Corte Interamericana de Derechos Humanos, en el caso "Campo Algodonero vs. México" (2009), reconoció el concepto de víctimas indirectas o familiares. Este enfoque está incorporado en los protocolos de atención de la URAVIT del Ministerio Público.'
+      },
+
+      // ===========================================
+      // TRAUMA Y DUELO (5 preguntas)
+      // ===========================================
+      {
+        tipo:'MC', nivel:'facil', area:'Trauma y Duelo',
+        enunciado:'Según el DSM-5 (Manual Diagnóstico y Estadístico de los Trastornos Mentales, 5ª edición, APA 2013), el Criterio A para el diagnóstico de Trastorno de Estrés Postraumático (TEPT) requiere:',
+        opciones:[
+          'Síntomas persistentes de hiperactivación fisiológica por al menos 6 meses',
+          'Exposición a un evento traumático: muerte, lesión grave, violencia sexual, ya sea como víctima directa, testigo presencial, o conocimiento de trauma de un familiar cercano',
+          'Presencia de al menos 5 síntomas depresivos concomitantes durante 1 mes',
+          'Alteraciones del sueño documentadas por polisomnografía durante 3 meses consecutivos'
+        ],
+        respuesta:1,
+        explicacion:'El DSM-5 (APA, 2013) define 8 criterios diagnósticos para el TEPT (309.81 / F43.10). El Criterio A es el criterio de entrada o "gatekeeper": exposición a muerte real o amenaza, lesión grave, o violencia sexual en una o más de estas formas: (A1) experiencia directa; (A2) ser testigo presencial; (A3) conocimiento de que un familiar/amigo cercano sufrió el evento; (A4) exposición repetida o extrema a detalles aversivos. Los demás criterios son: B (síntomas de intrusión/re-experimentación), C (evitación), D (alteraciones cognitivas/ánimo negativas), E (alteración en alerta/reactividad), F (duración > 1 mes), G (malestar clínicamente significativo), H (no atribuible a sustancias/condición médica). Este marco es utilizado por psicólogos y psiquiatras forenses en procesos penales chilenos para acreditar daño psicológico en víctimas (Art. 83 CPP).'
+      },
+      {
+        tipo:'VFD', nivel:'facil', area:'Trauma y Duelo',
+        enunciado:'El duelo es un proceso psicológico que puede manifestarse ante cualquier tipo de pérdida significativa —no solo la muerte de un ser querido— incluyendo la pérdida de salud, empleo, relación afectiva, o la experiencia migratoria forzada.',
+        respuesta:'V',
+        explicacion:'VERDADERO. La psicología contemporánea (Worden, 2009; Neimeyer, 2000) define el duelo como una respuesta natural y adaptativa ante cualquier pérdida significativa, no limitándose a la muerte. La teoría de las "Cuatro Tareas del Duelo" de Worden (aceptar la realidad de la pérdida, procesar el dolor, adaptarse al nuevo entorno, recolocar emocionalmente lo perdido) se aplica a múltiples tipos de pérdida. En el contexto de protección de víctimas, el Art. 78 CPP establece el derecho de la víctima a recibir atención psicológica, reconociendo el impacto emocional del delito que puede manifestarse como un proceso de duelo (pérdida de seguridad, confianza, integridad, proyecto de vida). La Ley 21.675 (2024) sobre violencia integral contra mujeres reconoce explícitamente el daño psicosocial que requiere reparación integral.'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Trauma y Duelo',
+        enunciado:'El duelo patológico o complicado se diferencia del duelo normal principalmente por la duración: todo duelo que exceda los 12 meses debe ser diagnosticado como Trastorno de Duelo Complejo Persistente según el DSM-5.',
+        respuesta:'F',
+        explicacion:'FALSO. Si bien el DSM-5 (2013) incluyó el Trastorno de Duelo Complejo Persistente (TDCP, código F43.8) en la sección de "Afecciones que necesitan más estudio", no es solo la duración lo que lo define. Los criterios propuestos incluyen: (A) duelo persistente (>12 meses en adultos, >6 meses en niños) caracterizado por añoranza/anhelo intenso por el fallecido Y (B) al menos 6 de 12 síntomas adicionales: incredulidad, evitación de recordatorios, ira/amargura, dificultad para aceptar la pérdida, confusión de identidad, dificultad para reintegrarse a la vida, embotamiento emocional, sensación de sinsentido, soledad intensa. Además debe causar (C) malestar clínicamente significativo y (D) no ser atribuible a otra condición. Mera duración >12 meses no es criterio suficiente. La URAVIT utiliza estos criterios para derivar a víctimas a atención psicológica especializada.'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Trauma y Duelo',
+        enunciado:'El Artículo 83 del Código Procesal Penal chileno establece que el Ministerio Público debe adoptar medidas para proteger a las víctimas. En relación al daño psicológico de las víctimas, ¿qué principio rige la actuación fiscal?',
+        opciones:[
+          'Principio de contradicción: la defensa debe poder contrainterrogar al perito psicólogo en todo momento',
+          'Principio de mínima intervención: solo se evalúa daño psicológico cuando la pena solicitada supera los 5 años',
+          'Principio de protección integral: el fiscal debe adoptar todas las medidas necesarias para proteger la integridad física y psíquica de la víctima durante todo el proceso',
+          'Principio de subsidiariedad penal: el daño psicológico solo puede ser evaluado por peritos del Servicio Médico Legal'
+        ],
+        respuesta:2,
+        explicacion:'El Art. 83 CPP (modificado por Ley 20.931 de 2016) impone al Ministerio Público el deber de "adoptar las medidas necesarias para proteger a las víctimas y testigos", lo que incluye la protección de su integridad psíquica. La Ley 19.640 (LOC MP), en su Art. 20, faculta al Fiscal Nacional para crear unidades especializadas, como la URAVIT. Además, el Art. 78 CPP establece el catálogo de derechos de la víctima, incluyendo: letra a) solicitar medidas de protección; letra b) recibir atención médica y psicológica de urgencia; letra c) ser informada del proceso. El Art. 109 permite solicitar medidas específicas frente a amenazas. La Ley 21.675 (2024) refuerza este principio de protección integral con enfoque de género, exigiendo que el Estado garantice atención psicológica, asesoría jurídica y protección policial a mujeres víctimas de violencia.'
+      },
+      {
+        tipo:'VFD', nivel:'dificil', area:'Trauma y Duelo',
+        enunciado:'Según el DSM-5, una persona que experimenta síntomas de re-experimentación, evitación, alteraciones cognitivas e hiperactivación fisiológica durante 3 semanas consecutivas después de un accidente de tránsito grave, cumple todos los criterios para ser diagnosticada con Trastorno de Estrés Postraumático (TEPT).',
+        respuesta:'F',
+        explicacion:'FALSO. El DSM-5 (APA, 2013, págs. 271-280) establece en el Criterio F que la duración de los síntomas debe ser SUPERIOR A 1 MES (más de 30 días) para el diagnóstico de TEPT. Con solo 3 semanas (21 días), el diagnóstico correcto sería Trastorno de Estrés Agudo (TEA, código 308.3 / F43.0), que comparte los mismos criterios A-E pero con duración de 3 días a 1 mes desde el evento traumático. Esta distinción es clínicamente relevante porque: (1) el TEA puede resolverse espontáneamente sin tratamiento; (2) permite intervención temprana para prevenir cronificación a TEPT; (3) tiene implicancias forenses en la evaluación de daño psicológico. Peritos del Servicio Médico Legal y de la URAVIT aplican estos criterios temporales en sus informes psicológicos periciales (Art. 314 CPP).'
+      },
+
+      // ===========================================
+      // FENOMENOLOGÍA Y CRIMEN ORGANIZADO (5 preguntas)
+      // ===========================================
+      {
+        tipo:'MC', nivel:'facil', area:'Fenomenología',
+        enunciado:'Según la Convención de las Naciones Unidas contra la Delincuencia Organizada Transnacional (Convención de Palermo, 2000), ratificada por Chile mediante Decreto Supremo N°342/2004 del Ministerio de Relaciones Exteriores, un "grupo delictivo organizado" se define como:',
+        opciones:[
+          'Cualquier asociación de 2 o más personas para cometer un delito',
+          'Un grupo estructurado de 3 o más personas, existente por cierto tiempo, que actúa concertadamente con el propósito de cometer delitos graves para obtener un beneficio económico u otro beneficio material',
+          'Una organización criminal con al menos 5 integrantes y alcance internacional',
+          'Una banda con estructura jerárquica vertical, liderazgo único e identificación territorial definida'
+        ],
+        respuesta:1,
+        explicacion:'El Artículo 2(a) de la Convención de Palermo (UNTOC, 2000) define "grupo delictivo organizado" como un grupo estructurado de 3 o más personas, existente durante cierto período de tiempo, que actúa concertadamente con el propósito de cometer uno o más delitos graves tipificados conforme a la Convención, con miras a obtener un beneficio económico u otro de orden material. Chile ratificó esta Convención mediante D.S. N°342/2004 del Ministerio de RR.EE. (publicado en el Diario Oficial el 16 de febrero de 2005). La Ley 20.000 (Ley de Drogas) y la Ley 20.393 (Responsabilidad Penal de Personas Jurídicas) contienen tipos penales que sancionan la participación en organizaciones criminales. El concepto de "delito grave" en la Convención se define como conducta punible con privación de libertad máxima de al menos 4 años.'
+      },
+      {
+        tipo:'VFD', nivel:'facil', area:'Fenomenología',
+        enunciado:'Una característica distintiva de las organizaciones criminales, según la doctrina criminológica, es la existencia de un "código de silencio" (omertà) que protege a la organización de la persecución penal mediante la intimidación a testigos y la obstrucción a la justicia.',
+        respuesta:'V',
+        explicacion:'VERDADERO. La doctrina criminológica (Cressey, 1969; Abadinsky, 2013; Albanese, 2015) identifica características comunes en el crimen organizado: (1) estructura jerárquica, (2) continuidad temporal, (3) uso de violencia o intimidación, (4) búsqueda de beneficio económico, (5) infiltración en economía lícita, y (6) código de silencio o "ley del silencio" como mecanismo de autoprotección. En Chile, el Art. 15 bis de la Ley 18.314 (Ley Antiterrorista) y las modificaciones de la Ley 20.931 (2016) reconocen la necesidad de proteger testigos frente a organizaciones criminales que utilizan la intimidación sistemática. La URAVIT del Ministerio Público tiene protocolos específicos para víctimas de crimen organizado, que incluyen reserva de identidad (Art. 307 CPP) y protección policial permanente (Art. 308 CPP).'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Fenomenología',
+        enunciado:'La Ley 20.000 chilena, que sanciona el tráfico ilícito de estupefacientes y sustancias psicotrópicas, fue publicada el 16 de febrero de 2005 y reemplazó a la antigua Ley 19.366. ¿Cuál de las siguientes conductas NO está sancionada expresamente por el artículo 3° de la Ley 20.000?',
+        opciones:[
+          'El cultivo de especies vegetales del género cannabis con autorización del SAG para fines de investigación científica',
+          'La producción, fabricación o preparación de sustancias estupefacientes o psicotrópicas',
+          'El tráfico, transporte o distribución de dichas sustancias',
+          'La posesión o tenencia ilegal de dichas sustancias'
+        ],
+        respuesta:0,
+        explicacion:'El Artículo 3° de la Ley 20.000 sanciona: elaboración, producción, fabricación, preparación, transformación, extracción, tráfico, transporte, importación, exportación, distribución o posesión de estupefacientes o sustancias psicotrópicas SIN la debida autorización. El cultivo de cannabis con autorización del SAG (Servicio Agrícola y Ganadero) para fines de investigación científica no está sancionado, pues el Decreto Supremo N°404/1982 del Ministerio de Salud (Reglamento de Estupefacientes) y sus modificaciones permiten el cultivo autorizado para fines médicos y científicos (Art. 6). La Ley 20.000 fue publicada en el Diario Oficial el 16 de febrero de 2005, derogando la Ley 19.366 de 1995 (que a su vez había reemplazado la Ley 18.403 de 1985). Con la entrada en vigencia de la Ley 21.575 (2023), se modificaron aspectos procesales de la Ley 20.000.'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Fenomenología',
+        enunciado:'Según la Ley 20.393 de Responsabilidad Penal de las Personas Jurídicas (2009), las empresas pueden ser penalmente responsables por delitos de lavado de activos, financiamiento del terrorismo, cohecho a funcionario público y receptación, cuando estos delitos son cometidos por sus dueños, controladores, ejecutivos o empleados en el marco de la actividad empresarial.',
+        respuesta:'V',
+        explicacion:'VERDADERO. La Ley 20.393, publicada el 2 de diciembre de 2009, estableció por primera vez en Chile la responsabilidad penal de las personas jurídicas (empresas, fundaciones, corporaciones). Originalmente aplicable a lavado de activos (Ley 19.913), financiamiento del terrorismo (Ley 18.314) y cohecho a funcionario público (Art. 250 y 251 bis CP). La Ley 20.931 (2016) amplió el catálogo a receptación (Art. 456 bis CP). Posteriores modificaciones (Leyes 21.121, 21.240, 21.325, 21.412, 21.426, 21.459, 21.488, 21.560, 21.565, 21.577, 21.595, 21.660) han ampliado progresivamente el catálogo de delitos. El Art. 3° establece que la persona jurídica responde cuando el delito es cometido "directa e inmediatamente en su interés o para su provecho, por sus dueños, controladores, responsables, ejecutivos principales, representantes o quienes realicen actividades de administración y supervisión".'
+      },
+      {
+        tipo:'MC', nivel:'dificil', area:'Fenomenología',
+        enunciado:'En el contexto del crimen organizado transnacional, el "tráfico ilícito de migrantes" y la "trata de personas" son conceptos distintos regulados por instrumentos internacionales complementarios. ¿Cuál es la diferencia fundamental entre ambos?',
+        opciones:[
+          'No hay diferencia: ambos términos describen el movimiento ilegal de personas a través de fronteras',
+          'La trata de personas implica coacción, engaño o explotación de la víctima, mientras que el tráfico de migrantes requiere consentimiento voluntario (aunque viciado) de la persona migrante para el cruce ilegal de fronteras',
+          'El tráfico de migrantes siempre es internacional; la trata solo ocurre dentro del territorio nacional',
+          'La diferencia es que la trata es un delito contra la libertad y el tráfico contra la administración de justicia'
+        ],
+        respuesta:1,
+        explicacion:'El Protocolo contra el Tráfico Ilícito de Migrantes (2000) y el Protocolo para Prevenir, Reprimir y Sancionar la Trata de Personas (Protocolo de Palermo, 2000), ambos complementarios de la Convención de Palermo y ratificados por Chile (D.S. N°342/2004), diferencian: (A) TRATA DE PERSONAS (Art. 3 Protocolo TP): captación, transporte, traslado, acogida o recepción de personas, recurriendo a amenaza, fuerza, coacción, fraude, engaño, abuso de poder o situación de vulnerabilidad, con fines de explotación (sexual, laboral, servidumbre, extracción de órganos). El consentimiento de la víctima es irrelevante si se usó cualquier medio ilícito. (B) TRÁFICO ILÍCITO DE MIGRANTES (Art. 3 Protocolo TIM): facilitación de entrada ilegal de una persona en un Estado del cual no sea nacional, con fines de obtener beneficio financiero o material. La persona migrante CONSiente voluntariamente (aunque el consentimiento puede estar viciado por necesidad económica). Chile tipificó la trata de personas en el Art. 411 quáter del Código Penal (Ley 20.507, 2011) y el tráfico ilícito de migrantes en el Art. 411 bis CP.'
+      },
+
+      // ===========================================
+      // SISTEMA DE JUSTICIA Y MINISTERIO PÚBLICO (5 preguntas)
+      // ===========================================
+      {
+        tipo:'VFD', nivel:'facil', area:'Sistema de Justicia',
+        enunciado:'El Código Procesal Penal chileno (Ley N°19.696), vigente desde el año 2000, establece un sistema procesal penal de corte acusatorio y oral, donde las funciones de investigar y juzgar están separadas en órganos distintos: el Ministerio Público investiga y los tribunales de garantía y tribunales orales en lo penal juzgan.',
+        respuesta:'V',
+        explicacion:'VERDADERO. El CPP, Ley N°19.696, publicada el 12 de octubre de 2000 e implementada gradualmente entre 2000 (Regiones IV y IX) y 2005 (Región Metropolitana), transformó el sistema inquisitivo escrito del Código de Procedimiento Penal de 1906 en un sistema acusatorio, oral y público. El principio de separación de funciones está consagrado en el Art. 1° CPP: "Ninguna persona podrá ser condenada o penada, ni sometida a una medida de seguridad, sino en virtud de sentencia fundada, dictada por un tribunal imparcial". El Art. 3° establece que corresponde al Ministerio Público (Ley 19.640 LOC MP) dirigir en forma exclusiva la investigación penal. Los Juzgados de Garantía (Art. 14 CPP) controlan la investigación y los Tribunales de Juicio Oral en lo Penal (Art. 17 CPP) realizan el juicio y dictan sentencia.'
+      },
+      {
+        tipo:'MC', nivel:'facil', area:'Sistema de Justicia',
+        enunciado:'La Ley N°19.640, Ley Orgánica Constitucional del Ministerio Público, fue publicada el 15 de octubre de 1999. Su artículo 34 crea una unidad especializada clave para la protección de víctimas y testigos. ¿Cómo se denomina actualmente esta unidad?',
+        opciones:[
+          'Unidad de Víctimas y Testigos del Ministerio Público (URAVIT)',
+          'Corporación de Asistencia Judicial (CAJ)',
+          'Servicio Nacional de Menores (SENAME)',
+          'Subsecretaría de Prevención del Delito'
+        ],
+        respuesta:0,
+        explicacion:'El Art. 34 de la Ley 19.640 (LOC MP) faculta al Fiscal Nacional para "crear las unidades administrativas que sean necesarias para el cumplimiento de las funciones del Ministerio Público". En virtud de esta facultad, se creó la Unidad Regional de Atención a Víctimas y Testigos (URAVIT), presente en cada Fiscalía Regional del país. Sus funciones incluyen: (a) evaluar el nivel de riesgo de víctimas y testigos; (b) proporcionar atención psicológica, social y jurídica inmediata; (c) recomendar y coordinar la implementación de medidas de protección (Arts. 109, 307-312 CPP); (d) acompañar a víctimas y testigos durante el proceso penal; (e) derivar a servicios de la red pública. La URAVIT trabaja coordinadamente con el fiscal a cargo del caso, Carabineros de Chile y la PDI para la ejecución de medidas de protección. La Ley 21.057 (2018) fortaleció la URAVIT para casos de NNA víctimas de delitos sexuales.'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Sistema de Justicia',
+        enunciado:'Según el Artículo 78 del Código Procesal Penal, la víctima tiene derecho a ser oída por el fiscal antes de que este decida archivar provisionalmente la investigación o no perseverar en el procedimiento.',
+        respuesta:'V',
+        explicacion:'VERDADERO. El Art. 78 inciso 2° CPP establece el catálogo de derechos de la víctima, entre los cuales la letra f) consagra el derecho a "ser oída por el fiscal antes de que este decida archivar provisionalmente la investigación o no perseverar en el procedimiento". El archivo provisional (Art. 167 CPP) procede cuando los antecedentes no permiten desarrollar actividades conducentes al esclarecimiento de los hechos. La decisión de no perseverar (Art. 248 letra c CPP) es una facultad del fiscal que puede ejercer cuando no se han reunido antecedentes suficientes para fundar una acusación, dentro del plazo de investigación (Art. 247 CPP: 2 años máximo, prorrogable). La víctima también tiene derecho a solicitar al juez de garantía que ordene al fiscal la reapertura del procedimiento o forzar la acusación (Art. 258 CPP - forzamiento de la acusación).'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Sistema de Justicia',
+        enunciado:'El Artículo 6° del Código Procesal Penal chileno establece el principio de "protección de la víctima". ¿Cuál de los siguientes enunciados describe correctamente el contenido de este principio?',
+        opciones:[
+          'La víctima tiene derecho preferente a obtener indemnización del Estado por todo delito sufrido',
+          'El Ministerio Público debe adoptar todas las medidas necesarias para proteger a las víctimas y garantizar el ejercicio de sus derechos durante el proceso penal, considerando especialmente su seguridad, dignidad e integridad física y psíquica',
+          'La víctima puede sustituir al fiscal en la investigación si este no actúa con la debida diligencia',
+          'El juez de garantía debe priorizar la protección de la víctima sobre la presunción de inocencia del imputado'
+        ],
+        respuesta:1,
+        explicacion:'El Artículo 6° CPP, titulado "Protección de la víctima", dispone: "El Ministerio Público estará obligado a velar por la protección de la víctima del delito en todas las etapas del procedimiento penal. En cumplimiento de esta obligación, adoptará las medidas necesarias para garantizar su seguridad, proteger su intimidad y la de su familia, y evitar cualquier perturbación o afectación de su dignidad". Este artículo es concordante con el Art. 83 CPP (deber de protección del fiscal) y con el Art. 34 de la LOC MP (creación de URAVIT). El principio NO implica que la víctima sustituya al fiscal (el querellante puede ejercer la acción penal pero no reemplaza al MP, Art. 111 CPP) ni que prevalezca sobre la presunción de inocencia. La Ley 20.931 (2016) reforzó este principio agregando el Art. 109 bis CPP que permite medidas de protección urgentes incluso antes de la formalización.'
+      },
+      {
+        tipo:'VFD', nivel:'dificil', area:'Sistema de Justicia',
+        enunciado:'El Artículo 109 bis del Código Procesal Penal, introducido por la Ley 20.931 (2016, Agenda Corta Antidelincuencia), permite que las medidas de protección a víctimas y testigos sean decretadas por el tribunal de garantía incluso antes de la formalización de la investigación, por un plazo máximo de 30 días prorrogables.',
+        respuesta:'V',
+        explicacion:'VERDADERO. El Art. 109 bis CPP, introducido por el Art. 9° de la Ley 20.931 (publicada el 5 de julio de 2016, conocida como "Agenda Corta Antidelincuencia"), establece: "En casos urgentes y graves, el tribunal de garantía, a solicitud del Ministerio Público o de la víctima, podrá decretar las medidas de protección que sean necesarias, incluso antes de la formalización de la investigación, por un plazo máximo de treinta días". Este plazo es prorrogable por períodos iguales, previa solicitud fundada. Esta innovación legal responde a la necesidad de proteger víctimas y testigos en las etapas iniciales de la investigación, cuando aún no hay imputado formalizado pero ya existen riesgos de hostigamiento, amenazas o atentados. Las medidas pueden incluir: protección policial, prohibición de acercamiento (Art. 155 CPP), rondas periódicas, reubicación temporal, y otras medidas cautelares personales.'
+      },
+
+      // ===========================================
+      // PROTECCIÓN ESPECIALIZADA (5 preguntas)
+      // ===========================================
+      {
+        tipo:'MC', nivel:'facil', area:'Protección Especializada',
+        enunciado:'La Ley N°21.057, publicada el 20 de enero de 2018, conocida como "Ley de Entrevista Videograbada", regula la forma en que debe tomarse declaración a niños, niñas y adolescentes (NNA) víctimas de delitos sexuales y otros delitos graves. ¿Cuál es el objetivo principal de esta ley?',
+        opciones:[
+          'Permitir que NNA puedan declarar desde su domicilio por videollamada',
+          'Evitar la revictimización de NNA reduciendo el número de entrevistas y garantizando que sean realizadas por profesionales especializados en salas acondicionadas (Gesell) y grabadas en video',
+          'Sustituir la declaración judicial por un informe psicológico escrito del profesional entrevistador',
+          'Permitir que la entrevista sea realizada por los padres del NNA en un entorno de confianza'
+        ],
+        respuesta:1,
+        explicacion:'La Ley 21.057 (2018), también conocida como "Ley de Entrevista Videograbada", establece un sistema de entrevista única para NNA víctimas de delitos sexuales, secuestro, homicidio, lesiones graves, VIF, trata, entre otros (Art. 1°). Su objetivo central es evitar la victimización secundaria, reduciendo el número de entrevistas que el NNA debe enfrentar a UNA entrevista investigativa realizada por un entrevistador acreditado (perteneciente a una institución acreditada por el Ministerio de Justicia y DDHH), en una sala especialmente acondicionada (sala Gesell), grabada en audio y video. La entrevista puede ser usada como prueba en el juicio oral, evitando que el NNA tenga que declarar nuevamente. El Art. 6° establece que "ningún NNA será sometido a más de una entrevista investigativa", salvo excepciones calificadas. La ley entró en vigencia gradual por regiones entre 2019 y 2021 (con retrasos debido a la pandemia). La Ley 21.426 (2022) modificó aspectos del procedimiento.'
+      },
+      {
+        tipo:'VFD', nivel:'facil', area:'Protección Especializada',
+        enunciado:'La Ley 21.057 permite que NNA víctimas de delitos sexuales puedan ser interrogados directamente por el abogado defensor del imputado durante el juicio oral, como garantía del derecho a defensa.',
+        respuesta:'F',
+        explicacion:'FALSO. Uno de los pilares fundamentales de la Ley 21.057 es precisamente EVITAR que NNA víctimas tengan que enfrentar el interrogatorio directo de la defensa en el juicio oral. El Art. 15° de la ley establece el "Procedimiento de declaración judicial" cuando excepcionalmente se requiere que el NNA declare en juicio, el cual debe realizarse: (a) en sala contigua a la de audiencia conectada por circuito cerrado de televisión; (b) con auxilio de un facilitador o intermediario; (c) LAS PARTES DIRIGEN LAS PREGUNTAS AL JUEZ, QUIEN LAS FORMULA AL NNA adaptándolas a lenguaje comprensible (no interrogatorio directo de la defensa). El Art. 15 bis permite incluso que el tribunal limite o rechace preguntas que puedan afectar la integridad psíquica del NNA. Estas disposiciones fueron declaradas constitucionales por el Tribunal Constitucional en sentencia Rol 3001-16-INA (2017), al considerar que el interés superior del niño (Art. 3° Convención de Derechos del Niño) justifica estas limitaciones al derecho de defensa.'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Protección Especializada',
+        enunciado:'La Ley 21.675, publicada el 14 de junio de 2024, establece medidas para prevenir, sancionar y erradicar la violencia integral contra las mujeres en razón de género. ¿Qué principio rector de esta ley exige que el Estado garantice atención psicológica, asesoría jurídica y protección policial a mujeres víctimas de violencia de género?',
+        opciones:[
+          'Principio de igualdad formal ante la ley',
+          'Principio de protección integral con enfoque de género y debida diligencia',
+          'Principio de subsidiariedad penal',
+          'Principio de presunción de veracidad del testimonio de la víctima'
+        ],
+        respuesta:1,
+        explicacion:'La Ley 21.675 (2024), titulada "Ley Integral contra la Violencia hacia las Mujeres", establece en su Artículo 4° los principios rectores, entre ellos: protección integral, debida diligencia, enfoque de género, interseccionalidad, no discriminación, y participación. El principio de protección integral con enfoque de género (Art. 4° letra b) impone al Estado la obligación de garantizar a las mujeres víctimas de violencia el acceso a: atención psicológica especializada y gratuita, asesoría jurídica, protección policial oportuna, medidas cautelares efectivas, y reparación integral del daño. La debida diligencia (Art. 4° letra e) exige que el Estado actúe con prontitud y exhaustividad para prevenir, investigar, sancionar y reparar la violencia de género, estándar desarrollado por la Corte IDH (Caso González y otras "Campo Algodonero" vs. México, 2009). La ley modifica diversos cuerpos legales incluyendo el CPP, el Código Penal, y la Ley 20.066 (VIF).'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Protección Especializada',
+        enunciado:'Las medidas de protección establecidas en el Código Procesal Penal (Art. 109 y siguientes) solo pueden ser solicitadas por el fiscal a cargo de la investigación, no por la víctima directamente.',
+        respuesta:'F',
+        explicacion:'FALSO. El Art. 109 inciso 1° CPP establece que "la víctima podrá solicitar al Ministerio Público o al tribunal de garantía las medidas de protección" que estime necesarias frente a hostigamientos, amenazas o atentados. La víctima puede hacerlo DIRECTAMENTE, sin necesidad de abogado patrocinante. El Art. 109 inciso 2° establece expresamente: "La solicitud no requerirá de formalidad alguna y podrá ser presentada por la propia víctima". Además, el Art. 78 letra a) CPP reconoce el derecho de la víctima a "solicitar medidas de protección". El Art. 109 bis (Ley 20.931, 2016) extiende esta facultad permitiendo que "el tribunal, a solicitud del Ministerio Público o de la víctima", decrete medidas antes de la formalización. El Ministerio Público (URAVIT) tiene el DEBER de evaluar el riesgo y recomendar medidas, pero la iniciativa puede ser tanto del MP como de la propia víctima.'
+      },
+      {
+        tipo:'MC', nivel:'dificil', area:'Protección Especializada',
+        enunciado:'El Artículo 307 del Código Procesal Penal regula la "reserva de identidad" como medida de protección para testigos. Según este artículo, ¿en qué circunstancias el tribunal puede autorizar la reserva total de identidad del testigo, impidiendo incluso que la defensa conozca su nombre y domicilio?',
+        opciones:[
+          'Siempre que el testigo lo solicite, como expresión del derecho a la protección',
+          'Cuando existan antecedentes calificados de riesgo grave para la vida o integridad física del testigo o su familia, y solo por el tiempo indispensable, debiendo el tribunal ponderar el principio de protección con el derecho a defensa',
+          'Solo en casos de crimen organizado o terrorismo, previa autorización del Fiscal Nacional',
+          'En ningún caso: la reserva total de identidad es inconstitucional porque vulnera el derecho al debido proceso y la defensa'
+        ],
+        respuesta:1,
+        explicacion:'El Art. 307 CPP (modificado por Ley 20.931 de 2016) autoriza al tribunal para disponer la reserva de identidad del testigo en 3 niveles: (1) reserva de domicilio y datos de localización (inc. 2°); (2) reserva total de identidad, nombre y domicilio (inc. 4°), solo cuando existan "antecedentes calificados de que existe riesgo grave para la vida o integridad física del testigo o de su familia", y solo "por el tiempo indispensable" y mediante resolución fundada que pondere los derechos en conflicto; (3) utilización de recursos tecnológicos como biombo, videoconferencia o distorsión de voz (Art. 310 CPP). El Tribunal Constitucional chileno, en sentencia Rol 2030-11-INA (2012), declaró constitucional la reserva de identidad siempre que se garantice un estándar mínimo de contradicción y control de credibilidad. La Ley 21.057 (2018) extiende esta protección a NNA víctimas de delitos sexuales, permitiendo la reserva total de identidad con mayor facilidad. La Corte IDH ha sostenido (Caso Norín Catrimán, 2014) que estas medidas deben ser proporcionales y temporales.'
+      },
+
+      // ===========================================
+      // MEDIDAS DE PROTECCIÓN (5 preguntas)
+      // ===========================================
+      {
+        tipo:'VFD', nivel:'facil', area:'Medidas de Protección',
+        enunciado:'Las medidas de protección a víctimas y testigos tienen como finalidad evitar la revictimización y garantizar la comparecencia efectiva de víctimas y testigos en el proceso penal, resguardando su integridad física y psicológica.',
+        respuesta:'V',
+        explicacion:'VERDADERO. Las medidas de protección contempladas en los Arts. 109, 109 bis, 307, 308, 310 y 312 del CPP persiguen una doble finalidad: (1) PROTEGER a la víctima o testigo de hostigamientos, amenazas, atentados o cualquier forma de intimidación que pueda afectar su integridad física o psíquica, evitando así la victimización secundaria; y (2) GARANTIZAR la efectividad del proceso penal, asegurando que víctimas y testigos puedan prestar su declaración o testimonio sin temor a represalias, contribuyendo así a la búsqueda de la verdad y la justicia. La URAVIT del Ministerio Público (Art. 34 Ley 19.640) implementa estas medidas mediante: protección policial (rondas, custodia personal, botón de pánico), reserva de identidad y domicilio, uso de biombo o videoconferencia en el juicio oral, reubicación temporal, prohibición de acercamiento del imputado (Art. 155 CPP), y coordinación con la red de apoyo psicosocial.'
+      },
+      {
+        tipo:'MC', nivel:'facil', area:'Medidas de Protección',
+        enunciado:'¿Cuál de las siguientes NO es una medida de protección contemplada expresamente en el Código Procesal Penal chileno para víctimas y testigos?',
+        opciones:[
+          'Protección policial (rondas periódicas o custodia personal)',
+          'Reserva de identidad y domicilio del testigo',
+          'Uso de biombo o videoconferencia en el juicio oral',
+          'Asignación de una vivienda fiscal permanente para la víctima y su familia'
+        ],
+        respuesta:3,
+        explicacion:'La asignación de una vivienda fiscal PERMANENTE NO es una medida de protección contemplada en el CPP. Las medidas expresamente reguladas son: (A) Art. 109 y 109 bis CPP: medidas de protección en general, incluyendo prohibición de acercamiento; (B) Art. 307 CPP: reserva de identidad y domicilio del testigo protegido; (C) Art. 308 CPP: protección policial mediante rondas periódicas, custodia personal, botón de pánico, o patrullajes focalizados; (D) Art. 310 CPP: uso de recursos tecnológicos en el juicio oral como biombo físico que impide ver al testigo, videoconferencia desde lugar remoto, distorsión de voz, o declaración en sala contigua; (E) Art. 312 CPP: cambio de domicilio temporal y entrega de recursos económicos para traslado (medida excepcional, no permanente). Existen programas de apoyo como el Fondo Nacional de Seguridad Pública, pero la asignación permanente de vivienda fiscal no es una medida cautelar procesal penal, sino una política habitacional del MINVU.'
+      },
+      {
+        tipo:'VFD', nivel:'intermedio', area:'Medidas de Protección',
+        enunciado:'Las medidas de protección para víctimas y testigos se extinguen automáticamente al dictarse la sentencia definitiva en el juicio oral, sin posibilidad de extensión.',
+        respuesta:'F',
+        explicacion:'FALSO. El Art. 312 CPP establece que las medidas de protección se mantienen durante todo el proceso penal, pero pueden extenderse más allá de la sentencia definitiva cuando persiste el riesgo para la víctima o testigo. El tribunal, el Ministerio Público o la víctima pueden solicitar la prórroga de las medidas de protección, y el tribunal de garantía decidirá fundadamente. La Ley 20.931 (2016) reforzó la continuidad de las medidas al permitir su aplicación desde antes de la formalización (Art. 109 bis) y su mantención en la etapa de ejecución de la pena. La URAVIT del MP realiza evaluaciones periódicas de riesgo para determinar la necesidad de mantener, modificar o cesar las medidas. En casos de crimen organizado, las medidas pueden mantenerse por años después de la sentencia debido a la naturaleza permanente de la amenaza que representan estas organizaciones criminales (venganza, represalias).'
+      },
+      {
+        tipo:'MC', nivel:'intermedio', area:'Medidas de Protección',
+        enunciado:'El Artículo 310 del CPP permite el uso de "recursos tecnológicos" para proteger a testigos durante el juicio oral. ¿Cuál de los siguientes NO está expresamente mencionado en dicho artículo?',
+        opciones:[
+          'Biombo físico que impide ver al testigo desde la sala de audiencia',
+          'Videoconferencia desde un lugar remoto con distorsión de imagen',
+          'Distorsión de la voz del testigo mediante procesamiento de audio',
+          'Sustitución del testigo por un actor profesional que reproduce su testimonio'
+        ],
+        respuesta:3,
+        explicacion:'El Art. 310 CPP NO contempla la sustitución del testigo por un actor profesional. Las medidas tecnológicas expresamente autorizadas son: (1) "separación física del testigo del imputado o del público, mediante la utilización de tabiques, biombos u otros elementos arquitectónicos o técnicos que impidan la visión del testigo" (sistema de biombo); (2) "declaración del testigo fuera de la sala de audiencia, a través de un sistema de videoconferencia u otro dispositivo técnico que transmita su imagen y voz en tiempo real" (Art. 310 inc. 3°); (3) "distorsión de la voz o de la imagen del testigo" (Art. 310 inc. 4°). La Ley 20.931 (2016) amplió estas opciones agregando la posibilidad de "declaración en sala contigua con circuito cerrado de televisión". La sustitución del testigo por un actor vulneraría el principio de inmediación (Art. 329 CPP) y el derecho a defensa (Art. 93 CPP), por lo que NO está permitida.'
+      },
+      {
+        tipo:'VFD', nivel:'dificil', area:'Medidas de Protección',
+        enunciado:'El Artículo 312 del CPP permite al Ministerio Público proporcionar recursos económicos a víctimas y testigos protegidos para facilitar su cambio de domicilio o lugar de trabajo habitual, cuando la gravedad de la amenaza lo justifique.',
+        respuesta:'V',
+        explicacion:'VERDADERO. El Art. 312 CPP (incorporado por Ley 19.789 de 2002 y modificado por Ley 20.931 de 2016) establece: "El Ministerio Público podrá proporcionar a las víctimas y testigos protegidos los recursos económicos necesarios para facilitar su cambio de domicilio o de lugar de trabajo habitual, cuando la gravedad de la amenaza lo justifique". Esta es la medida más intensa de protección, generalmente reservada para casos de crimen organizado, narcotráfico, terrorismo, o cuando la organización criminal tiene capacidad de ubicar a la persona en cualquier parte del país. Los recursos son administrados por la URAVIT a través del Fondo Nacional de Protección de Víctimas y Testigos. El cambio de domicilio es TEMPORAL (a diferencia de la vivienda permanente que no existe como medida), por períodos renovables según evaluación de riesgo. La Ley 20.000 (Art. 37) también contempla medidas similares para testigos en casos de narcotráfico. La implementación práctica de esta medida enfrenta desafíos de integración laboral, escolar (hijos) y redes de apoyo de la persona protegida.'
+      }
     ]
   }
 };
