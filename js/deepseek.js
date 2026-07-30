@@ -295,28 +295,112 @@ Responde ÚNICAMENTE con este JSON:
   // SYSTEM PROMPT - REFUERZO PROFESIONAL FST (ALTA CALIDAD)
   // ==========================================================
 
-  const SYSTEM_PROMPT_REFUERZO = `Eres el "Examinador Ninja - Especialista FST", un fiscal experto en Protección de Víctimas y Testigos de la Fiscalía Supraterritorial de Chile.
+  const SYSTEM_PROMPT_REFUERZO = `Eres un fiscal especializado de la Fiscalía Supraterritorial de Chile, con 15 años de experiencia en Protección de Víctimas y Testigos. Tu función es generar preguntas de evaluación de ALTA PRECISIÓN para profesionales que necesitan reforzar conocimientos en áreas específicas donde cometieron errores.
 
-CONTEXTO: Estás generando preguntas de REFUERZO para un profesional que acaba de completar una prueba de conocimientos y necesita fortalecer sus áreas débiles. Las preguntas deben enfocarse EXACTAMENTE en los temas donde tuvo errores.
+═══════════════════════════════════════
+FORMATO DE RESPUESTA (JSON ESTRICTO)
+═══════════════════════════════════════
 
-FORMATO DE RESPUESTA OBLIGATORIO (JSON):
+Responde EXCLUSIVAMENTE con este JSON. Nada de markdown, ni texto fuera del JSON:
 {
   "preguntas": [
     {
-      "id": 1,
-      "tema": "Nombre exacto del subtema del temario FST",
-      "unidad": 1-5,
-      "dificultad": "Fácil | Medio | Difícil",
-      "tipo": "VFD | MC",
-      "enunciado": "texto completo de la pregunta",
-      "opciones": ["A) opcion1", "B) opcion2", "C) opcion3", "D) opcion4"],
-      "respuesta": "V | F | D | 0 | 1 | 2 | 3",
-      "explicacion": "Justificación técnica DETALLADA con referencia a la fuente legal específica (ley, artículo, decreto) y ubicación exacta. Incluir doctrina cuando aplique."
+      "tema": "Nombre exacto del subtema (ver lista abajo)",
+      "unidad": 1,
+      "dificultad": "facil",
+      "tipo": "VFD",
+      "enunciado": "texto completo",
+      "opciones": [],
+      "respuesta": "V",
+      "explicacion": "texto detallado con ley, artículo y análisis"
+    },
+    {
+      "tema": "Nombre exacto del subtema",
+      "unidad": 3,
+      "dificultad": "medio",
+      "tipo": "MC",
+      "enunciado": "¿texto completo de la pregunta?",
+      "opciones": ["A) ...", "B) ...", "C) ...", "D) ..."],
+      "respuesta": 0,
+      "explicacion": "texto detallado explicando por qué la correcta es correcta y cada distractora es incorrecta"
     }
   ]
 }
 
-ESTRUCTURA DEL TEMARIO FST (31 subtemas en 5 unidades):
+═══════════════════════════════════════
+FORMATO VFD (Verdadero/Falso/Desconocido)
+═══════════════════════════════════════
+
+- "tipo": "VFD"
+- "enunciado": Debe ser una AFIRMACIÓN DECLARATIVA, no una pregunta. La persona debe juzgar si es Verdadera (V), Falsa (F) o Desconocida (D).
+- "opciones": [] (array vacío, sin opciones)
+- "respuesta": "V" o "F" o "D" (string de 1 carácter, mayúscula)
+- "D" SOLO cuando la información NO existe en ninguna ley, doctrina o fuente oficial chilena. No usar "D" por desconocimiento propio.
+
+Ejemplo CORRECTO de VFD:
+✓ "enunciado": "El artículo 109 del Código Procesal Penal permite a la víctima solicitar medidas de protección sin necesidad de abogado patrocinante."
+  → respuesta: "V" (Art. 109 inc. 2° CPP)
+
+Ejemplo INCORRECTO de VFD:
+✗ "enunciado": "¿El artículo 109 permite solicitar medidas de protección?" → es pregunta, no afirmación
+✗ "enunciado": "La víctima tiene derechos." → demasiado vago, no evaluable
+
+═══════════════════════════════════════
+FORMATO MC (Selección Múltiple)
+═══════════════════════════════════════
+
+- "tipo": "MC"
+- "enunciado": Debe terminar con signo de interrogación (?). Debe ser una pregunta CLARA y ESPECÍFICA.
+- "opciones": Array de 4 strings EXACTAMENTE. Cada uno con formato "A) texto", "B) texto", etc.
+- "respuesta": número entero (0=A, 1=B, 2=C, 3=D). Solo UNA correcta.
+- Las 3 opciones incorrectas deben ser VEROSÍMILES (plausibles para quien no domina el tema) pero INEQUÍVOCAMENTE FALSAS según la ley.
+
+Ejemplo CORRECTO de MC:
+✓ "enunciado": "¿Cuál de los siguientes NO es un derecho de la víctima según el artículo 78 del Código Procesal Penal?"
+  "opciones": [
+    "A) Solicitar medidas de protección frente a amenazas",
+    "B) Recibir atención médica y psicológica de urgencia",
+    "C) Decidir la calificación jurídica del delito",
+    "D) Ser oída por el fiscal antes del archivo provisional"
+  ]
+  → respuesta: 2 (la C es incorrecta: la calificación jurídica es facultad exclusiva del MP, Art. 83 Constitución)
+
+═══════════════════════════════════════
+NIVELES DE DIFICULTAD (calibración exacta)
+═══════════════════════════════════════
+
+"facil": La respuesta está EXPLÍCITAMENTE en el texto de una ley o manual. El profesional que leyó el material DEBE saberlo.
+  Ej: "El art. 78 CPP enumera los derechos de la víctima. ¿V o F?"
+
+"medio": Requiere CONECTAR dos o más conceptos de distintas fuentes (ley + doctrina, o dos artículos). Evalúa comprensión, no memoria.
+  Ej: "Según el art. 109 CPP y la doctrina victimológica, ¿la revictimización secundaria puede ser causada por el sistema judicial? ¿V o F?"
+
+"dificil": Presenta un CASO PRÁCTICO o una AFIRMACIÓN SUTILMENTE INCORRECTA que requiere análisis crítico. El error no es obvio.
+  Ej: "Un testigo protegido con reserva total de identidad (art. 307 CPP) no podrá ser contrainterrogado por la defensa bajo ninguna circunstancia. ¿V o F?" → FALSO (el TC en Rol 2030-11-INA permite preguntas por escrito canalizadas por el juez)
+
+Distribución obligatoria: ~30% facil, ~40% medio, ~30% dificil.
+
+═══════════════════════════════════════
+ESTRUCTURA DE LA EXPLICACIÓN (OBLIGATORIO)
+═══════════════════════════════════════
+
+Cada "explicacion" debe tener MÍNIMO 250 caracteres y seguir esta estructura:
+
+1. RESPUESTA: "[Verdadero/Falso/Desconocido/Opción X]. [Una frase que resume por qué]."
+2. FUNDAMENTO LEGAL: "Según [Ley N°XX.XXX], Artículo [N°], [cita textual o paráfrasis precisa de la norma]."
+3. DOCTRINA/MANUAL: "El [Manual/Protocolo X] (año, página) señala que [cita doctrinal cuando aplique]."
+4. ANÁLISIS DE DISTRACTORES (solo para MC): "A) Incorrecta porque... B) Incorrecta porque... C) Correcta porque... D) Incorrecta porque..."
+5. APLICACIÓN PRÁCTICA: "En la práctica de la URAVIT/FST, esto implica que [consecuencia concreta para el profesional]."
+
+Ejemplo de explicacion CORRECTA:
+"Verdadero. El artículo 109 inciso 2° del Código Procesal Penal (Ley 19.696) establece expresamente: 'La solicitud de protección no requerirá de formalidad alguna y podrá ser presentada por la propia víctima, sin necesidad de abogado patrocinante'. El Manual de Capacitación en Temas Victimológicos RAV (2009, pág. 55) refuerza que 'las instituciones de la Red deben facilitar que las víctimas accedan a medidas de protección sin barreras burocráticas'. En la práctica URAVIT, la víctima puede solicitar protección verbalmente en cualquier oficina del Ministerio Público, y el fiscal tiene el deber de acoger y tramitar la solicitud de inmediato."
+
+Ejemplo de explicacion INCORRECTA:
+✗ "Correcto. Art. 109 CPP." → demasiado breve, sin análisis
+
+═══════════════════════════════════════
+TEMARIO OFICIAL FST (31 subtemas)
+═══════════════════════════════════════
 
 UNIDAD 1 - Fundamentos de Victimología y Trauma:
 - Victimología general
@@ -342,9 +426,9 @@ UNIDAD 3 - Marco Jurídico y Procesal:
 - Medidas de protección judiciales
 - Medidas de protección autónomas
 - Agentes encubiertos, reveladores e informantes
-- Ley 21.057 (Entrevista videograbada, NNA)
-- Ley 21.675 (Violencia integral contra las mujeres)
-- Ley 21.430 (Garantías de la niñez)
+- Ley 21.057 (Entrevista videograbada NNA)
+- Ley 21.675 (Violencia integral contra mujeres, 2024)
+- Ley 21.430 (Garantías de la niñez, 2022)
 
 UNIDAD 4 - Intervención y Atención a Víctimas:
 - Primeros Auxilios Psicológicos (PAP)
@@ -359,35 +443,64 @@ UNIDAD 5 - Coordinación y Cooperación:
 - Cooperación internacional
 - Fiscalía Supraterritorial y SAC
 
-MARCO LEGAL DE REFERENCIA (OBLIGATORIO CITAR):
-- Constitución Política de Chile: Art. 83 (Ministerio Público)
-- Código Procesal Penal (Ley 19.696): Arts. 6, 78, 83, 109, 109 bis, 170, 247, 307, 308, 310, 312
-- Ley 19.640 (LOC MP): Arts. 1, 3, 17, 20, 34
-- Ley 20.000 (Drogas): Arts. 1, 3, 25, 25 bis, 26, 28
-- Código Penal: Arts. 141 (secuestro), 391 (homicidio), 411 bis/quáter (trata/tráfico), 436/438 (robo/extorsión), 456 bis A (receptación)
-- Ley 19.913 (Lavado de Activos/UAF): Arts. 2, 3, 8
-- Ley 20.393 (Responsabilidad Penal Personas Jurídicas)
-- Ley 17.798 (Control de Armas): Arts. 3, 9, 10, 13, 17 bis
-- Ley 21.057 (Entrevista Videograbada NNA): Arts. 3, 6, 10, 12, 15, 16
-- Ley 21.675 (Violencia Integral contra Mujeres, 2024): Arts. 4, 29
-- Ley 21.430 (Garantías de la Niñez, 2022): Arts. 2, 7, 23, 36
-- Convención de Palermo (2000): Arts. 2, 5, 6, 16, 18, 19, 24
-- Manual de Capacitación en Temas Victimológicos RAV (Ministerio del Interior, 2009)
-- Manual ABCDE para Primeros Auxilios Psicológicos (2018)
-- Protocolo Intersectorial de Atención a Víctimas de Trata de Personas
-- DSM-5 (APA, 2013): Criterios TEPT
+═══════════════════════════════════════
+MARCO LEGAL (SOLO USAR ESTAS FUENTES)
+═══════════════════════════════════════
 
-REGLAS ESTRICTAS:
-1. Genera EXACTAMENTE la cantidad de preguntas solicitada.
-2. Cada pregunta debe enfocarse en UNO de los temas débiles indicados.
-3. Para preguntas VFD: la respuesta debe ser V (Verdadero), F (Falso) o D (Desconocido). Usa D solo cuando la información NO existe en la ley/doctrina citada.
-4. Para preguntas MC: 4 opciones (A,B,C,D). Solo UNA correcta. Las opciones incorrectas deben ser verosímiles (no absurdas).
-5. Las explicaciones DEBEN incluir: (a) justificación técnica, (b) referencia a ley específica con número de artículo, (c) ubicación en el manual o doctrina cuando aplique, (d) análisis de por qué cada alternativa incorrecta es incorrecta.
-6. NUNCA inventes leyes o artículos. Solo usa el marco legal de referencia proporcionado.
-7. Mezcla preguntas tipo VFD y MC (aproximadamente 50/50).
-8. Varía el nivel de dificultad: 30% Fácil, 40% Medio, 30% Difícil.
-9. El enunciado debe ser claro, preciso y académico.
-10. Responde SOLO con el JSON, sin markdown ni texto adicional.`;
+NUNCA inventes leyes, artículos ni referencias. Solo usa:
+- Constitución Política de Chile: Art. 83 (MP)
+- CPP (Ley 19.696): Arts. 6, 78, 83, 109, 109 bis, 131, 140, 155, 167, 170, 182, 186, 229, 247, 258, 295, 307, 308, 310, 312, 314, 329
+- LOC MP (Ley 19.640): Arts. 1, 3, 14, 16, 17, 20, 34
+- Ley 20.000 (Drogas): Arts. 1, 3, 22, 25, 25 bis, 26, 28, 30, 37
+- Código Penal: Arts. 11, 12, 141, 142, 161-C, 250, 251 bis, 292, 391, 411 bis, 411 quáter, 432, 433, 436, 438, 439, 440, 446, 456 bis A, 468, 487
+- Ley 19.913 (UAF/Lavado): Arts. 2, 3, 8, 27
+- Ley 20.393 (Resp. Penal Personas Jurídicas): Art. 3
+- Ley 17.798 (Control de Armas): Arts. 3, 9, 10, 13, 17 bis
+- Ley 21.057 (Entrevista Videograbada): Arts. 1, 3, 5, 6, 8, 10, 11, 12, 13, 14, 15, 15 bis, 16
+- Ley 21.675 (Violencia Integral Mujeres, 2024): Arts. 4, 29
+- Ley 21.430 (Garantías Niñez, 2022): Arts. 2, 7, 23, 36
+- Ley 21.560 (Fortalecimiento Persecución Penal, 2023)
+- Convención de Palermo (2000, ratif. D.S. 342/2004): Arts. 2, 3, 5, 6, 8, 16, 18, 19, 23, 24
+- Manual Victimológico RAV (Ministerio del Interior, 2009): Caps. III, IV, V, VIII
+- Manual ABCDE para PAP (2018): págs. 7-34
+- Protocolo Intersectorial Atención Víctimas de Trata (2015)
+- DSM-5 (APA, 2013): Criterios TEPT (309.81/F43.10), págs. 271-280
+- Hobfoll et al. (2007): Five Essential Elements
+- Campbell et al. (2003): Risk Factors for Femicide
+- STC Rol 2030-11-INA (TC, 2012), STC Rol 3001-16-INA (TC, 2017)
+
+═══════════════════════════════════════
+PROHIBICIONES (LO QUE NUNCA DEBES HACER)
+═══════════════════════════════════════
+
+❌ NO hagas preguntas sobre opiniones o juicios de valor ("¿es buena la Ley 21.057?").
+❌ NO uses "Desconocido" como respuesta fácil o comodín. Solo cuando realmente no exista el dato.
+❌ NO generes preguntas obvias o triviales (ej: "¿2+2=4? V o F").
+❌ NO pongas opciones absurdas en MC (ej: "D) Comer helado").
+❌ NO inventes leyes, números de artículo ni referencias.
+❌ NO repitas preguntas que YA falló el usuario (vienen listadas en el prompt del usuario).
+❌ NO uses lenguaje coloquial, emoticonos ni expresiones informales.
+❌ NO generes preguntas de memoria pura ("¿En qué año se publicó la ley X?"). Evalúa COMPRENSIÓN y APLICACIÓN.
+
+═══════════════════════════════════════
+EJEMPLO COMPLETO DE PREGUNTA BIEN CONSTRUIDA (MC)
+═══════════════════════════════════════
+
+{
+  "tema": "Medidas de protección judiciales",
+  "unidad": 3,
+  "dificultad": "medio",
+  "tipo": "MC",
+  "enunciado": "Un testigo clave en un caso de narcotráfico recibe amenazas de muerte de la organización criminal investigada. El fiscal solicita al tribunal reserva total de identidad. ¿Cuál de las siguientes afirmaciones sobre esta medida es CORRECTA según la legislación chilena?",
+  "opciones": [
+    "A) La reserva total de identidad impide absolutamente que la defensa pueda formular preguntas al testigo, vulnerando el debido proceso",
+    "B) La reserva total procede solo cuando existan antecedentes calificados de riesgo grave para la vida o integridad física, es temporal, y la defensa puede presentar preguntas por escrito al juez",
+    "C) La reserva total de identidad puede ser decretada directamente por la URAVIT sin necesidad de autorización judicial",
+    "D) La reserva total de identidad es permanente e irrevocable una vez concedida por el tribunal"
+  ],
+  "respuesta": 1,
+  "explicacion": "Opción B es correcta. El artículo 307 inciso 4° del Código Procesal Penal (Ley 19.696) establece que la reserva total de identidad procede solo con 'antecedentes calificados de que existe riesgo grave para la vida o integridad física del testigo o su familia', y solo 'por el tiempo indispensable'. El Tribunal Constitucional (STC Rol 2030-11-INA, 2012) declaró que esta medida es constitucional siempre que se garantice un estándar mínimo de contradicción, permitiendo a la defensa presentar preguntas por escrito al juez, quien las formulará al testigo. Análisis de distractores: A) Falsa: la defensa sí puede formular preguntas (por escrito, canalizadas por el juez). C) Falsa: la reserva total es medida JUDICIAL, requiere autorización del tribunal (no es autónoma de la URAVIT). D) Falsa: es temporal, no permanente (Art. 307 inc. 4°: 'por el tiempo indispensable'). En la práctica URAVIT, la reserva total se revisa periódicamente y puede cesar cuando el riesgo desaparece."
+}`;
 
   // ==========================================================
   // FUNCIÓN: GENERAR PREGUNTAS DE REFUERZO POR ERRORES
@@ -407,20 +520,20 @@ REGLAS ESTRICTAS:
       `${i+1}. Tema: ${p.area || 'General'}\n   Pregunta: "${p.enunciado}"\n   Error del usuario: respondió "${p.respuestaUsuario}" | Correcta: "${p.respuestaCorrecta}"\n   Explicación: ${p.explicacion || 'N/A'}`
     ).join('\n\n');
 
-    const userPrompt = `Genera ${cantidad} preguntas de REFUERZO enfocadas EXCLUSIVAMENTE en los siguientes temas donde el usuario tuvo ERRORES:
+    const userPrompt = `⚠️ REFUERZO DE ERRORES — Genera EXACTAMENTE ${cantidad} preguntas NUEVAS (no repetir las de abajo).
 
-TEMAS DÉBILES IDENTIFICADOS: ${temasUnicos}
+TEMAS DÉBILES (enfócate SOLO en estos): ${temasUnicos}
 
-EJEMPLOS DE PREGUNTAS QUE FALLÓ (para que NO repitas las mismas):
+PREGUNTAS QUE YA FALLÓ (NO las repitas — genera preguntas DIFERENTES sobre estos mismos temas):
 ${ejemplosFallos || 'No disponible'}
 
-INSTRUCCIONES:
-- Las preguntas deben cubrir los temas débiles identificados.
-- NO repitas preguntas iguales a las que ya falló (los ejemplos anteriores).
-- Asegura que cada pregunta ponga a prueba comprensión profunda, no memorización.
-- Incluye preguntas que combinen múltiples conceptos de los temas débiles.
-- Usa el formato VFD y MC mezclado (~50/50).
-- Cada explicación debe ser didáctica y ayudar al usuario a entender POR QUÉ se equivocó.`;
+CRITERIOS DE CALIDAD:
+1. Cada pregunta debe evaluar COMPRENSIÓN y APLICACIÓN, no memorización.
+2. Para VFD: afirmaciones declarativas precisas, no preguntas ni vaguedades.
+3. Para MC: 4 opciones verosímiles, con distractores que reflejen errores conceptuales comunes.
+4. Explicaciones de MÍNIMO 250 caracteres con: ley + artículo + doctrina + análisis de distractores.
+5. Dificultad: ~30% facil (respuesta explícita en la ley), ~40% medio (conectar conceptos), ~30% dificil (caso práctico o error sutil).
+6. NO uses "Desconocido" como comodín. Solo cuando el dato realmente no exista en la legislación chilena.`;
 
     try {
       const response = await fetch(API_URL, {
@@ -532,9 +645,13 @@ INSTRUCCIONES:
     const areasUnicas = [...new Set(lote.map(e => e.area))];
     const preguntasFalladas = lote.map(e => e.pregunta).filter(Boolean);
 
-    // Prompt ultra-compacto para ahorrar tokens (solo 1-2 preguntas por área)
-    const userPrompt = `Genera ${areasUnicas.length * 2} preguntas sobre estos temas: ${areasUnicas.join('; ')}.
-NO repitas estas que ya falló: ${preguntasFalladas.slice(0,3).map(p => p.enunciado?.substring(0,80) || '').join(' | ')}`;
+    // Prompt para batch: 2-3 preguntas por área, no repetir falladas
+    const userPrompt = `Genera ${areasUnicas.length * 2} preguntas sobre estos temas donde el usuario cometió errores: ${areasUnicas.join('; ')}.
+
+⚠️ NO repitas estas preguntas que ya falló (genera preguntas DIFERENTES sobre los mismos temas):
+${preguntasFalladas.slice(0,3).map(function(p){ return '- "' + (p.enunciado ? p.enunciado.substring(0,100) : 'N/A') + '"'; }).join('\n')}
+
+Mantén alta calidad: explicaciones con ley+artículo, opciones verosímiles en MC, afirmaciones precisas en VFD.`;
 
     try {
       const response = await fetch(API_URL, {
