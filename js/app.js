@@ -389,6 +389,12 @@ const App = (function() {
           state.preguntas = [];
         }
         break;
+      case 'profesional':
+        // Mezclar banco y tomar N preguntas
+        var banco = testData.banco || [];
+        var mezclado = banco.sort(function() { return Math.random() - 0.5; });
+        state.preguntas = mezclado.slice(0, Math.min(testData.totalPreguntas, mezclado.length));
+        break;
       default:
         state.preguntas = [];
     }
@@ -577,7 +583,8 @@ const App = (function() {
       switch (state.testActual) {
         case 'inductivo': timerId = 'timer-display-inductivo'; break;
         case 'trabajo':
-        case 'situacional': timerId = 'timer-display-cuest'; break;
+        case 'situacional':
+        case 'profesional': timerId = 'timer-display-cuest'; break;
         default: timerId = 'timer-display';
       }
 
@@ -634,6 +641,10 @@ const App = (function() {
       case 'trabajo':
       case 'situacional':
         UI.mostrarPreguntaCuestionario(testData, idx, testData.totalPreguntas, state.respuestas);
+        actualizarNavCuestionario();
+        break;
+      case 'profesional':
+        UI.mostrarPreguntaProfesional(state.preguntas[idx], idx, state.preguntas.length);
         actualizarNavCuestionario();
         break;
     }
@@ -703,6 +714,43 @@ const App = (function() {
       tipoError,
       explicacion: pregunta.explicacion || `${mapa[respuestaCorrecta]}. ${esCorrecta ? '✅' : '❌ Revisa el gráfico.'}`
     };
+  }
+
+  function responderProfesionalMC(indice) {
+    if (state.finalizado || state.testActual !== 'profesional') return;
+    var idx = state.indiceActual;
+    var pregunta = state.preguntas[idx];
+    if (!pregunta || pregunta.tipo !== 'MC') return;
+
+    var esCorrecta = pregunta.respuesta === indice;
+    state.respuestas[idx] = {
+      respuesta: indice,
+      correcta: esCorrecta,
+      tipoError: esCorrecta ? 'Correcto' : 'Respuesta incorrecta'
+    };
+
+    // Feedback visual
+    document.querySelectorAll('.btn-mc').forEach(function(btn, i) {
+      btn.style.borderColor = i === pregunta.respuesta ? '#198754' : '#DEE2E6';
+      btn.style.background = i === pregunta.respuesta ? '#D1E7DD' : '#fff';
+      if (i === indice && i !== pregunta.respuesta) {
+        btn.style.borderColor = '#DC3545';
+        btn.style.background = '#F8D7DA';
+      }
+    });
+
+    // Mostrar feedback y botón siguiente
+    var fb = document.getElementById('feedback-instant');
+    if (fb) {
+      fb.classList.remove('hidden');
+      fb.className = 'feedback-instant ' + (esCorrecta ? 'correct' : 'incorrect');
+      fb.innerHTML = (esCorrecta ? '✅ ¡Correcto!' : '❌ Incorrecto') + '<br>' + pregunta.explicacion;
+    }
+    var btnNext = document.getElementById('btn-next-question');
+    if (btnNext) {
+      btnNext.classList.remove('hidden');
+      btnNext.textContent = state.indiceActual < state.preguntas.length - 1 ? 'SIGUIENTE ►' : 'VER RESULTADOS ►';
+    }
   }
 
   function avanzarPregunta() {
@@ -1058,7 +1106,9 @@ const App = (function() {
   return {
     state: state,
     init: init,
-    seleccionarTest: seleccionarTest
+    seleccionarTest: seleccionarTest,
+    responderVFD: responderVFD,
+    responderProfesionalMC: responderProfesionalMC
   };
 
 })();

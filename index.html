@@ -73,6 +73,12 @@
                     <span class="btn-badge badge-no-score">Sin puntaje</span>
                     <span class="btn-badge badge-time">~7:00</span>
                 </button>
+                
+                <button class="btn-menu" data-test="profesional" style="margin-top:10px;border-color:#9900CC;color:#9900CC;">
+                    ⚖️ 6. PRUEBA DE CONOCIMIENTOS PROFESIONAL
+                    <span class="btn-badge" style="background:#F3E5F5;color:#6A1B9A;">Protección VyT</span>
+                    <span class="btn-badge badge-time">15:00</span>
+                </button>
             </div>
             
             <button id="btn-global-results" class="btn-menu btn-results-global">
@@ -514,6 +520,16 @@
     <script src="js/deepseek.js?v=3"></script>
     <script src="js/ui.js?v=3"></script>
     <script src="js/app.js?v=3"></script>
+    
+    <!-- Funciones globales para test profesional -->
+    <script>
+    function responderProfesional(resp) {
+        if (typeof App !== 'undefined') App.responderVFD(resp);
+    }
+    function responderProfesionalMC(idx) {
+        if (typeof App !== 'undefined') App.responderProfesionalMC(idx);
+    }
+    </script>
     
     <script>
     var faseActual = 'teoria';

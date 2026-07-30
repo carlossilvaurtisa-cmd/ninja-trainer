@@ -888,6 +888,47 @@ const UI = (function() {
   }
 
   // ==========================================================
+  // PREGUNTA PROFESIONAL (V/F/D + Selección Múltiple)
+  // ==========================================================
+
+  function mostrarPreguntaProfesional(pregunta, indice, total) {
+    if (window.debugLog) debugLog('mostrarPreguntaProfesional idx=' + indice + '/' + total);
+    
+    var progressEl = document.getElementById('progress-text-cuest');
+    var barEl = document.getElementById('progress-bar-fill-cuest');
+    if (progressEl) progressEl.textContent = 'Pregunta ' + (indice + 1) + '/' + total;
+    if (barEl) barEl.style.width = ((indice / total) * 100) + '%';
+
+    var content = document.getElementById('cuestionario-content');
+    if (!content) return;
+
+    var nivelEmoji = pregunta.nivel === 'facil' ? '🟢' : pregunta.nivel === 'intermedio' ? '🟡' : '🔴';
+    var html = '<div style="margin-bottom:8px;">';
+    html += '<span style="font-size:0.75rem;color:var(--texto-muted);background:var(--bg-alt);padding:4px 10px;border-radius:4px;">' + nivelEmoji + ' ' + pregunta.area + '</span>';
+    html += '</div>';
+    html += '<p style="font-size:1.05rem;font-weight:600;line-height:1.6;margin-bottom:16px;">' + pregunta.enunciado + '</p>';
+
+    if (pregunta.tipo === 'VFD') {
+      html += '<div class="question-buttons">';
+      html += '<button class="btn-answer btn-verdadero" data-answer="V" onclick="responderProfesional(\'V\')"><span class="answer-letter">V</span><span class="answer-label">VERDADERO</span></button>';
+      html += '<button class="btn-answer btn-falso" data-answer="F" onclick="responderProfesional(\'F\')"><span class="answer-letter">F</span><span class="answer-label">FALSO</span></button>';
+      html += '<button class="btn-answer btn-desconocido" data-answer="D" onclick="responderProfesional(\'D\')"><span class="answer-letter">D</span><span class="answer-label">DESCONOCIDO</span></button>';
+      html += '</div>';
+    } else if (pregunta.tipo === 'MC') {
+      html += '<div class="mc-opciones" style="display:flex;flex-direction:column;gap:8px;">';
+      var letras = ['A', 'B', 'C', 'D'];
+      pregunta.opciones.forEach(function(op, i) {
+        html += '<button class="btn-mc" data-index="' + i + '" onclick="responderProfesionalMC(' + i + ')" style="text-align:left;font-family:var(--fuente);font-size:0.95rem;padding:14px 16px;border:2px solid var(--borde);border-radius:8px;background:#fff;cursor:pointer;transition:all 0.15s;">' + letras[i] + '. ' + op + '</button>';
+      });
+      html += '</div>';
+    }
+
+    content.innerHTML = html;
+    window._profesionalRespuesta = null;
+    window._profesionalConfirmado = false;
+  }
+
+  // ==========================================================
   // ACTUALIZAR TIMER
   // ==========================================================
 
