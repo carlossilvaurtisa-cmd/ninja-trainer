@@ -686,6 +686,19 @@ const App = (function() {
       tipoError: evaluacion.tipoError
     };
 
+    // === BACKGROUND REFUERZO: si hay error, encolar para generación asíncrona ===
+    if (!evaluacion.esCorrecta && state.testActual === 'profesional') {
+      var apiKey = obtenerApiKey();
+      if (apiKey) {
+        DeepSeek.encolarErrorRefuerzo(apiKey, pregunta.area || '', {
+          enunciado: pregunta.enunciado || '',
+          respuestaUsuario: respuesta,
+          respuestaCorrecta: pregunta.respuesta || '',
+          explicacion: pregunta.explicacion || ''
+        }, 'ninja_' + (state.usuario || '') + '_');
+      }
+    }
+
     // Mostrar feedback (usa el elemento correcto según test)
     if (state.testActual === 'profesional') {
       var fb2 = document.getElementById('feedback-cuest');
@@ -741,6 +754,19 @@ const App = (function() {
       correcta: esCorrecta,
       tipoError: esCorrecta ? 'Correcto' : 'Respuesta incorrecta'
     };
+
+    // === BACKGROUND REFUERZO: si hay error, encolar para generación asíncrona ===
+    if (!esCorrecta) {
+      var apiKey2 = obtenerApiKey();
+      if (apiKey2) {
+        DeepSeek.encolarErrorRefuerzo(apiKey2, pregunta.area || '', {
+          enunciado: pregunta.enunciado || '',
+          respuestaUsuario: String(indice),
+          respuestaCorrecta: String(pregunta.respuesta),
+          explicacion: pregunta.explicacion || ''
+        }, 'ninja_' + (state.usuario || '') + '_');
+      }
+    }
 
     // Feedback visual
     document.querySelectorAll('.btn-mc').forEach(function(btn, i) {
@@ -1042,7 +1068,6 @@ const App = (function() {
       return;
     }
 
-    // Obtener errores de la última sesión
     const ultimaSesion = state._ultimosResultados;
     if (!ultimaSesion || !ultimaSesion.detalleErrores || ultimaSesion.detalleErrores.length === 0) {
       alert('🎉 ¡No hay errores que reforzar! Excelente trabajo.');
@@ -1050,76 +1075,88 @@ const App = (function() {
     }
 
     const errores = ultimaSesion.detalleErrores.filter(e => e.area);
-
-    // Identificar temas débiles únicos
     const temasDebiles = [...new Set(errores.map(e => e.area))];
 
-    // Mostrar estado de carga
     const btnReforzar = document.getElementById('btn-reforzar');
     const statusDiv = document.getElementById('results-dashboard');
+
+    // === PASO 1: Intentar usar el pool LOCAL (generado en background durante el test) ===
+    const userPrefix = 'ninja_' + (state.usuario || '') + '_';
+    var preguntasRefuerzo = DeepSeek.consumirDelPool(userPrefix, temasDebiles, 20);
+    
+    if (preguntasRefuerzo.length >= 5) {
+      // ¡Hay suficientes en el pool! Usarlas inmediatamente
+      if (statusDiv) {
+        statusDiv.classList.remove('hidden');
+        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#D1E7DD;border-radius:8px;"><h3 style="color:#0F5132;">⚡ ' + preguntasRefuerzo.length + ' preguntas listas (generadas durante tu prueba)</h3><p style="font-size:0.8rem;color:#0F5132;">Temas: ' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? ' y más' : '') + '</p></div>';
+        setTimeout(function(){ if (statusDiv) statusDiv.classList.add('hidden'); }, 3000);
+      }
+      _iniciarRondaRefuerzo(preguntasRefuerzo);
+      return;
+    }
+
+    // === PASO 2: Pool insuficiente → llamar a la API + complementar con lo que haya en pool ===
     if (btnReforzar) {
-      btnReforzar.textContent = '⏳ GENERANDO PREGUNTAS...';
+      btnReforzar.textContent = '⏳ GENERANDO...';
       btnReforzar.disabled = true;
     }
     if (statusDiv) {
       statusDiv.classList.remove('hidden');
-      statusDiv.innerHTML = '<div style="text-align:center;padding:16px;"><h3>⏳ Analizando tus errores...</h3><p style="font-size:0.9rem;color:var(--texto-muted);">DeepSeek está generando preguntas personalizadas sobre:<br><strong>' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? '...' : '') + '</strong></p><p style="font-size:0.75rem;color:var(--texto-muted);">Esto puede tomar 10-20 segundos...</p></div>';
+      var poolInfo = preguntasRefuerzo.length > 0 ? '<br><small style="color:var(--texto-muted);">(' + preguntasRefuerzo.length + ' ya listas del pool local)</small>' : '';
+      statusDiv.innerHTML = '<div style="text-align:center;padding:16px;"><h3>⏳ Generando preguntas...</h3><p style="font-size:0.9rem;">DeepSeek está creando nuevas preguntas sobre:<br><strong>' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? '...' : '') + '</strong></p>' + poolInfo + '</div>';
     }
 
     try {
-      const cantidad = Math.min(errores.length + 5, 20); // Entre 5 y 20 preguntas de refuerzo
-      const preguntasRefuerzo = await DeepSeek.generarPreguntasRefuerzo(
-        apiKey,
-        temasDebiles,
-        errores,
-        cantidad
-      );
+      var cantidadAPI = Math.min(errores.length + 5, 20) - preguntasRefuerzo.length;
+      if (cantidadAPI > 0) {
+        var apiQuestions = await DeepSeek.generarPreguntasRefuerzo(apiKey, temasDebiles, errores, cantidadAPI);
+        preguntasRefuerzo = preguntasRefuerzo.concat(apiQuestions || []);
+      }
 
       if (!preguntasRefuerzo || preguntasRefuerzo.length === 0) {
-        throw new Error('No se generaron preguntas');
+        throw new Error('No se pudieron generar preguntas');
       }
 
-      // Configurar nueva sesión de refuerzo
-      detenerTimer();
-      state.testActual = state.testActual; // mantener el tipo de test
-      state.preguntas = preguntasRefuerzo;
-      state.respuestas = new Array(preguntasRefuerzo.length).fill(null);
-      state.indiceActual = 0;
-      state.segundosRestantes = Math.max(preguntasRefuerzo.length * 75, 600); // ~75 seg por pregunta, min 10 min
-      state.tiempoInicio = Date.now();
-      state.finalizado = false;
-      state._modoRefuerzo = true;
-
-      // Mostrar UI de refuerzo
-      UI.iniciarTestCuestionario({
-        titulo: '🎯 REFUERZO: ' + state.testData.titulo,
-        subtitulo: 'Preguntas generadas por IA sobre tus temas débiles',
-        tiempo: state.segundosRestantes,
-        totalPreguntas: preguntasRefuerzo.length
-      });
-
-      // Actualizar información de refuerzo
       if (statusDiv) {
         statusDiv.classList.remove('hidden');
-        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#D1E7DD;border-radius:8px;"><h3 style="color:#0F5132;">✅ ' + preguntasRefuerzo.length + ' preguntas generadas</h3><p style="font-size:0.8rem;color:#0F5132;">Temas: ' + temasDebiles.slice(0,5).join(', ') + (temasDebiles.length > 5 ? ' y ' + (temasDebiles.length - 5) + ' más' : '') + '</p></div>';
-        setTimeout(() => { if (statusDiv) statusDiv.classList.add('hidden'); }, 3000);
+        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#D1E7DD;border-radius:8px;"><h3 style="color:#0F5132;">✅ ' + preguntasRefuerzo.length + ' preguntas generadas</h3></div>';
+        setTimeout(function(){ if (statusDiv) statusDiv.classList.add('hidden'); }, 3000);
       }
 
-      // Iniciar timer y mostrar primera pregunta
-      iniciarTimer();
-      mostrarPreguntaActual();
+      _iniciarRondaRefuerzo(preguntasRefuerzo);
 
     } catch (error) {
       console.error('Error en refuerzo:', error);
       if (statusDiv) {
         statusDiv.classList.remove('hidden');
-        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#F8D7DA;border-radius:8px;"><h3 style="color:#842029;">❌ Error al generar preguntas</h3><p style="font-size:0.8rem;color:#842029;">' + error.message + '</p><p style="font-size:0.8rem;">Verifica tu conexión y API Key. Luego intenta de nuevo.</p></div>';
+        statusDiv.innerHTML = '<div style="text-align:center;padding:16px;background:#F8D7DA;border-radius:8px;"><h3 style="color:#842029;">❌ Error</h3><p style="font-size:0.8rem;">' + error.message + '</p></div>';
       }
       if (btnReforzar) {
         btnReforzar.textContent = '🎯 REFORZAR ERRORES';
         btnReforzar.disabled = false;
       }
     }
+  }
+
+  function _iniciarRondaRefuerzo(preguntasRefuerzo) {
+    detenerTimer();
+    state.preguntas = preguntasRefuerzo;
+    state.respuestas = new Array(preguntasRefuerzo.length).fill(null);
+    state.indiceActual = 0;
+    state.segundosRestantes = Math.max(preguntasRefuerzo.length * 75, 600);
+    state.tiempoInicio = Date.now();
+    state.finalizado = false;
+    state._modoRefuerzo = true;
+
+    UI.iniciarTestCuestionario({
+      titulo: '🎯 REFUERZO: ' + state.testData.titulo,
+      subtitulo: 'Preguntas generadas por IA sobre tus temas débiles',
+      tiempo: state.segundosRestantes,
+      totalPreguntas: preguntasRefuerzo.length
+    });
+
+    iniciarTimer();
+    mostrarPreguntaActual();
   }
 
   // ==========================================================

@@ -473,15 +473,191 @@ INSTRUCCIONES:
   }
 
   // ==========================================================
-  // API PÚBLICA
+  // FUNCIÓN: GENERACIÓN BACKGROUND POR ERROR (NO BLOQUEANTE)
+  // Acumula errores y dispara la API en lotes durante el test
   // ==========================================================
+
+  // Cola de errores pendientes de procesar
+  let _errorQueue = [];
+  let _batchTimer = null;
+  let _batchInProgress = false;
+  const BATCH_DELAY = 8000;  // 8 seg después del primer error
+  const BATCH_SIZE = 3;      // disparar tras 3 errores acumulados
+
+  /**
+   * Encola un error para generación background.
+   * Se llama DESPUÉS de cada respuesta incorrecta durante el test.
+   * @param {string} apiKey
+   * @param {string} area - El área/tema donde falló
+   * @param {object} preguntaFallada - {enunciado, respuestaUsuario, respuestaCorrecta, explicacion}
+   * @param {string} userPrefix - Prefijo para localStorage (userKey)
+   */
+  function encolarErrorRefuerzo(apiKey, area, preguntaFallada, userPrefix) {
+    if (!apiKey || !area) return;
+
+    // Agregar a la cola
+    _errorQueue.push({ area, pregunta: preguntaFallada, userPrefix });
+
+    // Si ya hay un batch en progreso o timer, solo acumulamos
+    if (_batchInProgress) return;
+
+    // Disparar inmediatamente si llegamos al tamaño del lote
+    if (_errorQueue.length >= BATCH_SIZE) {
+      if (_batchTimer) { clearTimeout(_batchTimer); _batchTimer = null; }
+      _procesarLoteBackground(apiKey, userPrefix);
+      return;
+    }
+
+    // Si es el primer error, programar batch para dentro de BATCH_DELAY
+    if (!_batchTimer && _errorQueue.length === 1) {
+      _batchTimer = setTimeout(() => {
+        _batchTimer = null;
+        _procesarLoteBackground(apiKey, userPrefix);
+      }, BATCH_DELAY);
+    }
+  }
+
+  /**
+   * Procesa la cola de errores: envía 1 llamada a la API por todas las áreas acumuladas.
+   */
+  async function _procesarLoteBackground(apiKey, userPrefix) {
+    if (_errorQueue.length === 0 || _batchInProgress) return;
+    _batchInProgress = true;
+
+    const lote = [..._errorQueue];
+    _errorQueue = []; // vaciar cola
+
+    if (_batchTimer) { clearTimeout(_batchTimer); _batchTimer = null; }
+
+    const areasUnicas = [...new Set(lote.map(e => e.area))];
+    const preguntasFalladas = lote.map(e => e.pregunta).filter(Boolean);
+
+    // Prompt ultra-compacto para ahorrar tokens (solo 1-2 preguntas por área)
+    const userPrompt = `Genera ${areasUnicas.length * 2} preguntas sobre estos temas: ${areasUnicas.join('; ')}.
+NO repitas estas que ya falló: ${preguntasFalladas.slice(0,3).map(p => p.enunciado?.substring(0,80) || '').join(' | ')}`;
+
+    try {
+      const response = await fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${apiKey}`
+        },
+        body: JSON.stringify({
+          model: MODEL,
+          messages: [
+            { role: 'system', content: SYSTEM_PROMPT_REFUERZO },
+            { role: 'user', content: userPrompt }
+          ],
+          temperature: 0.6,
+          max_tokens: 3000
+        })
+      });
+
+      if (!response.ok) {
+        console.warn('Background batch API error:', response.status);
+        _batchInProgress = false;
+        return;
+      }
+
+      const data = await response.json();
+      const contenido = data.choices[0].message.content;
+      const jsonStr = extraerJSON(contenido);
+      const resultado = JSON.parse(jsonStr);
+
+      if (!resultado.preguntas || !Array.isArray(resultado.preguntas)) {
+        _batchInProgress = false;
+        return;
+      }
+
+      // Normalizar
+      const nuevasPreguntas = resultado.preguntas.map(p => ({
+        tipo: p.tipo || 'VFD',
+        area: p.tema || p.area || 'Refuerzo FST',
+        nivel: (p.dificultad || 'Medio').toLowerCase() === 'fácil' ? 'facil' :
+               (p.dificultad || 'Medio').toLowerCase() === 'difícil' ? 'dificil' : 'intermedio',
+        enunciado: p.enunciado || p.pregunta || '',
+        opciones: p.opciones || [],
+        respuesta: p.tipo === 'MC' ? (typeof p.respuesta === 'number' ? p.respuesta : parseInt(p.respuesta) || 0) : String(p.respuesta || '').charAt(0).toUpperCase(),
+        explicacion: p.explicacion || '',
+        _generada: true,
+        _fecha: new Date().toISOString()
+      }));
+
+      // Guardar en pool localStorage
+      const poolKey = (userPrefix || 'ninja_') + 'refuerzo_pool';
+      let pool = [];
+      try {
+        pool = JSON.parse(localStorage.getItem(poolKey) || '[]');
+      } catch(e) { pool = []; }
+
+      // Evitar duplicados exactos (mismo enunciado)
+      const enunciadosExistentes = new Set(pool.map(p => p.enunciado?.substring(0,60)));
+      const preguntasUnicas = nuevasPreguntas.filter(p => !enunciadosExistentes.has(p.enunciado?.substring(0,60)));
+
+      pool = [...pool, ...preguntasUnicas];
+      // Limitar a 60 preguntas en pool para no saturar localStorage
+      if (pool.length > 60) pool = pool.slice(pool.length - 60);
+      localStorage.setItem(poolKey, JSON.stringify(pool));
+
+      console.log(`✅ Background: ${preguntasUnicas.length} preguntas generadas para pool (${pool.length} total)`);
+
+    } catch (error) {
+      console.warn('Background batch failed:', error.message);
+    }
+    _batchInProgress = false;
+  }
+
+  /**
+   * Obtiene el pool de preguntas de refuerzo generadas en background.
+   * @param {string} userPrefix 
+   * @returns {Array}
+   */
+  function obtenerPoolRefuerzo(userPrefix) {
+    const poolKey = (userPrefix || 'ninja_') + 'refuerzo_pool';
+    try {
+      return JSON.parse(localStorage.getItem(poolKey) || '[]');
+    } catch(e) { return []; }
+  }
+
+  /**
+   * Extrae preguntas del pool para temas específicos y las consume (elimina del pool).
+   * @param {string} userPrefix
+   * @param {Array} temas - Áreas a extraer
+   * @param {number} cantidad - Máximo a extraer
+   * @returns {Array}
+   */
+  function consumirDelPool(userPrefix, temas, cantidad) {
+    const poolKey = (userPrefix || 'ninja_') + 'refuerzo_pool';
+    let pool = [];
+    try { pool = JSON.parse(localStorage.getItem(poolKey) || '[]'); } catch(e) { pool = []; }
+
+    const extraidas = [];
+    const restantes = [];
+
+    for (const p of pool) {
+      if (extraidas.length >= cantidad) {
+        restantes.push(p);
+      } else if (temas.some(t => (p.area || '').toLowerCase().includes(t.toLowerCase()) || t.toLowerCase().includes((p.area || '').toLowerCase()))) {
+        extraidas.push(p);
+      } else {
+        restantes.push(p);
+      }
+    }
+
+    localStorage.setItem(poolKey, JSON.stringify(restantes));
+    return extraidas;
+  }
 
   return {
     generarPreguntas: generarPreguntas,
     generarRetroalimentacion: generarRetroalimentacion,
     generarDataset: generarDataset,
     obtenerDatasetsLocales: obtenerDatasetsLocales,
-    generarPreguntasRefuerzo: generarPreguntasRefuerzo
+    generarPreguntasRefuerzo: generarPreguntasRefuerzo,
+    encolarErrorRefuerzo: encolarErrorRefuerzo,
+    obtenerPoolRefuerzo: obtenerPoolRefuerzo,
+    consumirDelPool: consumirDelPool
   };
 
 })();
