@@ -894,6 +894,10 @@ const UI = (function() {
   function mostrarPreguntaProfesional(pregunta, indice, total) {
     if (window.debugLog) debugLog('mostrarPreguntaProfesional idx=' + indice + '/' + total);
     
+    // Ocultar feedback anterior
+    var fbCuest = document.getElementById('feedback-cuest');
+    if (fbCuest) fbCuest.classList.add('hidden');
+    
     var progressEl = document.getElementById('progress-text-cuest');
     var barEl = document.getElementById('progress-bar-fill-cuest');
     if (progressEl) progressEl.textContent = 'Pregunta ' + (indice + 1) + '/' + total;

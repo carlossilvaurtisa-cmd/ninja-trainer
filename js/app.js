@@ -337,6 +337,7 @@ const App = (function() {
         break;
       case 'trabajo':
       case 'situacional':
+      case 'profesional':
         if (window.debugLog) debugLog('iniciarTest → cuestionario: ' + testKey + ' total=' + testData.totalPreguntas);
         UI.iniciarTestCuestionario(testData);
         break;
@@ -684,17 +685,28 @@ const App = (function() {
       tipoError: evaluacion.tipoError
     };
 
-    // Mostrar feedback
-    UI.mostrarFeedbackInmediato(evaluacion.esCorrecta, evaluacion.explicacion);
+    // Mostrar feedback (usa el elemento correcto según test)
+    if (state.testActual === 'profesional') {
+      var fb2 = document.getElementById('feedback-cuest');
+      if (fb2) {
+        fb2.classList.remove('hidden', 'correct', 'incorrect');
+        fb2.classList.add(evaluacion.esCorrecta ? 'correct' : 'incorrect');
+        fb2.innerHTML = '<strong>' + (evaluacion.esCorrecta ? '✅ ¡CORRECTO!' : '❌ INCORRECTO') + '</strong><br>' + evaluacion.explicacion;
+      }
+    } else {
+      UI.mostrarFeedbackInmediato(evaluacion.esCorrecta, evaluacion.explicacion);
+    }
 
-    // Mostrar botón para avanzar manualmente
-    const btnNext = document.getElementById('btn-next-question');
-    if (btnNext) {
-      btnNext.classList.remove('hidden');
-      btnNext.textContent = (state.indiceActual < state.testData.totalPreguntas - 1) 
-        ? 'SIGUIENTE PREGUNTA ►' 
-        : 'VER RESULTADOS ►';
-      btnNext.focus();
+    // Mostrar botón para avanzar manualmente (solo si no es profesional, que usa btn-cuest-next)
+    if (state.testActual !== 'profesional') {
+      const btnNext = document.getElementById('btn-next-question');
+      if (btnNext) {
+        btnNext.classList.remove('hidden');
+        btnNext.textContent = (state.indiceActual < state.testData.totalPreguntas - 1) 
+          ? 'SIGUIENTE PREGUNTA ►' 
+          : 'VER RESULTADOS ►';
+        btnNext.focus();
+      }
     }
   }
 
@@ -739,17 +751,12 @@ const App = (function() {
       }
     });
 
-    // Mostrar feedback y botón siguiente
-    var fb = document.getElementById('feedback-instant');
+    // Mostrar feedback en el elemento del cuestionario
+    var fb = document.getElementById('feedback-cuest');
     if (fb) {
       fb.classList.remove('hidden');
       fb.className = 'feedback-instant ' + (esCorrecta ? 'correct' : 'incorrect');
       fb.innerHTML = (esCorrecta ? '✅ ¡Correcto!' : '❌ Incorrecto') + '<br>' + pregunta.explicacion;
-    }
-    var btnNext = document.getElementById('btn-next-question');
-    if (btnNext) {
-      btnNext.classList.remove('hidden');
-      btnNext.textContent = state.indiceActual < state.preguntas.length - 1 ? 'SIGUIENTE ►' : 'VER RESULTADOS ►';
     }
   }
 
@@ -911,7 +918,7 @@ const App = (function() {
     detenerTimer();
 
     // Guardar última respuesta pendiente (cuestionario)
-    if (state.testActual === 'trabajo' || state.testActual === 'situacional') {
+    if (state.testActual === 'trabajo' || state.testActual === 'situacional' || state.testActual === 'profesional') {
       guardarRespuestaCuestionario();
     }
 
