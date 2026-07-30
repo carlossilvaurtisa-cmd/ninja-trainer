@@ -15,7 +15,10 @@
     --primario-hover: #0B5ED7;
     --verde: #198754;
     --rojo: #DC3545;
+    --rojo-error: #DC3545;
     --ambar: #FD7E14;
+    --naranja: #FA6900;
+    --azul-polvo: #5B9BD5;
     --borde: #DEE2E6;
     --borde-focus: #0D6EFD;
     --seleccionado: #E7F1FF;
@@ -352,6 +355,26 @@ html, body {
 .modal-desc { font-size: 0.85rem; color: var(--texto-muted); margin-bottom: 16px; }
 .modal-box .api-key-input { width: 100%; padding: 10px 12px; border: 2px solid var(--borde); border-radius: 8px; font-size: 0.9rem; }
 .modal-buttons { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
+
+/* ============================================================
+   BOTONES MC (Selección Múltiple - Test Profesional)
+   ============================================================ */
+.btn-mc {
+    display: block; width: 100%;
+    text-align: left; font-family: var(--fuente); font-size: 0.95rem;
+    padding: 14px 16px; margin-bottom: 8px;
+    border: 2px solid var(--borde); border-radius: 8px;
+    background: #fff; color: var(--texto);
+    cursor: pointer; transition: all 0.15s ease;
+}
+.btn-mc:hover:not(:disabled) {
+    border-color: var(--primario); background: #E7F1FF;
+    transform: translateX(4px);
+}
+.btn-mc:focus-visible {
+    outline: 3px solid var(--borde-focus); outline-offset: 2px;
+}
+.btn-mc:disabled { cursor: default; opacity: 0.85; }
 
 /* ============================================================
    RESPONSIVE

@@ -403,7 +403,7 @@ const UI = (function() {
         datasets: [{ data, backgroundColor: colores.slice(0, data.length) }]
       },
       options: {
-        cutoutPercentage: 55,
+        cutout: '55%',
         plugins: {
           legend: { labels: { color: '#8899aa' } },
           datalabels: {
@@ -891,13 +891,13 @@ const UI = (function() {
   // PREGUNTA PROFESIONAL (V/F/D + Selección Múltiple)
   // ==========================================================
 
-  function mostrarPreguntaProfesional(pregunta, indice, total) {
+  function mostrarPreguntaProfesional(pregunta, indice, total, respuestasPrevias) {
     if (window.debugLog) debugLog('mostrarPreguntaProfesional idx=' + indice + '/' + total);
     
     // Ocultar feedback anterior
     var fbCuest = document.getElementById('feedback-cuest');
     if (fbCuest) fbCuest.classList.add('hidden');
-    
+
     var progressEl = document.getElementById('progress-text-cuest');
     var barEl = document.getElementById('progress-bar-fill-cuest');
     if (progressEl) progressEl.textContent = 'Pregunta ' + (indice + 1) + '/' + total;
@@ -905,6 +905,10 @@ const UI = (function() {
 
     var content = document.getElementById('cuestionario-content');
     if (!content) return;
+
+    // Determinar si ya hay respuesta previa para esta pregunta
+    var respuestaPrevia = (respuestasPrevias && respuestasPrevias[indice]) ? respuestasPrevias[indice] : null;
+    var yaRespondida = respuestaPrevia !== null;
 
     var nivelEmoji = pregunta.nivel === 'facil' ? '🟢' : pregunta.nivel === 'intermedio' ? '🟡' : '🔴';
     var html = '<div style="margin-bottom:8px;">';
@@ -914,22 +918,59 @@ const UI = (function() {
 
     if (pregunta.tipo === 'VFD') {
       html += '<div class="question-buttons">';
-      html += '<button class="btn-answer btn-verdadero" data-answer="V" onclick="responderProfesional(\'V\')"><span class="answer-letter">V</span><span class="answer-label">VERDADERO</span></button>';
-      html += '<button class="btn-answer btn-falso" data-answer="F" onclick="responderProfesional(\'F\')"><span class="answer-letter">F</span><span class="answer-label">FALSO</span></button>';
-      html += '<button class="btn-answer btn-desconocido" data-answer="D" onclick="responderProfesional(\'D\')"><span class="answer-letter">D</span><span class="answer-label">DESCONOCIDO</span></button>';
+      var respuestas = ['V', 'F', 'D'];
+      var labels = ['VERDADERO', 'FALSO', 'DESCONOCIDO'];
+      var clases = ['btn-verdadero', 'btn-falso', 'btn-desconocido'];
+      for (var vi = 0; vi < 3; vi++) {
+        var resp = respuestas[vi];
+        var disabledAttr = yaRespondida ? ' disabled' : '';
+        var extraStyle = '';
+        if (yaRespondida) {
+          if (resp === pregunta.respuesta) {
+            extraStyle = 'border-color:#198754!important;background:#D1E7DD!important;';
+          } else if (resp === respuestaPrevia.respuesta && !respuestaPrevia.correcta) {
+            extraStyle = 'border-color:#DC3545!important;background:#F8D7DA!important;';
+          } else {
+            extraStyle = 'opacity:0.6;';
+          }
+        }
+        html += '<button class="btn-answer ' + clases[vi] + '" data-answer="' + resp + '" onclick="responderProfesional(\'' + resp + '\')"' + disabledAttr + ' style="' + extraStyle + '"><span class="answer-letter">' + resp + '</span><span class="answer-label">' + labels[vi] + '</span></button>';
+      }
       html += '</div>';
+      
+      // Mostrar feedback si ya fue respondida
+      if (yaRespondida) {
+        var fbClass = respuestaPrevia.correcta ? 'correct' : 'incorrect';
+        var fbEmoji = respuestaPrevia.correcta ? '✅ ¡CORRECTO!' : '❌ INCORRECTO';
+        html += '<div class="feedback-instant ' + fbClass + '" style="margin-top:12px;display:block;"><strong>' + fbEmoji + '</strong><br>' + (pregunta.explicacion || '') + '</div>';
+      }
     } else if (pregunta.tipo === 'MC') {
       html += '<div class="mc-opciones" style="display:flex;flex-direction:column;gap:8px;">';
       var letras = ['A', 'B', 'C', 'D'];
       pregunta.opciones.forEach(function(op, i) {
-        html += '<button class="btn-mc" data-index="' + i + '" onclick="responderProfesionalMC(' + i + ')" style="text-align:left;font-family:var(--fuente);font-size:0.95rem;padding:14px 16px;border:2px solid var(--borde);border-radius:8px;background:#fff;cursor:pointer;transition:all 0.15s;">' + letras[i] + '. ' + op + '</button>';
+        var mcDisabled = yaRespondida ? ' disabled' : '';
+        var mcStyle = '';
+        if (yaRespondida) {
+          if (i === pregunta.respuesta) {
+            mcStyle = 'border-color:#198754!important;background:#D1E7DD!important;';
+          } else if (i === respuestaPrevia.respuesta && !respuestaPrevia.correcta) {
+            mcStyle = 'border-color:#DC3545!important;background:#F8D7DA!important;';
+          } else {
+            mcStyle = 'opacity:0.6;';
+          }
+        }
+        html += '<button class="btn-mc" data-index="' + i + '" onclick="responderProfesionalMC(' + i + ')"' + mcDisabled + ' style="text-align:left;font-family:var(--fuente);font-size:0.95rem;padding:14px 16px;border:2px solid var(--borde);border-radius:8px;background:#fff;cursor:pointer;' + mcStyle + '">' + letras[i] + '. ' + op + '</button>';
       });
       html += '</div>';
+      
+      if (yaRespondida) {
+        var fbClass2 = respuestaPrevia.correcta ? 'correct' : 'incorrect';
+        var fbEmoji2 = respuestaPrevia.correcta ? '✅ ¡CORRECTO!' : '❌ INCORRECTO';
+        html += '<div class="feedback-instant ' + fbClass2 + '" style="margin-top:12px;display:block;"><strong>' + fbEmoji2 + '</strong><br>' + (pregunta.explicacion || '') + '</div>';
+      }
     }
 
     content.innerHTML = html;
-    window._profesionalRespuesta = null;
-    window._profesionalConfirmado = false;
   }
 
   // ==========================================================
@@ -1287,8 +1328,9 @@ const UI = (function() {
   // ==========================================================
 
   function formatearTiempo(segundosTotales) {
+    if (segundosTotales == null || isNaN(segundosTotales)) return '--:--';
     const min = Math.floor(segundosTotales / 60);
-    const sec = segundosTotales % 60;
+    const sec = Math.floor(segundosTotales % 60);
     return `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
   }
 

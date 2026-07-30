@@ -101,10 +101,7 @@ const App = (function() {
     // Botón dashboard
     document.getElementById('btn-dashboard').addEventListener('click', abrirDashboard);
 
-    // Botón curso - manejado inline en index.html
-    document.getElementById('btn-curso').addEventListener('click', function() {
-      UI.mostrarPantalla('screen-curso');
-    });
+    // Botón curso - manejado inline en index.html (mostrarFaseCurso)
 
     // --- Modal API Key ---
     document.getElementById('btn-config-api').addEventListener('click', abrirModalAPI);
@@ -616,7 +613,7 @@ const App = (function() {
     if (window.debugLog) debugLog('mostrarPreguntaActual: test=' + state.testActual + ' idx=' + idx + ' preguntas=' + state.preguntas.length + ' esCuestionario=' + (state.testActual==='trabajo'||state.testActual==='situacional'));
     
     // Verificar que hay preguntas (excepto cuestionarios que usan testData)
-    const esCuestionario = (state.testActual === 'trabajo' || state.testActual === 'situacional');
+    const esCuestionario = (state.testActual === 'trabajo' || state.testActual === 'situacional' || state.testActual === 'profesional');
     if (!esCuestionario && (!state.preguntas || state.preguntas.length === 0)) {
       console.error('No hay preguntas generadas para', state.testActual);
       return;
@@ -646,7 +643,7 @@ const App = (function() {
         actualizarNavCuestionario();
         break;
       case 'profesional':
-        UI.mostrarPreguntaProfesional(state.preguntas[idx], idx, state.preguntas.length);
+        UI.mostrarPreguntaProfesional(state.preguntas[idx], idx, state.preguntas.length, state.respuestas);
         actualizarNavCuestionario();
         break;
     }
@@ -687,10 +684,10 @@ const App = (function() {
     };
 
     // === BACKGROUND REFUERZO: si hay error, encolar para generación asíncrona ===
-    if (!evaluacion.esCorrecta && state.testActual === 'profesional') {
+    if (!evaluacion.esCorrecta) {
       var apiKey = obtenerApiKey();
       if (apiKey) {
-        DeepSeek.encolarErrorRefuerzo(apiKey, pregunta.area || '', {
+        DeepSeek.encolarErrorRefuerzo(apiKey, pregunta.area || (state.testData.titulo || ''), {
           enunciado: pregunta.enunciado || '',
           respuestaUsuario: respuesta,
           respuestaCorrecta: pregunta.respuesta || '',
@@ -768,8 +765,10 @@ const App = (function() {
       }
     }
 
-    // Feedback visual
+    // Feedback visual y deshabilitar todos
     document.querySelectorAll('.btn-mc').forEach(function(btn, i) {
+      btn.disabled = true;
+      btn.style.cursor = 'default';
       btn.style.borderColor = i === pregunta.respuesta ? '#198754' : '#DEE2E6';
       btn.style.background = i === pregunta.respuesta ? '#D1E7DD' : '#fff';
       if (i === indice && i !== pregunta.respuesta) {
@@ -1148,13 +1147,16 @@ const App = (function() {
     state.finalizado = false;
     state._modoRefuerzo = true;
 
-    UI.iniciarTestCuestionario({
+    // Actualizar testData para reflejar la nueva ronda de refuerzo
+    state.testData = {
       titulo: '🎯 REFUERZO: ' + state.testData.titulo,
       subtitulo: 'Preguntas generadas por IA sobre tus temas débiles',
       tiempo: state.segundosRestantes,
-      totalPreguntas: preguntasRefuerzo.length
-    });
+      totalPreguntas: preguntasRefuerzo.length,
+      _modoRefuerzo: true
+    };
 
+    UI.iniciarTestCuestionario(state.testData);
     iniciarTimer();
     mostrarPreguntaActual();
   }
